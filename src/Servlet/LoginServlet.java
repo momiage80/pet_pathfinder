@@ -17,12 +17,12 @@ public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		RequestDispatcher dispatcher = req.getRequestDispatcher("html/PPF_login.html");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/login.jsp");
 		dispatcher.forward(req, resp);
 	}
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		RequestDispatcher dispatcher = req.getRequestDispatcher("html/PPF_mypage.html");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("html/PPF_Mypage.html");
 		dispatcher.forward(req, resp);
 	}
 }

@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div class="div">
-        <header class="header">
+        <header class="hamburger">
             <div class="nav">
                 <input id="drawer_input" class="drawer_hidden" type="checkbox">
                 <label for="drawer_input" class="drawer_open"><span></span></label>
@@ -27,37 +27,33 @@
         </header>
         <div class="div-2">
             <div class="div-3">
-            <div class="div-4">
-                <div class="column">
-                <div class="div-5">
-                    <div class="div-6">
-                        <a href="#" class="button_title">Pet PathFinder</a>
-                    </div>
-                    <div class="div-7">
-                    <div class="div-8">ログイン</div>
-                    <div class="div-9">login</div>
-                    </div>
-                </div>
-                </div>
-                <div class="column-2">
-                <div class="div-10">
-                    <img
-                    loading="lazy"
-                    srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/ed3e107b-f2bd-4a19-ba9e-d79e59832d78?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/ed3e107b-f2bd-4a19-ba9e-d79e59832d78?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/ed3e107b-f2bd-4a19-ba9e-d79e59832d78?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/ed3e107b-f2bd-4a19-ba9e-d79e59832d78?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/ed3e107b-f2bd-4a19-ba9e-d79e59832d78?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/ed3e107b-f2bd-4a19-ba9e-d79e59832d78?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/ed3e107b-f2bd-4a19-ba9e-d79e59832d78?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/ed3e107b-f2bd-4a19-ba9e-d79e59832d78?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
-                    class="img"
-                    />
-                    <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/dac2c3f5-7649-4349-86df-ac27a0e6e698?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
-                    class="img-2"
-                    />
-                </div>
-                </div>
-            </div>
+	            <div class="div-4">
+	                <div class="column">
+		                <div class="div-5">
+		                    <div class="div-6">
+		                        <a href="#" class="button_title">Pet PathFinder</a>
+		                    </div>
+		                    <div class="div-7">
+			                    <div class="div-8">ログイン</div>
+			                    <div class="div-9">login</div>
+		                    </div>
+		                </div>
+	                </div>
+	                <div class="column-2">
+	                <div class="div-10">
+	                	<!-- ここにヘッダー画像のURLを記述 -->
+	                    <img
+	                    loading="lazy"
+	                    srcset="img/login_header_image.jpg"
+	                    class="img"
+	                    />
+	                </div>
+	                </div>
+	            </div>
             </div>
             <div class="div-11">
 	            <div class="div-12">login</div>
-	            <form action="Login">
+	            <form action="Login" method="post">
 		            <div class="div-13">
 		                <img
 		                loading="lazy"
@@ -80,16 +76,15 @@
 		                </div>
 		            </div>
 		            <div class="div-18"></div>
-		            <div class="div-19"><a href="#">login</a></button></div>
+		            <input class="div-19" type="submit" value="login"></input>
 	           	</form>
             </div>
         </div>
-
-        <div class="div-20">
-            <div class="div-22">トップページ</div>
-        </div>
     </div>
+    <jsp:include page="footer.jsp" />
     <style>
+    	/*ここからヘッダー
+    	ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         *{
             margin: 0;
             padding: 0;
@@ -122,6 +117,7 @@
         .div-4 {
             gap: 20px;
             display: flex;
+            height: 661px;
         }
         @media (max-width: 991px) {
             .div-4 {
@@ -131,12 +127,14 @@
             }
         }
         .column {
-            display: flex;
-            flex-direction: column;
-            line-height: normal;
-            width: 20%;
-            margin-left: 0px;
-        }
+		    display: flex;
+		    flex-direction: column;
+		    line-height: normal;
+		    width: 20%;
+		    margin-left: 0px;
+		    flex-wrap: nowrap;
+		    justify-content: flex-start;
+		}
         @media (max-width: 991px) {
             .column {
             width: 100%;
@@ -144,7 +142,6 @@
         }
         .div-5 {
             display: flex;
-            margin-top: 50px;
             flex-direction: column;
         }
         @media (max-width: 991px) {
@@ -154,12 +151,13 @@
         }
         .div-6 {
             color: #000;
+            padding-top: 30px;
             text-align: center;
             font: 400 32px/37px Yeseva One, sans-serif;
         }
         .div-7 {
             display: flex;
-            margin-top: 217px;
+            margin-top: 183px;
             padding-left: 80px;
             flex-direction: column;
             align-items: start;
@@ -211,15 +209,10 @@
             }
         }
         .div-10 {
-            disply: flex;
-            flex-direction: column;
             overflow: hidden;
             position: relative;
-            display: flex;
-            min-height: 659px;
+            min-height: 100%;
             flex-grow: 1;
-            align-items: end;
-            padding: 37px 20px 50px;
         }
         @media (max-width: 991px) {
             .div-10 {
@@ -229,7 +222,7 @@
         }
         .img {
             position: absolute;
-            height: 100%;
+            height: 80%;
             width: 100%;
             object-fit: cover;
             object-position: center;
@@ -250,6 +243,8 @@
             margin: 0 10px 40px 0;
             }
         }
+        /*ここからメイン
+        ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         .div-11 {
             border-radius: 61px;
             border: 1px solid #3e3e3e;
@@ -269,6 +264,7 @@
             padding: 0 20px;
             }
         }
+
         .div-12 {
             justify-content: flex-end;
             color: #000;
@@ -374,67 +370,19 @@
             margin: 40px 0;
             }
         }
-        .div-20 {
-            background-color: #e5d7b4;
-            display: flex;
-            margin-top: 31px;
-            width: 100%;
-            flex-direction: column;
-            align-items: center;
-            padding: 50px 80px 26px 75px;
-        }
-        @media (max-width: 991px) {
-            .div-20 {
-            max-width: 100%;
-            padding: 0 20px;
-            }
-        }
-        .div-21 {
-            justify-content: flex-end;
-            color: #fff;
-            text-align: center;
-            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            margin-top: 80px;
-            max-width: 599px;
-            font: 400 64px/74px Yeseva One, sans-serif;
-        }
-        @media (max-width: 991px) {
-            .div-21 {
-            max-width: 100%;
-            font-size: 40px;
-            line-height: 51px;
-            margin-top: 40px;
-            }
-        }
-        .div-22 {
-            justify-content: flex-end;
-            color: #000;
-            text-align: center;
-            align-self: start;
-            margin-top: 62px;
-            max-width: 479px;
-            font: 400 24px/28px Yeseva One, sans-serif;
-        }
-        @media (max-width: 991px) {
-            .div-22 {
-            max-width: 100%;
-            margin-top: 40px;
-            }
-        }
-
         a{
             color: #000000;
             text-decoration-line: none;
         }
 
-        .header{
-            margin-right: auto;
-            display:flex;
-            justify-content: space-between;
-            align-items:right;
-            padding:20
-            20px;
+		/*ここからハンバーガー
+		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+        .hamburger{
+        	position: absolute;
             background:#555;
+            right: 22px;
+		    top: 22px;
+		    z-index: 1;
         }
 
         .drawer_hidden{
@@ -503,10 +451,9 @@
             transition:.5s;
 
         }
-
-        .nav_list{
-
-            /*この記述でハンバーガーメニューを修正する。*/
+		/*この記述でハンバーガーメニューを修正する。
+		--------------------------------------------------------------------------------------------------*/
+		.nav_list{
             list-style:none;
         }
 
