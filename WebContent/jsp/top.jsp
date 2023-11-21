@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="object-1">
+	<div class="div">
         <header class="hamburger">
             <div class="nav">
                 <input id="drawer_input" class="drawer_hidden" type="checkbox">
@@ -25,63 +25,62 @@
                 </nav>
             </div>
         </header>
-        <div class="object-2">
-            <div class="object-3">
-	            <div class="object-4">
+        <div class="div-2">
+            <div class="div-3">
+	            <div class="div-4">
 	                <div class="column">
-		                <div class="object-5">
-		                    <div class="object-6">
+		                <div class="div-5">
+		                    <div class="div-6">
 		                        <a href="#" class="button_title">Pet PathFinder</a>
+		                        <img alt="" srcset="../img/cat1.png" loading="lazy">
 		                    </div>
-		                    <div class="object-7">
-		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">ログイン</div>
-			                    <div class="object-9">login</div>
+		                    <div class="div-7">
+			                    <div class="div-8">ログイン</div>
+			                    <div class="div-9">login</div>
 		                    </div>
 		                </div>
 	                </div>
 	                <div class="column-2">
-	                <div class="object-10">
-	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
+	                <div class="div-10">
+	                	<!-- ここにヘッダー画像のURLを記述 -->
 	                    <img
 	                    loading="lazy"
-	                    srcset="img/login_header_image.jpg"
+	                    srcset="../img/cat1.png"
 	                    class="img"
 	                    />
 	                </div>
 	                </div>
 	            </div>
             </div>
-            <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
-	            <div class="main">
-		            <div class="object-12">login</div>
-		            <form action="Login" method="post">
-			            <div class="object-13">
-			                <img
-			                loading="lazy"
-			                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
-			                class="img-3"
-			                />
-			                <div class="object-14">
-			                    <input type="text" class="input-name" placeholder="Your name">
-			                </div>
-			            </div>
-			            <div class="object-15"></div>
-			            <div class="object-16">
-			                <img
-			                loading="lazy"
-			                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
-			                class="img-4"
-			                />
-			                <div class="object-17">
-			                    <input type="password" class="input-password" placeholder="Password">
-			                </div>
-			            </div>
-			            <div class="object-18"></div>
-			            <input class="object-19" type="submit" value="login"></input>
-		           	</form>
-	            </div>
-            <!-- ここまで入れ替える ------------------------------------------------------------------------->
+            <!-- このメインの部分を入れ替える（CSSも） -->
+            <div class="main">
+	            <div class="div-12">login</div>
+	            <form action="Login" method="post">
+		            <div class="div-13">
+		                <img
+		                loading="lazy"
+		                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
+		                class="img-3"
+		                />
+		                <div class="div-14">
+		                    <input type="text" class="input-name" placeholder="Your name">
+		                </div>
+		            </div>
+		            <div class="div-15"></div>
+		            <div class="div-16">
+		                <img
+		                loading="lazy"
+		                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
+		                class="img-4"
+		                />
+		                <div class="div-17">
+		                    <input type="password" class="input-password" placeholder="Password">
+		                </div>
+		            </div>
+		            <div class="div-18"></div>
+		            <input class="div-19" type="submit" value="login"></input>
+	           	</form>
+            </div>
         </div>
     </div>
     <jsp:include page="footer.jsp" />
@@ -93,37 +92,37 @@
             padding: 0;
             box-sizing: border-box;
         }
-        .page {
+        .div {
             background-color: #fff;
             display: flex;
             flex-direction: column;
         }
-        .object-2 {
+        .div-2 {
             display: flex;
             width: 100%;
             padding-left: 60px;
             flex-direction: column;
         }
         @media (max-width: 991px) {
-            .object-2 {
+            .div-2 {
             max-width: 100%;
             padding-left: 20px;
             }
         }
-        .object-3 {
+        .div-3 {
         }
         @media (max-width: 991px) {
-            .object-3 {
+            .div-3 {
             max-width: 100%;
             }
         }
-        .object-4 {
+        .div-4 {
             gap: 20px;
             display: flex;
             height: 661px;
         }
         @media (max-width: 991px) {
-            .object-4 {
+            .div-4 {
             flex-direction: column;
             align-items: stretch;
             gap: 0px;
@@ -143,22 +142,22 @@
             width: 100%;
             }
         }
-        .object-5 {
+        .div-5 {
             display: flex;
             flex-direction: column;
         }
         @media (max-width: 991px) {
-            .object-5 {
+            .div-5 {
             margin-top: 40px;
             }
         }
-        .object-6 {
+        .div-6 {
             color: #000;
             padding-top: 30px;
             text-align: center;
             font: 400 32px/37px Yeseva One, sans-serif;
         }
-        .object-7 {
+        .div-7 {
             display: flex;
             margin-top: 183px;
             padding-left: 80px;
@@ -166,25 +165,25 @@
             align-items: start;
         }
         @media (max-width: 991px) {
-            .object-7 {
+            .div-7 {
             margin-top: 40px;
             padding-left: 20px;
             }
         }
-        .object-8 {
+        .div-8 {
             color: #000;
             text-align: center;
             font: 400 37px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
             sans-serif;
         }
         @media (max-width: 991px) {
-            .object-8 {
+            .div-8 {
             margin-left: 9px;
             font-size: 40px;
             line-height: 65px;
             }
         }
-        .object-9 {
+        .div-9 {
             color: #f00;
             text-align: center;
             align-self: center;
@@ -194,7 +193,7 @@
             sans-serif;
         }
         @media (max-width: 991px) {
-            .object-9 {
+            .div-9 {
             margin-top: 40px;
             white-space: initial;
             }
@@ -211,14 +210,14 @@
             width: 100%;
             }
         }
-        .object-10 {
+        .div-10 {
             overflow: hidden;
             position: relative;
             min-height: 100%;
             flex-grow: 1;
         }
         @media (max-width: 991px) {
-            .object-10 {
+            .div-10 {
             max-width: 100%;
             margin-top: 33px;
             }
@@ -262,13 +261,13 @@
             padding: 50px 80px;
         }
         @media (max-width: 991px) {
-            .object-11 {
+            .div-11 {
             margin-top: 40px;
             padding: 0 20px;
             }
         }
 
-        .object-12 {
+        .div-12 {
             justify-content: flex-end;
             color: #000;
             margin-top: 72px;
@@ -276,13 +275,13 @@
             sans-serif;
         }
         @media (max-width: 991px) {
-            .object-12 {
+            .div-12 {
             font-size: 40px;
             line-height: 64px;
             margin-top: 40px;
             }
         }
-        .object-13 {
+        .div-13 {
             display: flex;
             margin-top: 76px;
             width: 391px;
@@ -291,7 +290,7 @@
             gap: 20px;
         }
         @media (max-width: 991px) {
-            .object-13 {
+            .div-13 {
             margin-top: 40px;
             }
         }
@@ -311,12 +310,12 @@
                     font: 400 32px/46px Noto Serif JP, -apple-system, Roboto, Helvetica, sans-serif;
                     color: #838383;
         }
-        .object-15 {
+        .div-15 {
             background-color: #494949;
             width: 391px;
             height: 2px;
         }
-        .object-16 {
+        .div-16 {
             display: flex;
             margin-top: 84px;
             width: 393px;
@@ -324,7 +323,7 @@
             gap: 19px;
         }
         @media (max-width: 991px) {
-            .object-16 {
+            .div-16 {
             margin-top: 40px;
             }
         }
@@ -344,13 +343,13 @@
                 font: 400 32px/46px Noto Serif JP, -apple-system, Roboto, Helvetica, sans-serif;
                 color: #838383;
         }
-        .object-18 {
+        .div-18 {
             background-color: #494949;
             margin-top: 7px;
             width: 393px;
             height: 2px;
         }
-        .object-19 {
+        .div-19 {
             color: #070707;
             text-align: center;
             letter-spacing: 4.5600000000000005px;
@@ -368,7 +367,7 @@
             sans-serif;
         }
         @media (max-width: 991px) {
-            .object-19 {
+            .div-19 {
             white-space: initial;
             margin: 40px 0;
             }
