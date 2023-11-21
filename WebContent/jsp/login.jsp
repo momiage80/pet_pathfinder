@@ -45,7 +45,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="img/login_header_image.jpg"
+	                    srcset="../img/login_header_image.jpg"
 	                    class="img"
 	                    />
 	                </div>
@@ -260,6 +260,7 @@
             align-items: center;
             margin: 153px 0 0 31px;
             padding: 50px 80px;
+            margin-bottom: 100px;
         }
         @media (max-width: 991px) {
             .object-11 {
@@ -366,6 +367,7 @@
             padding: 13px 20px;
             font: 400 24px/34px Noto Serif JP, -apple-system, Roboto, Helvetica,
             sans-serif;
+
         }
         @media (max-width: 991px) {
             .object-19 {
