@@ -52,7 +52,7 @@
 	                </div>
 	            </div>
             </div>
-            <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
+            <!-- このメインの部分を入れ替える（CSSのメイン部分も入れ替える） -------------------------------------------------------->
 	            <div class="main">
 		            <div class="object-12">login</div>
 		            <form action="Login" method="post">
@@ -157,6 +157,10 @@
             padding-top: 30px;
             text-align: center;
             font: 400 32px/37px Yeseva One, sans-serif;
+        }
+        .button_title {
+        	color: #000000;
+            text-decoration-line: none;
         }
         .object-7 {
             display: flex;
@@ -378,7 +382,7 @@
             text-decoration-line: none;
         }
 
-		/*ここからハンバーガー
+		/*ここからハンバーガー ※ここから下は入れ替えない
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         .hamburger{
         	position: absolute;
