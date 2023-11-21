@@ -51,7 +51,8 @@
 	                </div>
 	            </div>
             </div>
-            <div class="div-11">
+            <!-- このメインの部分を入れ替える（CSSも） -->
+            <div class="main">
 	            <div class="div-12">login</div>
 	            <form action="Login" method="post">
 		            <div class="div-13">
@@ -245,7 +246,7 @@
         }
         /*ここからメイン
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
-        .div-11 {
+        .main {
             border-radius: 61px;
             border: 1px solid #3e3e3e;
             background-color: #fdfdfd;
