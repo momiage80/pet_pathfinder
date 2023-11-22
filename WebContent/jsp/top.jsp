@@ -15,12 +15,12 @@
 	    <div class="div-2">
 		    <img
 		        loading="lazy"
-		        srcset="img/cat1.png"
+		        srcset="/Pet_Pathfinder/img/cat1.png"
 		        class="img"
 		    />
 		    <div class="div-3">
 		        <div class="div-4">
-		        	<span>Pet PathFinder<img src="img/7785.png" alt="hoge" style="width: 3rem; white-space: nowrap;"></span>
+		        	<span>Pet PathFinder<img src="/Pet_Pathfinder/img/7785.png" alt="hoge" style="width: 3rem; white-space: nowrap;"></span>
 		        	<hr style="width: 240px">
 		        </div>
 		    </div>
@@ -61,10 +61,10 @@
 		        class="img-7"
 		    />
 	    </div>
-	    <img src="img/tizu.png" class="img-8">
-	    <img src="img/Frame.png" class="frame">
-	    <input type="image" src="img/button1.png"  class="img-y"/>
-	    <input type="image" src="img/button2.png"  class="img-z"/>
+	    <img src="/Pet_Pathfinder/img/tizu.png" class="img-8">
+	    <img src="/Pet_Pathfinder/img/Frame.png" class="frame">
+	    <input type="image" src="/Pet_Pathfinder/img/button1.png"  class="img-y"/>
+	    <input type="image" src="/Pet_Pathfinder/img/button2.png"  class="img-z"/>
 	    <!-- footer部分 -->
 	    <jsp:include page="footer.jsp" />
 	</div>
