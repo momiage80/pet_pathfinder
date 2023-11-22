@@ -45,7 +45,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="img/login_header_image.jpg"
+	                    srcset="../img/cat4.png"
 	                    class="img"
 	                    />
 	                </div>
@@ -54,48 +54,11 @@
             </div>
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
 	          <div class="div-9">(表示名)のマイページ</div>
-          <div class="div-10">
-            <div class="div-11">
-              <div class="column-3">
-               <a href="#" class="img-button">
 
-                <img
-                  loading="lazy"
-                  srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/992b5867-b159-4700-8ea1-900f3e454e62?apiKey=e12b54bb17444cfc81d9a0b4cd1be7e1&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/992b5867-b159-4700-8ea1-900f3e454e62?apiKey=e12b54bb17444cfc81d9a0b4cd1be7e1&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/992b5867-b159-4700-8ea1-900f3e454e62?apiKey=e12b54bb17444cfc81d9a0b4cd1be7e1&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/992b5867-b159-4700-8ea1-900f3e454e62?apiKey=e12b54bb17444cfc81d9a0b4cd1be7e1&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/992b5867-b159-4700-8ea1-900f3e454e62?apiKey=e12b54bb17444cfc81d9a0b4cd1be7e1&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/992b5867-b159-4700-8ea1-900f3e454e62?apiKey=e12b54bb17444cfc81d9a0b4cd1be7e1&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/992b5867-b159-4700-8ea1-900f3e454e62?apiKey=e12b54bb17444cfc81d9a0b4cd1be7e1&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/992b5867-b159-4700-8ea1-900f3e454e62?apiKey=e12b54bb17444cfc81d9a0b4cd1be7e1&"
-                  class="img-3"
-                  alt="Image 1"
-                />
-              </a>
-              </div>
-              <div class="column-4">
-              <a href="#" class="img-button">
-                <div class="div-12">
-                  <div class="div-13">
-                    <img
-                      loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/95db9bf7-77e9-4ced-b3b8-9cd716345e8d?apiKey=e12b54bb17444cfc81d9a0b4cd1be7e1&"
-                      class="img-4"
-                      alt="Image 2"
-                    />
-                   </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="div-14">
-            <div class="div-15">
-              <div class="column-5">
-               <a href="#" class="button" onclick="location.href='リンク先URL1';">
-                <div class="div-16">
-                <div class="div-17">捜索依頼履歴</div></div></a>
-              </div>
-              <div class="column-6">
-               <a href="#" class="button" onclick="location.href='リンク先URL2';">
-                <div class="div-18">
-                <div class="div-19">ユーザプロフィール</div></div>
-              </div>
-            </div>
+               <a href="#" class="img-a"><img src="../img/customer.png"  alt="Image 1" /></a>
+               <a href="#" class="img-b" ><img src="../img/trede.png" alt="Image 2"></a>
+               <a href="#" class="img-c"><img src="../img/irai.png" ></a>
+               <a href="#" class="img-d"><img src="../img/profile.png" ></a>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
@@ -283,215 +246,51 @@
             line-height: 56px;
           }
         }
-        .div-10 {
-          align-self: center;
-          margin-top: 41px;
-          width: 100%;
-          max-width: 1056px;
-        }
-        @media (max-width: 991px) {
-          .div-10 {
-            max-width: 100%;
-            margin-top: 40px;
-          }
-        }
-        .div-11 {
-          gap: 20px;
-          display: flex;
-        }
-        @media (max-width: 991px) {
-          .div-11 {
-            flex-direction: column;
-            align-items: stretch;
-            gap: 0px;
-          }
-        }
-        .column-3 {
-          display: flex;
-          flex-direction: column;
-          line-height: normal;
-          width: 58%;
-          margin-left: 0px;
-        }
-        @media (max-width: 991px) {
-          .column-3 {
-            width: 100%;
-          }
-        }
-        .img-3 {
-          aspect-ratio: 1.56;
-          object-fit: contain;
-          object-position: center;
-          width: 100%;
-          justify-content: center;
-          align-items: center;
-          border: 1px solid #000;
-          box-shadow: 22px 22px 22px 0px rgba(0, 0, 0, 0.9);
-          overflow: hidden;
-          flex-grow: 1;
-          margin: 0 auto;
-        }
-        @media (max-width: 991px) {
-          .img-3 {
-            max-width: 100%;
-            margin-top: 40px;
-          }
-        }
-        .column-4 {
-          display: flex;
-          flex-direction: column;
-          line-height: normal;
-          width: 42%;
-          margin-left: 20px;
-        }
-        @media (max-width: 991px) {
-          .column-4 {
-            width: 100%;
-          }
-        }
-        .div-12 {
-          border: 1px solid #000;
-          box-shadow: 22px 22px 22px 0px rgba(0, 0, 0, 0.9);
-          background-color: #ffb673;
-          display: flex;
-          flex-grow: 1;
-          flex-direction: column;
-          width: 100%;
-          margin: 15px auto 0;
-        }
-        @media (max-width: 991px) {
-          .div-12 {
-            margin-top: 40px;
-          }
-        }
-        .div-13 {
-          background-color: rgba(255, 107, 0, 0.7);
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          padding: 50px 20px;
-        }
-        .img-4 {
-          aspect-ratio: 3.19;
-          object-fit: contain;
-          object-position: center;
-          width: 188px;
-          fill: #000;
-          overflow: hidden;
-          max-width: 100%;
-          margin: 57px 0 37px;
-        }
-        @media (max-width: 991px) {
-          .img-4 {
-            margin-top: 40px;
-          }
-        }
-        .div-14 {
-          align-self: center;
-          width: 100%;
-          max-width: 1009px;
-          margin: 120px 0 65px;
-        }
-        @media (max-width: 991px) {
-          .div-14 {
-            max-width: 100%;
-            margin: 40px 0;
-          }
-        }
-        .div-15 {
-          gap: 20px;
-          display: flex;
-        }
-        @media (max-width: 991px) {
-          .div-15 {
-            flex-direction: column;
-            align-items: stretch;
-            gap: 0px;
-          }
-        }
-        .column-5 {
-          display: flex;
-          flex-direction: column;
-          line-height: normal;
-          width: 56%;
-          margin-left: 0px;
-        }
-        @media (max-width: 991px) {
-          .column-5 {
-            width: 100%;
-          }
-        }
-        .div-16 {
-          border: 1px solid #000;
-          box-shadow: 22px 22px 22px 0px rgba(0, 0, 0, 0.9);
-          display: flex;
-          flex-grow: 1;
-          flex-direction: column;
-          width: 100%;
-          margin: 0 auto;
-        }
-        @media (max-width: 991px) {
-          .div-16 {
-            margin-top: 40px;
-          }
-        }
-        .div-17 {
-          justify-content: center;
-          color: #000;
-          text-align: center;
-          background-color: rgba(5, 255, 0, 0.75);
-          padding: 107px 10px 87px;
-          font: 400 64px/77px Inter, sans-serif;
-        }
-        @media (max-width: 991px) {
-          .div-17 {
-            font-size: 40px;
-            line-height: 53px;
-            padding: 40px 1px 0 0;
-          }
-        }
-        .column-6 {
-          display: flex;
-          flex-direction: column;
-          line-height: normal;
-          width: 44%;
-        }
-        @media (max-width: 991px) {
-          .column-6 {
-            width: 100%;
-          }
-        }
-        .div-18 {
-          border: 1px solid #000;
-          box-shadow: 22px 22px 22px 0px rgba(0, 0, 0, 0.9);
-          display: flex;
-          flex-grow: 1;
-          flex-direction: column;
-          width: 100%;
-          margin: 0 auto;
-        }
-        @media (max-width: 991px) {
-          .div-18 {
-            margin-top: 40px;
-          }
-        }
-        .div-19 {
-          justify-content: center;
-          color: #000;
-          text-align: center;
-          background-color: rgba(238, 243, 0, 0.75);
-          padding: 119px 20px 96px;
-          font: 400 40px/48px Inter, sans-serif;
-        }
-        @media (max-width: 991px) {
-          .div-19 {
-            padding: 40px 3px 40px 4px;
-          }
-        }
-
         a{
-            color: #000000;
-            text-decoration-line: none;
+            width:200px;
+            height:150px;
+            background: white;
+            /*border:none;*/
+        }
+        .img-a{
+            margin-top:40px;
+            margin-left:150px;
+            margin-bottom:20px;
+            width:200px;
+            height:150px;
+        }
+        .img-a:hover{
+            opacity:0.5;
+        }
+        .img-b{
+            margin-top:-170px;
+            margin-left:700px;
+            margin-bottom:20px;
+            width:200px;
+            height:150px;
+        }
+        .img-b:hover{
+            opacity:0.5;
+        }
+        .img-c{
+            margin-top:300px;
+            margin-left:150px;
+            margin-bottom:400px;
+            width:200px;
+            height:150px;
+        }
+        .img-c:hover{
+            opacity:0.5;
+        }
+        .img-d{
+            margin-top:-550px;
+            margin-left:700px;
+            margin-bottom:400px;
+            width:200px;
+            height:150px;
+        }
+        .img-d:hover{
+            opacity:0.5;
         }
 		/*ここからハンバーガー
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/

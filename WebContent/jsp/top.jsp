@@ -426,12 +426,18 @@
 		     margin-right:20px;
              width:300px;
         }
+        .img-y:hover{
+             opacity:0.5;
+        }
         .img-z{
              margin-top:-105px;
 		     margin-bottom:20px;
 		     margin-left:820px;
 		     margin-right:20px;
              width:300px;
+        }
+        .img-z:hover{
+             opacity:0.5;
         }
         .frame{
              margin-top:100px;
