@@ -17,7 +17,7 @@ public class TopServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    	RequestDispatcher dispatcher = req.getRequestDispatcher("html/Petpathfinder_Top.html");
+    	RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/top.jsp");
     	dispatcher.forward(req, resp);
     }
 }
