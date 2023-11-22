@@ -366,6 +366,9 @@
             sans-serif;
 
         }
+        .object-19:hover{
+            opacity: 0.5;
+        }
         .p-a{
             margin-top:50px;
             font-size:23px;

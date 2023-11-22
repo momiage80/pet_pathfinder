@@ -220,6 +220,7 @@
             margin-bottom:120px;
         }
         .top {
+            background: white;
             width: 803px;
             height: 124px;
             margin-left:200px;
@@ -228,6 +229,10 @@
         .top-1 {
             width: 800px;
             height: 120px;
+        }
+
+        .top-1:hover {
+            opacity:0.5;
         }
         a{
             color: #000000;

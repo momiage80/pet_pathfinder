@@ -361,6 +361,9 @@
             sans-serif;
 
         }
+        .object-19:hover{
+            opacity: 0.5;
+        }
         @media (max-width: 991px) {
             .object-19 {
             white-space: initial;
