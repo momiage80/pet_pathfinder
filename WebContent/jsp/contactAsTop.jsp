@@ -36,7 +36,7 @@
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
 			                    <div class="object-8">お問合せ</div>
-			                    <div class="object-9">otoawase</div>
+			                    <div class="object-9">contacta</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -65,7 +65,7 @@
 		    src="https://cdn.builder.io/api/v1/image/assets/TEMP/5cdf5ad6-a7c9-4f9f-b223-66584a286d87?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
 		    class="img"
 		    ></img>-->
-		    <button><a href="#">送信</a></button>
+		  <button class="button_sousi"><a href="#">送信</a></button>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
@@ -239,6 +239,29 @@
 
         /*ここからメイン
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+.button_sousi {
+    cursor: pointer;
+    display: inline-block;
+    padding: 15px 40px; /* 横長に調整 */
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #fff;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.button_sousi:hover {
+    background-color: #555;
+}
+
+.button_sousi:hover {
+    background-color: #555;
+}
+
 .div-6 form {
     display: flex;
     flex-direction: column;
