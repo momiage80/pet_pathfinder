@@ -30,7 +30,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="../img/cat4.png"
+	                    srcset="/Pet_Pathfinder/img/cat4.png"
 	                    class="img"
 	                    />
 	                </div>
@@ -40,10 +40,10 @@
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
 	          <div class="div-9">(表示名)のマイページ</div>
 
-               <a href="#" class="img-a"><img src="../img/customer.png"  alt="Image 1" /></a>
-               <a href="#" class="img-b" ><img src="../img/trede.png" alt="Image 2"></a>
-               <a href="#" class="img-c"><img src="../img/irai.png" ></a>
-               <a href="#" class="img-d"><img src="../img/profile.png" ></a>
+               <a href="#" class="img-a"><img src="/Pet_Pathfinder/img/customer.png"  alt="Image 1" /></a>
+               <a href="#" class="img-b" ><img src="/Pet_Pathfinder/img/trede.png" alt="Image 2"></a>
+               <a href="#" class="img-c"><img src="/Pet_Pathfinder/img/irai.png" ></a>
+               <a href="#" class="img-d"><img src="/Pet_Pathfinder/img/profile.png" ></a>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
