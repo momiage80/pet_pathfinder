@@ -563,7 +563,7 @@
         }
 
         .nav_content{
-            width:250px;
+            width:50%;
             height:100%;
             bottom:0px;
             text-align:center;
@@ -584,7 +584,7 @@
         }
 
         #drawer_input:checked ~ .nav_content{
-            left:0;
+            left:50%;
         }
 
         .nav_item{
@@ -596,6 +596,7 @@
         }
         .a{
             color:#fff;
+            text-decoration-line: none;
         }
     </style>
 </body>

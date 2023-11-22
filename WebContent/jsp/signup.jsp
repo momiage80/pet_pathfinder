@@ -238,6 +238,10 @@
             margin: 0 10px 40px 0;
             }
         }
+        .button_title {
+        	color:#000;
+            text-decoration-line: none;
+        }
         /*ここからメイン
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         .main {
@@ -370,10 +374,6 @@
             margin: 40px 0;
             }
         }
-        a{
-            color: #fff;
-            text-decoration-line: none;
-        }
 
 		/*ここからハンバーガー
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
@@ -470,6 +470,7 @@
         }
         .a{
             color:#fff;
+            text-decoration-line: none;
         }
     </style>
 </body>
