@@ -16,7 +16,7 @@
 	                <div class="column">
 		                <div class="object-5">
 		                    <div class="object-6">
-		                        <a href="#" class="button_title">Pet PathFinder</a>
+		                        <a href="/Pet_Pathfinder/Top" class="button_title">Pet PathFinder</a>
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
@@ -209,6 +209,9 @@
             margin: 0 10px 40px 0;
             }
         }
+        .button_title {
+        	color: black;
+        }
         /*ここからメイン
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
          .div-9 {
@@ -232,10 +235,11 @@
           }
         }
         a{
+        	color: white;
             width:200px;
             height:150px;
-            background: white;
-            /*border:none;*/
+            /*background: white;*/
+            text-decoration-line: none;
         }
         .img-a{
             margin-top:40px;
@@ -339,7 +343,7 @@
         }
 
         .nav_content{
-            width:250px;
+            width:50%;
             height:100%;
             bottom:0px;
             text-align:center;
@@ -360,7 +364,7 @@
         }
 
         #drawer_input:checked ~ .nav_content{
-            left:0;
+            left:50%;
         }
 
         .nav_item{
@@ -372,6 +376,7 @@
         }
         .a{
             color:#fff;
+            text-decoration-line: none;
         }
     </style>
 </body>
