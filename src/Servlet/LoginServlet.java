@@ -22,7 +22,7 @@ public class LoginServlet extends HttpServlet {
 	}
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		RequestDispatcher dispatcher = req.getRequestDispatcher("html/PPF_Mypage.html");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/mypage.jsp");
 		dispatcher.forward(req, resp);
 	}
 }
