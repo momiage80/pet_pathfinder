@@ -35,8 +35,8 @@
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">ログイン</div>
-			                    <div class="object-9">login</div>
+			                    <div class="object-8">確認画面</div>
+			                    <div class="object-9">signup</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -45,17 +45,17 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="../img/login_header_image.jpg"
+	                    srcset="../img/cat2.png"
 	                    class="img"
 	                    />
 	                </div>
 	                </div>
 	            </div>
             </div>
-            <!-- このメインの部分を入れ替える（CSSのメイン部分も入れ替える） -------------------------------------------------------->
+            <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
 	            <div class="main">
-		            <div class="object-12">login</div>
-		            <form action="Login" method="post">
+		            <div class="object-12"></div>
+		            <form action="Signup" method="post">
 			            <div class="object-13">
 			                <img
 			                loading="lazy"
@@ -78,7 +78,19 @@
 			                </div>
 			            </div>
 			            <div class="object-18"></div>
-			            <input class="object-19" type="submit" value="login"></input>
+			            <div class="object-16">
+			            <img src="../img/mail.png" class="img-a">
+			            <div class="object-14">
+			                    <input type="text" class="input-name" placeholder="email-address">
+			            </div>
+			            </div>
+			            <div class="object-18"></div>
+			            <p class="p-a">本当にこれでよろしいですか？<br>
+			               よろしければ登録ボタンをクリック<br>
+			               修正したい場合は戻るボタンをクリック
+			            </p>
+			            <input class="object-19" type="submit" value="戻る"></input>
+			            <input class="object-19" type="submit" value="登録"></input>
 		           	</form>
 	            </div>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
@@ -157,10 +169,6 @@
             padding-top: 30px;
             text-align: center;
             font: 400 32px/37px Yeseva One, sans-serif;
-        }
-        .button_title {
-        	color: #000000;
-            text-decoration-line: none;
         }
         .object-7 {
             display: flex;
@@ -365,13 +373,17 @@
             border-radius: 20px;
             box-shadow: 8px 7px 0px 0px rgba(0, 0, 0, 0.4);
             background-color: #0cf;
-            width: 391px;
+            width: 150px;
             max-width: 100%;
-            margin: 78px 0 56px;
+            margin: 78px 0 56px 45px;
             padding: 13px 20px;
             font: 400 24px/34px Noto Serif JP, -apple-system, Roboto, Helvetica,
             sans-serif;
 
+        }
+        .p-a{
+            margin-top:50px;
+            font-size:23px;
         }
         @media (max-width: 991px) {
             .object-19 {
@@ -384,7 +396,7 @@
             text-decoration-line: none;
         }
 
-		/*ここからハンバーガー ※ここから下は入れ替えない
+		/*ここからハンバーガー
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         .hamburger{
         	position: absolute;

@@ -52,9 +52,10 @@
 	                </div>
 	            </div>
             </div>
-            <!-- このメインの部分を入れ替える（CSSのメイン部分も入れ替える） -------------------------------------------------------->
+            <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
 	            <div class="main">
 		            <div class="object-12">login</div>
+		            <p class="p-1">ユーザ名、またはパスワードが間違っています。</p>
 		            <form action="Login" method="post">
 			            <div class="object-13">
 			                <img
@@ -157,10 +158,6 @@
             padding-top: 30px;
             text-align: center;
             font: 400 32px/37px Yeseva One, sans-serif;
-        }
-        .button_title {
-        	color: #000000;
-            text-decoration-line: none;
         }
         .object-7 {
             display: flex;
@@ -383,8 +380,13 @@
             color: #000000;
             text-decoration-line: none;
         }
+        .p-1{
+            color:red;
+            margin-top: 20px;
+            font-size: 18px;
+        }
 
-		/*ここからハンバーガー ※ここから下は入れ替えない
+		/*ここからハンバーガー
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         .hamburger{
         	position: absolute;
