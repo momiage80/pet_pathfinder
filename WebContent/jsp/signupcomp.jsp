@@ -16,7 +16,7 @@
 	                <div class="column">
 		                <div class="object-5">
 		                    <div class="object-6">
-		                        <a href="#" class="button_title">Pet PathFinder</a>
+		                        <a href="/Pet_Pathfinder/Top" class="button_title">Pet PathFinder</a>
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
@@ -39,7 +39,9 @@
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
             <img class="img-a"  src="../img/check.png">
             <p class="p1">登録が完了しました</p>
-            <button class="top"><img src="../img/top.png" class="top-1"></button>
+            <form action="/Pet_Pathfinder/Top" class="top-form">
+            	<input type="image" src="../img/top.png" alt="Submit" class="top-1">
+            </form>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
@@ -212,7 +214,7 @@
             height: 100px;
             margin-top:20px;
             margin-bottom:20px;
-            margin-left: 550px;
+            margin: auto;
         }
         .p1{
             font-size:25px;
@@ -223,7 +225,7 @@
             background: white;
             width: 803px;
             height: 124px;
-            margin-left:200px;
+            margin: auto;
             margin-bottom:300px;
         }
         .top-1 {
@@ -231,6 +233,10 @@
             height: 120px;
         }
 
+        .top-form {
+        	margin: auto;
+        	margin-bottom: 120px;
+        }
         .top-1:hover {
             opacity:0.5;
         }
