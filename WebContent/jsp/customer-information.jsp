@@ -55,24 +55,32 @@
             <img src="../img/aki.png" class="img-a">
 
             <form action="userprofile.jsp" method="get">
-            <p class="img-c"><input type="image" src="../img/customer-information-icon.png" id="userprofile" name="userprofile" ></p>
+            <p class="img-c">
+            <input type="image" src="../img/customer-information-icon.png" id="userprofile" name="userprofile" >
+            </p>
             </form>
 
             <!--<img src="../img/customer-information-icon.png" class="img-c">-->
             <img src="../img/customer-information.png" class="img-b">
-
-            <form action="mypage.jsp" method="get">
-            <p class="img-d"><input type="image" src="../img/customer-information-back.png" id="back" name="back" ></p>
-            </form>
-
             <!--<a href="#" class="img-d"><img src="../img/customer-information-back.png" ></a>-->
             <!--<a href="#" class="img-e"><img src="../img/customer-information-delete.png" ></a>-->
+
+            <form action="mypage.jsp" method="get">
+            <p class="img-d">
+            <input type="image" src="../img/customer-information-back.png" id="back" name="back" >
+            </p>
+            </form>
+
             <form action="customer-information-delete.jsp" method="get" >
-            <p class="img-e"><input type="image" src="../img/customer-information-delete.png" id="delete" name="delete" ></p>
+            <p class="img-e">
+            <input type="image" src="../img/customer-information-delete.png" id="delete" name="delete" >
+            </p>
             </form>
 
             <form action="customer-information-change.jsp" method="get" >
-            <p class="img-f"><input type="image" src="../img/customer-information-change.png" id="change" name="change" ></p>
+            <p class="img-f">
+            <input type="image" src="../img/customer-information-change.png" id="change" name="change" >
+            </p>
             </form>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
@@ -278,28 +286,28 @@
             margin-top:0px;
             margin-left:-10px;
             margin-bottom:0px;
-            width:0px;
-            height:0px;
+            width:100px;
+            height:100px;
         }
         .img-d:hover{
             opacity:0.5;
         }
         .img-e{
-            margin-top:0px;
+            margin-top:-100px;
             margin-left:300px;
             margin-bottom:0px;
-            width:0px;
-            height:0px;
+            width:100px;
+            height:100px;
         }
         .img-e:hover{
             opacity:0.5;
         }
         .img-f{
-            margin-top:0px;
+            margin-top:-100px;
             margin-left:850px;
-            margin-bottom:1100px;
-            width:0px;
-            height:0px;
+            margin-bottom:900px;
+            width:100px;
+            height:100px;
         }
         .img-f:hover{
             opacity:0.5;
