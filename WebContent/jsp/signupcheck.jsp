@@ -40,43 +40,49 @@
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
 	            <div class="main">
 		            <div class="object-12"></div>
-		            <form action="Signup" method="post">
-			            <div class="object-13">
-			                <img
-			                loading="lazy"
-			                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
-			                class="img-3"
-			                />
-			                <div class="object-14">
-			                    <input type="text" class="input-name" placeholder="Your name">
-			                </div>
-			            </div>
-			            <div class="object-15"></div>
-			            <div class="object-16">
-			                <img
-			                loading="lazy"
-			                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
-			                class="img-4"
-			                />
-			                <div class="object-17">
-			                    <input type="password" class="input-password" placeholder="Password">
-			                </div>
-			            </div>
-			            <div class="object-18"></div>
-			            <div class="object-16">
-			            <img src="../img/mail.png" class="img-a">
-			            <div class="object-14">
-			                    <input type="text" class="input-name" placeholder="email-address">
-			            </div>
-			            </div>
-			            <div class="object-18"></div>
-			            <p class="p-a">本当にこれでよろしいですか？<br>
-			               よろしければ登録ボタンをクリック<br>
-			               修正したい場合は戻るボタンをクリック
-			            </p>
-			            <input class="object-19" type="submit" value="戻る"></input>
-			            <input class="object-19" type="submit" value="登録"></input>
-		           	</form>
+		            <div class="object-13">
+		                <img
+		                loading="lazy"
+		                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
+		                class="img-3"
+		                />
+		                <div class="object-14">
+		                    <input type="text" class="input-name" placeholder="Your name">
+		                </div>
+		            </div>
+		            <div class="object-15"></div>
+		            <div class="object-16">
+		                <img
+		                loading="lazy"
+		                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
+		                class="img-4"
+		                />
+		                <div class="object-17">
+		                    <input type="password" class="input-password" placeholder="Password">
+		                </div>
+		            </div>
+		            <div class="object-18"></div>
+		            <div class="object-16">
+		            <img src="../img/mail.png" class="img-a">
+		            <div class="object-14">
+		                    <input type="text" class="input-name" placeholder="email-address">
+		            </div>
+		            </div>
+		            <div class="object-18"></div>
+		            <p class="p-a">本当にこれでよろしいですか？<br>
+		               よろしければ登録ボタンをクリック<br>
+		               修正したい場合は戻るボタンをクリック
+		            </p>
+		            <div style="display:inline-flex">
+			            <form action="Signupcheck" method="post">
+			            	<input type="hidden" name="action" value="edit">
+			            	<input class="object-19" type="submit" value="戻る"></input>
+			            </form>
+			            <form action="Signupcheck" method="post">
+			            	<input type="hidden" name="action" value="register">
+			            	<input class="object-19" type="submit" value="登録"></input>
+			            </form>
+			        </div>
 	            </div>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>

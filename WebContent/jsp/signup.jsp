@@ -64,10 +64,10 @@
 			            </div>
 			            <div class="object-18"></div>
 			            <div class="object-16">
-			            <img src="../img/mail.png" class="img-a">
-			            <div class="object-14">
+				            <img src="../img/mail.png" class="img-a">
+				            <div class="object-14">
 			                    <input type="text" class="input-name" placeholder="email-address">
-			            </div>
+				            </div>
 			            </div>
 			            <div class="object-18"></div>
 			            <input class="object-19" type="submit" value="signup"></input>
