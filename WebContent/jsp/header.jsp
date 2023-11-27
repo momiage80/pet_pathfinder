@@ -8,7 +8,7 @@
                 <li class="nav_item"><a class="a" href="/Pet_Pathfinder/Login">login</a></li>
                 <li class="nav_item"><a class="a" href="/Pet_Pathfinder/Signup">signup</a></li>
                 <li class="nav_item"><a class="a" href="/Pet_Pathfinder/Mypage">mypage</a></li>
-                <li class="nav_item"><a class="a" href="/Pet_Pathfinder/Gift">gift</a></li>
+                <li class="nav_item"><a class="a" href="/Pet_Pathfinder/Trade">Trade</a></li>
                 <li class="nav_item"><a class="a" href="/Pet_Pathfinder/Contact">contact as</a></li>
                 <li class="nav_item"><a class="a" href="/Pet_Pathfinder/Logout">logout</a></li>
                 <li class="nav_item"><a class="a" href="/Pet_Pathfinder/Charge">charge</a></li>
