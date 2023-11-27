@@ -8,20 +8,21 @@
 </head>
 <body>
 	<div class="object-1">
-        <!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーー-->
+		<!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーー-->
     	<%@ include file="header.jsp" %>
+
         <div class="object-2">
             <div class="object-3">
 	            <div class="object-4">
 	                <div class="column">
 		                <div class="object-5">
 		                    <div class="object-6">
-		                        <a href="#" class="button_title">Pet PathFinder</a>
+		                        <a href="/Pet_Pathfinder/jsp/top.jsp" class="button_title">Pet PathFinder</a>
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">ログイン</div>
-			                    <div class="object-9">login</div>
+			                    <div class="object-8">コイン購入</div>
+			                    <div class="object-9">charge</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -30,49 +31,37 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="../img/login_header_image.jpg"
+	                    srcset="../img/chrge_header_img.jpg"
 	                    class="img"
 	                    />
 	                </div>
 	                </div>
 	            </div>
             </div>
-            <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
-	            <div class="main">
-		            <div class="object-12">login</div>
-		            <p class="p-1">ユーザ名、またはパスワードが間違っています。</p>
-		            <form action="Login" method="post">
-			            <div class="object-13">
-			                <img
-			                loading="lazy"
-			                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
-			                class="img-3"
-			                />
-			                <div class="object-14">
-			                    <input type="text" class="input-name" placeholder="Your name">
-			                </div>
-			            </div>
-			            <div class="object-15"></div>
-			            <div class="object-16">
-			                <img
-			                loading="lazy"
-			                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
-			                class="img-4"
-			                />
-			                <div class="object-17">
-			                    <input type="password" class="input-password" placeholder="Password">
-			                </div>
-			            </div>
-			            <div class="object-18"></div>
-			            <input class="object-19" type="submit" value="login"></input>
-		           	</form>
-	            </div>
+            <!-- このメインの部分を入れ替える（CSSのメイン部分も入れ替える） -------------------------------------------------------->
+	          <center><h1>コイン購入画面</h1></center>
+				          <div class="coin-options">
+			    <div class="coin-option" onclick="purchaseCoins(10)">
+			        <div class="coin-amount">10コイン\110</div>
+			        <button class="purchase-button"><a href="#">購入</a></button>
+			    </div>
+
+			    <div class="coin-option" onclick="purchaseCoins(50)">
+			        <div class="coin-amount">50コイン\550円</div>
+			        <button class="purchase-button"><a href="#">購入</a></button>
+			    </div>
+
+			    <div class="coin-option" onclick="purchaseCoins(100)">
+			        <div class="coin-amount">100コイン\1100円</div>
+			        <button class="purchase-button"><a href="#">購入</a></button>
+			    </div>
+			</div>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
     <jsp:include page="footer.jsp" />
     <style>
-    	/*ここからヘッダー
+    	/*ここからヘッダーCSS（書き換えない）
     	ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         *{
             margin: 0;
@@ -144,6 +133,10 @@
             text-align: center;
             font: 400 32px/37px Yeseva One, sans-serif;
         }
+        .button_title {
+        	color: #000000;
+            text-decoration-line: none;
+        }
         .object-7 {
             display: flex;
             margin-top: 183px;
@@ -160,7 +153,7 @@
         .object-8 {
             color: #000;
             text-align: center;
-            font: 400 37px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
+            font: 400 30px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
             sans-serif;
         }
         @media (max-width: 991px) {
@@ -232,8 +225,55 @@
             margin: 0 10px 40px 0;
             }
         }
-        /*ここからメイン
+        /*ここからメイン （書き換える）
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+    /* コインオプションのスタイル */
+    .coin-options {
+        display: flex;
+        justify-content: center; /* 中央寄せに変更 */
+        align-items: center; /* 縦方向も中央寄せに変更 */
+        height: 100vh; /* ビューポートの高さいっぱいに広げる */
+    }
+
+    .coin-option {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #d3d3d3; /* グレーの背景 */
+        color: #333; /* 文字色を暗めに */
+        padding: 20px;
+        text-align: center;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin: 0 20px; /* オプション間の横のマージンを追加 */
+        width: 400px; /* 四角形の横幅を指定 */
+    }
+
+    .coin-option:hover {
+        background-color: #c0c0c0; /* グレーを少し濃く */
+    }
+
+    .coin-amount {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    /* 購入ボタンのスタイル */
+    .purchase-button {
+        background-color: #ff8c00; /* ダークオレンジ色のボタンに変更 */
+        color: #333; /* 文字色を暗めに */
+        padding: 10px 20px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .purchase-button:hover {
+        background-color: #e07d00; /* ダークオレンジ色を少し濃く */
+    }
         .main {
             border-radius: 61px;
             border: 1px solid #3e3e3e;
@@ -365,16 +405,11 @@
             }
         }
         a{
-            color: #000000;
+            color: #fff;
             text-decoration-line: none;
         }
-        .p-1{
-            color:red;
-            margin-top: 20px;
-            font-size: 18px;
-        }
 
-		/*ここからハンバーガー
+		/*ここからハンバーガー ※ここから下は入れ替えない
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         .hamburger{
         	position: absolute;
@@ -436,7 +471,7 @@
         }
 
         .nav_content{
-            width:250px;
+            width:50%;
             height:100%;
             bottom:0px;
             text-align:center;
@@ -457,7 +492,8 @@
         }
 
         #drawer_input:checked ~ .nav_content{
-            left:0;
+        	/*ここでアニメーション後のnavバーの位置を変える*/
+            left:50%;
         }
 
         .nav_item{

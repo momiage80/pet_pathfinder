@@ -10,19 +10,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class LoginServlet
+ * Servlet implementation class SignupServlet
  */
-@WebServlet("/Login")
-public class LoginServlet extends HttpServlet {
+@WebServlet("/Signup")
+public class SignupServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/login.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/signup.jsp");
 		dispatcher.forward(req, resp);
 	}
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/mypage.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/signupcheck.jsp");
 		dispatcher.forward(req, resp);
 	}
 }

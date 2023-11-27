@@ -6,36 +6,27 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjp.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
 </head>
 <body>
 	<div class="div">
 	    <!--ハンバーガーメニュー-->
-	    <header class="header">
-	        <div class="nav">
-	            <input id="drawer_input" class="drawer_hidden" type="checkbox">
-	            <label for="drawer_input" class="drawer_open"><span></span></label>
-	            <nav class="nav_content">
-	                <ul class="nav_list">
-	                    <li class="nav_item"><a href="PPF_login.html">login</a></li>
-	                    <li class="nav_item"><a href="PPF_Signup.html">signup</a></li>
-	                    <li class="nav_item"><a href=""></a>mypage</li>
-	                    <li class="nav_item"><a href="PPF_GiftTop.html">gift</a></li>
-	                    <li class="nav_item"><a href="PPF_ContactAsTop.html">contact as</a></li>
-	                    <li class="nav_item"><a href="PPF_logout.html">logout</a></li>
-	                    <li class="nav_item"><a href="PPF_ChargeTop.html">charge</a></li>
-	                </ul>
-	            </nav>
-	        </div>
-	    </header>
+	    <%@ include file="header.jsp" %>
+
 	    <div class="div-2">
 		    <img
 		        loading="lazy"
-		        srcset="../img/cat1.png"
+		        srcset="/Pet_Pathfinder/img/cat1.png"
 		        class="img"
 		    />
 		    <div class="div-3">
 		        <div class="div-4">
-		        	<span>Pet PathFinder<img src="../img/7785.png" alt="hoge" style="width: 3rem; white-space: nowrap;"></span>
+		        	<span>Pet PathFinder<img src="/Pet_Pathfinder/img/7785.png" alt="hoge" style="width: 3rem; white-space: nowrap;"></span>
 		        	<hr style="width: 240px">
 		        </div>
 		    </div>
@@ -76,11 +67,12 @@
 		        class="img-7"
 		    />
 	    </div>
-	    <img src="../img/tizu.png" class="img-8">
-	    <img src="../img/Frame.png" class="frame">
-	    <input type="image" src="../img/button1.png"  class="img-y"/>
-	    <input type="image" src="../img/button2.png"  class="img-z"/>
-	    <img src="../img/footer.png" class="img-a">
+	    <div id="map" style="width: 80%;"></div>
+	    <img src="/Pet_Pathfinder/img/Frame.png" class="frame">
+	    <input type="image" src="/Pet_Pathfinder/img/button1.png"  class="img-y"/>
+	    <input type="image" src="/Pet_Pathfinder/img/button2.png"  class="img-z"/>
+	    <!-- footer部分 -->
+	    <jsp:include page="footer.jsp" />
 	</div>
 	<style>
 		* {
@@ -328,106 +320,12 @@
 		    padding: 40px 0;
 		    }
 		}
-
-		/*ハンバーガーメニューcss*/
-		.header{
-			position: absolute;
-			right: 0;
-		    background:#555;
-		}
-
-		.drawer_hidden{
-		    display:none;
-		}
-
-		.drawer_open{
-		    display:flex;
-		    height: 60px;
-		    width:60px;
-		    justify-content:center;
-		    align-items:center;
-		    position: relative;
-		    z-index: 100;/*重なりが一番上になる*/
-		    cursor:pointer;
-		    color:#fff
-		}
-
-		.drawer_open span,
-		.drawer_open span:before,
-		.drawer_open span:after{
-		    content:'';
-		    display:block;
-		    height:3px;
-		    width:25px;
-		    border-radius:3px;
-		    background:#fff;
-		    transition:0.5s;
-		    position:absolute;
-		}
-
-		.drawer_open span:before{
-		    bottom:10px;
-		}
-
-		.drawer_open span:after{
-		    top:10px;
-		}
-
-		#drawer_input:checked ~ .drawer_open span{
-		    background:rgba(255,255,255,0);
-		}
-
-		#drawer_input:checked ~ .drawer_open span::before{
-		    bottom:0;
-		    transform: rotate(45deg);
-		}
-
-		#drawer_input:checked ~ .drawer_open span::after{
-		    top:0;
-		    transform: rotate(-45deg);
-		}
-
-		.nav_content{
-		    width:200px;
-		    height:100%;
-		    bottom:0px;
-		    text-align:center;
-		    margin-right: auto;
-		    position:fixed;
-		    top:9px;
-		    right:-50%;
-		    z-index:99;
-		    background:rgba(0,0,0,0.5);
-		    color:#fff;
-		    transition:.5s;
-
-		}
-
-		.nav_list{
-		    margin-top:20px;
-		    margin-bottom:20px;
-		    margin-left:20px;
-		    margin-right:20px;
-		    /*この記述でハンバーガーメニューを修正する。*/
-		    list-style:none;
-		}
-
-		#drawer_input:checked ~ .nav_content{
-		    right:30px;
-		}
-
-		a{
-		    color:#eee;
-		}
-        .img-y{
+		.img-y{
              margin-top:40px;
 		     margin-bottom:20px;
 		     margin-left:150px;
 		     margin-right:20px;
              width:300px;
-        }
-        .img-y:hover{
-             opacity:0.5;
         }
         .img-z{
              margin-top:-105px;
@@ -436,18 +334,137 @@
 		     margin-right:20px;
              width:300px;
         }
-        .img-z:hover{
-             opacity:0.5;
+        a {
+       		color: white;
+       		border-
         }
-        .frame{
-             margin-top:100px;
-		     margin-bottom:300px;
-		     margin-left:20px;
-		     margin-right:20px;
+
+		/*ここからハンバーガー ※ここから下は入れ替えない
+		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+        .hamburger{
+        	position: absolute;
+            background:#555;
+            right: 22px;
+		    top: 22px;
+		    z-index: 1;
         }
-        .img-a{
-             margin-top:500px;
+
+        .drawer_hidden{
+            display:none;
+        }
+
+        .drawer_open{
+            display:flex;
+            height: 60px;
+            width:60px;
+            justify-content:center;
+            align-items:center;
+            position: relative;
+            z-index: 100;/*重なりが一番上になる*/
+            cursor:pointer;
+            color:#fff
+        }
+
+        .drawer_open span,
+        .drawer_open span:before,
+        .drawer_open span:after{
+            content:'';
+            display:block;
+            height:3px;
+            width:25px;
+            border-radius:3px;
+            background:#fff;
+            transition:0.5s;
+            position:absolute;
+        }
+
+        .drawer_open span:before{
+            bottom:8px;
+        }
+
+        .drawer_open span:after{
+            top:8px;
+        }
+
+        #drawer_input:checked ~ .drawer_open span{
+            background:rgba(255,255,255,0);
+        }
+
+        #drawer_input:checked ~ .drawer_open span::before{
+            bottom:0;
+            transform: rotate(45deg);
+        }
+
+        #drawer_input:checked ~ .drawer_open span::after{
+            top:0;
+            transform: rotate(-45deg);
+        }
+
+        .nav_content{
+            width:50%;
+            height:100%;
+            bottom:0px;
+            text-align:center;
+            margin-right:auto;
+            position:fixed;
+            top:0;
+            left:100%;
+            z-index:99;
+            background:rgba(0,0,0,0.5);
+            color:#fff;
+            transition:.5s;
+
+        }
+		/*この記述でハンバーガーメニューを修正する。
+		--------------------------------------------------------------------------------------------------*/
+		    .nav_list{
+            list-style:none;
+        }
+        #drawer_input:checked ~ .nav_content{
+        	/*ここでアニメーション後のnavバーの位置を変える*/
+            left:50%;
+        }
+
+        .nav_item{
+            font-size:25px;
+            margin-top:20px;
+            margin-bottom:20px;
+            margin-left:20px;
+            margin-right:20px;
+        }
+        a{
+            color:#fff;
+            text-decoration-line: none;
         }
 		</style>
+
+		<!-- ここからjavascript
+		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー-->
+		<script>
+	        var map = L.map('map').setView([35.8713, 139.9719], 15);
+	        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	            maxZoom: 19,
+	            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	        }).addTo(map);
+	        var marker = L.marker([35.8689, 139.9711]).addTo(map);
+	        // var polygon = L.polygon([
+	        //     [35.89, 139.971],
+	        //     [35.8689, 139.9713],
+	        //     [35.868, 139.9715]
+	        // ]).addTo(map);
+	        marker.bindPopup("hoge").openPopup();
+	        var popup = L.popup()
+	            .setLatLng([35.85, 139.90])
+	            .setContent("<button style='color:blue';>I am a standalone popup.</button>")
+	            .openOn(map);
+	        var popup_latlng = L.popup();
+	        function onMapClick(e) {
+	            popup_latlng
+	                        .setLatLng(e.latlng)
+	                        .setContent("You clicked the map at" + e.latlng.toString())
+	                        .openOn(map);
+	        }
+	        map.on('click', onMapClick);
+    	</script>
 	</body>
 </html>

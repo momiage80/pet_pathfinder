@@ -8,23 +8,8 @@
 </head>
 <body>
 	<div class="object-1">
-        <header class="hamburger">
-            <div class="nav">
-                <input id="drawer_input" class="drawer_hidden" type="checkbox">
-                <label for="drawer_input" class="drawer_open"><span></span></label>
-                <nav class="nav_content">
-                    <ul class="nav_list">
-                        <li class="nav_item"><a href="PPF_login.html">login</a></li>
-                        <li class="nav_item"><a href="PPF_Signup.html">signup</a></li>
-                        <li class="nav_item"><a href="PPF_mypage.html">mypage</a></li>
-                        <li class="nav_item"><a href="PPF_GiftTop.html">gift</a></li>
-                        <li class="nav_item"><a href="PPF_ContactAsTop.html">contact as</a></li>
-                        <li class="nav_item"><a href="PPF_logout.html">logout</a></li>
-                        <li class="nav_item"><a href="PPF_ChargeTop.html">charge</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        <!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーー-->
+    	<%@ include file="header.jsp" %>
         <div class="object-2">
             <div class="object-3">
 	            <div class="object-4">
@@ -36,7 +21,7 @@
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
 			                    <div class="object-8">お問合せ</div>
-			                    <div class="object-9">otoawase</div>
+			                    <div class="object-9">contacta</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -65,7 +50,7 @@
 		    src="https://cdn.builder.io/api/v1/image/assets/TEMP/5cdf5ad6-a7c9-4f9f-b223-66584a286d87?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
 		    class="img"
 		    ></img>-->
-		    <button><a href="#">送信</a></button>
+		  <button class="button_sousi"><a href="#">送信</a></button>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
@@ -239,6 +224,29 @@
 
         /*ここからメイン
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+.button_sousi {
+    cursor: pointer;
+    display: inline-block;
+    padding: 15px 40px; /* 横長に調整 */
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #fff;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.button_sousi:hover {
+    background-color: #555;
+}
+
+.button_sousi:hover {
+    background-color: #555;
+}
+
 .div-6 form {
     display: flex;
     flex-direction: column;
@@ -491,7 +499,7 @@
 		    margin-right:20px;
 		}
 		a{
-		    color:#191919;
+		    color:#fff;
 		}
 		/*ここからハンバーガー
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
@@ -555,7 +563,7 @@
         }
 
         .nav_content{
-            width:250px;
+            width:50%;
             height:100%;
             bottom:0px;
             text-align:center;
@@ -576,7 +584,7 @@
         }
 
         #drawer_input:checked ~ .nav_content{
-            left:0;
+            left:50%;
         }
 
         .nav_item{
@@ -588,6 +596,7 @@
         }
         .a{
             color:#fff;
+            text-decoration-line: none;
         }
     </style>
 </body>

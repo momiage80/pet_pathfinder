@@ -10,14 +10,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class TopServlet
+ * Servlet implementation class ContactServlet
  */
-@WebServlet("/Top")
-public class TopServlet extends HttpServlet {
+@WebServlet("/Contact")
+public class ContactServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    	RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/top.jsp");
-    	dispatcher.forward(req, resp);
-    }
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/contactAsTop.jsp");
+		dispatcher.forward(req, resp);
+	}
 }
