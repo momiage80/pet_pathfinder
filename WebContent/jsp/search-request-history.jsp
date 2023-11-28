@@ -20,8 +20,8 @@
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">マイページ</div>
-			                    <div class="object-9">Mypage</div>
+			                    <div class="object-8">捜索依頼履歴</div>
+			                    <div class="object-9">Search Request history</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -38,12 +38,11 @@
 	            </div>
             </div>
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
-	          <div class="div-9">(表示名)のマイページ</div>
-
-               <a href="#" class="img-a"><img src="/Pet_Pathfinder/img/customer.png"  alt="Image 1" /></a>
-               <a href="#" class="img-b" ><img src="/Pet_Pathfinder/img/trede.png" alt="Image 2"></a>
-               <a href="#" class="img-c"><img src="/Pet_Pathfinder/img/irai.png" ></a>
-               <a href="#" class="img-d"><img src="/Pet_Pathfinder/img/profile.png" ></a>
+	         <img
+	         loading="lazy"
+	         srcset="../img/search-request-history-a.png"
+	         class="img-a"
+	                    />
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
@@ -142,7 +141,7 @@
         }
         @media (max-width: 991px) {
             .object-8 {
-            margin-left: 9px;
+            margin-left: 8px;
             font-size: 40px;
             line-height: 65px;
             }
@@ -214,73 +213,7 @@
         }
         /*ここからメイン
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
-         .div-9 {
-          justify-content: center;
-          color: #fff;
-          max-width: 1485px;
-          border: 1px solid #000;
-          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-          background-color: #000;
-          align-self: stretch;
-          width: 100%;
-          align-items: start;
-          padding: 31px 20px;
-          font: 400 48px/60px Inder, sans-serif;
-        }
-        @media (max-width: 991px) {
-          .div-9 {
-            max-width: 100%;
-            font-size: 40px;
-            line-height: 56px;
-          }
-        }
-        a{
-        	color: white;
-            width:200px;
-            height:150px;
-            /*background: white;*/
-            text-decoration-line: none;
-        }
-        .img-a{
-            margin-top:40px;
-            margin-left:150px;
-            margin-bottom:20px;
-            width:200px;
-            height:150px;
-        }
-        .img-a:hover{
-            opacity:0.5;
-        }
-        .img-b{
-            margin-top:-170px;
-            margin-left:700px;
-            margin-bottom:20px;
-            width:200px;
-            height:150px;
-        }
-        .img-b:hover{
-            opacity:0.5;
-        }
-        .img-c{
-            margin-top:300px;
-            margin-left:150px;
-            margin-bottom:400px;
-            width:200px;
-            height:150px;
-        }
-        .img-c:hover{
-            opacity:0.5;
-        }
-        .img-d{
-            margin-top:-550px;
-            margin-left:700px;
-            margin-bottom:400px;
-            width:200px;
-            height:150px;
-        }
-        .img-d:hover{
-            opacity:0.5;
-        }
+
 		/*ここからハンバーガー
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         .hamburger{
