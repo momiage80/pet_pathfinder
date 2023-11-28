@@ -21,8 +21,8 @@
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">支払い</div>
-			                    <div class="object-9">payment</div>
+			                    <div class="object-8">ログイン</div>
+			                    <div class="object-9">login</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -39,30 +39,31 @@
 	            </div>
             </div>
             <!-- このメインの部分を入れ替える（CSSのメイン部分も入れ替える） -------------------------------------------------------->
-			<div class="main-content">
+	            <div class="main-content">
     <div class="center-heading">
-        <h1>コイン購入画面</h1>
+        <h1>支払い方法選択</h1>
     </div>
     <div class="payment-options">
-        <label class="payment-option">
-            <input type="radio" id="creditCard" name="paymentMethod" value="creditCard">
+        <label class="payment-option" sty>
+            <input type="radio" name="paymentMethod" value="creditCard" style="display: none;">
             <div class="radio-custom"></div>
             <span class="payment-label">クレジットカード</span>
         </label>
 
         <label class="payment-option">
-            <input type="radio" id="payPay" name="paymentMethod" value="payPay">
+            <input type="radio" name="paymentMethod" value="payPay" sty style="display: none;">
             <div class="radio-custom"></div>
             <span class="payment-label">PayPay</span>
         </label>
 
         <label class="payment-option">
-            <input type="radio" id="convenienceStore" name="paymentMethod" value="convenienceStore">
+            <input type="radio" name="paymentMethod" value="convenienceStore" style="display: none;">
             <div class="radio-custom"></div>
             <span class="payment-label">コンビニ払い</span>
         </label>
 
         <button type="button" onclick="submitPayment()">決定</button>
+        <button type="button" onclick="goBack()">戻る</button>
     </div>
 </div>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
@@ -236,90 +237,174 @@
         }
         /*ここからメイン （書き換える）
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
-         /* 追加されたスタイル */
-    body {
-        background-color: #f5f5f5;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+         body {
+            background-color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    .main-content {
-        text-align: center;
-        margin-top: 50px;
-        background-color: #fff;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        max-width: 500px;
-        margin: 0 auto;
-    }
+        .main-content {
+            text-align: center;
+            margin-top: 50px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
 
-    .center-heading {
-        font-size: 32px;
-        font-weight: bold;
-        color: #333;
-        margin-bottom: 20px;
-    }
+        .center-heading {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
 
-    .payment-options {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+        .payment-options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    .payment-option {
-        display: flex;
-        align-items: center;
-        margin: 10px 0;
-        cursor: pointer;
-    }
+        .payment-option {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            cursor: pointer;
+        }
 
-    .radio-custom {
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        border: 2px solid #4CAF50;
-        margin-right: 10px;
-        position: relative;
-        transition: background-color 0.3s;
-    }
+        .radio-custom {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #f1800c;
+            margin-right: 10px;
+            position: relative;
+            transition: background-color 0.3s;
+        }
 
-    .radio-custom::before {
-        content: '';
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: #4CAF50;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(0);
-        transition: transform 0.3s;
-    }
+        .radio-custom::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color:#ffb859;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.3s;
+        }
 
-    input[type="radio"]:checked + .radio-custom::before {
-        transform: translate(-50%, -50%) scale(1);
-    }
+        input[type="radio"]:checked + .radio-custom::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
 
-    .payment-label {
-        font-size: 18px;
-        color: #333;
-    }
+        .payment-label {
+            font-size: 18px;
+            color: #333;
+        }
 
-    .payment-options button {
-        margin-top: 20px;
-        padding: 15px 30px;
-        font-size: 18px;
-        background-color: #4CAF50;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
+        .payment-options button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #f1800c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
 
-    .payment-options button:hover {
-        background-color: #45a049;
-    }
+        .payment-options button:hover {
+            background-color:#ffb859 ;
+        }
+
+        .drawer_hidden {
+            display: none;
+        }
+
+        .drawer_open {
+            display: flex;
+            height: 60px;
+            width: 60px;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 100;
+            /*重なりが一番上になる*/
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .drawer_open span,
+        .drawer_open span:before,
+        .drawer_open span:after {
+            content: '';
+            display: block;
+            height: 3px;
+            width: 25px;
+            border-radius: 3px;
+            background: #fff;
+            transition: 0.5s;
+            position: absolute;
+        }
+
+        .drawer_open span:before {
+            bottom: 8px;
+        }
+
+        .drawer_open span:after {
+            top: 8px;
+        }
+
+        #drawer_input:checked ~ .drawer_open span {
+            background: rgba(255, 255, 255, 0);
+        }
+
+        #drawer_input:checked ~ .drawer_open span::before {
+            bottom: 0;
+            transform: rotate(45deg);
+        }
+
+        #drawer_input:checked ~ .drawer_open span::after {
+            top: 0;
+            transform: rotate(-45deg);
+        }
+
+        .nav_content {
+            width: 50%;
+            height: 100%;
+            bottom: 0px;
+            text-align: center;
+            margin-right: auto;
+            position: fixed;
+            top: 0;
+            left: 100%;
+            z-index: 99;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            transition: 0.5s;
+        }
+
+        #drawer_input:checked ~ .nav_content {
+            /*ここでアニメーション後のnavバーの位置を変える*/
+            left: 50%;
+        }
+
+        .nav_item {
+            font-size: 25px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .a {
+            color: #fff;
+            text-decoration-line: none;
+        }
 		/*ここからハンバーガー ※ここから下は入れ替えない
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         .hamburger{
