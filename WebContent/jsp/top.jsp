@@ -6,6 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjp.css">
+<link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
@@ -35,42 +36,62 @@
 		    	<p class="header-subtitle">また、一緒にいられる毎日を</p>
 		    </div>
 	    </div>
-	    <div class="div-6">
-		    <img
-		        loading="lazy"
-		        srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/c23ce7a6-8a77-44ff-88be-5ceccb17af67?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/c23ce7a6-8a77-44ff-88be-5ceccb17af67?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/c23ce7a6-8a77-44ff-88be-5ceccb17af67?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/c23ce7a6-8a77-44ff-88be-5ceccb17af67?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/c23ce7a6-8a77-44ff-88be-5ceccb17af67?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/c23ce7a6-8a77-44ff-88be-5ceccb17af67?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/c23ce7a6-8a77-44ff-88be-5ceccb17af67?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/c23ce7a6-8a77-44ff-88be-5ceccb17af67?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
-		        class="img-3"
-		    />
-		    <img
-		        loading="lazy"
-		        src="https://cdn.builder.io/api/v1/image/assets/TEMP/ce5b150c-19bb-4a4f-9ad5-de1e3c837f7d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
-		        class="img-4"
-		    />
-	    </div>
-	    <div class="div-7">
-		    <img
-		        loading="lazy"
-		        srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/58e3e2bb-f4eb-42cd-9375-db9f87c8f1d6?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/58e3e2bb-f4eb-42cd-9375-db9f87c8f1d6?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/58e3e2bb-f4eb-42cd-9375-db9f87c8f1d6?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/58e3e2bb-f4eb-42cd-9375-db9f87c8f1d6?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/58e3e2bb-f4eb-42cd-9375-db9f87c8f1d6?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/58e3e2bb-f4eb-42cd-9375-db9f87c8f1d6?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/58e3e2bb-f4eb-42cd-9375-db9f87c8f1d6?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/58e3e2bb-f4eb-42cd-9375-db9f87c8f1d6?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
-		        class="img-5"
-		    />
-		    <div class="div-8">捜索依頼を出す方法</div>
-	    </div>
-	    <div class="div-9">
-		    <img
-		        loading="lazy"
-		        srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/054b1c69-6d89-4de0-a1a7-c809c6ef78c0?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/054b1c69-6d89-4de0-a1a7-c809c6ef78c0?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/054b1c69-6d89-4de0-a1a7-c809c6ef78c0?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/054b1c69-6d89-4de0-a1a7-c809c6ef78c0?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/054b1c69-6d89-4de0-a1a7-c809c6ef78c0?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/054b1c69-6d89-4de0-a1a7-c809c6ef78c0?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/054b1c69-6d89-4de0-a1a7-c809c6ef78c0?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/054b1c69-6d89-4de0-a1a7-c809c6ef78c0?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
-		        class="img-6"
-		    />
-		    <img
-		        loading="lazy"
-		        src="https://cdn.builder.io/api/v1/image/assets/TEMP/4eb6fa28-c348-4d64-b489-6fee6412ee9d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
-		        class="img-7"
-		    />
-	    </div>
-	    <div id="map" style="width: 80%;"></div>
+	    <!-- 初号機
+	    ------------------------------------------------------------------------------------------------------------ -->
+		<!-- 折り畳み展開ポインタ -->
+			<div onclick="toggleContent('open-1');">
+				<a class="btn" id="btn-1" onclick="rotateArrow('btn-1');">Pet Pathfinderとは</a>
+			</div>
+		<!--// 折り畳み展開ポインタ -->
+
+		<!-- 折り畳まれ部分 -->
+			<div id="open-1" style="display:none;clear:both;">
+				<!--ここの部分が折りたたまれる＆展開される部分になります。自由に記述してください。-->
+				<p class="p-1">hogehogehogeohgeohgehogehogehogehogehogehogehogehogehogehoge</p>
+			</div>
+		<!--// 折り畳まれ部分 -->
+		<hr class="btn-hr" />
+
+		<!-- 2号機
+		------------------------------------------------------------------------------------------------------------ -->
+		<!-- 折り畳み展開ポインタ -->
+			<div onclick="toggleContent('open-2');">
+				<a class="btn" id="btn-2" onclick="rotateArrow('btn-2');">Pet Pathfinderとは</a>
+			</div>
+		<!--// 折り畳み展開ポインタ -->
+
+		<!-- 折り畳まれ部分 -->
+			<div id="open-2" style="display:none;clear:both;">
+				<!--ここの部分が折りたたまれる＆展開される部分になります。自由に記述してください。-->
+				<p class="p-1">hogehogehogeohgeohgehogehogehogehogehogehogehogehogehogehoge</p>
+			</div>
+		<!--// 折り畳まれ部分 -->
+		<hr class="btn-hr" />
+
+		<!-- 3号機
+		------------------------------------------------------------------------------------------------------------ -->
+		<!-- 折り畳み展開ポインタ -->
+			<div onclick="toggleContent('open-3');">
+				<a class="btn" id="btn-3" onclick="rotateArrow('btn-3');">Pet Pathfinderとは</a>
+			</div>
+		<!--// 折り畳み展開ポインタ -->
+
+		<!-- 折り畳まれ部分 -->
+			<div id="open-3" style="display:none;clear:both;">
+				<!--ここの部分が折りたたまれる＆展開される部分になります。自由に記述してください。-->
+				<p class="p-1">hogehogehogeohgeohgehogehogehogehogehogehogehogehogehogehoge</p>
+			</div>
+		<!--// 折り畳まれ部分 -->
+		<hr class="btn-hr" />
+
+	    <!-- map
+	    ------------------------------------------------------------------------------------------------ -->
+	    <div id="map"></div>
 	    <img src="/Pet_Pathfinder/img/Frame.png" class="frame">
-	    <input type="image" src="/Pet_Pathfinder/img/button1.png"  class="img-y"/>
-	    <input type="image" src="/Pet_Pathfinder/img/button2.png"  class="img-z"/>
+	    <div class="search-btns">
+		    <input type="image" src="/Pet_Pathfinder/img/button1.png"  class="img-y"/>
+		    <input type="image" src="/Pet_Pathfinder/img/button2.png"  class="img-z"/>
+		</div>
 	    <!-- footer部分 -->
 	    <jsp:include page="footer.jsp" />
 	</div>
@@ -297,6 +318,9 @@
 		    max-width: 100%;
 		    }
 		}
+		.img-z {
+			margin-left: 100px;
+		}
 		.div-10 {
 		    justify-content: flex-end;
 		    color: #fff;
@@ -320,24 +344,83 @@
 		    padding: 40px 0;
 		    }
 		}
-		.img-y{
-             margin-top:40px;
-		     margin-bottom:20px;
-		     margin-left:150px;
-		     margin-right:20px;
-             width:300px;
-        }
-        .img-z{
-             margin-top:-105px;
-		     margin-bottom:20px;
-		     margin-left:820px;
-		     margin-right:20px;
-             width:300px;
-        }
+
         a {
        		color: white;
        		border-
         }
+        #map {
+        	width: 60%;
+        	height: 400px;
+        	margin: 50px auto;
+        }
+        .btn {
+        	display: block;
+			text-align: center;
+			vertical-align: middle;
+			text-decoration: none;
+			width: 60%;
+			margin: 15px auto 0;
+			padding: 1rem 4rem;
+			font-weight: bold;
+			color: black;
+			transition: 0.5s;
+			cursor: pointer;
+			position: relative;
+        }
+        .btn::before{
+		    content: "";
+		    display: block;
+		    width: 20px;
+		    height: 20px;
+		    background: #eee;
+		    border-radius: 50%;
+		    position: absolute;
+		    top: 50%;
+		    transform: translateY(-50%);
+		    right: 10%;
+		}
+		.btn::after{
+		    content: "";
+		    display: block;
+		    width: 7px;
+		    height: 7px;
+		    border-right: 2px solid #333;
+		    border-bottom: 2px solid #333;
+		    transform: rotate(45deg);
+		    position: absolute;
+		    top: calc(50% - 6px);
+		    right: 10.7%;
+		}
+		#btn-1.active::after{
+			transform: rotate(225deg);
+			top: calc(50% - 3px);
+		}
+		#btn-2.active::after{
+			transform: rotate(225deg);
+			top: calc(50% - 3px);
+		}
+		#btn-3.active::after{
+			transform: rotate(225deg);
+			top: calc(50% - 3px);
+		}
+        .btn:hover {
+			color: #fff;
+			background: #eee;
+		}
+		.p-1 {
+			width: 60%;
+			margin: 10px auto;
+		}
+		.btn-hr {
+			width: 60%;
+			margin: auto;
+			color: #eee;
+		}
+		.search-btns {
+			margin: 40px auto;
+
+		}
 
 		/*ここからハンバーガー ※ここから下は入れ替えない
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
@@ -441,6 +524,16 @@
 		<!-- ここからjavascript
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー-->
 		<script>
+			function rotateArrow(id) {
+			    var btn = document.getElementById(id);
+			    btn.classList.toggle('active');
+			}
+
+			function toggleContent(id) {
+			    var openDiv = document.getElementById(id);
+			    openDiv.style.display = (openDiv.style.display == 'none') ? 'block' : 'none';
+			}
+
 	        var map = L.map('map').setView([35.8713, 139.9719], 15);
 	        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	            maxZoom: 19,
