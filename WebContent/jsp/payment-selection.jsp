@@ -21,8 +21,8 @@
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">ログイン</div>
-			                    <div class="object-9">login</div>
+			                    <div class="object-8">支払い</div>
+			                    <div class="object-9">payment</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -41,7 +41,7 @@
             <!-- このメインの部分を入れ替える（CSSのメイン部分も入れ替える） -------------------------------------------------------->
 	            <div class="main-content">
     <div class="center-heading">
-        <h1>支払い方法選択</h1>
+        <h2>支払い方法選択</h2>
     </div>
     <div class="payment-options">
         <label class="payment-option" sty>
@@ -250,7 +250,7 @@
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             max-width: 500px;
-            margin: 0 auto;
+            margin: 90px 300px;
         }
 
         .center-heading {
@@ -263,7 +263,6 @@
         .payment-options {
             display: flex;
             flex-direction: column;
-            align-items: center;
         }
 
         .payment-option {
