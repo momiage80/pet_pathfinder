@@ -21,7 +21,7 @@
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
 			                    <div class="object-8">お問合せ</div>
-			                    <div class="object-9">contact as</div>
+			                    <div class="object-9">contacta</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -38,19 +38,19 @@
 	            </div>
             </div>
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
-			   	<label for="username" class="label">ユーザー名</label>
-			   	<input type="text" id="username" name="username" class="input" required>
-				<label for="email" class="label">メールアドレス</label>
-				<input type="email" id="email" name="email" class="input" required>
-				<label for="inquiry" class="label">お問い合わせ内容</label>
-		        <textarea id="inquiry" name="inquiry" class="textarea" required></textarea>
-				<div class="div-12">
-				    <!--<img
-				    loading="lazy"
-				    src="https://cdn.builder.io/api/v1/image/assets/TEMP/5cdf5ad6-a7c9-4f9f-b223-66584a286d87?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
-				    class="img"
-				    ></img>-->
-				  <button class="button_sousi"><a href="#">送信</a></button>
+	   	<label for="username" class="label">ユーザー名</label>
+	   	<input type="text" id="username" name="username" class="input" required>
+		<label for="email" class="label">メールアドレス</label>
+		<input type="email" id="email" name="email" class="input" required>
+		<label for="inquiry" class="label">お問い合わせ内容</label>
+        <textarea id="inquiry" name="inquiry" class="textarea" required></textarea>
+		<div class="div-12">
+		    <!--<img
+		    loading="lazy"
+		    src="https://cdn.builder.io/api/v1/image/assets/TEMP/5cdf5ad6-a7c9-4f9f-b223-66584a286d87?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
+		    class="img"
+		    ></img>-->
+		  <button class="button_sousi"><a href="#">送信</a></button>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
