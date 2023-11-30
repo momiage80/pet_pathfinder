@@ -20,9 +20,4 @@ public class LogoutServlet extends HttpServlet {
 		RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/logout.jsp");
 		dispatcher.forward(req, resp);
 	}
-	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/logoutcomp.jsp");
-		dispatcher.forward(req, resp);
-	}
 }
