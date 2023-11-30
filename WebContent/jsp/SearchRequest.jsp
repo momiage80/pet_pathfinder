@@ -1,41 +1,45 @@
-<!DOCTYPE html>
-<html lang="ja">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petpathfinder_search</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
 </head>
 <body>
-<div class="div">
-  <div class="div-2">
-    <div class="div-3">
-      <div class="div-4">
-        <div class="column">
-          <div class="div-5">
-            <div class="div-6">Pet PathFinder</div>
-            <div class="div-7">捜索依頼</div>
-          </div>
-        </div>
-        <div class="column-2">
-          <div class="div-8">
-            <img
-              loading="lazy"
-              srcset="/Pet_Pathfinder/img/Catsunglasses.png"
-              class="img"
-            />
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/767b7515-1dff-48f2-b6a7-36b37d1c7443?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
-              class="img-2"
-            />
-            <!-- ハンバーガーメニュー<%@ include file="header.jsp" %>-->
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- ここから下をコピペ -->
-    <!--オープンストリートマップを追加-->
-    <img
+	<div class="object-1">
+		<!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーー-->
+    	<%@ include file="header.jsp" %>
+
+        <div class="object-2">
+            <div class="object-3">
+	            <div class="object-4">
+	                <div class="column">
+		                <div class="object-5">
+		                    <div class="object-6">
+		                        <a href="/Pet_Pathfinder/jsp/top.jsp" class="button_title">Pet PathFinder</a>
+		                    </div>
+		                    <div class="object-7">
+		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
+			                    <div class="object-8">捜索依頼</div>
+			                    <div class="object-9">search</div>
+		                    </div>
+		                </div>
+	                </div>
+	                <div class="column-2">
+	                <div class="object-10">
+	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
+	                    <img
+	                    loading="lazy"
+	                    srcset="/Pet_Pathfinder/img/Catsunglasses.png"
+	                    class="img"
+	                    />
+	                </div>
+	                </div>
+	            </div>
+            </div>
+            <!-- このメインの部分を入れ替える（CSSのメイン部分も入れ替える） -------------------------------------------------------->
+	           <img
       loading="lazy"
       srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/e4c7f1a0-06c5-45b1-8ac8-4fe65d79c386?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/e4c7f1a0-06c5-45b1-8ac8-4fe65d79c386?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/e4c7f1a0-06c5-45b1-8ac8-4fe65d79c386?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/e4c7f1a0-06c5-45b1-8ac8-4fe65d79c386?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/e4c7f1a0-06c5-45b1-8ac8-4fe65d79c386?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/e4c7f1a0-06c5-45b1-8ac8-4fe65d79c386?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/e4c7f1a0-06c5-45b1-8ac8-4fe65d79c386?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/e4c7f1a0-06c5-45b1-8ac8-4fe65d79c386?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
       class="img-3"
@@ -58,7 +62,7 @@
           font-weight: 400;
         "
       >
-        　：<!-- checkbox(?) -->
+        　:
       </span>
     </div>
     <div class="div-11">マップ上の地点をクリックしてください</div>
@@ -79,7 +83,7 @@
           font-weight: 400;
         "
       >
-        　：<!-- checkbox(?) -->
+        　：
       </span>
     </div>
     <div class="div-13">マップ上の地点をクリックしてください</div>
@@ -100,51 +104,62 @@
           font-weight: 400;
         "
       >
-        　：<!-- checkbox(?) -->
+        　：
       </span>
     </div>
     <div class="div-15">必須（ほかのユーザに表示されます）</div>
-    <div class="div-16">動物の種類　：</div>
+    <!-- ここからチェックボックスに変更 -->
+
     <div class="div-17">
     <!-- checkbox -->
-      <img
-        loading="lazy"
-        srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/fc76df25-5ddf-4e87-b53e-2203d604990d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc76df25-5ddf-4e87-b53e-2203d604990d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc76df25-5ddf-4e87-b53e-2203d604990d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc76df25-5ddf-4e87-b53e-2203d604990d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc76df25-5ddf-4e87-b53e-2203d604990d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc76df25-5ddf-4e87-b53e-2203d604990d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc76df25-5ddf-4e87-b53e-2203d604990d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc76df25-5ddf-4e87-b53e-2203d604990d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
-        class="img-4"
-      />
-      <div class="div-18">ネコ</div>
-    </div>
-    <div class="div-19">
-    <!-- checkbox -->
-      <img
-        loading="lazy"
-        srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/9c431595-dd87-408e-9e6f-a5a9821280ba?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/9c431595-dd87-408e-9e6f-a5a9821280ba?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9c431595-dd87-408e-9e6f-a5a9821280ba?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/9c431595-dd87-408e-9e6f-a5a9821280ba?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/9c431595-dd87-408e-9e6f-a5a9821280ba?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9c431595-dd87-408e-9e6f-a5a9821280ba?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/9c431595-dd87-408e-9e6f-a5a9821280ba?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/9c431595-dd87-408e-9e6f-a5a9821280ba?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
-        class="img-5"
-      />
-      <div class="div-20">イヌ</div>
-    </div>
-    <div class="div-21">
-    <!--  checkbox-->
-      <img
-        loading="lazy"
-        srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/7e2eaaa2-1c43-4da5-9ce5-417f06ec88be?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e2eaaa2-1c43-4da5-9ce5-417f06ec88be?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e2eaaa2-1c43-4da5-9ce5-417f06ec88be?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e2eaaa2-1c43-4da5-9ce5-417f06ec88be?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e2eaaa2-1c43-4da5-9ce5-417f06ec88be?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e2eaaa2-1c43-4da5-9ce5-417f06ec88be?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e2eaaa2-1c43-4da5-9ce5-417f06ec88be?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e2eaaa2-1c43-4da5-9ce5-417f06ec88be?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
-        class="img-6"
-      />
-      <div class="div-22">その他</div>
-    </div>
-    <div class="div-23"></div>
+    <div class="amimal-category">
+    <div class="div-16">動物の種類　:</div>
+    <div class="div-20"><input type="radio" name="animal" value="dog" checked><span>犬</span></div>
+    <div class="div-18"><input type="radio" name="animal" value="cat">ネコ</div>
+    <div class="div-22"><input type="radio" name="animal" value="way">その他</div>
+
+    <div class="div-23"><textarea name="wayanimal" rows="3" class="Wayanimal"></textarea></div>
     <div class="div-24">
       <div class="div-25">
       <!-- checkbox(?) -->
-        <span
+        <!--<span
           style="
             font-family: Noto Serif JP, -apple-system, Roboto, Helvetica,
               sans-serif;
             font-weight: 700;
           "
         >
-          動物の写真
+
         </span>
+        -->
+
+
+     <!--   <img
+        loading="lazy"
+        srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/fc76df25-5ddf-4e87-b53e-2203d604990d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc76df25-5ddf-4e87-b53e-2203d604990d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc76df25-5ddf-4e87-b53e-2203d604990d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc76df25-5ddf-4e87-b53e-2203d604990d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc76df25-5ddf-4e87-b53e-2203d604990d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc76df25-5ddf-4e87-b53e-2203d604990d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc76df25-5ddf-4e87-b53e-2203d604990d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc76df25-5ddf-4e87-b53e-2203d604990d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
+        class="img-4"
+      />-->
+
+    </div>
+    <div class="div-19">
+    <!-- checkbox -->
+      <!-- <img
+        loading="lazy"
+        srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/9c431595-dd87-408e-9e6f-a5a9821280ba?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/9c431595-dd87-408e-9e6f-a5a9821280ba?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9c431595-dd87-408e-9e6f-a5a9821280ba?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/9c431595-dd87-408e-9e6f-a5a9821280ba?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/9c431595-dd87-408e-9e6f-a5a9821280ba?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9c431595-dd87-408e-9e6f-a5a9821280ba?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/9c431595-dd87-408e-9e6f-a5a9821280ba?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/9c431595-dd87-408e-9e6f-a5a9821280ba?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
+        class="img-5"
+      />-->
+      <!-- <div class="div-20">イヌ</div> -->
+    </div>
+    <!--
+
+      <img
+        loading="lazy"
+        srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/7e2eaaa2-1c43-4da5-9ce5-417f06ec88be?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e2eaaa2-1c43-4da5-9ce5-417f06ec88be?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e2eaaa2-1c43-4da5-9ce5-417f06ec88be?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e2eaaa2-1c43-4da5-9ce5-417f06ec88be?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e2eaaa2-1c43-4da5-9ce5-417f06ec88be?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e2eaaa2-1c43-4da5-9ce5-417f06ec88be?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e2eaaa2-1c43-4da5-9ce5-417f06ec88be?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e2eaaa2-1c43-4da5-9ce5-417f06ec88be?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
+        class="img-6"
+      />-->
+
+      動物の写真　:
+        <!-- </span>-->
         <span
           style="
             font-family: Noto Serif JP, -apple-system, Roboto, Helvetica,
@@ -154,7 +169,7 @@
         >
           　:
         </span>
-      </div>
+
       <!-- 画像ファイルの添付をできるようにする。 -->
       <div class="div-26">ファイルを選択</div>
       <div class="div-27">選択されていません</div>
@@ -193,11 +208,180 @@
     <!-- 送信処理と送信完了画面に遷移 -->
     <div class="div-32">送信する</div>
   </div>
-
-  <div class="div-33">Pet PathFinder</div>
 </div>
-<style>
-  .div {
+  <!--<div class="div-33">Pet PathFinder</div>-->
+</div>
+        </div>
+
+    <jsp:include page="footer.jsp" />
+    <style>
+    	/*ここからヘッダーCSS（書き換えない）
+    	ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .page {
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+        .object-2 {
+            display: flex;
+            width: 100%;
+            padding-left: 60px;
+            flex-direction: column;
+        }
+        @media (max-width: 991px) {
+            .object-2 {
+            max-width: 100%;
+            padding-left: 20px;
+            }
+        }
+        .object-3 {
+        }
+        @media (max-width: 991px) {
+            .object-3 {
+            max-width: 100%;
+            }
+        }
+        .object-4 {
+            gap: 20px;
+            display: flex;
+            height: 661px;
+        }
+        @media (max-width: 991px) {
+            .object-4 {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0px;
+            }
+        }
+        .column {
+		    display: flex;
+		    flex-direction: column;
+		    line-height: normal;
+		    width: 20%;
+		    margin-left: 0px;
+		    flex-wrap: nowrap;
+		    justify-content: flex-start;
+		}
+        @media (max-width: 991px) {
+            .column {
+            width: 100%;
+            }
+        }
+        .object-5 {
+            display: flex;
+            flex-direction: column;
+        }
+        @media (max-width: 991px) {
+            .object-5 {
+            margin-top: 40px;
+            }
+        }
+        .object-6 {
+            color: #000;
+            padding-top: 30px;
+            text-align: center;
+            font: 400 32px/37px Yeseva One, sans-serif;
+        }
+        .button_title {
+        	color: #000000;
+            text-decoration-line: none;
+        }
+        .object-7 {
+            display: flex;
+            margin-top: 183px;
+            padding-left: 80px;
+            flex-direction: column;
+            align-items: start;
+        }
+        @media (max-width: 991px) {
+            .object-7 {
+            margin-top: 40px;
+            padding-left: 20px;
+            }
+        }
+        .object-8 {
+            color: #000;
+            text-align: center;
+            font: 400 37px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
+            sans-serif;
+        }
+        @media (max-width: 991px) {
+            .object-8 {
+            margin-left: 9px;
+            font-size: 40px;
+            line-height: 65px;
+            }
+        }
+        .object-9 {
+            color: #f00;
+            text-align: center;
+            align-self: center;
+            margin-top: 56px;
+            white-space: nowrap;
+            font: 400 24px/35px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
+            sans-serif;
+        }
+        @media (max-width: 991px) {
+            .object-9 {
+            margin-top: 40px;
+            white-space: initial;
+            }
+        }
+        .column-2 {
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            width: 80%;
+            margin-left: 20px;
+        }
+        @media (max-width: 991px) {
+            .column-2 {
+            width: 100%;
+            }
+        }
+        .object-10 {
+            overflow: hidden;
+            position: relative;
+            min-height: 100%;
+            flex-grow: 1;
+        }
+        @media (max-width: 991px) {
+            .object-10 {
+            max-width: 100%;
+            margin-top: 33px;
+            }
+        }
+        .img {
+            position: absolute;
+            height: 80%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .img-2 {
+            aspect-ratio: 1.67;
+            object-fit: contain;
+            object-position: center;
+            width: 80px;
+            fill: #fff;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+            overflow: hidden;
+            max-width: 100%;
+            margin: 0 16px 409px 0;
+        }
+        @media (max-width: 991px) {
+            .img-2 {
+            margin: 0 10px 40px 0;
+            }
+        }
+        /*ここからメイン （書き換える）
+        ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+        .div {
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -538,12 +722,12 @@
     font: 400 32px Noto Serif JP, sans-serif;
   }
   .div-23 {
-    border-radius: 12px;
-    border: 1px solid #989898;
-    background-color: #ececec;
+	border-radius: 12px;
+	border: 1px solid #989898;
+	background-color: #ececec;
     align-self: center;
     display: flex;
-    width: 1288px;
+    width: 1100px;
     height: 95px;
     flex-direction: column;
     margin: 14px 0 0 14px;
@@ -669,10 +853,11 @@
     align-self: center;
     margin-top: 27px;
     width: 100%;
-    max-width: 1337px;
+    max-width: 1100px;
     align-items: center;
     padding: 20px;
     font: 700 40px Noto Serif JP, sans-serif;
+    margin-bottom:27px;
   }
   @media (max-width: 991px) {
     .div-32 {
@@ -691,6 +876,7 @@
     align-items: center;
     padding: 130px 20px 108px 45px;
     font: 400 64px Yeseva One, sans-serif;
+
   }
   @media (max-width: 991px) {
     .div-33 {
@@ -700,6 +886,104 @@
       padding: 40px 0;
     }
   }
-</style>
+		/*ここからハンバーガー ※ここから下は入れ替えない
+		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+        .hamburger{
+        	position: absolute;
+            background:#555;
+            right: 22px;
+		    top: 22px;
+		    z-index: 1;
+        }
+
+        .drawer_hidden{
+            display:none;
+        }
+
+        .drawer_open{
+            display:flex;
+            height: 60px;
+            width:60px;
+            justify-content:center;
+            align-items:center;
+            position: relative;
+            z-index: 100;/*重なりが一番上になる*/
+            cursor:pointer;
+            color:#fff
+        }
+
+        .drawer_open span,
+        .drawer_open span:before,
+        .drawer_open span:after{
+            content:'';
+            display:block;
+            height:3px;
+            width:25px;
+            border-radius:3px;
+            background:#fff;
+            transition:0.5s;
+            position:absolute;
+        }
+
+        .drawer_open span:before{
+            bottom:8px;
+        }
+
+        .drawer_open span:after{
+            top:8px;
+        }
+
+        #drawer_input:checked ~ .drawer_open span{
+            background:rgba(255,255,255,0);
+        }
+
+        #drawer_input:checked ~ .drawer_open span::before{
+            bottom:0;
+            transform: rotate(45deg);
+        }
+
+        #drawer_input:checked ~ .drawer_open span::after{
+            top:0;
+            transform: rotate(-45deg);
+        }
+
+        .nav_content{
+            width:50%;
+            height:100%;
+            bottom:0px;
+            text-align:center;
+            margin-right:auto;
+            position:fixed;
+            top:0;
+            left:100%;
+            z-index:99;
+            background:rgba(0,0,0,0.5);
+            color:#fff;
+            transition:.5s;
+
+        }
+		/*この記述でハンバーガーメニューを修正する。
+		--------------------------------------------------------------------------------------------------*/
+		.nav_list{
+            list-style:none;
+        }
+
+        #drawer_input:checked ~ .nav_content{
+        	/*ここでアニメーション後のnavバーの位置を変える*/
+            left:50%;
+        }
+
+        .nav_item{
+            font-size:25px;
+            margin-top:20px;
+            margin-bottom:20px;
+            margin-left:20px;
+            margin-right:20px;
+        }
+        .a{
+            color:#fff;
+            text-decoration-line: none;
+        }
+    </style>
 </body>
 </html>
