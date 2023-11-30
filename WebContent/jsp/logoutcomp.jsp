@@ -37,7 +37,7 @@
 	                </div>
 	            </div>
             </div>
-            <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
+            <!-- このメインの部分を入れ替える（CSSも） ---------------------------------------------------------->
             <img class="img-a"  src="/Pet_Pathfinder/img/check.png">
             <p class="p1">ログアウトが完了しました</p>
             <form action="/Pet_Pathfinder/Top" class="top-form">
