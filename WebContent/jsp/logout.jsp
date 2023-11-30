@@ -40,10 +40,7 @@
             </div>
             <!-- このメインの部分を入れ替える（CSSのメイン部分も入れ替える） -------------------------------------------------------->
 				<div class="div-11">ログアウトしますか？</div>
-				<form action="Logout" method="post">
-					<input type="submit" value="logout" class="btn">
-				</form>
-
+				<div class="div-12"><a href="C:\Users\HanawaPC\Desktop\hanawa\卒業研究\練習用プログラミング\html\PPF_logoutcomp.html">log out</a></div>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
@@ -220,7 +217,7 @@
 			    color: #000;
 			    align-self: center;
 			    max-width: 542px;
-			    margin: 249px 0 100px 30px;
+			    margin: 249px 0 0 30px;
 			    font: 700 50px/72px serif;
 			}
 			@media (max-width: 991px) {
@@ -231,27 +228,29 @@
 			    line-height: 64px;
 			    }
 			}
-			input.btn {
-				display: block;
-				text-align: center;
-				vertical-align: middle;
-				text-decoration: none;
-				width: 250px;
-				font-size: 2rem;
-				margin: 0 auto 100px;
-				padding: 1rem 4rem;
-				font-weight: bold;
-				border-radius: 0.3rem;
-				border-bottom: 7px solid #0686b2;
-				background: #27acd9;
-				color: #fff;
+			.div-12 {
+			    color: #f3f3f3;
+			    text-align: center;
+			    white-space: nowrap;
+			    justify-content: center;
+			    align-items: center;
+			    border-radius: 20px;
+			    box-shadow: 8px 7px 0px 0px rgba(0, 0, 0, 0.4);
+			    background-color: #6d7475;
+			    align-self: center;
+			    width: 342px;
+			    max-width: 100%;
+			    margin: 83px 0 200px 0px;
+			    padding: 24px 20px 16px;
+			    font: 400 32px/46px Noto Serif JP, -apple-system, Roboto, Helvetica,
+			    sans-serif;
 			}
-			input.btn:hover {
-				margin-top: 6px;
-				border-bottom: 1px solid #0686b2;
-				color: #fff;
+			@media (max-width: 991px) {
+			    .div-12 {
+			    white-space: initial;
+			    margin-top: 40px;
+			    }
 			}
-
 		/*ここからハンバーガー ※ここから下は入れ替えない
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         .hamburger{

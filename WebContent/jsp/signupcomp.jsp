@@ -21,7 +21,6 @@
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
 			                    <div class="object-8">会員登録</div>
-			                    <div class="object-9">signup</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -30,7 +29,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="/img/cat3.png"
+	                    srcset="../img/cat3.png"
 	                    class="img"
 	                    />
 	                </div>
@@ -308,7 +307,7 @@
         }
 
         .nav_content{
-            width:50%;
+            width:250px;
             height:100%;
             bottom:0px;
             text-align:center;
@@ -329,7 +328,7 @@
         }
 
         #drawer_input:checked ~ .nav_content{
-            left:50%;
+            left:0;
         }
 
         .nav_item{

@@ -21,7 +21,7 @@
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
 			                    <div class="object-8">お問合せ</div>
-			                    <div class="object-9">contact as</div>
+			                    <div class="object-9">contacta</div>
 		                    </div>
 		                </div>
 	                </div>
