@@ -30,7 +30,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="../img/cat3.png"
+	                    srcset="/img/cat3.png"
 	                    class="img"
 	                    />
 	                </div>
