@@ -8,20 +8,21 @@
 </head>
 <body>
 	<div class="object-1">
-       <!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーー-->
+		<!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーー-->
     	<%@ include file="header.jsp" %>
+
         <div class="object-2">
             <div class="object-3">
 	            <div class="object-4">
 	                <div class="column">
 		                <div class="object-5">
 		                    <div class="object-6">
-		                        <a href="/Pet_Pathfinder/Top" class="button_title">Pet PathFinder</a>
+		                        <a href="/Pet_Pathfinder/jsp/top.jsp" class="button_title">Pet PathFinder</a>
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">お問い合わせ</div>
-			                    <div class="object-9">contact as</div>
+			                    <div class="object-8">コイン確認</div>
+			                    <div class="object-9">login</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -30,25 +31,34 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="/Pet_Pathfinder/img/login-header-image.png"
+	                    srcset="/Pet_Pathfinder/img/login_header_image.jpg"
 	                    class="img"
 	                    />
 	                </div>
 	                </div>
 	            </div>
             </div>
-            <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
-            <img class="img-a"  src="/Pet_Pathfinder/img/check.png">
-            <p class="p1">お問い合わせが完了しました</p>
-            <form action="/Pet_Pathfinder/Top" class="top-form">
-            	<input type="image" src="/Pet_Pathfinder/img/top.png" alt="Submit" class="top-1">
-            </form>
+            <!-- このメインの部分を入れ替える（CSSのメイン部分も入れ替える） -------------------------------------------------------->
+			<div class="div-2">内容をご確認ください</div>
+			  <div class="div-3"></div>
+			  <div class="div-4">
+			    <div class="div-5">支払い方法</div>
+			    <div class="div-6">PayPay</div>
+			  </div>
+			  <div class="div-7"></div>
+			  <div class="div-8">
+			    <div class="div-9">枚数</div>
+			    <div class="div-10">100コイン</div>
+			  </div>
+			  <button class="div-11 button"><a href="#">購入する</a></button>
+			<button class="div-12 button"><a href="#">戻る</a></button>
+			</div>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
     <jsp:include page="footer.jsp" />
     <style>
-    	/*ここからヘッダー
+    	/*ここからヘッダーCSS（書き換えない）
     	ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         *{
             margin: 0;
@@ -120,6 +130,10 @@
             text-align: center;
             font: 400 32px/37px Yeseva One, sans-serif;
         }
+        .button_title {
+        	color: #000000;
+            text-decoration-line: none;
+        }
         .object-7 {
             display: flex;
             margin-top: 183px;
@@ -136,7 +150,7 @@
         .object-8 {
             color: #000;
             text-align: center;
-            font: 400 25px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
+            font: 400 30px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
             sans-serif;
         }
         @media (max-width: 991px) {
@@ -208,45 +222,201 @@
             margin: 0 10px 40px 0;
             }
         }
-        /*ここからメイン
+        /*ここからメイン （書き換える）
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
-        .img-a{
-            width: 100px;
-            height: 100px;
-            margin-top:20px;
-            margin-bottom:20px;
-            margin: auto;
-        }
-        .p1{
-            font-size:25px;
-            text-align:center;
-            margin-bottom:120px;
-        }
-        .top {
-            background: white;
-            width: 803px;
-            height: 124px;
-            margin: auto;
-            margin-bottom:300px;
-        }
-        .top-1 {
-            width: 800px;
-            height: 120px;
-        }
 
-        .top-form {
-        	margin: auto;
-        	margin-bottom: 120px;
-        }
-        .top-1:hover {
-            opacity:0.5;
-        }
-        a{
-            color: #000000;
-            text-decoration-line: none;
-        }
+		        .button {
+		    cursor: pointer;
+		    padding: 10px 20px;
+		    text-align: center;
+		    border-radius: 16px;
+		    font: 100 36px Inter, sans-serif;
+		  }
 
-		/*ここからハンバーガー
+		  @media (max-width: 991px) {
+		    .button {
+		      font-size: 40px;
+		      max-width: 100%;
+		    }
+		  }
+
+		    background-color: #fff;
+		    display: flex;
+		    flex-direction: column;
+		    padding: 50px 0;
+		  }
+		  .img {
+		    aspect-ratio: 1;
+		    object-fit: contain;
+		    object-position: center;
+		    width: 160px;
+		    overflow: hidden;
+		    align-self: center;
+		    margin-top: 16px;
+		    max-width: 100%;
+		  }
+		  .div-2 {
+		    color: #000;
+		    text-align: center;
+		    align-self: center;
+		    margin-top: 30px;
+		    max-width: 690px;
+		    font: 400 64px Inter, sans-serif;
+		  }
+		  @media (max-width: 991px) {
+		    .div-2 {
+		      max-width: 100%;
+		      font-size: 40px;
+		    }
+		  }
+		  .div-3 {
+		    background-color: #888585;
+		    align-self: stretch;
+		    min-height: 1px;
+		    margin-top: 54px;
+		    width: 100%;
+		  }
+		  @media (max-width: 991px) {
+		    .div-3 {
+		      max-width: 100%;
+		      margin-top: 40px;
+		    }
+		  }
+		  .div-4 {
+		    align-self: center;
+		    display: flex;
+		    margin-top: 116px;
+		    width: 100%;
+		    max-width: 1142px;
+		    align-items: start;
+		    justify-content: space-between;
+		    gap: 20px;
+		    padding: 0 20px;
+		  }
+		  @media (max-width: 991px) {
+		    .div-4 {
+		      max-width: 100%;
+		      flex-wrap: wrap;
+		      margin-top: 40px;
+		    }
+		  }
+		  .div-5 {
+		    color: #6b6b6b;
+		    flex-grow: 1;
+		    flex-basis: auto;
+		    font: 400 36px Inter, sans-serif;
+		  }
+		  .div-6 {
+		    color: #746565;
+		    text-align: center;
+		    flex-grow: 1;
+		    flex-basis: auto;
+		    margin-left: 378px;
+		    font: 90 56px Inter, sans-serif;
+		  }
+		  @media (max-width: 991px) {
+		    .div-6 {
+		      font-size: 40px;
+		    }
+		  }
+		  .div-7 {
+		    background-color: #888585;
+		    align-self: center;
+		    margin-top: 16px;
+		    width: 1244px;
+		    height: 3px;
+		  }
+		  @media (max-width: 991px) {
+		    .div-7 {
+		      max-width: 100%;
+		    }
+		  }
+		  .div-8 {
+		    align-self: center;
+		    display: flex;
+		    margin-top: 21px;
+		    width: 100%;
+		    max-width: 1191px;
+		    align-items: start;
+		    justify-content: space-between;
+		    gap: 20px;
+		    padding: 0 20px;
+		  }
+		  @media (max-width: 991px) {
+		    .div-8 {
+		      max-width: 100%;
+		      flex-wrap: wrap;
+		    }
+		  }
+		  .div-9 {
+		    color: #857f7f;
+		    text-align: center;
+		    margin-top: 5px;
+		    font: 400 36px Inter, sans-serif;
+		  }
+		  .div-10 {
+		    color: #777474;
+		    text-align: center;
+		    align-self: stretch;
+		    flex-basis: 378px;
+		    font: 400 48px Inter, sans-serif;
+		  }
+		  @media (max-width: 991px) {
+		    .div-10 {
+		      font-size: 40px;
+		    }
+		  }
+		  .div-11 {
+		    color: #fff;
+		    text-align: center;
+		    max-width: 800px;
+		    border-radius: 16px;
+		    border: 6px solid #000;
+		    background-color: #98a0a8;
+		    align-self: center;
+		    margin-top: 111px;
+		    width: 1308px;
+		    justify-content: center;
+		    align-items: center;
+		    font: 100 36px Inter, sans-serif;
+		  }
+		  .div-11 a {
+		    text-decoration: none;
+		    color: #fff;
+		  }
+		  @media (max-width: 991px) {
+		    .div-11 {
+		      font-size: 40px;
+		      max-width: 100%;
+		      margin-top: 40px;
+		    }
+		  }
+		  .div-12 {
+		    color: #fff;
+		    text-align: center;
+		    max-width: 800px;
+		    border-radius: 16px;
+		    border: 6px solid #000;
+		    background-color: #98a0a8;
+		    align-self: center;
+		    width: 1308px;
+		    justify-content: center;
+		    align-items: center;
+		    margin: 36px 0 18px;
+		    font: 100 36px Inter, sans-serif;
+		  }
+		  .div-12 a{
+		  text-decoration: none;
+		  color: #fff;
+		  }
+
+		  @media (max-width: 991px) {
+		    .div-12 {
+		      font-size: 40px;
+		      max-width: 100%;
+		    }
+		  }
+		/*ここからハンバーガー ※ここから下は入れ替えない
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         .hamburger{
         	position: absolute;
@@ -329,6 +499,7 @@
         }
 
         #drawer_input:checked ~ .nav_content{
+        	/*ここでアニメーション後のnavバーの位置を変える*/
             left:50%;
         }
 
@@ -341,6 +512,7 @@
         }
         .a{
             color:#fff;
+            text-decoration-line: none;
         }
     </style>
 </body>
