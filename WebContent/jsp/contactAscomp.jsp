@@ -20,8 +20,8 @@
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">ログアウト</div>
-			                    <div class="object-9">logout</div>
+			                    <div class="object-8">お問い合わせ</div>
+			                    <div class="object-9">contact as</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -30,7 +30,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="/Pet_Pathfinder/img/logout-header-image.jpg"
+	                    srcset="/Pet_Pathfinder/img/login-header-image.png"
 	                    class="img"
 	                    />
 	                </div>
@@ -39,7 +39,7 @@
             </div>
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
             <img class="img-a"  src="/Pet_Pathfinder/img/check.png">
-            <p class="p1">ログアウトが完了しました</p>
+            <p class="p1">お問い合わせが完了しました</p>
             <form action="/Pet_Pathfinder/Top" class="top-form">
             	<input type="image" src="/Pet_Pathfinder/img/top.png" alt="Submit" class="top-1">
             </form>
@@ -136,7 +136,7 @@
         .object-8 {
             color: #000;
             text-align: center;
-            font: 400 30px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
+            font: 400 25px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
             sans-serif;
         }
         @media (max-width: 991px) {
