@@ -43,6 +43,21 @@
 	         srcset="../img/search-request-history-a.png"
 	         class="img-a"
 	                    />
+	         <form action="search-request-history-change.jsp" method="get">
+            <p class="img-b-1">
+            <input type="image" src="../img/search-request-history-c.png" id="search-history-a" name="search-history-a" >
+            </p>
+            <p class="img-b-2">
+            <input type="image" src="../img/search-request-history-c.png" id="search-history-b" name="search-history-b" >
+            </p>
+            <p class="img-b-3">
+            <input type="image" src="../img/search-request-history-c.png" id="search-history-c" name="search-history-c" >
+            </p>
+            <input type="submit" id="search-history-f" name="search-history-f" value="戻る" class="img-e">
+            <input type="submit" id="search-history-d" name="search-history-d" value="変更" class="img-c">
+            <input type="submit" id="search-history-e" name="search-history-e" value="削除" class="img-d">
+            </form>
+
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
@@ -213,7 +228,81 @@
         }
         /*ここからメイン
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
-
+        .img-a{
+            margin-top:-133px;
+            margin-left: -100px;
+        }
+        .img-b-1{
+            width:100px;
+            height:100px;
+            margin-top:-500px;
+        }
+        .img-b-1:hover{
+            opacity: 0.5;
+        }
+        .img-b-1:onclick{
+            opacity:0.5;
+        }
+        .img-b-2{
+            width:100px;
+            height:100px;
+            margin-top:-600px;
+        }
+        .img-b-2:hover{
+            opacity:0.5;
+        }
+        .img-b-2:onclick{
+            opacity:0.5;
+        }
+        .img-b-3{
+            width:100px;
+            height:100px;
+            margin-top:-600px;
+            margin-bottom:1200px;
+        }
+        .img-b-3:hover{
+            opacity:0.5;
+        }
+        .img-b-3:onclick{
+            opacity:0.5;
+        }
+        .img-c{
+            width:150px;
+            height:90px;
+            background-color: #6AFF62;
+            font-size: 60px;
+            color:white;
+            box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+            margin-top:0px;
+            margin-left:820px;
+        }
+        .img-c:hover{
+             opacity:0.5;
+        }
+        .img-d{
+            width:150px;
+            height:90px;
+            background-color: #6AFF62;
+            font-size: 60px;
+            color:white;
+            box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+        }
+        .img-d:hover{
+             opacity:0.5;
+        }
+        .img-e{
+            width:300px;
+            height:100px;
+            background-color: #5EFFFF;
+            font-size: 60px;
+            color:black;
+            box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+             margin-left:820px;
+             margin-bottom: 10px;
+        }
+        .img-e:hover{
+             opacity:0.5;
+        }
 		/*ここからハンバーガー
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         .hamburger{
