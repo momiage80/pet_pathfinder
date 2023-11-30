@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div class="object-1">
-       <!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーー-->
+       <!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーーー-->
     	<%@ include file="header.jsp" %>
         <div class="object-2">
             <div class="object-3">
