@@ -38,6 +38,7 @@
 	            </div>
             </div>
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
+            <form action="Contact" method="post">
 			   	<label for="username" class="label">ユーザー名</label>
 			   	<input type="text" id="username" name="username" class="input" required>
 				<label for="email" class="label">メールアドレス</label>
@@ -45,12 +46,9 @@
 				<label for="inquiry" class="label">お問い合わせ内容</label>
 		        <textarea id="inquiry" name="inquiry" class="textarea" required></textarea>
 				<div class="div-12">
-				    <!--<img
-				    loading="lazy"
-				    src="https://cdn.builder.io/api/v1/image/assets/TEMP/5cdf5ad6-a7c9-4f9f-b223-66584a286d87?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
-				    class="img"
-				    ></img>-->
 				  <button class="button_sousi"><a href="#">送信</a></button>
+				</div>
+			</form>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
@@ -258,6 +256,7 @@
     color: #000;
     font-size: 18px;
     margin-bottom: 5px;
+    display: block;
 }
 
 .input,
