@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div class="object-1">
-       <!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーーー-->
+       <!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーー-->
     	<%@ include file="header.jsp" %>
         <div class="object-2">
             <div class="object-3">
@@ -20,7 +20,8 @@
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">会員登録</div>
+			                    <div class="object-8">ログアウト</div>
+			                    <div class="object-9">logout</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -29,18 +30,18 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="../img/cat3.png"
+	                    srcset="/Pet_Pathfinder/img/logout-header-image.jpg"
 	                    class="img"
 	                    />
 	                </div>
 	                </div>
 	            </div>
             </div>
-            <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
-            <img class="img-a"  src="../img/check.png">
-            <p class="p1">登録が完了しました</p>
+            <!-- このメインの部分を入れ替える（CSSも） ---------------------------------------------------------->
+            <img class="img-a"  src="/Pet_Pathfinder/img/check.png">
+            <p class="p1">ログアウトが完了しました</p>
             <form action="/Pet_Pathfinder/Top" class="top-form">
-            	<input type="image" src="../img/top.png" alt="Submit" class="top-1">
+            	<input type="image" src="/Pet_Pathfinder/img/top.png" alt="Submit" class="top-1">
             </form>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
@@ -135,7 +136,7 @@
         .object-8 {
             color: #000;
             text-align: center;
-            font: 400 37px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
+            font: 400 30px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
             sans-serif;
         }
         @media (max-width: 991px) {
@@ -307,7 +308,7 @@
         }
 
         .nav_content{
-            width:250px;
+            width:50%;
             height:100%;
             bottom:0px;
             text-align:center;
@@ -328,7 +329,7 @@
         }
 
         #drawer_input:checked ~ .nav_content{
-            left:0;
+            left:50%;
         }
 
         .nav_item{
