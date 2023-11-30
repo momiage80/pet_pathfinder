@@ -31,7 +31,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="/Pet_Pathfinder/img/login_header_image.jpg"
+	                    srcset="/Pet_Pathfinder/img/payment_dog.jpg"
 	                    class="img"
 	                    />
 	                </div>
