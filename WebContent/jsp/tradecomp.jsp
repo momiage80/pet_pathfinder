@@ -8,6 +8,7 @@
 </head>
 <body>
 	<div class="object-1">
+       <!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーー-->
     	<%@ include file="header.jsp" %>
         <div class="object-2">
             <div class="object-3">
@@ -15,7 +16,7 @@
 	                <div class="column">
 		                <div class="object-5">
 		                    <div class="object-6">
-		                        <a href="#" class="button_title">Pet PathFinder</a>
+		                        <a href="/Pet_Pathfinder/Top" class="button_title">Pet PathFinder</a>
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
@@ -29,7 +30,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="../img/cat5.png"
+	                    srcset="/Pet_Pathfinder/img/logout-header-image.jpg"
 	                    class="img"
 	                    />
 	                </div>
@@ -37,148 +38,11 @@
 	            </div>
             </div>
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
-            <div class="limited-title">
-            	<p>期間限定</p>
-            </div>
-            <form action="Trade" method="post">
-	            <div class="limited-parent">
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="/Pet_Pathfinder/img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="/Pet_Pathfinder/img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="/Pet_Pathfinder/img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="/Pet_Pathfinder/img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="/Pet_Pathfinder/img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="/Pet_Pathfinder/img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="/Pet_Pathfinder/img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="/Pet_Pathfinder/img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-				</div>
-	            <div class="normal-title">
-	            	<p>通常</p>
-	            </div>
-	            <div class="normal-parent">
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="../img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="../img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="../img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="../img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="../img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="../img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="../img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="../img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-
-				</div>
-			</form>
-
+            <img class="img-a"  src="/Pet_Pathfinder/img/check.png">
+            <p class="p1">交換が完了しました</p>
+            <form action="/Pet_Pathfinder/Top" class="top-form">
+            	<input type="image" src="/Pet_Pathfinder/img/top.png" alt="Submit" class="top-1">
+            </form>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
@@ -346,98 +210,41 @@
         }
         /*ここからメイン
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
-         .div-9 {
-          justify-content: center;
-          color: #fff;
-          max-width: 1485px;
-          border: 1px solid #000;
-          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-          background-color: #000;
-          align-self: stretch;
-          width: 100%;
-          align-items: start;
-          padding: 31px 20px;
-          font: 400 48px/60px Inder, sans-serif;
+        .img-a{
+            width: 100px;
+            height: 100px;
+            margin-top:20px;
+            margin-bottom:20px;
+            margin: auto;
         }
-        @media (max-width: 991px) {
-          .div-9 {
-            max-width: 100%;
-            font-size: 40px;
-            line-height: 56px;
-          }
+        .p1{
+            font-size:25px;
+            text-align:center;
+            margin-bottom:120px;
         }
-        .button_title{
-        	color: black;
+        .top {
+            background: white;
+            width: 803px;
+            height: 124px;
+            margin: auto;
+            margin-bottom:300px;
+        }
+        .top-1 {
+            width: 800px;
+            height: 120px;
+        }
+
+        .top-form {
+        	margin: auto;
+        	margin-bottom: 120px;
+        }
+        .top-1:hover {
+            opacity:0.5;
         }
         a{
-            width:200px;
-            height:150px;
-            text-decoration: none;
-            color: #fff;
+            color: #000000;
+            text-decoration-line: none;
         }
-        .img-a{
-            margin-top:-133px;
-            margin-left:-60px;
-            width:1263px;
-            height:1841px;;
-        }
-        .limited-parent {
-        	display: flex;
-        	justify-content: space-evenly;
-        	flex-wrap: wrap
-        }
-        .normal-parent {
-        	display: flex;
-        	justify-content: space-evenly;
-        	flex-wrap: wrap
-        }
-        .child {
-        	margin: 20px 3%;
-        }
-        .limited-parent p {
-        	width: 100%;
-        	margin: auto;
-        	text-align: center;
-        	font-size: 2rem;
-        	color: red;
-        }
-        .normal-parent p {
-        	width: 100%;
-        	margin: auto;
-        	text-align: center;
-        	font-size: 2rem;
-        	color: #191919;
-        }
-        .rounded-image {
-			width: 200px; /* 任意のサイズ */
-			height: 200px; /* 任意のサイズ */
-			border-radius: 50%; /* 円形にするためのスタイル */
-			overflow: hidden; /* 余白を非表示にするためのスタイル */
-			border: 2px solid #191919;
-    	}
-    	.rounded-image:hover{
-    		cursor: pointer;
-    	}
-    	.rounded-image img {
-			width: 100%; /* 親要素に対して画像を100%にするためのスタイル */
-			height: auto; /* アスペクト比を維持するためのスタイル */
-	    }
-	    .limited-title p {
-	    	width: 400px;
-	    	margin: 10px auto;
-	    	text-align: center;
-	    	padding: 0 auto;
-	    	font-size: 3rem;
-	    	color: red;
-	    }
-	    .normal-title p {
-	    	width: 400px;
-	    	margin: 10px auto;
-	    	text-align: center;
-	    	padding: 0 auto;
-	    	font-size: 3rem;
-	    	color: #191919;
-	    }
 
 		/*ここからハンバーガー
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/

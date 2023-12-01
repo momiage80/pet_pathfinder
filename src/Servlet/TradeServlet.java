@@ -17,4 +17,15 @@ public class TradeServlet extends HttpServlet {
 		RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/trademenu.jsp");
 		dispatcher.forward(req, resp);
 	}
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String trade = req.getParameter("trade");
+		if("ok".equals(trade)){
+			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/tradecomp.jsp");
+			dispatcher.forward(req, resp);
+		}else{
+			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/tradecheck.jsp");
+			dispatcher.forward(req, resp);
+		}
+	}
 }

@@ -38,147 +38,29 @@
             </div>
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
             <div class="limited-title">
-            	<p>期間限定</p>
+            	<p>交換の確認</p>
             </div>
-            <form action="Trade" method="post">
-	            <div class="limited-parent">
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="/Pet_Pathfinder/img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
+            <div class="limited-parent">
+	            <div class="trade-child">
+					<div class="rounded-image">
+						<img src="../img/cat1.png" alt="Circle Image">
 					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="/Pet_Pathfinder/img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="/Pet_Pathfinder/img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="/Pet_Pathfinder/img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="/Pet_Pathfinder/img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="/Pet_Pathfinder/img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="/Pet_Pathfinder/img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="/Pet_Pathfinder/img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
+					<p>交換しますか？</p>
+				</div>
+				<div class="check-child">
+					<p>コイン所持枚数</p>
+					<p>100枚</p>
+					<p>↓</p>
+					<p style="margin-bottom: 80px;">2枚</p>
+					<div class="parent" style="display: flex;">
+						<form action="Trade" method="post">
+							<input type="hidden" name="trade" value="ok">
+							<input class="div-12 button" type="submit" value="はい">
+						</form>
+						<button class="div-12 button"><a href="javascript:history.back()">いいえ</a></button>
 					</div>
 				</div>
-	            <div class="normal-title">
-	            	<p>通常</p>
-	            </div>
-	            <div class="normal-parent">
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="../img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="../img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="../img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="../img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="../img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="../img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="../img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="../img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-
-				</div>
-			</form>
-
+	        </div>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
@@ -392,16 +274,22 @@
         	flex-wrap: wrap
         }
         .child {
-        	margin: 20px 3%;
+        	width: 50%;
         }
-        .limited-parent p {
+        .trade-child{
+        	width: 45%;
+        }
+        .trade-child p {
         	width: 100%;
-        	margin: auto;
+        	margin: 100px auto 100px;
         	text-align: center;
         	font-size: 2rem;
         	color: red;
         }
-        .normal-parent p {
+        .check-child{
+        	width: 45%;
+        }
+        .check-child p {
         	width: 100%;
         	margin: auto;
         	text-align: center;
@@ -414,9 +302,7 @@
 			border-radius: 50%; /* 円形にするためのスタイル */
 			overflow: hidden; /* 余白を非表示にするためのスタイル */
 			border: 2px solid #191919;
-    	}
-    	.rounded-image:hover{
-    		cursor: pointer;
+			margin: auto;
     	}
     	.rounded-image img {
 			width: 100%; /* 親要素に対して画像を100%にするためのスタイル */
@@ -438,6 +324,56 @@
 	    	font-size: 3rem;
 	    	color: #191919;
 	    }
+	    form{
+	    	width: 40%;
+	    	white-space: nowrap;
+	    }
+	    input.btn {
+			text-align: center;
+			vertical-align: middle;
+			text-decoration: none;
+			width: 250px;
+			font-size: 2rem;
+			margin: 0 0 82px 20px;
+			padding: 1rem 4rem;
+			font-weight: bold;
+			border-radius: 0.3rem;
+			border-bottom: 7px solid #0686b2;
+			background: #27acd9;
+			color: #fff;
+		}
+		input.btn:hover {
+			margin-top: 6px;
+			border-bottom: 1px solid #0686b2;
+			color: #fff;
+		}
+		.div-12 {
+		    color: #fff;
+		    text-align: center;
+		    max-width: 200px;
+		    border-radius: 16px;
+		    border: 2px solid #000;
+		    background-color: #98a0a8;
+		    width: 1308px;
+		    justify-content: center;
+		    align-items: center;
+		    margin: 36px 0 18px 16%;
+		    font: 100 36px Inter, sans-serif;
+		}
+		.div-12 a{
+			text-decoration: none;
+			color: #fff;
+		}
+		.div-12:hover{
+			cursor: pointer;
+		}
+
+		@media (max-width: 991px) {
+		  .div-12 {
+		    font-size: 40px;
+		    max-width: 100%;
+		  }
+		}
 
 		/*ここからハンバーガー
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
