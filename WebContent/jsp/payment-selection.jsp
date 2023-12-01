@@ -40,32 +40,34 @@
             </div>
             <!-- このメインの部分を入れ替える（CSSのメイン部分も入れ替える） -------------------------------------------------------->
 	            <div class="main-content">
-    <div class="center-heading">
-        <h2>支払い方法選択</h2>
-    </div>
-    <div class="payment-options">
-        <label class="payment-option" sty>
-            <input type="radio" name="paymentMethod" value="creditCard" style="display: none;">
-            <div class="radio-custom"></div>
-            <span class="payment-label">クレジットカード</span>
-        </label>
+				    <div class="center-heading">
+				        <h2>支払い方法選択</h2>
+				    </div>
+				    <form action="Charge" method="post">
+					    <div class="payment-options">
+					        <label class="payment-option" sty>
+					            <input type="radio" name="payment" value="creditCard" style="display: none;">
+					            <div class="radio-custom"></div>
+					            <span class="payment-label">クレジットカード</span>
+					        </label>
 
-        <label class="payment-option">
-            <input type="radio" name="paymentMethod" value="payPay" sty style="display: none;">
-            <div class="radio-custom"></div>
-            <span class="payment-label">PayPay</span>
-        </label>
+					        <label class="payment-option">
+					            <input type="radio" name="payment" value="payPay" sty style="display: none;">
+					            <div class="radio-custom"></div>
+					            <span class="payment-label">PayPay</span>
+					        </label>
 
-        <label class="payment-option">
-            <input type="radio" name="paymentMethod" value="convenienceStore" style="display: none;">
-            <div class="radio-custom"></div>
-            <span class="payment-label">コンビニ払い</span>
-        </label>
+					        <label class="payment-option">
+					            <input type="radio" name="payment" value="convenienceStore" style="display: none;">
+					            <div class="radio-custom"></div>
+					            <span class="payment-label">コンビニ払い</span>
+					        </label>
 
-        <button type="button" onclick="submitPayment()">決定</button>
-        <button type="button" onclick="goBack()">戻る</button>
-    </div>
-</div>
+					        <input type="submit" class="button" value="決定">
+					        <input type="submit" class="button" value="戻る">
+					    </div>
+				    </form>
+				</div>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
@@ -304,7 +306,7 @@
             color: #333;
         }
 
-        .payment-options button {
+        .payment-options .button {
             margin-top: 20px;
             padding: 15px 30px;
             font-size: 18px;
@@ -316,7 +318,7 @@
             transition: background-color 0.3s;
         }
 
-        .payment-options button:hover {
+        .payment-options .button:hover {
             background-color:#ffb859 ;
         }
 
