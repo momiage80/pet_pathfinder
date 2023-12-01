@@ -21,7 +21,7 @@
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">捜索依頼</div>
+			                    <div class="object-8">捜索協力</div>
 			                    <div class="object-9">search</div>
 		                    </div>
 		                </div>
@@ -44,7 +44,7 @@
       srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/e4c7f1a0-06c5-45b1-8ac8-4fe65d79c386?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/e4c7f1a0-06c5-45b1-8ac8-4fe65d79c386?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/e4c7f1a0-06c5-45b1-8ac8-4fe65d79c386?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/e4c7f1a0-06c5-45b1-8ac8-4fe65d79c386?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/e4c7f1a0-06c5-45b1-8ac8-4fe65d79c386?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/e4c7f1a0-06c5-45b1-8ac8-4fe65d79c386?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/e4c7f1a0-06c5-45b1-8ac8-4fe65d79c386?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/e4c7f1a0-06c5-45b1-8ac8-4fe65d79c386?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
       class="img-3"
     />
-    <div class="div-9">捜索依頼をする</div>
+    <div class="div-9">捜索協力をする</div>
     <div class="div-10">
       <span
         style="
@@ -109,71 +109,12 @@
     </div>
     <div class="div-15">必須（ほかのユーザに表示されます）</div>
     <!-- ここからチェックボックスに変更 -->
-
-    <div class="div-17">
-    <!-- checkbox -->
-    <div class="amimal-category">
-    <div class="div-16">動物の種類　:</div>
-    <div class="div-20"><input type="radio" name="animal" value="dog" checked><span>犬</span></div>
-    <div class="div-18"><input type="radio" name="animal" value="cat">ネコ</div>
-    <div class="div-22"><input type="radio" name="animal" value="way">その他</div>
-
-    <div class="div-23"><textarea name="wayanimal" rows="3" class="Wayanimal"></textarea></div>
-    <div class="div-24">
-      <div class="div-25">
-      <!-- checkbox(?) -->
-        <!--<span
-          style="
-            font-family: Noto Serif JP, -apple-system, Roboto, Helvetica,
-              sans-serif;
-            font-weight: 700;
-          "
-        >
-
-        </span>
-        -->
+  <!--<div class="div-33">Pet PathFinder</div>-->
+  <div class="div-16">動物の写真　: <input type="file" accept='image/*' onchange="previewImage(this);"></div>
 
 
-     <!--   <img
-        loading="lazy"
-        srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/fc76df25-5ddf-4e87-b53e-2203d604990d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc76df25-5ddf-4e87-b53e-2203d604990d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc76df25-5ddf-4e87-b53e-2203d604990d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc76df25-5ddf-4e87-b53e-2203d604990d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc76df25-5ddf-4e87-b53e-2203d604990d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc76df25-5ddf-4e87-b53e-2203d604990d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc76df25-5ddf-4e87-b53e-2203d604990d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/fc76df25-5ddf-4e87-b53e-2203d604990d?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
-        class="img-4"
-      />-->
-
-    </div>
-    <div class="div-19">
-    <!-- checkbox -->
-      <!-- <img
-        loading="lazy"
-        srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/9c431595-dd87-408e-9e6f-a5a9821280ba?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/9c431595-dd87-408e-9e6f-a5a9821280ba?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9c431595-dd87-408e-9e6f-a5a9821280ba?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/9c431595-dd87-408e-9e6f-a5a9821280ba?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/9c431595-dd87-408e-9e6f-a5a9821280ba?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/9c431595-dd87-408e-9e6f-a5a9821280ba?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/9c431595-dd87-408e-9e6f-a5a9821280ba?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/9c431595-dd87-408e-9e6f-a5a9821280ba?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
-        class="img-5"
-      />-->
-      <!-- <div class="div-20">イヌ</div> -->
-    </div>
-    <!--
-
-      <img
-        loading="lazy"
-        srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/7e2eaaa2-1c43-4da5-9ce5-417f06ec88be?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e2eaaa2-1c43-4da5-9ce5-417f06ec88be?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e2eaaa2-1c43-4da5-9ce5-417f06ec88be?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e2eaaa2-1c43-4da5-9ce5-417f06ec88be?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e2eaaa2-1c43-4da5-9ce5-417f06ec88be?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e2eaaa2-1c43-4da5-9ce5-417f06ec88be?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e2eaaa2-1c43-4da5-9ce5-417f06ec88be?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/7e2eaaa2-1c43-4da5-9ce5-417f06ec88be?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
-        class="img-6"
-      />-->
 
 
-        <!-- </span>-->
-        <div class="div-16">動物の写真　:</div>
-		<span
-          style="
-            font-family: Noto Serif JP, -apple-system, Roboto, Helvetica,
-              sans-serif;
-            font-weight: 400;
-          "
-        >
-        </span>
-
-      <!-- 画像ファイルの添付をできるようにする。 -->
-      <div class="div-26">
-      <input type="file" accept='image/*' onchange="previewImage(this);"><!-- 画像読み込み -->
-      </div><br>
 
       <!-- 画像添付のスクリプト -->
 		<script>
@@ -224,18 +165,15 @@
       <div class="div-31">入力内容に間違いがないことを確認しました</div>
     </div>
     <!-- 送信処理と送信完了画面に遷移 -->
-    <div class="div-32">送信する</div>
-  </div>
-</div>
-  <!--<div class="div-33">Pet PathFinder</div>-->
-</div>
-        </div>
+    	<div class="div-32">送信する</div>
+ 	</div>
 
-    <jsp:include page="footer.jsp" />
+
+
+<jsp:include page="footer.jsp"/>
     <style>
-    	/*ここからヘッダーCSS（書き換えない）
-    	ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
-        *{
+    	/*ここからヘッダーCSS（書き換えない）ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+        	 *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -877,6 +815,7 @@
     padding: 20px;
     font: 700 40px Noto Serif JP, sans-serif;
     margin-bottom:27px;
+    margin-left:100px;
   }
   @media (max-width: 991px) {
     .div-32 {
