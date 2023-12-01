@@ -20,8 +20,7 @@
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">お問い合わせ</div>
-			                    <div class="object-9">contact as</div>
+			                    <div class="object-8">譲渡完了</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -30,7 +29,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="/Pet_Pathfinder/img/login-header-image.png"
+	                    srcset="/Pet_Pathfinder/img/coin-purchase-completed_dog.jpg"
 	                    class="img"
 	                    />
 	                </div>
@@ -39,7 +38,7 @@
             </div>
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
             <img class="img-a"  src="/Pet_Pathfinder/img/check.png">
-            <p class="p1">購入しまた</p>
+            <p class="p1">渡しました</p>
             <form action="/Pet_Pathfinder/Top" class="top-form">
             	<input type="image" src="/Pet_Pathfinder/img/top.png" alt="Submit" class="top-1">
             </form>
@@ -136,7 +135,7 @@
         .object-8 {
             color: #000;
             text-align: center;
-            font: 400 25px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
+            font: 400 24px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
             sans-serif;
         }
         @media (max-width: 991px) {
@@ -308,7 +307,7 @@
         }
 
         .nav_content{
-            width:50%;
+            width:250px;
             height:100%;
             bottom:0px;
             text-align:center;
@@ -329,7 +328,7 @@
         }
 
         #drawer_input:checked ~ .nav_content{
-            left:50%;
+            left:0;
         }
 
         .nav_item{
