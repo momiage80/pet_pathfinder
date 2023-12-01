@@ -50,8 +50,11 @@
 			    <div class="div-9">枚数</div>
 			    <div class="div-10">100コイン</div>
 			  </div>
-			  <button class="div-11 button"><a href="#">購入する</a></button>
-			<button class="div-12 button"><a href="#">戻る</a></button>
+			  <form action="Charge" method="post">
+			  	<input type="hidden" name="check" value="ok">
+			  	<input class="div-12 button" type="submit" value="購入する">
+			  </form>
+			<button class="div-12 button"><a href="javascript:history.back()">戻る</a></button>
 			</div>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
@@ -225,7 +228,7 @@
         /*ここからメイン （書き換える）
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 
-		        .button {
+		  .button {
 		    cursor: pointer;
 		    padding: 10px 20px;
 		    text-align: center;
@@ -398,11 +401,10 @@
 		    border-radius: 16px;
 		    border: 6px solid #000;
 		    background-color: #98a0a8;
-		    align-self: center;
 		    width: 1308px;
 		    justify-content: center;
 		    align-items: center;
-		    margin: 36px 0 18px;
+		    margin: 36px 0 18px 16%;
 		    font: 100 36px Inter, sans-serif;
 		  }
 		  .div-12 a{

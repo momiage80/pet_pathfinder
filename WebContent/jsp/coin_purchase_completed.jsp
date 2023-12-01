@@ -37,10 +37,10 @@
 	            </div>
             </div>
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
-            <img class="img-a"  src="../img/check.png">
+            <img class="img-a"  src="/Pet_Pathfinder/img/check.png">
             <p class="p1">購入しました</p>
             <form action="/Pet_Pathfinder/Top" class="top-form">
-            	<input type="image" src="../img/top.png" alt="Submit" class="top-1">
+            	<input type="image" src="/Pet_Pathfinder/img/top.png" alt="Submit" class="top-1">
             </form>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>

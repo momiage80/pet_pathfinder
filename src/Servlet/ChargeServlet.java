@@ -17,4 +17,23 @@ public class ChargeServlet extends HttpServlet {
 		RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/chargetop.jsp");
 		dispatcher.forward(req, resp);
 	}
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String coin = req.getParameter("coin");
+		String payment = req.getParameter("payment");
+		String check = req.getParameter("check");
+		if(coin != null){
+			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/payment-selection.jsp");
+			dispatcher.forward(req, resp);
+		}else if(payment != null){
+			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/Coin_purchase_confirmation.jsp");
+			dispatcher.forward(req, resp);
+		}else if(check != null){
+			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/coin_purchase_completed.jsp");
+			dispatcher.forward(req, resp);
+		}else{
+			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/chargetop.jsp");
+			dispatcher.forward(req, resp);
+		}
+	}
 }

@@ -40,23 +40,32 @@
             </div>
             <!-- このメインの部分を入れ替える（CSSのメイン部分も入れ替える） -------------------------------------------------------->
 	          <center><h1>コイン購入画面</h1></center>
-				          <div class="coin-options">
+	          <div class="coin-options">
 			    <div class="coin-option" onclick="purchaseCoins(10)">
 			        <div class="coin-amount">10コイン\110</div>
-			        <button class="purchase-button"><a href="#">購入</a></button>
+			        <form action="Charge" method="post">
+				        <input type="hidden" name="coin" value="10">
+				        <input class="purchase-button" type="submit" value="購入">
+			        </form>
 			    </div>
 
 			    <div class="coin-option" onclick="purchaseCoins(50)">
 			        <div class="coin-amount">50コイン\550円</div>
-			        <button class="purchase-button"><a href="#">購入</a></button>
+			        <form action="Charge" method="post">
+				        <input type="hidden" name="coin" value="50">
+				        <input class="purchase-button" type="submit" value="購入">
+			        </form>
 			    </div>
 
 			    <div class="coin-option" onclick="purchaseCoins(100)">
 			        <div class="coin-amount">100コイン\1100円</div>
-			        <button class="purchase-button"><a href="#">購入</a></button>
+			        <form action="Charge" method="post">
+				        <input type="hidden" name="coin" value="100">
+				        <input class="purchase-button" type="submit" value="購入">
+			        </form>
 			    </div>
-			</div>
-            <!-- ここまで入れ替える ------------------------------------------------------------------------->
+			  </div>
+           <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
     <jsp:include page="footer.jsp" />
@@ -262,7 +271,7 @@
     /* 購入ボタンのスタイル */
     .purchase-button {
         background-color: #ff8c00; /* ダークオレンジ色のボタンに変更 */
-        color: #333; /* 文字色を暗めに */
+        color: #fff; /* 文字色を暗めに */
         padding: 10px 20px;
         font-size: 18px;
         border: none;
