@@ -35,7 +35,7 @@
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">ユーザプロフィール</div>
+			                    <div class="object-8">ユーザプロフィール<br>変更</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -44,7 +44,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="../img/cat-user.png"
+	                    srcset="../img/user-profile-change.png"
 	                    class="img"
 	                    />
 	                </div>
@@ -52,25 +52,22 @@
 	            </div>
             </div>
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
-            <img src="../img/user-profile.png" class="img-a">
-            <img src="../img/user-profile-white.png" class="img-b">
-            <form action="" method="get">
-            <div class="img-c"></div>
-            <p class="p-1">表示名</p>
-            <div class="img-d"></div>
-            <p class="p-2">メールアドレス</p>
-            <div class="img-e"></div>
-            <p class="p-3">一言コメント</p>
-            <div class="img-f"></div>
-            </form>
-            <form action="mypage.jsp" method="get">
-            <input type="submit" id="back" name="back" value="戻る" class="img-g">
-            </form>
-            <form action="user-profile-change.jsp" method="get">
-            <input type="submit" id="change" name="change" value="変更" class="img-h">
-            </form>
-            <form action="coin-pass.jsp" method="get">
-            <input type="submit" id="coin" name="coin" value="コインを渡す" class="img-i">
+            <img src="../img/user-profile-change-a.png"  class="img-a">
+            <div class="box">ユーザプロフィールの変更を入力してください</div>
+            <form action="" method="post">
+            <p class="img-b">
+            <input type="image" src="../img/user-profile-change-b.png" id="cat-img" name="cat-img" >
+            </p>
+            <div class="box-1">
+            </div>
+            <p class="p-1">表示名:</p>
+            <input type="text"  id="name"  name="name" value="表示名を入力" class="box-2">
+            <p class="p-2">メールアドレス:</p>
+            <input type="text"  id="mail"  name="mail" value="メールアドレスを入力" class="box-3">
+            <p class="p-3">一言コメント:</p>
+            <input type="text"  id="comment"  name="comment" value="コメントを入力" class="box-4">
+            <input type="submit"  id="back"  name="back" value="戻る" class="box-5">
+            <input type="submit"  id="change"  name="change" value="変更" class="box-6">
             </form>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
@@ -167,7 +164,7 @@
             width:500px;
             color: #000;
             text-align: center;
-            font: 700 30px/20px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
+            font: 700 30px/50px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
             sans-serif;
         }
         @media (max-width: 991px) {
@@ -255,109 +252,113 @@
         .img-a{
             margin-top:-132.5px;
             margin-left:-60px;
-            width:1263px;
-            height:1841px;;
         }
         .img-b{
-            margin-top:-1500px;
-            margin-left:-60px;
-        }
-        .img-c{
-            width:400px;
-            height:400px;
-            margin-top:-600px;
-            margin-left:80px;
-            background-color: white;
+            margin-top:0px;
+            margin-left:110px;
+            width:405px;
             border-radius:50%;
-            border: solid 1px black;
+        }
+        .img-b:hover{
+            opacity:10%
+        }
+        .box{
+             height:50px;
+             margin-left:-60px;
+             margin-top:-898px;
+             background-color:#FFFFD0;
+             margin-bottom:100px;
+             font-size:30px;
+             text-align: center;
+             color: red;
+             font-weight: bold;
+             border: solid 2px black;
+        }
+        .box-1{
+            width: 650px;
+            height: 600px;
+            background:#98FFD0;
+            opacity: 30%;
+            border-radius:10%;
+            margin-top:-400px;
+            margin-left: 530px;
+            margin-bottom: -500px;
+            z-index: 1;
         }
         .p-1{
-            margin-top:-600px;
+            font-size:35px;
+            color: red;
             margin-left:600px;
-            font-size:40px;
+            margin-top:0px;
+            z-index: 10;
         }
-        .img-d{
-            margin-bottom:20px;
-            margin-left:600px;
-            width:500px;
-            height:70px;
-            background-color: white;
-            border-radius:5%;
-            border: solid 1px black;
+        .box-2{
+            width: 400px;
+            height: 50px;
+            margin-top: -50px;
+            margin-left:750px;
+            margin-bottom: 20px;
+            z-index: 10;
         }
         .p-2{
+            font-size:35px;
+            color: red;
             margin-left:600px;
-            font-size:40px;
+            z-index: 10;
         }
-        .img-e{
-            margin-bottom:20px;
-            margin-left:600px;
-            width:500px;
-            height:70px;
-            background-color: white;
-            border-radius:5%;
-            border: solid 1px black;
+        .box-3{
+            width: 400px;
+            height: 50px;
+            margin-top: 0px;
+            margin-left:750px;
+            margin-bottom: 20px;
+            z-index: 10;
         }
         .p-3{
+            font-size:35px;
+            color: red;
             margin-left:600px;
-            font-size:40px;
+            z-index: 10;
         }
-        .img-f{
-            margin-left:600px;
-            width:500px;
-            height:300px;
-            background-color: white;
-            border-radius:5%;
-            border: solid 1px black;
+        .box-4{
+            width: 400px;
+            height: 200px;
+            margin-top: 0px;
+            margin-left:750px;
+            z-index: 10;
         }
-        .img-g{
-            width:250px;
-            height:150px;
+        .box-5{
+            width:200px;
+            height:100px;
             background-color: #6EFFFF;
-            border-radius:80%;
+            color:white;
+            border: solid 2px black;
+            font-size:60px;
+            font-weight:bold;
+            opacity: 70%;
+            margin-top: 80px;
+            margin-left: 600px;
+            box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+        }
+        .box-5:hover{
+            opacity:50%;
+        }
+        .box-6{
+            width:300px;
+            height:100px;
+            background-color: red;
             border: solid 2px black;
             font-size:60px;
             font-weight:bold;
             opacity: 90%;
-            margin-left: 600px;
-            margin-top: 100px;
+            margin-top: -100px;
+            margin-left: 850px;
             box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+            margin-bottom: 14px;
         }
-        .img-g:hover{
+        .box-6:hover{
             opacity:50%;
         }
-        .img-h{
-            width:250px;
-            height:95px;
-            background-color: #56FF30;
-            border: solid 2px black;
-            font-size:50px;
-            font-weight:bold;
-            opacity: 90%;
-            margin-left: 900px;
-            margin-top: -200px;
-            box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
-        }
-        .img-h:hover{
-            opacity:50%;
-        }
-        .img-i{
-            width:250px;
-            height:95px;
-            background-color: #56FF30;
-            border: solid 2px black;
-            font-size:30px;
-            font-weight:bold;
-            opacity: 90%;
-            margin-left: 900px;
-            margin-top: -80px;
-            box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
-            margin-bottom:365px;
-        }
-        .img-i:hover{
-            opacity:50%;
-        }
-
 		/*ここからハンバーガー
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         .hamburger{
