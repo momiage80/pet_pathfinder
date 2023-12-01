@@ -21,8 +21,8 @@
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">ログイン</div>
-			                    <div class="object-9">login</div>
+			                    <div class="object-8">会員情報変更</div>
+			                    <div class="object-9">Mem. Change</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -157,7 +157,7 @@
         .object-8 {
             color: #000;
             text-align: center;
-            font: 400 37px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
+            font: 400 25px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
             sans-serif;
         }
         @media (max-width: 991px) {
