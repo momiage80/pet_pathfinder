@@ -158,21 +158,36 @@
         class="img-6"
       />-->
 
-      動物の写真　:
+
         <!-- </span>-->
-        <span
+        <div class="div-16">動物の写真　:</div>
+		<span
           style="
             font-family: Noto Serif JP, -apple-system, Roboto, Helvetica,
               sans-serif;
             font-weight: 400;
           "
         >
-          　:
         </span>
 
       <!-- 画像ファイルの添付をできるようにする。 -->
-      <div class="div-26">ファイルを選択</div>
-      <div class="div-27">選択されていません</div>
+      <div class="div-26">
+      <input type="file" accept='image/*' onchange="previewImage(this);"><!-- 画像読み込み -->
+      </div>
+      <!-- 画像表示タグ -->
+      <img id="preview" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="max-width:600px;">
+		<!-- 画像添付のスクリプト -->
+		<script>
+		function previewImage(obj)
+		{
+			var fileReader = new FileReader();
+			fileReader.onload = (function() {
+				document.getElementById('preview').src = fileReader.result;
+			});
+			fileReader.readAsDataURL(obj.files[0]);
+		}
+		</script>
+   		<!--  <div class="div-27"></div>-->
     </div>
     <div class="div-28">
       <span
@@ -185,7 +200,7 @@
         備考
       </span>
       <!-- textboxに書き換え -->
-      <span
+		<span
         style="
           font-family: Noto Serif JP, -apple-system, Roboto, Helvetica,
             sans-serif;
@@ -198,11 +213,12 @@
     <div class="div-29">動物の詳細情報を記入してください</div>
     <div class="div-30">
     <!-- 入力内容ミスがないか確認のチェックボックス -->
-      <img
+    <input type="checkbox" name="check" value="Check">
+      <!--  <img
         loading="lazy"
         srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/a53c02c7-a637-4a57-b924-edf70a9a20dc?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/a53c02c7-a637-4a57-b924-edf70a9a20dc?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a53c02c7-a637-4a57-b924-edf70a9a20dc?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/a53c02c7-a637-4a57-b924-edf70a9a20dc?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/a53c02c7-a637-4a57-b924-edf70a9a20dc?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a53c02c7-a637-4a57-b924-edf70a9a20dc?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/a53c02c7-a637-4a57-b924-edf70a9a20dc?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/a53c02c7-a637-4a57-b924-edf70a9a20dc?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
         class="img-7"
-      />
+      />-->
       <div class="div-31">入力内容に間違いがないことを確認しました</div>
     </div>
     <!-- 送信処理と送信完了画面に遷移 -->
@@ -760,12 +776,12 @@
   .div-26 {
     color: #000;
     justify-content: center;
-    border-radius: 8px;
-    border: 1px solid #000;
-    background-color: #f4f4f4;
+    /*border-radius: 8px;*/
+    /*border: 1px solid #000;*/
+    /*background-color: #f4f4f4;*/
     align-self: stretch;
     flex-grow: 1;
-    padding: 12px 11px;
+    /*padding: 12px 11px;*/
     font: 400 24px Noto Serif JP, sans-serif;
   }
   @media (max-width: 991px) {
@@ -984,6 +1000,11 @@
             color:#fff;
             text-decoration-line: none;
         }
+        #Path .img {
+  width: 200px;
+  margin: 10px;
+  border: solid 1px silver;
+}
     </style>
 </body>
 </html>
