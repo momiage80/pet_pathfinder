@@ -173,10 +173,9 @@
       <!-- 画像ファイルの添付をできるようにする。 -->
       <div class="div-26">
       <input type="file" accept='image/*' onchange="previewImage(this);"><!-- 画像読み込み -->
-      </div>
-      <!-- 画像表示タグ -->
-      <img id="preview" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="max-width:600px;">
-		<!-- 画像添付のスクリプト -->
+      </div><br>
+
+      <!-- 画像添付のスクリプト -->
 		<script>
 		function previewImage(obj)
 		{
@@ -189,6 +188,9 @@
 		</script>
    		<!--  <div class="div-27"></div>-->
     </div>
+     <!-- 画像表示タグ -->
+    <img id="preview" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="algin=50px; ">
+
     <div class="div-28">
       <span
         style="
@@ -207,10 +209,10 @@
           font-weight: 400;
         "
       >
-        　：
+       <textarea class="text" placeholder="動物の詳細情報を記入してください" style="width:100%;height:100px;"></textarea>
       </span>
     </div>
-    <div class="div-29">動物の詳細情報を記入してください</div>
+    <div class="div-29"></div>
     <div class="div-30">
     <!-- 入力内容ミスがないか確認のチェックボックス -->
     <input type="checkbox" name="check" value="Check">
@@ -783,6 +785,7 @@
     flex-grow: 1;
     /*padding: 12px 11px;*/
     font: 400 24px Noto Serif JP, sans-serif;
+    margin-top:22px;
   }
   @media (max-width: 991px) {
     .div-26 {
@@ -808,16 +811,16 @@
     }
   }
   .div-29 {
-    color: #818181;
+    /*color: #818181;
     max-width: 501px;
     align-items: start;
     border-radius: 12px;
     border: 1px solid #000;
     align-self: center;
-    width: 1288px;
+    width: 1288px;*/
     justify-content: center;
-    margin: 17px 0 0 14px;
-    padding: 33px 20px;
+    /*margin: 17px 0 0 14px;
+    padding: 33px 20px;*/
     font: 400 32px Noto Serif JP, sans-serif;
   }
   @media (max-width: 991px) {
@@ -999,12 +1002,8 @@
         .a{
             color:#fff;
             text-decoration-line: none;
-        }
-        #Path .img {
-  width: 200px;
-  margin: 10px;
-  border: solid 1px silver;
-}
+            }
+
     </style>
 </body>
 </html>
