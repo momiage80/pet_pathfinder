@@ -22,6 +22,7 @@
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
 			                    <div class="object-8">会員情報</div>
+			                     <div class="object-9">Member info</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -185,6 +186,17 @@
             width: 100%;
             }
         }
+
+        .object-9 {
+            color: #f00;
+            text-align: center;
+            align-self: center;
+            margin-top: 56px;
+            white-space: nowrap;
+            font: 400 24px/35px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
+            sans-serif;
+        }
+
         .object-10 {
             overflow: hidden;
             position: relative;
@@ -247,6 +259,7 @@
             height:150px;
             border:none;
             text-decoration-line: none;
+            color: #191919;
         }
         .img-a{
             margin-top:-133px;
