@@ -8,23 +8,9 @@
 </head>
 <body>
 	<div class="object-1">
-        <header class="hamburger">
-            <div class="nav">
-                <input id="drawer_input" class="drawer_hidden" type="checkbox">
-                <label for="drawer_input" class="drawer_open"><span></span></label>
-                <nav class="nav_content">
-                    <ul class="nav_list">
-                        <li class="nav_item"><a href="PPF_login.html">login</a></li>
-                        <li class="nav_item"><a href="PPF_Signup.html">signup</a></li>
-                        <li class="nav_item"><a href="PPF_mypage.html">mypage</a></li>
-                        <li class="nav_item"><a href="PPF_GiftTop.html">gift</a></li>
-                        <li class="nav_item"><a href="PPF_ContactAsTop.html">contact as</a></li>
-                        <li class="nav_item"><a href="PPF_logout.html">logout</a></li>
-                        <li class="nav_item"><a href="PPF_ChargeTop.html">charge</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        <!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーー-->
+    	<%@ include file="header.jsp" %>
+
         <div class="object-2">
             <div class="object-3">
 	            <div class="object-4">
@@ -259,8 +245,8 @@
         a{
             width:200px;
             height:150px;
-            background: white;
-            /*border:none;*/
+            border:none;
+            text-decoration-line: none;
         }
         .img-a{
             margin-top:-133px;
@@ -376,7 +362,7 @@
         }
 
         .nav_content{
-            width:250px;
+            width: 50%;
             height:100%;
             bottom:0px;
             text-align:center;
@@ -397,7 +383,8 @@
         }
 
         #drawer_input:checked ~ .nav_content{
-            left:0;
+        	/*ここでアニメーション後のnavバーの位置を変える*/
+            left:50%;
         }
 
         .nav_item{
