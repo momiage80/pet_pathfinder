@@ -39,26 +39,25 @@
             </div>
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
 	          <div class="div-9">(表示名)のマイページ</div>
-	          <form action="customer-information.jsp" method="get" >
-	          <p class="img-a">
-              <input type="image" src="/Pet_Pathfinder/img/customer.png" id="customer" name="customer" >
-              </p>
+	          <form action="/Pet_Pathfinder/CustomerInfo" method="post" >
+		          <p class="img-a">
+	            	  <input type="image" src="/Pet_Pathfinder/img/customer.png" id="customer" name="customer" >
+	              </p>
               </form>
-               <!--<a href="#" class="img-a"><img src="/Pet_Pathfinder/img/customer.png"  alt="Image 1" /></a>-->
-              <form action="trademenu.jsp" method="get" >
-	          <p class="img-b">
-              <input type="image" src="/Pet_Pathfinder/img/trede.png" id="trade" name="trade" >
-              </p>
+              <form action="/Pet_Pathfinder/Trade" method="post" >
+		          <p class="img-b">
+	             	 <input type="image" src="/Pet_Pathfinder/img/trede.png" id="trade" name="trade" >
+	              </p>
               </form>
-              <form action="search-request-history.jsp" method="get" >
-	          <p class="img-c">
-              <input type="image" src="/Pet_Pathfinder/img/irai.png" id="irai" name="irai" >
-              </p>
+              <form action="/Pet_Pathfinder/SearchHistory" method="post" >
+		          <p class="img-c">
+	             	 <input type="image" src="/Pet_Pathfinder/img/irai.png" id="irai" name="irai" >
+	              </p>
               </form>
-              <form action="user-profile.jsp" method="get" >
-	          <p class="img-d">
-              <input type="image" src="/Pet_Pathfinder/img/profile.png" id="profile" name="profile" >
-              </p>
+              <form action="/Pet_Pathfinder/Profile" method="post" >
+		          <p class="img-d">
+	             	 <input type="image" src="/Pet_Pathfinder/img/profile.png" id="profile" name="profile" >
+            	  </p>
               </form>
               <!--
                <a href="#" class="img-b" ><img src="/Pet_Pathfinder/img/trede.png" alt="Image 2"></a>
