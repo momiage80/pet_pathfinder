@@ -20,8 +20,8 @@
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">捜索依頼履歴</div>
-			                    <div class="object-9">Search Request history</div>
+			                    <div class="object-8">捜索依頼履歴<br>変更</div>
+			                    <div class="object-9">Search Request history change</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -30,7 +30,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="/Pet_Pathfinder/img/cat4.png"
+	                    srcset="../img/search-request-history-completion-a.png"
 	                    class="img"
 	                    />
 	                </div>
@@ -38,26 +38,12 @@
 	            </div>
             </div>
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
-	         <img
-	         loading="lazy"
-	         srcset="../img/search-request-history-a.png"
-	         class="img-a"
-	                    />
-	         <form action="search-request-history-change.jsp" method="get">
-            <p class="img-b-1">
-            <input type="image" src="../img/search-request-history-c.png" id="search-history-a" name="search-history-a" >
-            </p>
-            <p class="img-b-2">
-            <input type="image" src="../img/search-request-history-c.png" id="search-history-b" name="search-history-b" >
-            </p>
-            <p class="img-b-3">
-            <input type="image" src="../img/search-request-history-c.png" id="search-history-c" name="search-history-c" >
-            </p>
-            <input type="submit" id="search-history-f" name="search-history-f" value="戻る" class="img-e">
-            <input type="submit" id="search-history-d" name="search-history-d" value="変更" class="img-c">
-            <input type="submit" id="search-history-e" name="search-history-e" value="削除" class="img-d">
-            </form>
-
+	         <img loading="lazy" srcset="../img/search-request-history-completion-b.png" class="img-a" />
+	         <p class="p-1">捜索依頼履歴の変更が完了致しました</p>
+	         <img src="../img/search-request-history-completion-c.png" class="img-b">
+	         <form action="search-request-history.jsp" method="get">
+	         <input type="submit" id="search" name="search" value="履歴に戻る" class="box">
+	         </form>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
@@ -149,10 +135,11 @@
             }
         }
         .object-8 {
-            margin-left:-50px;
+            margin-left:-120px;
+            width:300px;
             color: #000;
             text-align: center;
-            font: 400 30px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
+            font: 400 30px/90px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
             sans-serif;
         }
         @media (max-width: 991px) {
@@ -163,13 +150,13 @@
             }
         }
         .object-9 {
+            margin-left:-70px;
             color: #f00;
-             margin-left:-50px;
             text-align: center;
             align-self: center;
             margin-top: 56px;
             white-space: nowrap;
-            font: 400 24px/35px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
+            font: 400 20px/35px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
             sans-serif;
         }
         @media (max-width: 991px) {
@@ -231,79 +218,43 @@
         /*ここからメイン
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         .img-a{
-            margin-top:-133px;
+            margin-top:-132.5px;
             margin-left: -100px;
         }
-        .img-b-1{
-            width:100px;
-            height:100px;
-            margin-top:-500px;
+        .p-1{
+            height:80px;
+            margin-top: -926.5px;
+            background-color: #FFFF00;
+            margin-left:-60px;
+            border: solid 3px black;
+            color: red;
+            font-size: 50px;
+            text-align: center;
         }
-        .img-b-1:hover{
-            opacity: 0.5;
+
+        .img-b{
+            margin-top: 150px;
+            width:600px;
+            height:300px;
+            margin-left: 500px;
         }
-        .img-b-1:onclick{
-            opacity:0.5;
-        }
-        .img-b-2{
-            width:100px;
-            height:100px;
-            margin-top:-600px;
-        }
-        .img-b-2:hover{
-            opacity:0.5;
-        }
-        .img-b-2:onclick{
-            opacity:0.5;
-        }
-        .img-b-3{
-            width:100px;
-            height:100px;
-            margin-top:-600px;
-            margin-bottom:1200px;
-        }
-        .img-b-3:hover{
-            opacity:0.5;
-        }
-        .img-b-3:onclick{
-            opacity:0.5;
-        }
-        .img-c{
-            width:150px;
-            height:90px;
-            background-color: #6AFF62;
-            font-size: 60px;
-            color:white;
+        .box{
+            background-color: #67FF50;
+            width: 300px;
+            height: 100px;
             box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
-            margin-top:0px;
-            margin-left:820px;
+            margin-left:850px;
+            margin-top: 150px;
+            margin-bottom: 146px;
+            opacity: 70%;
+            font-size: 45px;
+            font-weight: bold;
+            border: none;
+            transition: 2.0s ;
         }
-        .img-c:hover{
-             opacity:0.5;
-        }
-        .img-d{
-            width:150px;
-            height:90px;
-            background-color: #6AFF62;
-            font-size: 60px;
-            color:white;
-            box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
-        }
-        .img-d:hover{
-             opacity:0.5;
-        }
-        .img-e{
-            width:300px;
-            height:100px;
-            background-color: #5EFFFF;
-            font-size: 60px;
-            color:black;
-            box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
-             margin-left:820px;
-             margin-bottom: 10px;
-        }
-        .img-e:hover{
-             opacity:0.5;
+        .box:hover{
+            color: white;
+            opacity: 30%;
         }
 		/*ここからハンバーガー
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
