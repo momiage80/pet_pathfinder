@@ -35,7 +35,7 @@
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">ユーザプロフィール<br>変更確認</div>
+			                    <div class="object-8">ユーザプロフィール<br>変更完了</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -52,33 +52,11 @@
 	            </div>
             </div>
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
-            <img src="../img/user-profile-change-com-a.png"  class="img-a">
-            <img src="../img/user-profile-change-com-d.png"  class="img-b">
-            <!-- 変更前 -->
-            <img src="../img/user-profile-change-com-e.png"  class="img-c">
-            <img src="../img/user-profile-change-com-b.png"  class="img-d">
-            <p class="p-1">表示名</p>
-            <div class="img-f"></div>
-            <p class="p-2">メールアドレス</p>
-            <div class="img-g"></div>
-            <p class="p-3">一言コメント</p>
-            <div class="img-h"></div>
-            <!-- 変更後 -->
-            <img src="../img/user-profile-change-com-f.png"  class="img-c">
-            <img src="../img/user-profile-change-com-c.png"  class="img-d">
-            <p class="p-1">表示名</p>
-            <div class="img-f"></div>
-            <p class="p-2">メールアドレス</p>
-            <div class="img-g"></div>
-            <p class="p-3">一言コメント</p>
-            <div class="img-h"></div>
-            <!-- ボタン -->
-            <form action="user-profile-change.jsp" method="get">
-            <input type="submit"  id="back"  name="back" value="戻る" class="box-1">
-            </form>
-
-            <form action="user-profile-change-completion.jsp" method="get">
-            <input type="submit"  id="completion"  name="completion" value="変更確定" class="box-2">
+            <img src="../img/user-profile-change-comp-b.png" class="img-a">
+            <img src="../img/user-profile-change-comp-a.png" class="img-b">
+            <p class="p-1">ユーザプロフィールの変更が完了致しました</p>
+            <form action="user-profile.jsp" method="get">
+            <input type="submit" id="user" name="user" value="プロフィールに戻る" class="box">
             </form>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
@@ -265,92 +243,32 @@
             margin-left:-60px;
         }
         .img-b{
-            margin-top:-2719.5px;
+            margin-top:-898px;
             margin-left:-60px;
-        }
-        .img-c{
-            margin-top:100px;
-            margin-left:-60px;
-        }
-        .img-d{
-            margin-top: -700px;
-            margin-left:0px;
-            width:400px;
-            height:400px;
         }
         .p-1{
-            margin-top:-500px;
-            margin-left:600px;
-            font-size:40px;
-        }
-        .img-f{
-            margin-bottom:20px;
-            margin-left:600px;
-            width:500px;
-            height:70px;
-            background-color: white;
-            border-radius:5%;
-            border: solid 1px black;
-        }
-        .p-2{
-            margin-left:600px;
-            font-size:40px;
-        }
-        .img-g{
-            margin-bottom:20px;
-            margin-left:600px;
-            width:500px;
-            height:70px;
-            background-color: white;
-            border-radius:5%;
-            border: solid 1px black;
-        }
-        .p-3{
-            margin-left:600px;
-            font-size:40px;
-        }
-        .img-h{
-            margin-left:600px;
-            margin-bottom: 200px;
-            width:500px;
-            height:300px;
-            background-color: white;
-            border-radius:5%;
-            border: solid 1px black;
-        }
-        .box-1{
-            width:400px;
+            margin-top:-100px;
             height:100px;
-            background-color: #58BBFF;
-            border: solid 2px white;
-            font-size:60px;
-            font-weight:bold;
-            color:white;
-            opacity: 70%;
-            margin-top: 100px;
-            margin-left: 300px;
+            color:red;
+            font-size:50px;
+            text-align: center;
+        }
+        .box{
+            background-color:#58FFFF;
+            width: 300px;
+            height: 100px;
             box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
-            margin-bottom: 14px;
-        }
-        .box-1:hover{
-            opacity:30%;
-        }
-        .box-2{
-            width:400px;
-            height:100px;
-            background-color: red;
-            border: solid 2px white;
-            color: white;
-            font-size:60px;
-            font-weight:bold;
+            margin-left:850px;
+            margin-top: 150px;
+            margin-bottom: 518px;
             opacity: 70%;
-            margin-top: -115px;
-            margin-left: 750px;
-            box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
-            margin-bottom: 137px;
+            font-size: 30px;
+            border: none;
+            transition: 2.0s ;
         }
-        .box-2:hover{
-            opacity:30%;
+        .box:hover{
+            background-color:#FFFF94;
+            opacity: 30%;
         }
 		/*ここからハンバーガー
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
