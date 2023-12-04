@@ -29,7 +29,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="/Pet_Pathfinder/img/coin-purchase-completed_dog.jpg"
+	                    srcset="/Pet_Pathfinder/img/transfer_completed.jpg"
 	                    class="img"
 	                    />
 	                </div>
@@ -39,9 +39,12 @@
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
             <img class="img-a"  src="/Pet_Pathfinder/img/check.png">
             <p class="p1">渡しました</p>
+            <div class="user-inputs" style="margin: auto;">
+
             <form action="/Pet_Pathfinder/Top" class="top-form">
-            	<input type="image" src="/Pet_Pathfinder/img/top.png" alt="Submit" class="top-1">
+            <button type="button" onclick="submitUserInput()">ユーザープロフィール画面へ</button>
             </form>
+            </div>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
@@ -209,6 +212,19 @@
         }
         /*ここからメイン
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+
+        .user-inputs button {
+		    margin-top: 20px;
+		    padding: 15px 30px;
+		    font-size: 18px;
+		    background-color: #949392;
+		    color: #fff;
+		    border: none;
+		    border-radius: 5px;
+		    cursor: pointer;
+		    transition: background-color 0.3s;
+		}
+
         .img-a{
             width: 100px;
             height: 100px;
