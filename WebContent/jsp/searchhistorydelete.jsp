@@ -88,7 +88,7 @@
         </div>
     </div>
     <jsp:include page="footer.jsp" />
-    <style>
+<style>
     	/*ここからヘッダーCSS（書き換えない）
     	ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         *{
@@ -232,7 +232,7 @@
         }
         .img {
             position: absolute;
-            height: 80%;
+            height: 100%;
             width: 100%;
             object-fit: cover;
             object-position: center;
