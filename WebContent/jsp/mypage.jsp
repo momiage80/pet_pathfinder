@@ -52,6 +52,7 @@
               </form>
               <form action="/Pet_Pathfinder/SearchHistory" method="post" >
 		          <p class="img-c">
+		          	 <input type="hidden" name="searchhistory" value="searchhistory">
 	             	 <input type="image" src="/Pet_Pathfinder/img/irai.png" id="irai" name="irai" value="irai" >
 	              </p>
               </form>
