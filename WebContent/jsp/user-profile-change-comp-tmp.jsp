@@ -20,7 +20,8 @@
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">譲渡完了</div>
+			                    <div class="object-8">ユーザプロフィール</div>
+			                    <div class="object-9">profile</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -29,7 +30,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="/Pet_Pathfinder/img/transfer_completed.jpg"
+	                    srcset="/Pet_Pathfinder/img/contactAscomp.jpg"
 	                    class="img"
 	                    />
 	                </div>
@@ -38,13 +39,11 @@
             </div>
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
             <img class="img-a"  src="/Pet_Pathfinder/img/check.png">
-            <p class="p1">渡しました</p>
-            <div class="user-inputs" style="margin: auto;">
-
-            <form action="/Pet_Pathfinder/Top" class="top-form">
-            <button type="button" onclick="submitUserInput()">ユーザープロフィール画面へ</button>
+            <p class="p1">ユーザプロフィールの変更が完了しました。</p>
+            <form action="/Pet_Pathfinder/Profile" class="top-form" method="post">
+            	<input type="hidden" name="profile" value="profile">
+            	<input type="submit" id="user" name="user" value="プロフィールに戻る" class="box">
             </form>
-            </div>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
@@ -138,7 +137,7 @@
         .object-8 {
             color: #000;
             text-align: center;
-            font: 400 24px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
+            font: 400 25px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
             sans-serif;
         }
         @media (max-width: 991px) {
@@ -212,19 +211,6 @@
         }
         /*ここからメイン
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
-
-        .user-inputs button {
-		    margin-top: 20px;
-		    padding: 15px 30px;
-		    font-size: 18px;
-		    background-color: #949392;
-		    color: #fff;
-		    border: none;
-		    border-radius: 5px;
-		    cursor: pointer;
-		    transition: background-color 0.3s;
-		}
-
         .img-a{
             width: 100px;
             height: 100px;
@@ -260,6 +246,18 @@
             color: #000000;
             text-decoration-line: none;
         }
+		.box {
+		    background-color: #58FFFF;
+		    width: 300px;
+		    height: 100px;
+		    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+		    margin-left: 850px;
+		    margin-top: 150px;
+		    opacity: 70%;
+		    font-size: 30px;
+		    border: none;
+		    transition: 2.0s;
+		}
 
 		/*ここからハンバーガー
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
@@ -323,7 +321,7 @@
         }
 
         .nav_content{
-            width:250px;
+            width:50%;
             height:100%;
             bottom:0px;
             text-align:center;
@@ -344,7 +342,7 @@
         }
 
         #drawer_input:checked ~ .nav_content{
-            left:0;
+            left:50%;
         }
 
         .nav_item{

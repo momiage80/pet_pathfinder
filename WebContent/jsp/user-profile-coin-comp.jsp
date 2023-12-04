@@ -8,21 +8,19 @@
 </head>
 <body>
 	<div class="object-1">
-		<!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーー-->
+       <!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーー-->
     	<%@ include file="header.jsp" %>
-
         <div class="object-2">
             <div class="object-3">
 	            <div class="object-4">
 	                <div class="column">
 		                <div class="object-5">
 		                    <div class="object-6">
-		                        <a href="/Pet_Pathfinder/jsp/top.jsp" class="button_title">Pet PathFinder</a>
+		                        <a href="/Pet_Pathfinder/Top" class="button_title">Pet PathFinder</a>
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">譲渡コイン確認</div>
-			                    <div class="object-9">madadekitenai</div>
+			                    <div class="object-8">譲渡完了</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -31,28 +29,29 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="/Pet_Pathfinder/img/transfer_coin.jsp..jpg"
+	                    srcset="/Pet_Pathfinder/img/transfer_completed.jpg"
 	                    class="img"
 	                    />
 	                </div>
 	                </div>
 	            </div>
             </div>
-            <!-- このメインの部分を入れ替える（CSSのメイン部分も入れ替える） -------------------------------------------------------->
-              <div class="user-info">
-               <div class="rounded-image">
-						<img src="../img/transfer_coin_confirmation.jpg" alt="Circle Image">
-					</div>
-                   <div class="user-name">ユーザ名</div>
-                <div class="coin-message">コインを渡しますか？</div>
-               <button class="confirm-button">OK</button>
-             </div>
+            <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
+            <img class="img-a"  src="/Pet_Pathfinder/img/check.png">
+            <p class="p1">渡しました</p>
+            <div class="user-inputs" style="margin: auto;">
+
+            <form action="/Pet_Pathfinder/Profile" class="top-form" method="post">
+            	<input type="hidden" name="profile" value="profile">
+            	<input type="submit" class="button" value="ユーザプロフィール画面へ">
+            </form>
+            </div>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
     <jsp:include page="footer.jsp" />
     <style>
-    	/*ここからヘッダーCSS（書き換えない）
+    	/*ここからヘッダー
     	ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         *{
             margin: 0;
@@ -124,10 +123,6 @@
             text-align: center;
             font: 400 32px/37px Yeseva One, sans-serif;
         }
-        .button_title {
-        	color: #000000;
-            text-decoration-line: none;
-        }
         .object-7 {
             display: flex;
             margin-top: 183px;
@@ -144,7 +139,7 @@
         .object-8 {
             color: #000;
             text-align: center;
-            font: 400 22px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
+            font: 400 24px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
             sans-serif;
         }
         @media (max-width: 991px) {
@@ -216,76 +211,70 @@
             margin: 0 10px 40px 0;
             }
         }
-        /*ここからメイン （書き換える）
+        /*ここからメイン
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
 
-        .rounded-image {
-			width: 100px; /* 任意のサイズ */
-			height: 100px; /* 任意のサイズ */
-			border-radius: 50%; /* 円形にするためのスタイル */
-			overflow: hidden; /* 余白を非表示にするためのスタイル */
-			border: 2px solid #191919;
-			margin: auto;
-    	}
-    	.rounded-image img {
-			width: 100%; /* 親要素に対して画像を100%にするためのスタイル */
-			height: auto; /* アスペクト比を維持するためのスタイル */
-	    }
-
-        .main-content {
-		    display: flex;
-		    flex-direction: column;
-		    align-items: center;
-		    margin-top: 50px;
-		}
-
-		.user-info {
-		    background-color: #ecf0f1;
-		    padding: 20px;
-		    border-radius: 10px;
-		    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-		    margin-bottom: 20px;
-		    text-align: center;
-		    width: 50%;
-		    margin: 100px auto;
-		}
-
-		#numberInput {
-		    margin-bottom: 20px;
-		    padding: 10px;
-		    font-size: 16px;
-		    width: 100%;
-		    box-sizing: border-box;
-		}
-
-		.button-container {
-		    display: flex;
-		    justify-content: space-between;
-		}
-
-		.back-button, .confirm-button {
-		    padding: 10px 20px;
-		    font-size: 16px;
-		    cursor: pointer;
+        .user-inputs button {
+		    margin-top: 20px;
+		    padding: 15px 30px;
+		    font-size: 18px;
+		    background-color: #949392;
+		    color: #fff;
 		    border: none;
 		    border-radius: 5px;
-		    transition: background-color 0.3s ease, color 0.3s ease;
+		    cursor: pointer;
+		    transition: background-color 0.3s;
 		}
 
-		.back-button:hover, .confirm-button:hover {
-		    opacity: 0.8;
-		}
-
-		.back-button {
-		    background-color: #e74c3c;
+		.button {
+			margin-top: 20px;
+		    padding: 15px 30px;
+		    font-size: 18px;
+		    background-color: #949392;
 		    color: #fff;
+		    border: none;
+		    border-radius: 5px;
+		    cursor: pointer;
+		    transition: background-color 0.3s;
 		}
 
-		.confirm-button {
-		    background-color: #2ecc71;
-		    color: #fff;
-		}
-		/*ここからハンバーガー ※ここから下は入れ替えない
+        .img-a{
+            width: 100px;
+            height: 100px;
+            margin-top:20px;
+            margin-bottom:20px;
+            margin: auto;
+        }
+        .p1{
+            font-size:25px;
+            text-align:center;
+            margin-bottom:120px;
+        }
+        .top {
+            background: white;
+            width: 803px;
+            height: 124px;
+            margin: auto;
+            margin-bottom:300px;
+        }
+        .top-1 {
+            width: 800px;
+            height: 120px;
+        }
+
+        .top-form {
+        	margin: auto;
+        	margin-bottom: 120px;
+        }
+        .top-1:hover {
+            opacity:0.5;
+        }
+        a{
+            color: #000000;
+            text-decoration-line: none;
+        }
+
+		/*ここからハンバーガー
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         .hamburger{
         	position: absolute;
@@ -347,7 +336,7 @@
         }
 
         .nav_content{
-            width:50%;
+            width:250px;
             height:100%;
             bottom:0px;
             text-align:center;
@@ -368,8 +357,7 @@
         }
 
         #drawer_input:checked ~ .nav_content{
-        	/*ここでアニメーション後のnavバーの位置を変える*/
-            left:50%;
+            left:0;
         }
 
         .nav_item{
@@ -381,7 +369,6 @@
         }
         .a{
             color:#fff;
-            text-decoration-line: none;
         }
     </style>
 </body>
