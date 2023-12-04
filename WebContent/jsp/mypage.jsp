@@ -41,22 +41,23 @@
 	          <div class="div-9">(表示名)のマイページ</div>
 	          <form action="/Pet_Pathfinder/CustomerInfo" method="post" >
 		          <p class="img-a">
-	            	  <input type="image" src="/Pet_Pathfinder/img/customer.png" id="customer" name="customer" >
+		          	  <input type="hidden" name="customer" value="customer" >
+	            	  <input type="image" src="/Pet_Pathfinder/img/customer.png" id="customer">
 	              </p>
               </form>
-              <form action="/Pet_Pathfinder/Trade" method="post" >
+              <form action="/Pet_Pathfinder/Trade" method="get" >
 		          <p class="img-b">
-	             	 <input type="image" src="/Pet_Pathfinder/img/trede.png" id="trade" name="trade" >
+	             	 <input type="image" src="/Pet_Pathfinder/img/trede.png" id="trade" name="trade" value="trade" >
 	              </p>
               </form>
               <form action="/Pet_Pathfinder/SearchHistory" method="post" >
 		          <p class="img-c">
-	             	 <input type="image" src="/Pet_Pathfinder/img/irai.png" id="irai" name="irai" >
+	             	 <input type="image" src="/Pet_Pathfinder/img/irai.png" id="irai" name="irai" value="irai" >
 	              </p>
               </form>
               <form action="/Pet_Pathfinder/Profile" method="post" >
 		          <p class="img-d">
-	             	 <input type="image" src="/Pet_Pathfinder/img/profile.png" id="profile" name="profile" >
+	             	 <input type="image" src="/Pet_Pathfinder/img/profile.png" id="profile" name="profile" value="profile" >
             	  </p>
               </form>
               <!--

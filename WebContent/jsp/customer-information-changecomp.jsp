@@ -8,21 +8,20 @@
 </head>
 <body>
 	<div class="object-1">
-		<!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーー-->
+       <!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーー-->
     	<%@ include file="header.jsp" %>
-
         <div class="object-2">
             <div class="object-3">
 	            <div class="object-4">
 	                <div class="column">
 		                <div class="object-5">
 		                    <div class="object-6">
-		                        <a href="/Pet_Pathfinder/jsp/top.jsp" class="button_title">Pet PathFinder</a>
+		                        <a href="/Pet_Pathfinder/Top" class="button_title">Pet PathFinder</a>
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">会員情報変更</div>
-			                    <div class="object-9">Mem. Change</div>
+			                    <div class="object-8">会員情報変更完了</div>
+			                    <div class="object-9">change comp</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -31,41 +30,25 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="/Pet_Pathfinder/img/login_header_image.jpg"
+	                    srcset="/Pet_Pathfinder/img/login-header-image.png"
 	                    class="img"
 	                    />
 	                </div>
 	                </div>
 	            </div>
             </div>
-            <!-- このメインの部分を入れ替える（CSSのメイン部分も入れ替える） -------------------------------------------------------->
-           <div class="main-content">
-			    <div class="center-heading">
-			        <h2>ユーザー情報入力</h2>
-			    </div>
-			    <div class="user-inputs">
-			        <label class="input-label">
-			            <input type="text" name="username" placeholder="ユーザー名" class="text-input">
-			        </label>
-
-			        <label class="input-label">
-			            <input type="password" name="password" placeholder="パスワード" class="text-input">
-			        </label>
-
-			        <label class="input-label">
-			            <input type="email" name="email" placeholder="メールアドレス" class="text-input">
-			        </label>
-
-			        <button type="button" onclick="submitUserInput()">変更する</button>
-			        <button type="button" onclick="goBack()">戻る</button>
-			    </div>
-			</div>
+            <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
+            <img class="img-a"  src="/Pet_Pathfinder/img/check.png">
+            <p class="p1">会員情報の変更が完了しました。</p>
+            <form action="/Pet_Pathfinder/Top" class="top-form">
+            	<input type="image" src="/Pet_Pathfinder/img/top.png" alt="Submit" class="top-1">
+            </form>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
     <jsp:include page="footer.jsp" />
     <style>
-    	/*ここからヘッダーCSS（書き換えない）
+    	/*ここからヘッダー
     	ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         *{
             margin: 0;
@@ -136,10 +119,6 @@
             padding-top: 30px;
             text-align: center;
             font: 400 32px/37px Yeseva One, sans-serif;
-        }
-        .button_title {
-        	color: #000000;
-            text-decoration-line: none;
         }
         .object-7 {
             display: flex;
@@ -229,205 +208,45 @@
             margin: 0 10px 40px 0;
             }
         }
-        /*ここからメイン （書き換える）
+        /*ここからメイン
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
-		  body {
-            background-color: #f5f5f5;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        .img-a{
+            width: 100px;
+            height: 100px;
+            margin-top:20px;
+            margin-bottom:20px;
+            margin: auto;
+        }
+        .p1{
+            font-size:25px;
+            text-align:center;
+            margin-bottom:120px;
+        }
+        .top {
+            background: white;
+            width: 803px;
+            height: 124px;
+            margin: auto;
+            margin-bottom:300px;
+        }
+        .top-1 {
+            width: 800px;
+            height: 120px;
         }
 
-        .main-content {
-            text-align: center;
-            margin-top: 50px;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            margin: 90px 300px;
+        .top-form {
+        	margin: auto;
+        	margin-bottom: 120px;
         }
-
-        .center-heading {
-            font-size: 32px;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 20px;
+        .top-1:hover {
+            opacity:0.5;
         }
-
-        .payment-options {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .payment-option {
-            display: flex;
-            align-items: center;
-            margin: 10px 0;
-            cursor: pointer;
-        }
-
-        .radio-custom {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            border: 2px solid #f1800c;
-            margin-right: 10px;
-            position: relative;
-            transition: background-color 0.3s;
-        }
-
-        .radio-custom::before {
-            content: '';
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color:#ffb859;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(0);
-            transition: transform 0.3s;
-        }
-
-        input[type="radio"]:checked + .radio-custom::before {
-            transform: translate(-50%, -50%) scale(1);
-        }
-
-        .payment-label {
-            font-size: 18px;
-            color: #333;
-        }
-
-        .payment-options button {
-            margin-top: 20px;
-            padding: 15px 30px;
-            font-size: 18px;
-            background-color: #f1800c;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .payment-options button:hover {
-            background-color:#ffb859 ;
-        }
-
-        .drawer_hidden {
-            display: none;
-        }
-
-        .drawer_open {
-            display: flex;
-            height: 60px;
-            width: 60px;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            z-index: 100;
-            /*重なりが一番上になる*/
-            cursor: pointer;
-            color: #fff;
-        }
-
-        .drawer_open span,
-        .drawer_open span:before,
-        .drawer_open span:after {
-            content: '';
-            display: block;
-            height: 3px;
-            width: 25px;
-            border-radius: 3px;
-            background: #fff;
-            transition: 0.5s;
-            position: absolute;
-        }
-
-        .drawer_open span:before {
-            bottom: 8px;
-        }
-
-        .drawer_open span:after {
-            top: 8px;
-        }
-
-        #drawer_input:checked ~ .drawer_open span {
-            background: rgba(255, 255, 255, 0);
-        }
-
-        #drawer_input:checked ~ .drawer_open span::before {
-            bottom: 0;
-            transform: rotate(45deg);
-        }
-
-        #drawer_input:checked ~ .drawer_open span::after {
-            top: 0;
-            transform: rotate(-45deg);
-        }
-
-        .nav_content {
-            width: 50%;
-            height: 100%;
-            bottom: 0px;
-            text-align: center;
-            margin-right: auto;
-            position: fixed;
-            top: 0;
-            left: 100%;
-            z-index: 99;
-            background: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            transition: 0.5s;
-        }
-
-        #drawer_input:checked ~ .nav_content {
-            /*ここでアニメーション後のnavバーの位置を変える*/
-            left: 50%;
-        }
-
-        .nav_item {
-            font-size: 25px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            margin-left: 20px;
-            margin-right: 20px;
-        }
-
-        .a {
-            color: #fff;
+        a{
+            color: #000000;
             text-decoration-line: none;
         }
 
-       .text-input {
-		    padding: 10px;
-		    font-size: 16px;
-		    margin: 10px 0;
-		    border: 1px solid #ccc;
-		    border-radius: 5px;
-		}
-
-		.user-inputs {
-		    display: flex;
-		    flex-direction: column;
-		}
-
-		.user-inputs button {
-		    margin-top: 20px;
-		    padding: 15px 30px;
-		    font-size: 18px;
-		    background-color: #f1800c;
-		    color: #fff;
-		    border: none;
-		    border-radius: 5px;
-		    cursor: pointer;
-		    transition: background-color 0.3s;
-		}
-
-		.user-inputs button:hover {
-		    background-color: #ffb859;
-		}
-		/*ここからハンバーガー ※ここから下は入れ替えない
+		/*ここからハンバーガー
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         .hamburger{
         	position: absolute;
@@ -510,7 +329,6 @@
         }
 
         #drawer_input:checked ~ .nav_content{
-        	/*ここでアニメーション後のnavバーの位置を変える*/
             left:50%;
         }
 
@@ -523,7 +341,6 @@
         }
         .a{
             color:#fff;
-            text-decoration-line: none;
         }
     </style>
 </body>

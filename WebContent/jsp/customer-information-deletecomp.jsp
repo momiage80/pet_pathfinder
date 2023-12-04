@@ -8,21 +8,20 @@
 </head>
 <body>
 	<div class="object-1">
-		<!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーー-->
+       <!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーー-->
     	<%@ include file="header.jsp" %>
-
         <div class="object-2">
             <div class="object-3">
 	            <div class="object-4">
 	                <div class="column">
 		                <div class="object-5">
 		                    <div class="object-6">
-		                        <a href="/Pet_Pathfinder/jsp/top.jsp" class="button_title">Pet PathFinder</a>
+		                        <a href="/Pet_Pathfinder/Top" class="button_title">Pet PathFinder</a>
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">会員情報削除</div>
-			                    <div class="object-9">data deletion</div>
+			                    <div class="object-8">会員情報削除完了</div>
+			                    <div class="object-9">delete comp</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -31,32 +30,25 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="/Pet_Pathfinder/img/data-deletion.jpg"
+	                    srcset="/Pet_Pathfinder/img/login-header-image.png"
 	                    class="img"
 	                    />
 	                </div>
 	                </div>
 	            </div>
             </div>
-            <!-- このメインの部分を入れ替える（CSSのメイン部分も入れ替える） -------------------------------------------------------->
-			<div class="center-heading stylish-heading">
-			    <h2>確認画面</h2>
-			</div>
-			<p class="warning-message">会員情報を削除すると全ての情報が削除されます。<br>本当に削除しますか？</p>
-			<div class="button-container">
-			<form action="CustomerInfo" method="post">
-				<input type="hidden" name="customer" value="deletecomp">
-			    <input type="submit" onclick="executeDeletion()" class="delete-button" value="削除">
-			</form>
-			    <a class="cancel-button" href="javascript:history.back()">いいえ</a>
-			</div>
-			</div>
+            <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
+            <img class="img-a"  src="/Pet_Pathfinder/img/check.png">
+            <p class="p1">会員情報の削除が完了しました。</p>
+            <form action="/Pet_Pathfinder/Top" class="top-form">
+            	<input type="image" src="/Pet_Pathfinder/img/top.png" alt="Submit" class="top-1">
+            </form>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
     <jsp:include page="footer.jsp" />
     <style>
-    	/*ここからヘッダーCSS（書き換えない）
+    	/*ここからヘッダー
     	ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         *{
             margin: 0;
@@ -127,10 +119,6 @@
             padding-top: 30px;
             text-align: center;
             font: 400 32px/37px Yeseva One, sans-serif;
-        }
-        .button_title {
-        	color: #000000;
-            text-decoration-line: none;
         }
         .object-7 {
             display: flex;
@@ -220,51 +208,45 @@
             margin: 0 10px 40px 0;
             }
         }
-        /*ここからメイン （書き換える）
+        /*ここからメイン
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
-        .stylish-heading h2.red-text {
-		    color: #ff5252; /* 赤色のテキストカラーに変更 */
-		    font-size: 2em;
-		    margin-bottom: 10px;
-		}
+        .img-a{
+            width: 100px;
+            height: 100px;
+            margin-top:20px;
+            margin-bottom:20px;
+            margin: auto;
+        }
+        .p1{
+            font-size:25px;
+            text-align:center;
+            margin-bottom:120px;
+        }
+        .top {
+            background: white;
+            width: 803px;
+            height: 124px;
+            margin: auto;
+            margin-bottom:300px;
+        }
+        .top-1 {
+            width: 800px;
+            height: 120px;
+        }
 
-		.warning-message.red-text {
-		    font-size: 18px;
-		    color: #ff5252; /* 赤色のテキストカラーに変更 */
-		    margin-bottom: 20px;
-		}
+        .top-form {
+        	margin: auto;
+        	margin-bottom: 120px;
+        }
+        .top-1:hover {
+            opacity:0.5;
+        }
+        a{
+            color: #000000;
+            text-decoration-line: none;
+        }
 
-		.button-container {
-		    display: flex;
-		    justify-content: center;
-		    margin-bottom: 100px;
-		}
-
-		/* 削除ボタンのスタイル */
-		.delete-button,
-		.cancel-button {
-		    background-color: #ff5252; /* 赤色の背景色に変更 */
-		    color: #fff;
-		    padding: 12px 24px;
-		    font-size: 16px;
-		    cursor: pointer;
-		    border: none;
-		    border-radius: 4px;
-		    margin: 0 10px;
-		    text-decoration: none;
-		}
-
-		.delete-button:hover,
-		.cancel-button:hover {
-		    opacity: 0.9;
-		}
-
-		/* キャンセルボタンのスタイル */
-		.cancel-button {
-		    background-color: #ff7f7f; /* より明るい赤色の背景色に変更 */
-		    color: #fff;
-		}
-		/*ここからハンバーガー ※ここから下は入れ替えない
+		/*ここからハンバーガー
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         .hamburger{
         	position: absolute;
@@ -347,7 +329,6 @@
         }
 
         #drawer_input:checked ~ .nav_content{
-        	/*ここでアニメーション後のnavバーの位置を変える*/
             left:50%;
         }
 
@@ -360,7 +341,6 @@
         }
         .a{
             color:#fff;
-            text-decoration-line: none;
         }
     </style>
 </body>
