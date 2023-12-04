@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+		<html lang="ja">
+		<head>
+		    <meta charset="UTF-8">
+		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		    <title>PetPathfinder</title>
+		</head>
+		<body>
+<div class="div">
+  <div class="div-2">
+    <img
+      loading="lazy"
+      srcset="/Pet_Pathfinder/img/searchdelete.png"
+      class="img"
+    />
+    <div class="div-3">削除完了しました。</div>
+    <div class="div-4">履歴に戻る</div>
+  </div>
+</div>
+<style>
+  .div {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .div-2 {
+    disply: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    min-height: 1024px;
+    width: 100%;
+    align-items: end;
+    padding: 50px 63px 50px 80px;
+  }
+  @media (max-width: 991px) {
+    .div-2 {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+  }
+  .img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .div-3 {
+    position: relative;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    max-width: 100%;
+    border-radius: 60px;
+    background-color: rgba(102, 205, 170, 0.6);
+    margin-top: 191px;
+    width: 767px;
+    align-items: center;
+    padding: 148px 60px 121px;
+    font: 400 64px Inter, sans-serif;
+  }
+  @media (max-width: 991px) {
+    .div-3 {
+      max-width: 100%;
+      font-size: 40px;
+      margin-top: 40px;
+      padding: 40px 20px;
+    }
+  }
+  .div-4 {
+    position: relative;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #000;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    background-color: rgba(20, 255, 0, 0.5);
+    margin: 140px 0 58px;
+    padding: 54px 37px 54px 31px;
+    font: 400 48px Inter, sans-serif;
+  }
+  @media (max-width: 991px) {
+    .div-4 {
+      font-size: 40px;
+      margin: 40px 0;
+      padding: 0 20px;
+    }
+  }
+</style>
+</body>
+</html>
