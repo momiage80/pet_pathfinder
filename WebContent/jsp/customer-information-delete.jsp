@@ -31,7 +31,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="/Pet_Pathfinder/img/data_deletion.jpg"
+	                    srcset="/Pet_Pathfinder/img/data-deletion.jpg"
 	                    class="img"
 	                    />
 	                </div>
@@ -44,8 +44,11 @@
 			</div>
 			<p class="warning-message">会員情報を削除すると全ての情報が削除されます。<br>本当に削除しますか？</p>
 			<div class="button-container">
-			    <button type="button" onclick="executeDeletion()" class="delete-button">削除</button>
-			    <button type="button" onclick="cancelDeletion()" class="cancel-button">いいえ</button>
+			<form action="CustomerInfo" method="post">
+				<input type="hidden" name="customer" value="deletecomp">
+			    <input type="submit" onclick="executeDeletion()" class="delete-button" value="削除">
+			</form>
+			    <a class="cancel-button" href="javascript:history.back()">いいえ</a>
 			</div>
 			</div>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
@@ -234,6 +237,7 @@
 		.button-container {
 		    display: flex;
 		    justify-content: center;
+		    margin-bottom: 100px;
 		}
 
 		/* 削除ボタンのスタイル */
@@ -247,6 +251,7 @@
 		    border: none;
 		    border-radius: 4px;
 		    margin: 0 10px;
+		    text-decoration: none;
 		}
 
 		.delete-button:hover,
