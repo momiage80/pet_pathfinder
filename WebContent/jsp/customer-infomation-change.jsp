@@ -21,8 +21,8 @@
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">譲渡コイン確認</div>
-			                    <div class="object-9">madadekitenai</div>
+			                    <div class="object-8">会員情報変更</div>
+			                    <div class="object-9">Mem. Change</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -31,7 +31,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="/Pet_Pathfinder/img/transfer_coin.jsp..jpg"
+	                    srcset="/Pet_Pathfinder/img/customer-infomation-changejpg.jpg"
 	                    class="img"
 	                    />
 	                </div>
@@ -39,14 +39,27 @@
 	            </div>
             </div>
             <!-- このメインの部分を入れ替える（CSSのメイン部分も入れ替える） -------------------------------------------------------->
-              <div class="user-info">
-               <div class="rounded-image">
-						<img src="../img/transfer_coin_confirmation.jpg" alt="Circle Image">
-					</div>
-                   <div class="user-name">ユーザ名</div>
-                <div class="coin-message">コインを渡しますか？</div>
-               <button class="confirm-button">OK</button>
-             </div>
+           <div class="main-content">
+			    <div class="center-heading">
+			        <h2>ユーザー情報入力</h2>
+			    </div>
+			    <div class="user-inputs">
+			        <label class="input-label">
+			            <input type="text" name="username" placeholder="ユーザー名" class="text-input">
+			        </label>
+
+			        <label class="input-label">
+			            <input type="password" name="password" placeholder="パスワード" class="text-input">
+			        </label>
+
+			        <label class="input-label">
+			            <input type="email" name="email" placeholder="メールアドレス" class="text-input">
+			        </label>
+
+			        <button type="button" onclick="submitUserInput()">変更する</button>
+			        <button type="button" onclick="goBack()">戻る</button>
+			    </div>
+			</div>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
@@ -144,7 +157,7 @@
         .object-8 {
             color: #000;
             text-align: center;
-            font: 400 22px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
+            font: 400 25px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
             sans-serif;
         }
         @media (max-width: 991px) {
@@ -218,72 +231,201 @@
         }
         /*ここからメイン （書き換える）
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
-
-        .rounded-image {
-			width: 100px; /* 任意のサイズ */
-			height: 100px; /* 任意のサイズ */
-			border-radius: 50%; /* 円形にするためのスタイル */
-			overflow: hidden; /* 余白を非表示にするためのスタイル */
-			border: 2px solid #191919;
-			margin: auto;
-    	}
-    	.rounded-image img {
-			width: 100%; /* 親要素に対して画像を100%にするためのスタイル */
-			height: auto; /* アスペクト比を維持するためのスタイル */
-	    }
+		  body {
+            background-color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
         .main-content {
-		    display: flex;
-		    flex-direction: column;
-		    align-items: center;
-		    margin-top: 50px;
-		}
+            text-align: center;
+            margin-top: 50px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 90px 300px;
+        }
 
-		.user-info {
-		    background-color: #ecf0f1;
-		    padding: 20px;
-		    border-radius: 10px;
-		    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-		    margin-bottom: 20px;
-		    text-align: center;
-		    width: 50%;
-		    margin: 100px auto;
-		}
+        .center-heading {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
 
-		#numberInput {
-		    margin-bottom: 20px;
+        .payment-options {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .payment-option {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        .radio-custom {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #f1800c;
+            margin-right: 10px;
+            position: relative;
+            transition: background-color 0.3s;
+        }
+
+        .radio-custom::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color:#ffb859;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.3s;
+        }
+
+        input[type="radio"]:checked + .radio-custom::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .payment-label {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .payment-options button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #f1800c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .payment-options button:hover {
+            background-color:#ffb859 ;
+        }
+
+        .drawer_hidden {
+            display: none;
+        }
+
+        .drawer_open {
+            display: flex;
+            height: 60px;
+            width: 60px;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 100;
+            /*重なりが一番上になる*/
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .drawer_open span,
+        .drawer_open span:before,
+        .drawer_open span:after {
+            content: '';
+            display: block;
+            height: 3px;
+            width: 25px;
+            border-radius: 3px;
+            background: #fff;
+            transition: 0.5s;
+            position: absolute;
+        }
+
+        .drawer_open span:before {
+            bottom: 8px;
+        }
+
+        .drawer_open span:after {
+            top: 8px;
+        }
+
+        #drawer_input:checked ~ .drawer_open span {
+            background: rgba(255, 255, 255, 0);
+        }
+
+        #drawer_input:checked ~ .drawer_open span::before {
+            bottom: 0;
+            transform: rotate(45deg);
+        }
+
+        #drawer_input:checked ~ .drawer_open span::after {
+            top: 0;
+            transform: rotate(-45deg);
+        }
+
+        .nav_content {
+            width: 50%;
+            height: 100%;
+            bottom: 0px;
+            text-align: center;
+            margin-right: auto;
+            position: fixed;
+            top: 0;
+            left: 100%;
+            z-index: 99;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            transition: 0.5s;
+        }
+
+        #drawer_input:checked ~ .nav_content {
+            /*ここでアニメーション後のnavバーの位置を変える*/
+            left: 50%;
+        }
+
+        .nav_item {
+            font-size: 25px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .a {
+            color: #fff;
+            text-decoration-line: none;
+        }
+
+       .text-input {
 		    padding: 10px;
 		    font-size: 16px;
-		    width: 100%;
-		    box-sizing: border-box;
+		    margin: 10px 0;
+		    border: 1px solid #ccc;
+		    border-radius: 5px;
 		}
 
-		.button-container {
+		.user-inputs {
 		    display: flex;
-		    justify-content: space-between;
+		    flex-direction: column;
 		}
 
-		.back-button, .confirm-button {
-		    padding: 10px 20px;
-		    font-size: 16px;
-		    cursor: pointer;
+		.user-inputs button {
+		    margin-top: 20px;
+		    padding: 15px 30px;
+		    font-size: 18px;
+		    background-color: #f1800c;
+		    color: #fff;
 		    border: none;
 		    border-radius: 5px;
-		    transition: background-color 0.3s ease, color 0.3s ease;
+		    cursor: pointer;
+		    transition: background-color 0.3s;
 		}
 
-		.back-button:hover, .confirm-button:hover {
-		    opacity: 0.8;
-		}
-
-		.back-button {
-		    background-color: #e74c3c;
-		    color: #fff;
-		}
-
-		.confirm-button {
-		    background-color: #2ecc71;
-		    color: #fff;
+		.user-inputs button:hover {
+		    background-color: #ffb859;
 		}
 		/*ここからハンバーガー ※ここから下は入れ替えない
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
