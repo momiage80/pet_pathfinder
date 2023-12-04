@@ -8,23 +8,8 @@
 </head>
 <body>
 	<div class="object-1">
-        <header class="hamburger">
-            <div class="nav">
-                <input id="drawer_input" class="drawer_hidden" type="checkbox">
-                <label for="drawer_input" class="drawer_open"><span></span></label>
-                <nav class="nav_content">
-                    <ul class="nav_list">
-                        <li class="nav_item"><a href="PPF_login.html">login</a></li>
-                        <li class="nav_item"><a href="PPF_Signup.html">signup</a></li>
-                        <li class="nav_item"><a href="PPF_mypage.html">mypage</a></li>
-                        <li class="nav_item"><a href="PPF_GiftTop.html">gift</a></li>
-                        <li class="nav_item"><a href="PPF_ContactAsTop.html">contact as</a></li>
-                        <li class="nav_item"><a href="PPF_logout.html">logout</a></li>
-                        <li class="nav_item"><a href="PPF_ChargeTop.html">charge</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        <!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーー-->
+    	<%@ include file="header.jsp" %>
         <div class="object-2">
             <div class="object-3">
 	            <div class="object-4">
@@ -44,7 +29,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="../img/cat-user.png"
+	                    srcset="/Pet_Pathfinder/img/cat-user.png"
 	                    class="img"
 	                    />
 	                </div>
@@ -52,8 +37,8 @@
 	            </div>
             </div>
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
-            <img src="../img/user-profile.png" class="img-a">
-            <img src="../img/user-profile-white.png" class="img-b">
+            <img src="/Pet_Pathfinder/img/user-profile.png" class="img-a">
+            <img src="/Pet_Pathfinder/img/user-profile-white.png" class="img-b">
             <form action="" method="get">
             <div class="img-c"></div>
             <p class="p-1">表示名</p>
@@ -63,14 +48,17 @@
             <p class="p-3">一言コメント</p>
             <div class="img-f"></div>
             </form>
-            <form action="mypage.jsp" method="get">
-            <input type="submit" id="back" name="back" value="戻る" class="img-g">
+            <form action="/Pet_Pathfinder/Profile" method="post">
+            	<input type="hidden" name="profile" value="hoge">
+            	<input type="submit" id="back" name="back" value="戻る" class="img-g">
             </form>
-            <form action="user-profile-change.jsp" method="get">
-            <input type="submit" id="change" name="change" value="変更" class="img-h">
+            <form action="/Pet_Pathfinder/Profile" method="post">
+            	<input type="hidden" name="profile" value="change">
+            	<input type="submit" id="change" name="change" value="変更" class="img-h">
             </form>
-            <form action="coin-pass.jsp" method="get">
-            <input type="submit" id="coin" name="coin" value="コインを渡す" class="img-i">
+            <form action="/Pet_Pathfinder/Profile" method="post">
+            	<input type="hidden" name="profile" value="coin">
+            	<input type="submit" id="coin" name="coin" value="コインを渡す" class="img-i">
             </form>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>

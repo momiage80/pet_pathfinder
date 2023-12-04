@@ -23,7 +23,5 @@ public class MypageServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String irai = req.getParameter("irai");
-		String profile = req.getParameter("profile");
-		String trade = req.getParameter("trade");
 	}
 }

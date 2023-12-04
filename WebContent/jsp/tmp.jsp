@@ -8,7 +8,6 @@
 </head>
 <body>
 	<div class="object-1">
-      <!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーー-->
     	<%@ include file="header.jsp" %>
         <div class="object-2">
             <div class="object-3">
@@ -16,12 +15,12 @@
 	                <div class="column">
 		                <div class="object-5">
 		                    <div class="object-6">
-		                        <a href="/Pet_Pathfinder/Top" class="button_title">Pet PathFinder</a>
+		                        <a href="#" class="button_title">Pet PathFinder</a>
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">マイページ</div>
-			                    <div class="object-9">Mypage</div>
+			                    <div class="object-8">ユーザプロフィール</div>
+			                    <div class="object-9">profile</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -30,7 +29,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="/Pet_Pathfinder/img/cat4.png"
+	                    srcset="../img/cat5.png"
 	                    class="img"
 	                    />
 	                </div>
@@ -38,33 +37,31 @@
 	            </div>
             </div>
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
-	          <div class="div-9">(表示名)のマイページ</div>
-	          <form action="/Pet_Pathfinder/CustomerInfo" method="post" >
-		          <p class="img-a">
-		          	  <input type="hidden" name="customer" value="customer" >
-	            	  <input type="image" src="/Pet_Pathfinder/img/customer.png" id="customer">
-	              </p>
-              </form>
-              <form action="/Pet_Pathfinder/Trade" method="get" >
-		          <p class="img-b">
-	             	 <input type="image" src="/Pet_Pathfinder/img/trede.png" id="trade" name="trade" value="trade" >
-	              </p>
-              </form>
-              <form action="/Pet_Pathfinder/SearchHistory" method="post" >
-		          <p class="img-c">
-	             	 <input type="image" src="/Pet_Pathfinder/img/irai.png" id="irai" name="irai" value="irai" >
-	              </p>
-              </form>
-              <form action="/Pet_Pathfinder/Profile" method="post" >
-		          <p class="img-d">
-		          	 <input type="hidden" name="profile" value="profile">
-	             	 <input type="image" src="/Pet_Pathfinder/img/profile.png" id="profile" name="profile" value="profile" >
-            	  </p>
-              </form>
-              <!--
-               <a href="#" class="img-b" ><img src="/Pet_Pathfinder/img/trede.png" alt="Image 2"></a>
-               <a href="#" class="img-c"><img src="/Pet_Pathfinder/img/irai.png" ></a>
-               <a href="#" class="img-d"><img src="/Pet_Pathfinder/img/profile.png" ></a>-->
+            <div class="limited-title">
+            	<p>入力してください</p>
+            </div>
+            <div class="limited-parent">
+	            <div class="trade-child">
+					<div class="rounded-image">
+						<img src="../img/cat1.png" alt="Circle Image">
+					</div>
+				</div>
+				<div class="check-child">
+		            <p class="p-1">表示名:</p>
+		            	<input type="text"  id="name"  name="name" value="表示名を入力" class="box-2">
+		            <p class="p-2">メールアドレス:</p>
+		            	<input type="text"  id="mail"  name="mail" value="メールアドレスを入力" class="box-3">
+		            <p class="p-3">一言コメント:</p>
+		           		<input type="text"  id="comment"  name="comment" value="コメントを入力" class="box-4">
+					<div class="parent" style="display: flex;">
+						<form action="Profile" method="post">
+							<input type="hidden" name="profile" value="comp">
+							<input class="div-12 button" type="submit" value="変更">
+						</form>
+						<button class="div-12 button"><a href="javascript:history.back()">戻る</a></button>
+					</div>
+				</div>
+	        </div>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
@@ -158,7 +155,7 @@
         .object-8 {
             color: #000;
             text-align: center;
-            font: 400 30px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
+            font: 400 15px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
             sans-serif;
         }
         @media (max-width: 991px) {
@@ -230,9 +227,6 @@
             margin: 0 10px 40px 0;
             }
         }
-        .button_title {
-        	color: black;
-        }
         /*ここからメイン
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
          .div-9 {
@@ -255,53 +249,135 @@
             line-height: 56px;
           }
         }
+        .button_title{
+        	color: black;
+        }
         a{
-        	color: white;
             width:200px;
             height:150px;
-            /*background: white;*/
-            text-decoration-line: none;
+            text-decoration: none;
+            color: #fff;
         }
         .img-a{
-            margin-top:40px;
-            margin-left:150px;
-            margin-bottom:20px;
-            width:200px;
-            height:150px;
+            margin-top:-133px;
+            margin-left:-60px;
+            width:1263px;
+            height:1841px;;
         }
-        .img-a:hover{
-            opacity:0.5;
+        .limited-parent {
+        	display: flex;
+        	justify-content: space-evenly;
+        	flex-wrap: wrap;
+        	margin-bottom: 100px;
         }
-        .img-b{
-            margin-top:-170px;
-            margin-left:700px;
-            margin-bottom:20px;
-            width:200px;
-            height:150px;
+        .normal-parent {
+        	display: flex;
+        	justify-content: space-evenly;
+        	flex-wrap: wrap
         }
-        .img-b:hover{
-            opacity:0.5;
+        .child {
+        	width: 50%;
         }
-        .img-c{
-            margin-top:300px;
-            margin-left:150px;
-            margin-bottom:400px;
-            width:200px;
-            height:150px;
+        .trade-child{
+        	width: 45%;
         }
-        .img-c:hover{
-            opacity:0.5;
+        .trade-child p {
+        	width: 100%;
+        	margin: 100px auto 100px;
+        	text-align: center;
+        	font-size: 2rem;
+        	color: red;
         }
-        .img-d{
-            margin-top:-550px;
-            margin-left:700px;
-            margin-bottom:400px;
-            width:200px;
-            height:150px;
+        .check-child{
+        	width: 45%;
+
         }
-        .img-d:hover{
-            opacity:0.5;
+        .check-child p {
+        	width: 100%;
+        	margin: auto;
+        	text-align: center;
+        	font-size: 2rem;
+        	color: #191919;
         }
+        .rounded-image {
+			width: 200px; /* 任意のサイズ */
+			height: 200px; /* 任意のサイズ */
+			border-radius: 50%; /* 円形にするためのスタイル */
+			overflow: hidden; /* 余白を非表示にするためのスタイル */
+			border: 2px solid #191919;
+			margin: auto;
+    	}
+    	.rounded-image img {
+			width: 100%; /* 親要素に対して画像を100%にするためのスタイル */
+			height: auto; /* アスペクト比を維持するためのスタイル */
+	    }
+	    .limited-title p {
+	    	width: 400px;
+	    	margin: 0px auto 100px;
+	    	text-align: center;
+	    	padding: 0 auto;
+	    	font-size: 3rem;
+	    	color: red;
+	    }
+	    .normal-title p {
+	    	width: 400px;
+	    	margin: 10px auto;
+	    	text-align: center;
+	    	padding: 0 auto;
+	    	font-size: 3rem;
+	    	color: #191919;
+	    }
+	    form{
+	    	width: 40%;
+	    	white-space: nowrap;
+	    }
+	    input.btn {
+			text-align: center;
+			vertical-align: middle;
+			text-decoration: none;
+			width: 250px;
+			font-size: 2rem;
+			margin: 0 0 82px 20px;
+			padding: 1rem 4rem;
+			font-weight: bold;
+			border-radius: 0.3rem;
+			border-bottom: 7px solid #0686b2;
+			background: #27acd9;
+			color: #fff;
+		}
+		input.btn:hover {
+			margin-top: 6px;
+			border-bottom: 1px solid #0686b2;
+			color: #fff;
+		}
+		.div-12 {
+		    color: #fff;
+		    text-align: center;
+		    max-width: 200px;
+		    border-radius: 16px;
+		    border: 2px solid #000;
+		    background-color: #98a0a8;
+		    width: 1308px;
+		    justify-content: center;
+		    align-items: center;
+		    margin: 36px 0 18px 16%;
+		    font: 100 36px Inter, sans-serif;
+		}
+		.div-12 a{
+			text-decoration: none;
+			color: #fff;
+		}
+		.div-12:hover{
+			cursor: pointer;
+		}
+
+		@media (max-width: 991px) {
+		  .div-12 {
+		    font-size: 40px;
+		    max-width: 100%;
+		  }
+		}
+
 		/*ここからハンバーガー
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         .hamburger{
@@ -397,7 +473,6 @@
         }
         .a{
             color:#fff;
-            text-decoration-line: none;
         }
     </style>
 </body>

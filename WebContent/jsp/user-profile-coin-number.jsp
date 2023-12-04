@@ -46,8 +46,11 @@
 			        <input type="number" id="numberInput" min="10" max="100" placeholder="Enter a number (10-100)">
 			        <div class="button-container">
 			           <div class="button-container">
-					    <button type="button" onclick="backToMemberInfo()" class="back-button">戻る</button>
-					    <button type="button" onclick="confirmChanges()" class="confirm-button">OK</button>
+			           <form action="Profile" method="post">
+					    <a class="button" href="javascript:history.back()" style="text-decoration: none;">戻る</a>
+					    <input type="hidden" name="profile" value="coincheck">
+					    <input type="submit" class="button" value="ok">
+					   </form>
 					</div>
 			    </div>
 			</div>
@@ -247,6 +250,17 @@
             font-size: 16px;
             width: 20%;
             box-sizing: border-box;
+        }
+        .button{
+        	margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #f1800c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
 		/*ここからハンバーガー ※ここから下は入れ替えない
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
