@@ -52,34 +52,36 @@
 	            </div>
             </div>
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
-            <img src="../img/aki.png" class="img-a">
+            <img src="/Pet_Pathfinder/img/aki.png" class="img-a">
 
             <form action="userprofile.jsp" method="get">
             <p class="img-c">
-            <input type="image" src="../img/customer-information-icon.png" id="userprofile" name="userprofile" >
+            <input type="image" src="/Pet_Pathfinder/img/customer-information-icon.png" id="userprofile" name="userprofile" >
             </p>
             </form>
 
-            <!--<img src="../img/customer-information-icon.png" class="img-c">-->
-            <img src="../img/customer-information.png" class="img-b">
+            <!--<img src="/Pet_Pathfinder/img/customer-information-icon.png" class="img-c">-->
+            <img src="/Pet_Pathfinder/img/customer-information.png" class="img-b">
             <!--<a href="#" class="img-d"><img src="../img/customer-information-back.png" ></a>-->
             <!--<a href="#" class="img-e"><img src="../img/customer-information-delete.png" ></a>-->
 
-            <form action="mypage.jsp" method="get">
+            <form action="/Pet_Pathfinder/CustomerInfo" method="post">
             <p class="img-d">
-            <input type="image" src="../img/customer-information-back.png" id="back" name="back" >
+            <input type="image" src="/Pet_Pathfinder/img/customer-information-back.png" id="back" name="back" >
             </p>
             </form>
 
-            <form action="customer-information-delete.jsp" method="get" >
+            <form action="/Pet_Pathfinder/CustomerInfo" method="post" >
             <p class="img-e">
-            <input type="image" src="../img/customer-information-delete.png" id="delete" name="delete" >
+            <input type="hidden" name="customer" value="delete">
+            <input type="image" src="/Pet_Pathfinder/img/customer-information-delete.png" id="delete" name="delete" >
             </p>
             </form>
 
-            <form action="customer-information-change.jsp" method="get" >
+            <form action="/Pet_Pathfinder/CustomerInfo" method="post" >
             <p class="img-f">
-            <input type="image" src="../img/customer-information-change.png" id="change" name="change" >
+            <input type="hidden" name="customer" value="change">
+            <input type="image" src="/Pet_Pathfinder/img/customer-information-change.png" id="change" name="change" >
             </p>
             </form>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->

@@ -57,8 +57,11 @@
 
 			    </div>
 			    <div class="button-container">
-			        <button type="button" onclick="backToMemberInfo()" class="back-button">会員情報へ戻る</button>
-			        <button type="button" onclick="confirmChanges()" class="confirm-button">変更確定</button>
+			    <form action="/Pet_Pathfinder/CustomerInfo" method="post">
+			        <a class="back-button" style="text-decoration: none;" href="javascript:history.back()">会員情報へ戻る</a>
+			    	<input type="hidden" name="customer" value="changecomp">
+			        <input type="submit" class="confirm-button" value="変更確定">
+			    </form>
 			    </div>
 			</div>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->

@@ -21,8 +21,8 @@
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">会員情報削除</div>
-			                    <div class="object-9">data deletion</div>
+			                    <div class="object-8">会員情報変更</div>
+			                    <div class="object-9">Mem. Change</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -31,7 +31,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="/Pet_Pathfinder/img/data-deletion.jpg"
+	                    srcset="/Pet_Pathfinder/img/login_header_image.jpg"
 	                    class="img"
 	                    />
 	                </div>
@@ -39,17 +39,29 @@
 	            </div>
             </div>
             <!-- このメインの部分を入れ替える（CSSのメイン部分も入れ替える） -------------------------------------------------------->
-			<div class="center-heading stylish-heading">
-			    <h2>確認画面</h2>
-			</div>
-			<p class="warning-message">会員情報を削除すると全ての情報が削除されます。<br>本当に削除しますか？</p>
-			<div class="button-container">
-			<form action="CustomerInfo" method="post">
-				<input type="hidden" name="customer" value="deletecomp">
-			    <input type="submit" onclick="executeDeletion()" class="delete-button" value="削除">
-			</form>
-			    <a class="cancel-button" href="javascript:history.back()">いいえ</a>
-			</div>
+           <div class="main-content">
+			    <div class="center-heading">
+			        <h2>ユーザー情報入力</h2>
+			    </div>
+			    <form action="/Pet_Pathfinder/CustomerInfo" method="post">
+				    <div class="user-inputs">
+				        <label class="input-label">
+				            <input type="text" name="username" placeholder="ユーザー名" class="text-input">
+				        </label>
+
+				        <label class="input-label">
+				            <input type="password" name="password" placeholder="パスワード" class="text-input">
+				        </label>
+
+				        <label class="input-label">
+				            <input type="email" name="email" placeholder="メールアドレス" class="text-input">
+				        </label>
+
+						<input type="hidden" name="customer" value="changecheck">
+				        <input type="submit" value="変更する" class="button">
+				        <a class="button" href="javascript:history.back()">戻る</a>
+				    </div>
+			    </form>
 			</div>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
@@ -222,48 +234,219 @@
         }
         /*ここからメイン （書き換える）
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
-        .stylish-heading h2.red-text {
-		    color: #ff5252; /* 赤色のテキストカラーに変更 */
-		    font-size: 2em;
-		    margin-bottom: 10px;
-		}
+		  body {
+            background-color: #f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-		.warning-message.red-text {
-		    font-size: 18px;
-		    color: #ff5252; /* 赤色のテキストカラーに変更 */
-		    margin-bottom: 20px;
-		}
+        .main-content {
+            text-align: center;
+            margin-top: 50px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 90px 300px;
+        }
 
-		.button-container {
-		    display: flex;
-		    justify-content: center;
-		    margin-bottom: 100px;
-		}
+        .center-heading {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
 
-		/* 削除ボタンのスタイル */
-		.delete-button,
-		.cancel-button {
-		    background-color: #ff5252; /* 赤色の背景色に変更 */
-		    color: #fff;
-		    padding: 12px 24px;
+        .payment-options {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .payment-option {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        .radio-custom {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #f1800c;
+            margin-right: 10px;
+            position: relative;
+            transition: background-color 0.3s;
+        }
+
+        .radio-custom::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color:#ffb859;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.3s;
+        }
+
+        input[type="radio"]:checked + .radio-custom::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .payment-label {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .payment-options button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #f1800c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .payment-options button:hover {
+            background-color:#ffb859 ;
+        }
+
+        .drawer_hidden {
+            display: none;
+        }
+
+        .drawer_open {
+            display: flex;
+            height: 60px;
+            width: 60px;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 100;
+            /*重なりが一番上になる*/
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .drawer_open span,
+        .drawer_open span:before,
+        .drawer_open span:after {
+            content: '';
+            display: block;
+            height: 3px;
+            width: 25px;
+            border-radius: 3px;
+            background: #fff;
+            transition: 0.5s;
+            position: absolute;
+        }
+
+        .drawer_open span:before {
+            bottom: 8px;
+        }
+
+        .drawer_open span:after {
+            top: 8px;
+        }
+
+        #drawer_input:checked ~ .drawer_open span {
+            background: rgba(255, 255, 255, 0);
+        }
+
+        #drawer_input:checked ~ .drawer_open span::before {
+            bottom: 0;
+            transform: rotate(45deg);
+        }
+
+        #drawer_input:checked ~ .drawer_open span::after {
+            top: 0;
+            transform: rotate(-45deg);
+        }
+
+        .nav_content {
+            width: 50%;
+            height: 100%;
+            bottom: 0px;
+            text-align: center;
+            margin-right: auto;
+            position: fixed;
+            top: 0;
+            left: 100%;
+            z-index: 99;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            transition: 0.5s;
+        }
+
+        #drawer_input:checked ~ .nav_content {
+            /*ここでアニメーション後のnavバーの位置を変える*/
+            left: 50%;
+        }
+
+        .nav_item {
+            font-size: 25px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .a {
+            color: #fff;
+            text-decoration-line: none;
+        }
+
+       .text-input {
+		    padding: 10px;
 		    font-size: 16px;
-		    cursor: pointer;
-		    border: none;
-		    border-radius: 4px;
-		    margin: 0 10px;
-		    text-decoration: none;
+		    margin: 10px 0;
+		    border: 1px solid #ccc;
+		    border-radius: 5px;
 		}
 
-		.delete-button:hover,
-		.cancel-button:hover {
-		    opacity: 0.9;
+		.user-inputs {
+		    display: flex;
+		    flex-direction: column;
 		}
 
-		/* キャンセルボタンのスタイル */
-		.cancel-button {
-		    background-color: #ff7f7f; /* より明るい赤色の背景色に変更 */
+		.user-inputs button {
+		    margin-top: 20px;
+		    padding: 15px 30px;
+		    font-size: 18px;
+		    background-color: #f1800c;
 		    color: #fff;
+		    border: none;
+		    border-radius: 5px;
+		    cursor: pointer;
+		    transition: background-color 0.3s;
 		}
+
+		.user-inputs .button {
+		    margin-top: 20px;
+		    padding: 15px 30px;
+		    font-size: 18px;
+		    background-color: #f1800c;
+		    color: #fff;
+		    border: none;
+		    border-radius: 5px;
+		    cursor: pointer;
+		    transition: background-color 0.3s;
+		}
+
+		.user-inputs button:hover {
+		    background-color: #ffb859;
+		}
+
+		.user-inputs .button:hover {
+		    background-color: #ffb859;
+		}
+
 		/*ここからハンバーガー ※ここから下は入れ替えない
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         .hamburger{
