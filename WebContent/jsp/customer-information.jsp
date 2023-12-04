@@ -8,23 +8,9 @@
 </head>
 <body>
 	<div class="object-1">
-        <header class="hamburger">
-            <div class="nav">
-                <input id="drawer_input" class="drawer_hidden" type="checkbox">
-                <label for="drawer_input" class="drawer_open"><span></span></label>
-                <nav class="nav_content">
-                    <ul class="nav_list">
-                        <li class="nav_item"><a href="PPF_login.html">login</a></li>
-                        <li class="nav_item"><a href="PPF_Signup.html">signup</a></li>
-                        <li class="nav_item"><a href="PPF_mypage.html">mypage</a></li>
-                        <li class="nav_item"><a href="PPF_GiftTop.html">gift</a></li>
-                        <li class="nav_item"><a href="PPF_ContactAsTop.html">contact as</a></li>
-                        <li class="nav_item"><a href="PPF_logout.html">logout</a></li>
-                        <li class="nav_item"><a href="PPF_ChargeTop.html">charge</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        <!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーー-->
+    	<%@ include file="header.jsp" %>
+
         <div class="object-2">
             <div class="object-3">
 	            <div class="object-4">
@@ -36,6 +22,7 @@
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
 			                    <div class="object-8">会員情報</div>
+			                     <div class="object-9">Member info</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -52,34 +39,36 @@
 	            </div>
             </div>
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
-            <img src="../img/aki.png" class="img-a">
+            <img src="/Pet_Pathfinder/img/aki.png" class="img-a">
 
             <form action="userprofile.jsp" method="get">
             <p class="img-c">
-            <input type="image" src="../img/customer-information-icon.png" id="userprofile" name="userprofile" >
+            <input type="image" src="/Pet_Pathfinder/img/customer-information-icon.png" id="userprofile" name="userprofile" >
             </p>
             </form>
 
-            <!--<img src="../img/customer-information-icon.png" class="img-c">-->
-            <img src="../img/customer-information.png" class="img-b">
+            <!--<img src="/Pet_Pathfinder/img/customer-information-icon.png" class="img-c">-->
+            <img src="/Pet_Pathfinder/img/customer-information.png" class="img-b">
             <!--<a href="#" class="img-d"><img src="../img/customer-information-back.png" ></a>-->
             <!--<a href="#" class="img-e"><img src="../img/customer-information-delete.png" ></a>-->
 
-            <form action="mypage.jsp" method="get">
+            <form action="/Pet_Pathfinder/CustomerInfo" method="post">
             <p class="img-d">
-            <input type="image" src="../img/customer-information-back.png" id="back" name="back" >
+            <input type="image" src="/Pet_Pathfinder/img/customer-information-back.png" id="back" name="back" >
             </p>
             </form>
 
-            <form action="customer-information-delete.jsp" method="get" >
+            <form action="/Pet_Pathfinder/CustomerInfo" method="post" >
             <p class="img-e">
-            <input type="image" src="../img/customer-information-delete.png" id="delete" name="delete" >
+            <input type="hidden" name="customer" value="delete">
+            <input type="image" src="/Pet_Pathfinder/img/customer-information-delete.png" id="delete" name="delete" >
             </p>
             </form>
 
-            <form action="customer-information-change.jsp" method="get" >
+            <form action="/Pet_Pathfinder/CustomerInfo" method="post" >
             <p class="img-f">
-            <input type="image" src="../img/customer-information-change.png" id="change" name="change" >
+            <input type="hidden" name="customer" value="change">
+            <input type="image" src="/Pet_Pathfinder/img/customer-information-change.png" id="change" name="change" >
             </p>
             </form>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
@@ -197,6 +186,17 @@
             width: 100%;
             }
         }
+
+        .object-9 {
+            color: #f00;
+            text-align: center;
+            align-self: center;
+            margin-top: 56px;
+            white-space: nowrap;
+            font: 400 24px/35px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
+            sans-serif;
+        }
+
         .object-10 {
             overflow: hidden;
             position: relative;
@@ -257,8 +257,9 @@
         a{
             width:200px;
             height:150px;
-            background: white;
-            /*border:none;*/
+            border:none;
+            text-decoration-line: none;
+            color: #191919;
         }
         .img-a{
             margin-top:-133px;
@@ -374,7 +375,7 @@
         }
 
         .nav_content{
-            width:250px;
+            width: 50%;
             height:100%;
             bottom:0px;
             text-align:center;
@@ -395,7 +396,8 @@
         }
 
         #drawer_input:checked ~ .nav_content{
-            left:0;
+        	/*ここでアニメーション後のnavバーの位置を変える*/
+            left:50%;
         }
 
         .nav_item{

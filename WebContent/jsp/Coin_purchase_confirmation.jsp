@@ -22,7 +22,7 @@
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
 			                    <div class="object-8">コイン確認</div>
-			                    <div class="object-9">login</div>
+			                    <div class="object-9">Coin checked</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -50,7 +50,7 @@
 			    <div class="div-9">枚数</div>
 			    <div class="div-10">100コイン</div>
 			  </div>
-			  <form action="Charge" method="post">
+			  <form action="Charge" method="post" style="width: 400px; margin: auto;">
 			  	<input type="hidden" name="check" value="ok">
 			  	<input class="div-12 button" type="submit" value="購入する">
 			  </form>
@@ -326,7 +326,7 @@
 		    background-color: #888585;
 		    align-self: center;
 		    margin-top: 16px;
-		    width: 1244px;
+		    width: 100%;
 		    height: 3px;
 		  }
 		  @media (max-width: 991px) {
@@ -397,14 +397,13 @@
 		  .div-12 {
 		    color: #fff;
 		    text-align: center;
-		    max-width: 800px;
 		    border-radius: 16px;
 		    border: 6px solid #000;
 		    background-color: #98a0a8;
-		    width: 1308px;
+		    width: 400px;
 		    justify-content: center;
 		    align-items: center;
-		    margin: 36px 0 18px 16%;
+		    margin: 36px auto;
 		    font: 100 36px Inter, sans-serif;
 		  }
 		  .div-12 a{

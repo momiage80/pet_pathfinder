@@ -149,6 +149,7 @@
             }
         }
         .object-8 {
+            margin-left:-50px;
             color: #000;
             text-align: center;
             font: 400 30px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
@@ -163,6 +164,7 @@
         }
         .object-9 {
             color: #f00;
+             margin-left:-50px;
             text-align: center;
             align-self: center;
             margin-top: 56px;

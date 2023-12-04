@@ -46,7 +46,7 @@
 				<label for="inquiry" class="label">お問い合わせ内容</label>
 		        <textarea id="inquiry" name="inquiry" class="textarea" required></textarea>
 				<div class="div-12">
-				  <button class="button_sousi"><a href="#">送信</a></button>
+				  <input class="button_sousi" value="送信" type="submit">
 				</div>
 			</form>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
@@ -222,76 +222,76 @@
 
         /*ここからメイン
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
-.button_sousi {
-    cursor: pointer;
-    display: inline-block;
-    padding: 15px 40px; /* 横長に調整 */
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none;
-    background-color: #fff;
-    color: #fff;
-    border: 1px solid #000;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
-}
+		.button_sousi {
+		    cursor: pointer;
+		    display: inline-block;
+		    padding: 15px 40px; /* 横長に調整 */
+		    font-size: 16px;
+		    text-align: center;
+		    text-decoration: none;
+		    background-color: #fff;
+		    color: #fff;
+		    border: 1px solid #000;
+		    border-radius: 5px;
+		    transition: background-color 0.3s ease;
+		    margin-top: 20px;
+		}
 
-.button_sousi:hover {
-    background-color: #555;
-}
+		.button_sousi:hover {
+		    background-color: #555;
+		}
 
-.button_sousi:hover {
-    background-color: #555;
-}
+		.button_sousi:hover {
+		    background-color: #555;
+		}
 
-.div-6 form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 20px;
-}
+		.div-6 form {
+		    display: flex;
+		    flex-direction: column;
+		    align-items: flex-start;
+		    margin-top: 20px;
+		}
 
-.label {
-    color: #000;
-    font-size: 18px;
-    margin-bottom: 5px;
-    display: block;
-}
+		.label {
+		    color: #000;
+		    font-size: 18px;
+		    margin-bottom: 5px;
+		    display: block;
+		}
 
-.input,
-.textarea {
-    border-radius: 6px;
-    border: 1px solid #000;
-    background-color: #fff;
-    width: 678px;
-    height: 40px; /* 必要に応じて調整 */
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 16px;
-}
+		.input,
+		.textarea {
+		    border-radius: 6px;
+		    border: 1px solid #000;
+		    background-color: #fff;
+		    width: 678px;
+		    height: 40px; /* 必要に応じて調整 */
+		    margin-bottom: 15px;
+		    padding: 10px;
+		    font-size: 16px;
+		}
 
-.textarea {
-    height: 100px; /* 必要に応じて調整 */
-}
+		.textarea {
+		    height: 100px; /* 必要に応じて調整 */
+		}
 
-.button {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: #fff;
-    background-color: #000;
-    padding: 15px 20px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
+		.button {
+		    cursor: pointer;
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    text-decoration: none;
+		    color: #fff;
+		    background-color: #000;
+		    padding: 15px 20px;
+		    border: 1px solid #000;
+		    border-radius: 5px;
+		    transition: background-color 0.3s ease;
+		}
 
-.button:hover {
-    background-color: #555;
-}
+		.button:hover {
+		    background-color: #555;
+		}
 		    sans-serif;
 		}
 		@media (max-width: 991px) {
@@ -383,7 +383,7 @@
 		    overflow: hidden;
 		    align-self: end;
 		    min-height: 106px;
-		    width: 1289px;
+		    width: 1200px;
 		    align-items: center;
 		    margin: 37px 0 91px;
 		    padding: 29px 20px 44px;

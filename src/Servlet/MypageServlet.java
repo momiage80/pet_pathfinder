@@ -20,4 +20,10 @@ public class MypageServlet extends HttpServlet {
 		RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/mypage.jsp");
 		dispatcher.forward(req, resp);
 	}
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String irai = req.getParameter("irai");
+		String profile = req.getParameter("profile");
+		String trade = req.getParameter("trade");
+	}
 }
