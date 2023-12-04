@@ -21,6 +21,7 @@
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
 			                    <div class="object-8">コイン購入完了</div>
+			                    <div class="object-9">Done</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -135,7 +136,7 @@
         .object-8 {
             color: #000;
             text-align: center;
-            font: 400 24px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
+            font: 400 20px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
             sans-serif;
         }
         @media (max-width: 991px) {

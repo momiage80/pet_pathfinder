@@ -31,7 +31,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="/Pet_Pathfinder/img/login_header_image.jpg"
+	                    srcset="/Pet_Pathfinder/img/transfer_coin.jsp..jpg"
 	                    class="img"
 	                    />
 	                </div>
@@ -144,7 +144,7 @@
         .object-8 {
             color: #000;
             text-align: center;
-            font: 400 37px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
+            font: 400 22px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
             sans-serif;
         }
         @media (max-width: 991px) {
