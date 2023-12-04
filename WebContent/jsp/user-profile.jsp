@@ -21,6 +21,7 @@
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
 			                    <div class="object-8">ユーザプロフィール</div>
+			                    <div class="object-9">User profile</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -177,6 +178,17 @@
             width: 100%;
             }
         }
+
+        .object-9 {
+            color: #f00;
+            text-align: center;
+            align-self: center;
+            margin-top: 56px;
+            white-space: nowrap;
+            font: 400 24px/35px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
+            sans-serif;
+        }
+
         .object-10 {
             overflow: hidden;
             position: relative;
@@ -237,8 +249,9 @@
         a{
             width:200px;
             height:150px;
-            background: white;
-            /*border:none;*/
+            border:none;
+            color: #191919;
+            text-decoration:none;
         }
         .img-a{
             margin-top:-132.5px;
@@ -408,7 +421,7 @@
         }
 
         .nav_content{
-            width:250px;
+            width:50%;
             height:100%;
             bottom:0px;
             text-align:center;
@@ -429,7 +442,8 @@
         }
 
         #drawer_input:checked ~ .nav_content{
-            left:0;
+        	/*ここでアニメーション後のnavバーの位置を変える*/
+            left:50%;
         }
 
         .nav_item{
@@ -441,6 +455,7 @@
         }
         .a{
             color:#fff;
+            text-decoration-line: none;
         }
     </style>
 </body>
