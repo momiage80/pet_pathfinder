@@ -21,8 +21,8 @@
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">ログイン</div>
-			                    <div class="object-9">login</div>
+			                    <div class="object-8">捜索依頼削除</div>
+			                    <div class="object-9">historydelete</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -31,7 +31,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 						<img
     loading="lazy"
-    srcset="/Pet_Pathfinder/img/Catsunglasses.png"
+    srcset="/Pet_Pathfinder/img/cat1.png"
     class="img"
   />
 	                </div>
