@@ -89,8 +89,15 @@
 	    <div id="map"></div>
 	    <img src="/Pet_Pathfinder/img/Frame.png" class="frame">
 	    <div class="search-btns">
-		    <input type="image" src="/Pet_Pathfinder/img/button1.png"  class="img-y"/>
-		    <input type="image" src="/Pet_Pathfinder/img/button2.png"  class="img-z"/>
+	    <form action="/Pet_Pathfinder/Search" method="post" class="search-buttons">
+	    	<input type="hidden" name="search" value="searchrequest">
+		    <input type="submit" class="img-y" value="捜索依頼を出す"/>
+		</form>
+	    <form action="/Pet_Pathfinder/Search" method="post" class="search-buttons">
+	    	<input type="hidden" name="search" value="searchnora">
+		    <input type="submit" class="img-z" value="野良動物を報告する"/>
+		</form>
+
 		</div>
 	    <!-- footer部分 -->
 	    <jsp:include page="footer.jsp" />
@@ -318,8 +325,37 @@
 		    max-width: 100%;
 		    }
 		}
+		.img-y {
+			margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #f1800c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+		}
+		.img-y:hover{
+            background-color:#ffb859 ;
+		}
+		.search-buttons{
+			display: inline;
+		}
 		.img-z {
 			margin-left: 100px;
+			margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #f1800c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+		}
+		.img-z:hover{
+            background-color:#ffb859 ;
 		}
 		.div-10 {
 		    justify-content: flex-end;
