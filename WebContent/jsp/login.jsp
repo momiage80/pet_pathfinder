@@ -45,25 +45,23 @@
 			            <div class="object-13">
 			                <img
 			                loading="lazy"
-			                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
+			                srcset="/Pet_Pathfinder/img/login_user_icon.png"
 			                class="img-3"
 			                />
 			                <div class="object-14">
-			                    <input type="text" class="input-name" placeholder="Your name">
+			                    <input type="text" name="user_name" class="input-name" placeholder="Your name">
 			                </div>
 			            </div>
-			            <div class="object-15"></div>
 			            <div class="object-16">
 			                <img
 			                loading="lazy"
-			                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
+			                srcset="/Pet_Pathfinder/img/login_password_icon.png"
 			                class="img-4"
 			                />
 			                <div class="object-17">
-			                    <input type="password" class="input-password" placeholder="Password">
+			                    <input type="password" name="password" class="input-password" placeholder="Password">
 			                </div>
 			            </div>
-			            <div class="object-18"></div>
 			            <input class="object-19" type="submit" value="login"></input>
 		           	</form>
 	            </div>
@@ -238,18 +236,18 @@
         }
         /*ここからメイン （書き換える）
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+        form { width:80%; }
+
         .main {
             border-radius: 61px;
             border: 1px solid #3e3e3e;
             background-color: #fdfdfd;
             align-self: center;
             display: flex;
-            width: 585px;
-            max-width: 100%;
+            max-width: 450px;
             flex-direction: column;
             align-items: center;
-            margin: 153px 0 0 31px;
-            padding: 50px 80px;
+            padding: 10px;
             margin-bottom: 100px;
         }
         @media (max-width: 991px) {
@@ -276,10 +274,10 @@
         .object-13 {
             display: flex;
             margin-top: 76px;
-            width: 391px;
             max-width: 100%;
             justify-content: space-between;
             gap: 20px;
+            border-bottom: solid 2px;
         }
         @media (max-width: 991px) {
             .object-13 {
@@ -300,19 +298,13 @@
                     background: transparent;
                     width: 100%;
                     font: 400 32px/46px Noto Serif JP, -apple-system, Roboto, Helvetica, sans-serif;
-                    color: #838383;
-        }
-        .object-15 {
-            background-color: #494949;
-            width: 391px;
-            height: 2px;
         }
         .object-16 {
             display: flex;
             margin-top: 84px;
-            width: 393px;
             max-width: 100%;
             gap: 19px;
+            border-bottom: solid 2px;
         }
         @media (max-width: 991px) {
             .object-16 {
@@ -333,14 +325,8 @@
                 background: transparent;
                 width: 100%;
                 font: 400 32px/46px Noto Serif JP, -apple-system, Roboto, Helvetica, sans-serif;
-                color: #838383;
         }
-        .object-18 {
-            background-color: #494949;
-            margin-top: 7px;
-            width: 393px;
-            height: 2px;
-        }
+
         .object-19 {
             color: #070707;
             text-align: center;

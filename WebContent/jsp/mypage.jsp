@@ -9,6 +9,7 @@
 <body>
 	<div class="object-1">
       <!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーー-->
+      	<div class="logined"><c:if test="${login.getName()}">${login.getName()}</c:if></div>
     	<%@ include file="header.jsp" %>
         <div class="object-2">
             <div class="object-3">
@@ -236,6 +237,15 @@
         }
         /*ここからメイン
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+         .logined {
+         	position: absolute;
+		    right: 100px;
+		    top: 40px;
+		    z-index: 1;
+		    font-size: 1.2rem;
+		    font-family: serif;
+		    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+         }
          .div-9 {
           justify-content: center;
           color: #fff;

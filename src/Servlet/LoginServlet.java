@@ -8,6 +8,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import model.Login;
+import model.LoginLogic;
 
 /**
  * Servlet implementation class LoginServlet
@@ -22,7 +26,23 @@ public class LoginServlet extends HttpServlet {
 	}
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/mypage.jsp");
-		dispatcher.forward(req, resp);
+		String user_name = req.getParameter("user_name");
+		String password = req.getParameter("password");
+		System.out.println(user_name + password);
+
+		Login login = new Login(user_name, password);
+		LoginLogic bo = new LoginLogic();
+		boolean result = bo.execute(login);
+
+		if(result){
+			HttpSession session = req.getSession();
+			System.out.println(session.getId());
+			session.setAttribute("login", login);
+			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/mypage.jsp");
+			dispatcher.forward(req, resp);
+		}else{
+			resp.sendRedirect("Login");
+		}
+
 	}
 }
