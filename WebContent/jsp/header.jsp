@@ -1,4 +1,29 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<div class="logined" style="position: absolute;
+		    right: 100px;
+		    top: 40px;
+		    z-index: 1;
+		    font-size: 1.2rem;
+		    font-family: serif;
+		    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+<%@ page import="javax.servlet.http.HttpSession" %>
+<%@ page import="model.*" %>
+<%
+	// セッションからユーザ情報を取得
+	Login login = (session != null) ? (Login) session.getAttribute("login") : null;
+
+	// ログインしているかどうかを確認
+	boolean isLoggedIn = (login != null);
+
+	if (isLoggedIn) {
+	    // ログインしている場合はユーザ名を表示
+	    out.println(login.getName() + "さん！");
+	} else {
+	    // ログインしていない場合はゲストと表示
+	    out.println("ゲストさん！");
+	}
+%>
+</div>
 <header class="hamburger">
     <div class="nav">
         <input id="drawer_input" class="drawer_hidden" type="checkbox">

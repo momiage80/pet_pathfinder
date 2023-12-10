@@ -14,5 +14,7 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="C:/Users/r_nagata/Downloads/postgresql-42.7.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/r_nagata/Downloads/jstl-impl-1.2 (1).jar"/>
+	<classpathentry kind="lib" path="C:/Users/r_nagata/Downloads/jstl-api-1.2 (1).jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -16,7 +16,7 @@
 	                <div class="column">
 		                <div class="object-5">
 		                    <div class="object-6">
-		                        <a href="#" class="button_title">Pet PathFinder</a>
+		                        <a href="/Pet_Pathfinder/Top" class="button_title">Pet PathFinder</a>
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
@@ -30,7 +30,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="../img/cat2.png"
+	                    srcset="/Pet_Pathfinder/img/cat2.png"
 	                    class="img"
 	                    />
 	                </div>
@@ -40,48 +40,47 @@
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
 	            <div class="main">
 		            <div class="object-12"></div>
-		            <div class="object-13">
-		                <img
-		                loading="lazy"
-		                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/7371d0a0-d70b-48d6-bed8-950765dd3bff?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
-		                class="img-3"
-		                />
-		                <div class="object-14">
-		                    <input type="text" class="input-name" placeholder="Your name">
-		                </div>
-		            </div>
-		            <div class="object-15"></div>
-		            <div class="object-16">
-		                <img
-		                loading="lazy"
-		                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/a6936667-0be9-4f44-a0d4-4fcf3fbfd461?apiKey=5fb7fc1e8ce740c2bc96a0eebd2ef662&"
-		                class="img-4"
-		                />
-		                <div class="object-17">
-		                    <input type="password" class="input-password" placeholder="Password">
-		                </div>
-		            </div>
-		            <div class="object-18"></div>
-		            <div class="object-16">
-		            <img src="../img/mail.png" class="img-a">
-		            <div class="object-14">
-		                    <input type="text" class="input-name" placeholder="email-address">
-		            </div>
-		            </div>
-		            <div class="object-18"></div>
-		            <p class="p-a">本当にこれでよろしいですか？<br>
-		               よろしければ登録ボタンをクリック<br>
-		               修正したい場合は戻るボタンをクリック
-		            </p>
-		            <div style="display:inline-flex">
-			            <form action="Signupcheck" method="post">
-			            	<input type="hidden" name="action" value="edit">
-			            	<input class="object-19" type="submit" value="戻る"></input>
-			            </form>
-			            <form action="Signupcheck" method="post">
-			            	<input type="hidden" name="action" value="register">
-			            	<input class="object-19" type="submit" value="登録"></input>
-			            </form>
+		            <div class="width80">
+			            <div class="object-13">
+			                <img
+			                loading="lazy"
+		                	srcset="/Pet_Pathfinder/img/login_user_icon.png"
+			                class="img-3"
+			                />
+			                <div class="object-14">
+			                    <input type="text" class="input-name" placeholder="Your name">
+			                </div>
+			            </div>
+			            <div class="object-16">
+			                <img
+			                loading="lazy"
+			                srcset="/Pet_Pathfinder/img/login_password_icon.png"
+			                class="img-4"
+			                />
+			                <div class="object-17">
+			                    <input type="password" class="input-password" placeholder="Password">
+			                </div>
+			            </div>
+			            <div class="object-16">
+			            <img src="/Pet_Pathfinder/img/signup_mail_icon.png" class="img-4">
+			            <div class="object-14">
+			                    <input type="text" class="input-name" placeholder="email-address">
+			            </div>
+			            </div>
+			            <p class="p-a">本当にこれでよろしいですか？<br>
+			               よろしければ登録ボタンをクリック<br>
+			               修正したい場合は戻るボタンをクリック
+			            </p>
+			            <div style="display:inline-flex">
+				            <form action="Signupcheck" method="post">
+				            	<input type="hidden" name="action" value="edit">
+				            	<input class="object-19" type="submit" value="戻る"></input>
+				            </form>
+				            <form action="Signupcheck" method="post">
+				            	<input type="hidden" name="action" value="register">
+				            	<input class="object-19" type="submit" value="登録"></input>
+				            </form>
+				        </div>
 			        </div>
 	            </div>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
@@ -251,18 +250,16 @@
         }
         /*ここからメイン
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+        .width80 {width: 80%;}
         .main {
             border-radius: 61px;
             border: 1px solid #3e3e3e;
             background-color: #fdfdfd;
             align-self: center;
             display: flex;
-            width: 585px;
-            max-width: 100%;
+            max-width: 400px;
             flex-direction: column;
             align-items: center;
-            margin: 153px 0 0 31px;
-            padding: 50px 80px;
             margin-bottom: 100px;
         }
         @media (max-width: 991px) {
@@ -293,6 +290,7 @@
             max-width: 100%;
             justify-content: space-between;
             gap: 20px;
+            border-bottom: solid 2px;
         }
         @media (max-width: 991px) {
             .object-13 {
@@ -313,7 +311,6 @@
                     background: transparent;
                     width: 100%;
                     font: 400 32px/46px Noto Serif JP, -apple-system, Roboto, Helvetica, sans-serif;
-                    color: #838383;
         }
         .object-15 {
             background-color: #494949;
@@ -322,10 +319,11 @@
         }
         .object-16 {
             display: flex;
-            margin-top: 84px;
+            margin-top: 40px;
             width: 393px;
             max-width: 100%;
             gap: 19px;
+            border-bottom: solid 2px;
         }
         @media (max-width: 991px) {
             .object-16 {
@@ -346,7 +344,6 @@
                 background: transparent;
                 width: 100%;
                 font: 400 32px/46px Noto Serif JP, -apple-system, Roboto, Helvetica, sans-serif;
-                color: #838383;
         }
         .object-18 {
             background-color: #494949;
@@ -366,7 +363,7 @@
             background-color: #0cf;
             width: 150px;
             max-width: 100%;
-            margin: 78px 0 56px 45px;
+            margin: 78px 0 56px 10px;
             padding: 13px 20px;
             font: 400 24px/34px Noto Serif JP, -apple-system, Roboto, Helvetica,
             sans-serif;
@@ -374,6 +371,7 @@
         }
         .object-19:hover{
             opacity: 0.5;
+            cursor: pointer;
         }
         .p-a{
             margin-top:50px;
@@ -385,8 +383,8 @@
             margin: 40px 0;
             }
         }
-        a{
-            color: #000000;
+        .button_title {
+        	color:#000;
             text-decoration-line: none;
         }
 
@@ -452,7 +450,7 @@
         }
 
         .nav_content{
-            width:250px;
+            width:50%;
             height:100%;
             bottom:0px;
             text-align:center;
@@ -464,7 +462,6 @@
             background:rgba(0,0,0,0.5);
             color:#fff;
             transition:.5s;
-
         }
 		/*この記述でハンバーガーメニューを修正する。
 		--------------------------------------------------------------------------------------------------*/
@@ -473,7 +470,7 @@
         }
 
         #drawer_input:checked ~ .nav_content{
-            left:0;
+            left:50%;
         }
 
         .nav_item{
@@ -485,6 +482,7 @@
         }
         .a{
             color:#fff;
+            text-decoration-line: none;
         }
     </style>
 </body>
