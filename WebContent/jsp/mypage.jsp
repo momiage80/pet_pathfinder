@@ -9,7 +9,6 @@
 <body>
 	<div class="object-1">
       <!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーー-->
-      	<div class="logined"><c:if test="${login.getName()}">${login.getName()}</c:if></div>
     	<%@ include file="header.jsp" %>
         <div class="object-2">
             <div class="object-3">
