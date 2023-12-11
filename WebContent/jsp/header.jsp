@@ -2,10 +2,11 @@
 <div class="logined" style="position: absolute;
 		    right: 100px;
 		    top: 40px;
+	        color: #ffa5a5;
 		    z-index: 1;
 		    font-size: 1.2rem;
 		    font-family: serif;
-		    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+   			 text-shadow: 2px 2px 4px rgb(218 20 20 / 50%);">
 <%@ page import="javax.servlet.http.HttpSession" %>
 <%@ page import="model.*" %>
 <%
@@ -30,13 +31,18 @@
         <label for="drawer_input" class="drawer_open"><span></span></label>
         <nav class="nav_content">
             <ul class="nav_list">
-                <li class="nav_item"><a class="a" href="/Pet_Pathfinder/Login">login</a></li>
-                <li class="nav_item"><a class="a" href="/Pet_Pathfinder/Signup">signup</a></li>
+            <% if (isLoggedIn) { %>
                 <li class="nav_item"><a class="a" href="/Pet_Pathfinder/Mypage">mypage</a></li>
                 <li class="nav_item"><a class="a" href="/Pet_Pathfinder/Trade">Trade</a></li>
                 <li class="nav_item"><a class="a" href="/Pet_Pathfinder/Contact">contact as</a></li>
                 <li class="nav_item"><a class="a" href="/Pet_Pathfinder/Logout">logout</a></li>
                 <li class="nav_item"><a class="a" href="/Pet_Pathfinder/Charge">charge</a></li>
+            <% }else{ %>
+            	<li class="nav_item"><a class="a" href="/Pet_Pathfinder/Login">login</a></li>
+                <li class="nav_item"><a class="a" href="/Pet_Pathfinder/Signup">signup</a></li>
+                <li class="nav_item"><a class="a" href="/Pet_Pathfinder/Trade">Trade</a></li>
+                <li class="nav_item"><a class="a" href="/Pet_Pathfinder/Contact">contact as</a></li>
+            <% }; %>
             </ul>
         </nav>
     </div>

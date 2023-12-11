@@ -40,8 +40,11 @@
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
 	            <div class="main">
 		            <div class="object-12">Sign up</div>
-		            <% if (request.getParameter("error") != null) { %>
+		            <% if ("duplicate".equals(request.getParameter("error"))) { %>
 					    <p style="color: red;">ユーザ名またはパスワードが無効です。</p>
+					<% } %>
+		            <% if ("cantinsert".equals(request.getParameter("error"))) { %>
+					    <p style="color: red;">会員登録できませんでした。お手数ですがお問い合わせをお願いします。</p>
 					<% } %>
 		            <form action="/Pet_Pathfinder/Signup" method="post">
 			            <div class="object-13">
@@ -51,7 +54,7 @@
 			                class="img-3"
 			                />
 			                <div class="object-14">
-			                    <input type="text" class="input-name" name="name" placeholder="Your name">
+			                    <input type="text" class="input-name" name="name" placeholder="Your name" required>
 			                </div>
 			            </div>
 			            <div class="object-16">
@@ -61,13 +64,13 @@
 			                class="img-4"
 			                />
 			                <div class="object-17">
-			                    <input type="password" class="input-password" name="password" placeholder="Password">
+			                    <input type="password" class="input-password" name="password" placeholder="Password" pattern="^(?=.*[0-9])(?=.*[a-zA-Z]).{8,}$" title="半角英数字8文字以上で入力してください" required>
 			                </div>
 			            </div>
 			            <div class="object-16">
 				            <img src="/Pet_Pathfinder/img/signup_mail_icon.png" class="img-4">
 				            <div class="object-14">
-			                    <input type="text" class="input-name" name="mail" placeholder="email-address">
+			                    <input type="text" class="input-name" name="mail" placeholder="email-address" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" title="正しいメールアドレスの形式で入力してください。" required>
 				            </div>
 			            </div>
 			            <input class="object-19" type="submit" value="signup"></input>

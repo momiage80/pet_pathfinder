@@ -29,7 +29,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="../img/cat3.png"
+	                    srcset="/Pet_Pathfinder/img/cat3.png"
 	                    class="img"
 	                    />
 	                </div>
@@ -37,10 +37,10 @@
 	            </div>
             </div>
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
-            <img class="img-a"  src="../img/check.png">
+            <img class="img-a"  src="/Pet_Pathfinder/img/check.png">
             <p class="p1">登録が完了しました</p>
             <form action="/Pet_Pathfinder/Top" class="top-form">
-            	<input type="image" src="../img/top.png" alt="Submit" class="top-1">
+            	<input type="image" src="/Pet_Pathfinder/img/top.png" alt="Submit" class="top-1">
             </form>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
@@ -240,11 +240,10 @@
         .top-1:hover {
             opacity:0.5;
         }
-        a{
-            color: #000000;
-            text-decoration-line: none;
-        }
-
+		.button_title{
+			text-decoration: none;
+			color: black;
+		}
 		/*ここからハンバーガー
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         .hamburger{
@@ -307,7 +306,7 @@
         }
 
         .nav_content{
-            width:250px;
+            width:50%;
             height:100%;
             bottom:0px;
             text-align:center;
@@ -328,7 +327,7 @@
         }
 
         #drawer_input:checked ~ .nav_content{
-            left:0;
+            left:50%;
         }
 
         .nav_item{
@@ -340,6 +339,7 @@
         }
         .a{
             color:#fff;
+            text-decoration: none;
         }
     </style>
 </body>

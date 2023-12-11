@@ -35,7 +35,6 @@ public class LoginServlet extends HttpServlet {
 
 		if(result){
 			HttpSession session = req.getSession();
-			System.out.println(session.getId());
 			session.setAttribute("login", login);
 			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/mypage.jsp");
 			dispatcher.forward(req, resp);

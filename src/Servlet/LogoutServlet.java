@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class LogoutServlet
@@ -22,7 +23,19 @@ public class LogoutServlet extends HttpServlet {
 	}
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/logoutcomp.jsp");
-		dispatcher.forward(req, resp);
+		// falseを指定することで、セッションが存在しない場合は新しいセッションを作成せずにnullを返します。
+		HttpSession session = req.getSession(false);
+
+        // セッションが存在し、無効でない場合
+        if (session != null && session.getAttribute("login") != null) {
+            // セッションの無効化
+            session.invalidate();
+            System.out.println("sessionを無効化したよ");
+        }else{
+        	System.out.println("sessionはまだ有効だよ");
+        }
+
+        // ログアウト後の処理
+        resp.sendRedirect("jsp/logoutcomp.jsp");
 	}
 }
