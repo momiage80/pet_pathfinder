@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.DuplicationDAO;
+import model.Signup;
 
 /**
  * Servlet implementation class SignupServlet
@@ -29,6 +30,7 @@ public class SignupServlet extends HttpServlet {
 		String password = req.getParameter("password");
 		String mail = req.getParameter("mail");
 		System.out.println(name+password+mail);
+		Signup signup = new Signup(name,password,mail);
 		DuplicationDAO dup = new DuplicationDAO();
 
 		//重複処理--------------------------------------------------------------------------
@@ -37,6 +39,7 @@ public class SignupServlet extends HttpServlet {
 			resp.sendRedirect("/Pet_Pathfinder/jsp/signup.jsp?error=duplicate");
             return;
 		}else{
+			req.setAttribute("signup", signup);
 			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/signupcheck.jsp");
 			dispatcher.forward(req, resp);
 		}

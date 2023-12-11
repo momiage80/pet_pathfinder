@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="model.Signup" %>
+<%
+	Signup signup = (Signup)request.getAttribute("signup");
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -40,7 +44,7 @@
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
 	            <div class="main">
 		            <div class="object-12"></div>
-		            <div class="width80">
+		            <form action="Signupcheck" method="post" class="width80">
 			            <div class="object-13">
 			                <img
 			                loading="lazy"
@@ -48,7 +52,7 @@
 			                class="img-3"
 			                />
 			                <div class="object-14">
-			                    <input type="text" class="input-name" placeholder="Your name">
+			                    <input type="text" name="name" class="input-name" placeholder="Your name" readonly="readonly" value="<%= signup.getName() %>">
 			                </div>
 			            </div>
 			            <div class="object-16">
@@ -58,29 +62,24 @@
 			                class="img-4"
 			                />
 			                <div class="object-17">
-			                    <input type="password" class="input-password" placeholder="Password">
+			                    <input type="password" name="password" class="input-password" placeholder="Password" readonly="readonly" value="<%= signup.getPassword() %>">
 			                </div>
 			            </div>
 			            <div class="object-16">
 			            <img src="/Pet_Pathfinder/img/signup_mail_icon.png" class="img-4">
 			            <div class="object-14">
-			                    <input type="text" class="input-name" placeholder="email-address">
+			                    <input type="text" name="mail" class="input-name" placeholder="email-address" readonly="readonly" value="<%= signup.getMail() %>">
 			            </div>
 			            </div>
 			            <p class="p-a">本当にこれでよろしいですか？<br>
 			               よろしければ登録ボタンをクリック<br>
 			               修正したい場合は戻るボタンをクリック
 			            </p>
-			            <div style="display:inline-flex">
-				            <form action="Signupcheck" method="post">
-				            	<input type="hidden" name="action" value="edit">
-				            	<input class="object-19" type="submit" value="戻る"></input>
-				            </form>
-				            <form action="Signupcheck" method="post">
-				            	<input type="hidden" name="action" value="register">
-				            	<input class="object-19" type="submit" value="登録"></input>
-				            </form>
-				        </div>
+			            	<div style="display:inline-flex">
+				            	<button class="object-19"><a href="javascript:history.back()" style="text-decoration: none; color: black;">戻る</a></button>
+				            	<input class="object-19" type="submit" value="登録">
+				            </div>
+			            </form>
 			        </div>
 	            </div>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
