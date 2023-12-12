@@ -1,28 +1,33 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" %>
+<%
+	Account account = (Account)session.getAttribute("account");
+	int totalCoins = account.getFree_coins() + account.getPaid_coins();
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=0.7">
+
 <title>Insert title here</title>
 </head>
 <body>
 	<div class="object-1">
-		<!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーー-->
+       <!-- ハンバーガーをインクルードで挿入してるよ ーーーーーーーーーーーーーーーーーーーー-->
     	<%@ include file="header.jsp" %>
-
         <div class="object-2">
             <div class="object-3">
 	            <div class="object-4">
 	                <div class="column">
 		                <div class="object-5">
 		                    <div class="object-6">
-		                        <a href="/Pet_Pathfinder/jsp/top.jsp" class="button_title">Pet PathFinder</a>
+		                        <a href="/Pet_Pathfinder/Top" class="button_title">Pet PathFinder</a>
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">会員情報変更</div>
-			                    <div class="object-9">Mem. Change</div>
+			                    <div class="object-8">会員登録</div>
+			                    <div class="object-9">signup</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -31,48 +36,67 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="/Pet_Pathfinder/img/login_header_image.jpg"
+	                    srcset="/Pet_Pathfinder/img/cat2.png"
 	                    class="img"
 	                    />
 	                </div>
 	                </div>
 	            </div>
             </div>
-            <!-- このメインの部分を入れ替える（CSSのメイン部分も入れ替える） -------------------------------------------------------->
-           <div class="main-content">
-			    <div class="center-heading">
-			        <h2>ユーザー情報入力</h2>
-			    </div>
-			    <% if ("duplicate".equals(request.getParameter("error"))) { %>
-					    <p style="color: red;">ユーザ名またはメールアドレスが重複しています。</p>
-				<% } %>
-			    <form action="/Pet_Pathfinder/CustomerInfo" method="post">
-				    <div class="user-inputs">
-				        <label class="input-label">
-				            <input type="text" name="name" placeholder="ユーザー名" class="text-input">
-				        </label>
+            <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
+	            <div class="main">
+		            <div class="wid80">
+			            <div class="object-13">
+			                <div class="object-14">
+			                    <h2>ユーザー名</h2>
+			                    <p><%= account.getUser_name() %></p>
+			                </div>
+			            </div>
+			            <div class="object-13">
+			                <div class="object-14">
+			                    <h2>パスワード</h2>
+			                    <p><%= account.getPassword() %></p>
+			                </div>
+			            </div>
+			            <div class="object-13">
+			                <div class="object-14">
+			                    <h2>メールアドレス</h2>
+			                    <p><%= account.getMail_address() %></p>
+			                </div>
+			            </div>
+			            <div class="object-13">
+			                <div class="object-14">
+			                    <h2>コイン枚数</h2>
+			                    <p><%= totalCoins %></p>
+			                </div>
+			            </div>
 
-				        <label class="input-label">
-				            <input type="password" name="password" placeholder="パスワード" class="text-input">
-				        </label>
+						<div class="form-parent">
+				            <form action="/Pet_Pathfinder/CustomerInfo" method="post">
+	            				<input type="hidden" name="customer" value="back">
+				            	<input class="object-19" type="submit" value="戻る">
+				            </form>
 
-				        <label class="input-label">
-				            <input type="email" name="mail" placeholder="メールアドレス" class="text-input">
-				        </label>
+				            <form action="/Pet_Pathfinder/CustomerInfo" method="post" >
+					            <input type="hidden" name="customer" value="delete">
+				            	<input class="object-19" type="submit" value="削除">
+				            </form>
 
-						<input type="hidden" name="customer" value="changecheck">
-				        <input type="submit" value="変更する" class="button">
-				        <a class="button" href="javascript:history.back()">戻る</a>
-				    </div>
-			    </form>
-			</div>
+				            <form action="/Pet_Pathfinder/CustomerInfo" method="post" >
+					            <input type="hidden" name="customer" value="change">
+				            	<input class="object-19" type="submit" value="変更">
+				            </form>
+			            </div>
+		            </div>
+	            </div>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
     <jsp:include page="footer.jsp" />
     <style>
-    	/*ここからヘッダーCSS（書き換えない）
+    	/*ここからヘッダー
     	ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+    	form {width: 25%;}
         *{
             margin: 0;
             padding: 0;
@@ -143,10 +167,6 @@
             text-align: center;
             font: 400 32px/37px Yeseva One, sans-serif;
         }
-        .button_title {
-        	color: #000000;
-            text-decoration-line: none;
-        }
         .object-7 {
             display: flex;
             margin-top: 183px;
@@ -163,7 +183,7 @@
         .object-8 {
             color: #000;
             text-align: center;
-            font: 400 25px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
+            font: 400 37px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
             sans-serif;
         }
         @media (max-width: 991px) {
@@ -235,222 +255,137 @@
             margin: 0 10px 40px 0;
             }
         }
-        /*ここからメイン （書き換える）
-        ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
-		  body {
-            background-color: #f5f5f5;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        .main-content {
-            text-align: center;
-            margin-top: 50px;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            margin: 90px 300px;
-        }
-
-        .center-heading {
-            font-size: 32px;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .payment-options {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .payment-option {
-            display: flex;
-            align-items: center;
-            margin: 10px 0;
-            cursor: pointer;
-        }
-
-        .radio-custom {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            border: 2px solid #f1800c;
-            margin-right: 10px;
-            position: relative;
-            transition: background-color 0.3s;
-        }
-
-        .radio-custom::before {
-            content: '';
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color:#ffb859;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(0);
-            transition: transform 0.3s;
-        }
-
-        input[type="radio"]:checked + .radio-custom::before {
-            transform: translate(-50%, -50%) scale(1);
-        }
-
-        .payment-label {
-            font-size: 18px;
-            color: #333;
-        }
-
-        .payment-options button {
-            margin-top: 20px;
-            padding: 15px 30px;
-            font-size: 18px;
-            background-color: #f1800c;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .payment-options button:hover {
-            background-color:#ffb859 ;
-        }
-
-        .drawer_hidden {
-            display: none;
-        }
-
-        .drawer_open {
-            display: flex;
-            height: 60px;
-            width: 60px;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            z-index: 100;
-            /*重なりが一番上になる*/
-            cursor: pointer;
-            color: #fff;
-        }
-
-        .drawer_open span,
-        .drawer_open span:before,
-        .drawer_open span:after {
-            content: '';
-            display: block;
-            height: 3px;
-            width: 25px;
-            border-radius: 3px;
-            background: #fff;
-            transition: 0.5s;
-            position: absolute;
-        }
-
-        .drawer_open span:before {
-            bottom: 8px;
-        }
-
-        .drawer_open span:after {
-            top: 8px;
-        }
-
-        #drawer_input:checked ~ .drawer_open span {
-            background: rgba(255, 255, 255, 0);
-        }
-
-        #drawer_input:checked ~ .drawer_open span::before {
-            bottom: 0;
-            transform: rotate(45deg);
-        }
-
-        #drawer_input:checked ~ .drawer_open span::after {
-            top: 0;
-            transform: rotate(-45deg);
-        }
-
-        .nav_content {
-            width: 50%;
-            height: 100%;
-            bottom: 0px;
-            text-align: center;
-            margin-right: auto;
-            position: fixed;
-            top: 0;
-            left: 100%;
-            z-index: 99;
-            background: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            transition: 0.5s;
-        }
-
-        #drawer_input:checked ~ .nav_content {
-            /*ここでアニメーション後のnavバーの位置を変える*/
-            left: 50%;
-        }
-
-        .nav_item {
-            font-size: 25px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            margin-left: 20px;
-            margin-right: 20px;
-        }
-
-        .a {
-            color: #fff;
+        .button_title {
+        	color:#000;
             text-decoration-line: none;
         }
+        /*ここからメイン
+        ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+        .wid80 {
+        	width: 80%;
+        	display: flex;
+        	flex-direction: column;
+    		align-items: center;
+       	}
+        .main {
+            border-radius: 20px;
+            border: 1px solid #3e3e3e;
+            background-color: #fdfdfd;
+            align-self: center;
+            display: flex;
+            max-width: 600px;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+        @media (max-width: 991px) {
+            .object-11 {
+            margin-top: 40px;
+            padding: 0 20px;
+            }
+        }
 
-       .text-input {
-		    padding: 10px;
-		    font-size: 16px;
-		    margin: 10px 0;
-		    border: 1px solid #ccc;
+        .object-12 {
+            justify-content: flex-end;
+            color: #000;
+            margin-top: 72px;
+            font: 700 50px/72px Noto Serif JP, -apple-system, Roboto, Helvetica,
+            sans-serif;
+        }
+        @media (max-width: 991px) {
+            .object-12 {
+            font-size: 40px;
+            line-height: 64px;
+            margin-top: 40px;
+            }
+        }
+        .object-13 {
+            display: flex;
+            margin-top: 30px;
+            width: 600px;
+            max-width: 100%;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        @media (max-width: 991px) {
+            .object-13 {
+            margin-top: 40px;
+            }
+        }
+
+        .input-name {
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                    width: 100%;
+                    font: 400 32px/46px Noto Serif JP, -apple-system, Roboto, Helvetica, sans-serif;
+        }
+
+        .object-16 {
+            display: flex;
+            margin-top: 50px;
+            width: 393px;
+            max-width: 100%;
+            gap: 19px;
+            border-bottom: solid 2px;
+        }
+        @media (max-width: 991px) {
+            .object-16 {
+            margin-top: 40px;
+            }
+        }
+        .img-4 {
+            aspect-ratio: 1.02;
+            object-fit: contain;
+            object-position: center;
+            width: 58px;
+            overflow: hidden;
+            max-width: 100%;
+        }
+        .input-password {
+                border: none;
+                outline: none;
+                background: transparent;
+                width: 100%;
+                font: 400 32px/46px Noto Serif JP, -apple-system, Roboto, Helvetica, sans-serif;
+        }
+        .object-18 {
+            background-color: #494949;
+            margin-top: 7px;
+            width: 393px;
+            height: 2px;
+        }
+        .object-19 {
+            color: #070707;
+		    text-align: center;
+		    letter-spacing: 4.5600000000000005px;
 		    border-radius: 5px;
-		}
+		    border: solid 1px #9f9f9f;
+		    box-shadow: 2px 3px 0px 0px rgba(0, 0, 0, 0.4);
+		    background-color: #f7f7f7;
+		    width: 100%;
+		    padding: 7px 20px;
+		    font: 400 24px/34px Noto Serif JP, -apple-system, Roboto, Helvetica, sans-serif;
+		    margin: 30px 0 24px 0;
+        }
+        .object-19:hover{
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        @media (max-width: 991px) {
+            .object-19 {
+            white-space: initial;
+            margin: 40px 0;
+            }
+        }
+        .form-parent {
+        	width: 100%;
+        	display: flex;
+		    flex-direction: row;
+		    justify-content: space-between;
+        }
 
-		.user-inputs {
-		    display: flex;
-		    flex-direction: column;
-		}
-
-		.user-inputs button {
-		    margin-top: 20px;
-		    padding: 15px 30px;
-		    font-size: 18px;
-		    background-color: #f1800c;
-		    color: #fff;
-		    border: none;
-		    border-radius: 5px;
-		    cursor: pointer;
-		    transition: background-color 0.3s;
-		}
-
-		.user-inputs .button {
-		    margin-top: 20px;
-		    padding: 15px 30px;
-		    font-size: 18px;
-		    background-color: #f1800c;
-		    color: #fff;
-		    border: none;
-		    border-radius: 5px;
-		    cursor: pointer;
-		    transition: background-color 0.3s;
-		}
-
-		.user-inputs button:hover {
-		    background-color: #ffb859;
-		}
-
-		.user-inputs .button:hover {
-		    background-color: #ffb859;
-		}
-
-		/*ここからハンバーガー ※ここから下は入れ替えない
+		/*ここからハンバーガー
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         .hamburger{
         	position: absolute;
@@ -533,7 +468,6 @@
         }
 
         #drawer_input:checked ~ .nav_content{
-        	/*ここでアニメーション後のnavバーの位置を変える*/
             left:50%;
         }
 

@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import model.Account;
 import model.Login;
 import model.LoginLogic;
 
@@ -32,10 +33,12 @@ public class LoginServlet extends HttpServlet {
 		Login login = new Login(user_name, password);
 		LoginLogic bo = new LoginLogic();
 		boolean result = bo.execute(login);
+		Account account = bo.getAccount(login);
 
 		if(result){
 			HttpSession session = req.getSession();
 			session.setAttribute("login", login);
+			session.setAttribute("account", account);
 			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/mypage.jsp");
 			dispatcher.forward(req, resp);
 		}else{

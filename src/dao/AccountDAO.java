@@ -10,6 +10,39 @@ import model.Account;
 import model.Login;
 
 public class AccountDAO {
+	public boolean isUpdateAccount(String username, String email, String pass, String updatename) {
+        try {
+            // データベース接続処理（略）
+			Class.forName("org.postgresql.Driver");
+		}catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e);
+		}
+
+        try{
+			Connection con = DriverManager.getConnection(
+					"jdbc:postgresql://localhost/pet_pathfinder?useSSL=false",
+					"postgres",
+					"postsql"
+					);
+            // updateチェッククエリの実行
+            String query = "update customer set user_name = ?,mail_address = ?,password = ? where user_name = ?;";
+            try (PreparedStatement statement = con.prepareStatement(query)) {
+                statement.setString(1, username);
+                statement.setString(2, email);
+                statement.setString(3, pass);
+                statement.setString(4, updatename);
+                int rowsAffected = statement.executeUpdate();
+                if (rowsAffected > 0) {
+                    return true;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("customerのupdateに失敗しました");
+        }
+        return false;
+    }
 	public Account findByLogin(Login login) {
 		Account account = null;
 		try {
