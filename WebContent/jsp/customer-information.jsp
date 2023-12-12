@@ -17,7 +17,7 @@
 	                <div class="column">
 		                <div class="object-5">
 		                    <div class="object-6">
-		                        <a href="#" class="button_title">Pet PathFinder</a>
+		                        <a href="/Pet_Pathfinder/Top" class="button_title">Pet PathFinder</a>
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
@@ -31,7 +31,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="../img/cat6.png"
+	                    srcset="/Pet_Pathfinder/img/cat6.png"
 	                    class="img"
 	                    />
 	                </div>
@@ -49,8 +49,8 @@
 
             <!--<img src="/Pet_Pathfinder/img/customer-information-icon.png" class="img-c">-->
             <img src="/Pet_Pathfinder/img/customer-information.png" class="img-b">
-            <!--<a href="#" class="img-d"><img src="../img/customer-information-back.png" ></a>-->
-            <!--<a href="#" class="img-e"><img src="../img/customer-information-delete.png" ></a>-->
+            <!--<a href="#" class="img-d"><img src="/Pet_Pathfindeimg/customer-information-back.png" ></a>-->
+            <!--<a href="#" class="img-e"><img src="/Pet_Pathfindeimg/customer-information-delete.png" ></a>-->
 
             <form action="/Pet_Pathfinder/CustomerInfo" method="post">
             <p class="img-d">

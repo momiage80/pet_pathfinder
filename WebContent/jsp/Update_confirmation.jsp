@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	Account account = (Account)session.getAttribute("account");
+	Signup update = (Signup)request.getAttribute("update");
+	int totalCoins = account.getFree_coins() + account.getPaid_coins();
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -43,23 +48,26 @@
 			    <!-- 変更後の内容 -->
 			    <div class="user-info">
 			    	<h3>変更前</h3>
-			        <p>ユーザー名：マリオ<p>
-			        <p>メールアドレス: user@example.com</p>
-			        <p>パスワード: *********</p>
+			        <p>ユーザー名：<%= account.getUser_name() %><p>
+			        <p>メールアドレス: <%= account.getMail_address() %></p>
+			        <p>パスワード: <%= account.getPassword() %></p>
 			    </div>
 			</div>
 			<!-- 変更後の内容 -->
 			    <div class="user-info">
 			    	<h3>変更後</h3>
-			        <p>ユーザー名クッパ<p>
-			        <p>ユーザー: user@example.com</p>
-			        <p>パスワード: *********</p>
+			        <p>ユーザー名 : <%= update.getName() %><p>
+			        <p>メールアドレス: <%= update.getMail() %></p>
+			        <p>パスワード: <%= update.getPassword() %></p>
 
 			    </div>
 			    <div class="button-container">
 			    <form action="/Pet_Pathfinder/CustomerInfo" method="post">
 			        <a class="back-button" style="text-decoration: none;" href="javascript:history.back()">会員情報へ戻る</a>
 			    	<input type="hidden" name="customer" value="changecomp">
+			    	<input type="hidden" name="changename" value=<%= update.getName() %>>
+			    	<input type="hidden" name="changepassword" value=<%= update.getPassword()%>>
+			    	<input type="hidden" name="changemail" value=<%= update.getMail() %>>
 			        <input type="submit" class="confirm-button" value="変更確定">
 			    </form>
 			    </div>
