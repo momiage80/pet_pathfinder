@@ -14,6 +14,7 @@ public class Account implements Serializable {
 	private Timestamp update;
 	private String comment;
 	private String icon;
+	private int icon_margintop = 0;
 
 	public Account(int id, String name, String mail, String password,
 			int free, int paid, Timestamp created, Timestamp update,
@@ -71,6 +72,10 @@ public class Account implements Serializable {
 		return icon;
 	}
 
+	public int getIconMargintop() {
+		return icon_margintop;
+	}
+
 //setter------------------------------------------------------
 	public void setUser_id(int user_id) {
 		this.user_id = user_id;
@@ -112,4 +117,7 @@ public class Account implements Serializable {
 		this.icon = icon;
 	}
 
+	public void setIconMargntop(int icon_margintop){
+		this.icon_margintop = icon_margintop;
+	}
 }
