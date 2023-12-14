@@ -1,15 +1,66 @@
 package dao;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Timestamp;
 
+import javax.servlet.http.Part;
+
 import model.Account;
 import model.Login;
 
 public class AccountDAO {
+	public boolean isUpdatefiles(String comment, String fileName, Part file, String user){
+		try {
+            // データベース接続処理（略）
+			Class.forName("org.postgresql.Driver");
+		}catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e);
+		}
+
+        try{
+			Connection con = DriverManager.getConnection(
+					"jdbc:postgresql://localhost/pet_pathfinder?useSSL=false",
+					"postgres",
+					"postsql"
+					);
+			String uploadDirectory = "C:/pleiades/4_6neon/Pet_Pathfinder/WebContent/img";
+			String uploadPath = uploadDirectory + File.separator + fileName;
+
+	        try (InputStream input = file.getInputStream();
+	        	OutputStream output = new FileOutputStream(new File(uploadPath))) {
+
+	        	byte[] buffer = new byte[1024];
+	    		int length;
+	    		while ((length = input.read(buffer)) > 0) {
+	    			output.write(buffer, 0, length);
+	    		}
+			}
+
+	        // データベースにファイルのパスを保存
+	        String query = "update customer set comment = ?,icon = ? where user_name = ?;";
+	        try (PreparedStatement statement = con.prepareStatement(query)) {
+                statement.setString(1, comment);
+                statement.setString(2, fileName);
+                statement.setString(3, user);
+                int rowsAffected = statement.executeUpdate();
+                if (rowsAffected > 0) {
+                    return true;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("userprofileのupdateに失敗しました");
+        }
+        return false;
+	}
 	public boolean isUpdateAccount(String username, String email, String pass, String updatename) {
         try {
             // データベース接続処理（略）

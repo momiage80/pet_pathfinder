@@ -5,6 +5,28 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script>
+	function previewImage(obj){
+		var fileReader = new FileReader();
+
+		fileReader.onload = (function() {
+			document.getElementById('preview').src = fileReader.result;
+		});
+		fileReader.readAsDataURL(obj.files[0]);
+	}
+	function resizeImage() {
+        var img = document.getElementById('preview');
+        var marginTop = document.getElementById('marginTop');
+        var newSize = prompt("新しいサイズを入力してください (px) マイナスで入力すると画像が上に行きます。", img.style.marginTop);
+
+        if (newSize !== null) {
+            img.style.marginTop = newSize + "px";
+            img.style.width = "100%";
+            img.style.height = "auto"; // アスペクト比を維持する場合
+            marginTop.value = newSize;
+        }
+    }
+</script>
 </head>
 <body>
 	<div class="object-1">
@@ -15,7 +37,7 @@
 	                <div class="column">
 		                <div class="object-5">
 		                    <div class="object-6">
-		                        <a href="#" class="button_title">Pet PathFinder</a>
+		                        <a href="/Pet_Pathfinder/Top" class="button_title">Pet PathFinder</a>
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
@@ -29,7 +51,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="../img/cat5.png"
+	                    srcset="/Pet_Pathfinder/img/cat5.png"
 	                    class="img"
 	                    />
 	                </div>
@@ -40,28 +62,29 @@
             <div class="limited-title">
             	<p>入力してください</p>
             </div>
-            <div class="limited-parent">
-	            <div class="trade-child">
-					<div class="rounded-image">
-						<img src="../img/cat1.png" alt="Circle Image">
+            <form action="/Pet_Pathfinder/Profile" method="post" enctype="multipart/form-data">
+	            <div class="limited-parent">
+		            <div class="trade-child">
+						<div class="rounded-image">
+							<img id="preview" src="/Pet_Pathfinder/img/login_icon_human.png">
+						</div>
+						<input type="file" name="file" type="file" accept='image/*' onchange="previewImage(this);" style="margin: 30px auto 0;width: 50%;display: block;">
+						<input type="hidden" name="marginTop" value="0" id="marginTop">
+						<button type="button" onclick="resizeImage()" style="margin: 30px auto 0;width: 50%;display: block;">画像上下調整</button>
 					</div>
-				</div>
-				<div class="check-child">
-		            <p class="p-1">表示名:</p>
-		            	<input type="text"  id="name"  name="name" value="表示名を入力" class="box-2">
-		            <p class="p-2">メールアドレス:</p>
-		            	<input type="text"  id="mail"  name="mail" value="メールアドレスを入力" class="box-3">
-		            <p class="p-3">一言コメント:</p>
-		           		<input type="text"  id="comment"  name="comment" value="コメントを入力" class="box-4">
-					<div class="parent" style="display: flex;">
-						<form action="Profile" method="post">
-							<input type="hidden" name="profile" value="comp">
-							<input class="div-12 button" type="submit" value="変更">
-						</form>
-						<button class="div-12 button"><a href="javascript:history.back()">戻る</a></button>
+					<div class="check-child">
+			            <p class="p-3">一言コメント:</p>
+			           		<textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+						<div class="parent" style="display: flex;">
+							<div class="form">
+								<input type="hidden" name="profile" value="comp">
+								<input class="div-12 button" type="submit" value="変更">
+							</div>
+							<button class="div-12 button"><a href="javascript:history.back()">戻る</a></button>
+						</div>
 					</div>
-				</div>
-	        </div>
+		        </div>
+	        </form>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
@@ -290,7 +313,8 @@
         }
         .check-child{
         	width: 45%;
-
+			display: flex;
+   			flex-direction: column;
         }
         .check-child p {
         	width: 100%;
@@ -307,7 +331,7 @@
 			border: 2px solid #191919;
 			margin: auto;
     	}
-    	.rounded-image img {
+    	.rounded-image #preview {
 			width: 100%; /* 親要素に対して画像を100%にするためのスタイル */
 			height: auto; /* アスペクト比を維持するためのスタイル */
 	    }
@@ -327,7 +351,7 @@
 	    	font-size: 3rem;
 	    	color: #191919;
 	    }
-	    form{
+	    .form{
 	    	width: 40%;
 	    	white-space: nowrap;
 	    }
@@ -376,6 +400,19 @@
 		    font-size: 40px;
 		    max-width: 100%;
 		  }
+		}
+
+		.img-aspect {
+			max-width: 300px;
+			max-height: 500px;
+		/** overflow: scroll; **/
+			margin-bottom: 15px;
+		}
+
+		.img-aspect #preview {
+			width: 100%;
+			height: auto;
+			display: block;
 		}
 
 		/*ここからハンバーガー
