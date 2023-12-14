@@ -16,7 +16,7 @@ import model.Account;
 import model.Login;
 
 public class AccountDAO {
-	public boolean isUpdatefiles(String comment, String fileName, Part file, String user){
+	public boolean isUpdatefiles(String comment, String fileName, Part file, String user, int marginTop){
 		try {
             // データベース接続処理（略）
 			Class.forName("org.postgresql.Driver");
@@ -45,11 +45,12 @@ public class AccountDAO {
 			}
 
 	        // データベースにファイルのパスを保存
-	        String query = "update customer set comment = ?,icon = ? where user_name = ?;";
+	        String query = "update customer set comment = ?,icon = ?,icon_margintop = ? where user_name = ?;";
 	        try (PreparedStatement statement = con.prepareStatement(query)) {
                 statement.setString(1, comment);
                 statement.setString(2, fileName);
-                statement.setString(3, user);
+                statement.setInt(3, marginTop);
+                statement.setString(4, user);
                 int rowsAffected = statement.executeUpdate();
                 if (rowsAffected > 0) {
                     return true;

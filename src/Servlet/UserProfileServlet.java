@@ -34,7 +34,8 @@ public class UserProfileServlet extends HttpServlet {
 			dispatcher.forward(req, resp);
 		}else if("comp".equals(profile)){
 			String comment = req.getParameter("comment");
-			String marginTop = req.getParameter("marginTop");
+			String SmarginTop = req.getParameter("marginTop");
+			int marginTop = Integer.parseInt(SmarginTop);
 			Part file = req.getPart("file");
 			String fileName = getFileName(file);
 			HttpSession session = req.getSession(false);
@@ -43,7 +44,10 @@ public class UserProfileServlet extends HttpServlet {
 			String updatedname = account.getUser_name();
 			System.out.println(comment+marginTop+file);
 			AccountDAO dao = new AccountDAO();
-			if(dao.isUpdatefiles(comment, fileName, file, account.getUser_name())){
+			if(dao.isUpdatefiles(comment, fileName, file, account.getUser_name(), marginTop)){
+				account.setComment(comment);
+				account.setIcon(fileName);
+				account.setIconMargntop(marginTop);
 				RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/user-profile-change-comp-tmp.jsp");
 				dispatcher.forward(req, resp);
 			}else{

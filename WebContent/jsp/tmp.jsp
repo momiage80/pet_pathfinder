@@ -62,6 +62,9 @@
             <div class="limited-title">
             	<p>入力してください</p>
             </div>
+            <% if ("cantfileupload".equals(request.getParameter("error"))) { %>
+				    <p style="color: red; margin: auto;">iconが設定できませんでした<br>お手数ですが、お問い合わせをお願いします。</p>
+			<% } %>
             <form action="/Pet_Pathfinder/Profile" method="post" enctype="multipart/form-data">
 	            <div class="limited-parent">
 		            <div class="trade-child">

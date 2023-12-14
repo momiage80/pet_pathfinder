@@ -40,36 +40,41 @@
 	                </div>
 	            </div>
             </div>
+
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
-            <img src="/Pet_Pathfinder/img/user-profile.png" class="img-a">
-            <img src="/Pet_Pathfinder/img/user-profile-white.png" class="img-b">
-            <form action="" method="get">
-            <div class="img-c"></div>
-            <p class="p-1">name</p>
-            <div class="img-d"><%= account.getUser_name() %></div>
-            <p class="p-2">mail-address</p>
-            <div class="img-e"><%= account.getMail_address() %></div>
-            <p class="p-3">comment</p>
-            <div class="img-f">
-            	<% if (account.getComment() != null) { %>
-            		<%= account.getComment() %>
-            	<% }else{ %>
-            		私は犬より猫が好きです。
-            	<% } %>
+            <div class="parent">
+	            <div class="rounded-image">
+					<img id="preview" src="/Pet_Pathfinder/img/<%= account.getIcon() %>" alt="画像の更新には時間がかかります。">
+				</div>
+	            <div class="child">
+		            <p class="p-1">name</p>
+		            <div class="img-d"><%= account.getUser_name() %></div>
+		            <p class="p-2">mail-address</p>
+		            <div class="img-e"><%= account.getMail_address() %></div>
+		            <p class="p-3">comment</p>
+		            <div class="img-f">
+		            	<% if (account.getComment() != null) { %>
+		            		<%= account.getComment() %>
+		            	<% }else{ %>
+		            		私は犬より猫が好きです。
+		            	<% } %>
+		            </div>
+		            <div class="children">
+			            <form action="/Pet_Pathfinder/Profile" method="post">
+			            	<input type="hidden" name="profile" value="hoge">
+			            	<input type="submit" id="back" name="back" value="戻る" class="img-g">
+			            </form>
+			            <form action="/Pet_Pathfinder/Profile" method="post">
+			            	<input type="hidden" name="profile" value="change">
+			            	<input type="submit" id="change" name="change" value="変更" class="img-h">
+			            </form>
+			            <form action="/Pet_Pathfinder/Profile" method="post">
+			            	<input type="hidden" name="profile" value="coin">
+			            	<input type="submit" id="coin" name="coin" value="コインを渡す" class="img-i">
+			            </form>
+		            </div>
+	            </div>
             </div>
-            </form>
-            <form action="/Pet_Pathfinder/Profile" method="post">
-            	<input type="hidden" name="profile" value="hoge">
-            	<input type="submit" id="back" name="back" value="戻る" class="img-g">
-            </form>
-            <form action="/Pet_Pathfinder/Profile" method="post">
-            	<input type="hidden" name="profile" value="change">
-            	<input type="submit" id="change" name="change" value="変更" class="img-h">
-            </form>
-            <form action="/Pet_Pathfinder/Profile" method="post">
-            	<input type="hidden" name="profile" value="coin">
-            	<input type="submit" id="coin" name="coin" value="コインを渡す" class="img-i">
-            </form>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
         </div>
     </div>
@@ -235,6 +240,29 @@
         }
         /*ここからメイン
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+        .rounded-image {
+			width: 400px;
+		    height: 400px;
+		    border-radius: 50%;
+		    overflow: hidden;
+		    border: 2px solid #191919;
+		    margin: 100px auto;
+		    background: white;
+    	}
+    	.rounded-image #preview {
+			width: 100%; /* 親要素に対して画像を100%にするためのスタイル */
+			height: auto; /* アスペクト比を維持するためのスタイル */
+			margin-top: <%=account.getIconMargintop() %>px;
+	    }
+        .children{
+        	display: flex;
+        	margin-top: 100px;
+        }
+        .parent{
+        	display: flex;
+        	background-image: url("/Pet_Pathfinder/img/user-profile.png");
+        	justify-content: space-between;
+        }
          .div-9 {
           justify-content: center;
           color: #fff;
@@ -275,53 +303,51 @@
         .img-c{
             width:400px;
             height:400px;
-            margin-top:-600px;
             margin-left:80px;
             background-color: white;
             border-radius:50%;
             border: solid 1px black;
         }
         .p-1{
-            margin-top:-600px;
-            margin-left:600px;
             font-size:40px;
         }
         .img-d{
             margin-bottom:20px;
-            margin-left:600px;
             width:500px;
             height:70px;
             background-color: white;
             border-radius:5%;
             border: solid 1px black;
+            font-size: 1.5rem;
+            padding: 10px;
         }
         .p-2{
-            margin-left:600px;
             font-size:40px;
         }
         .img-e{
             margin-bottom:20px;
-            margin-left:600px;
             width:500px;
             height:70px;
             background-color: white;
             border-radius:5%;
             border: solid 1px black;
+            font-size: 1.5rem;
+    		padding: 10px;
         }
         .p-3{
-            margin-left:600px;
             font-size:40px;
         }
         .img-f{
-            margin-left:600px;
             width:500px;
             height:300px;
             background-color: white;
             border-radius:5%;
             border: solid 1px black;
+            font-size: 1.5rem;
+    		padding: 10px;
         }
         .img-g{
-            width:250px;
+            width:200px;
             height:150px;
             background-color: #6EFFFF;
             border-radius:80%;
@@ -329,24 +355,21 @@
             font-size:60px;
             font-weight:bold;
             opacity: 90%;
-            margin-left: 600px;
-            margin-top: 100px;
             box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
         }
         .img-g:hover{
             opacity:50%;
         }
         .img-h{
-            width:250px;
+            width:200px;
             height:95px;
             background-color: #56FF30;
             border: solid 2px black;
             font-size:50px;
             font-weight:bold;
             opacity: 90%;
-            margin-left: 900px;
-            margin-top: -200px;
             box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+            margin-left: 40px;
         }
         .img-h:hover{
             opacity:50%;
@@ -359,10 +382,7 @@
             font-size:30px;
             font-weight:bold;
             opacity: 90%;
-            margin-left: 900px;
-            margin-top: -80px;
             box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
-            margin-bottom:365px;
         }
         .img-i:hover{
             opacity:50%;
