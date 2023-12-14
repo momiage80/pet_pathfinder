@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	Account account = (Account)session.getAttribute("account");
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -42,12 +45,18 @@
             <img src="/Pet_Pathfinder/img/user-profile-white.png" class="img-b">
             <form action="" method="get">
             <div class="img-c"></div>
-            <p class="p-1">表示名</p>
-            <div class="img-d"></div>
-            <p class="p-2">メールアドレス</p>
-            <div class="img-e"></div>
-            <p class="p-3">一言コメント</p>
-            <div class="img-f"></div>
+            <p class="p-1">name</p>
+            <div class="img-d"><%= account.getUser_name() %></div>
+            <p class="p-2">mail-address</p>
+            <div class="img-e"><%= account.getMail_address() %></div>
+            <p class="p-3">comment</p>
+            <div class="img-f">
+            	<% if (account.getComment() != null) { %>
+            		<%= account.getComment() %>
+            	<% }else{ %>
+            		私は犬より猫が好きです。
+            	<% } %>
+            </div>
             </form>
             <form action="/Pet_Pathfinder/Profile" method="post">
             	<input type="hidden" name="profile" value="hoge">
