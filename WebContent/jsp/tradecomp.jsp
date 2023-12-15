@@ -1,10 +1,30 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	Prize prize = (Prize)session.getAttribute("prize");
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script>
+function downloadImage() {
+    // 画像のURL
+    var imageUrl = '/Pet_Pathfinder/img/<%=prize.getPath()%>';
+    console.log(imageUrl);
+
+    // 仮想的なリンクを作成
+    var link = document.createElement('a');
+    link.href = imageUrl;
+
+    // ダウンロード時のファイル名を指定
+    link.download = 'downloaded_<%=prize.getPath()%>';
+
+    // リンクをクリックしてダウンロードを開始
+    link.click();
+}
+</script>
 </head>
 <body>
 	<div class="object-1">
@@ -40,6 +60,7 @@
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
             <img class="img-a"  src="/Pet_Pathfinder/img/check.png">
             <p class="p1">交換が完了しました</p>
+            <button onclick="downloadImage()" style="width: 30%;margin: 0 auto 30px;">画像をダウンロード</button>
             <form action="/Pet_Pathfinder/Top" class="top-form">
             	<input type="image" src="/Pet_Pathfinder/img/top.png" alt="Submit" class="top-1">
             </form>

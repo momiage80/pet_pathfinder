@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.util.List" %>
+<%
+	List<Prize> prizes = (List)session.getAttribute("prizes");
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -15,7 +19,7 @@
 	                <div class="column">
 		                <div class="object-5">
 		                    <div class="object-6">
-		                        <a href="#" class="button_title">Pet PathFinder</a>
+		                        <a href="/Pet_Pathfinder/Top" class="button_title">Pet PathFinder</a>
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
@@ -29,7 +33,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="../img/cat5.png"
+	                    srcset="/Pet_Pathfinder/img/cat5.png"
 	                    class="img"
 	                    />
 	                </div>
@@ -42,140 +46,47 @@
             </div>
             <form action="Trade" method="post">
 	            <div class="limited-parent">
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="/Pet_Pathfinder/img/cat1.png" alt="Circle Image">
+	            <%
+	            	for(Prize prize : prizes){
+	            		if("limited".equals(prize.getKinds())){
+	            %>
+				            <div class="child">
+				                <button type="submit" name="id" value="<%=prize.getId() %>" style="background: none; border: none; padding: 0;">
+									<div class="rounded-image">
+										<img src="/Pet_Pathfinder/img/<%= prize.getPath() %>" alt="Circle Image">
+									</div>
+								</button>
+								<p><%= prize.getCost() %>coin</p>
 							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="/Pet_Pathfinder/img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="/Pet_Pathfinder/img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="/Pet_Pathfinder/img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="/Pet_Pathfinder/img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="/Pet_Pathfinder/img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="/Pet_Pathfinder/img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="/Pet_Pathfinder/img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
+				<%
+            			}else{
+
+            			}
+	            	}
+            	%>
 				</div>
 	            <div class="normal-title">
 	            	<p>通常</p>
 	            </div>
 	            <div class="normal-parent">
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="../img/cat1.png" alt="Circle Image">
+            	<%
+	            	for(Prize prize : prizes){
+	            		if("normal".equals(prize.getKinds())){
+	            %>
+				            <div class="child">
+				                <button type="submit" name="id" value="<%=prize.getId() %>" style="background: none; border: none; padding: 0;">
+									<div class="rounded-image">
+										<img src="/Pet_Pathfinder/img/<%= prize.getPath() %>" alt="Circle Image">
+									</div>
+								</button>
+								<p><%= prize.getCost() %>coin</p>
 							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="../img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="../img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="../img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="../img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="../img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="../img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
-		            <div class="child">
-		                <button type="submit" style="background: none; border: none; padding: 0;">
-							<div class="rounded-image">
-								<img src="../img/cat1.png" alt="Circle Image">
-							</div>
-						</button>
-						<p>120coin</p>
-					</div>
+				<%
+            			}else{
 
+            			}
+	            	}
+            	%>
 				</div>
 			</form>
 
