@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	Prize prize = (Prize)session.getAttribute("prize");
+	Account account = (Account)session.getAttribute("account");
+	int totalCoins = account.getFree_coins() + account.getPaid_coins();
+	int afterPurchase = totalCoins - prize.getCost();
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -15,7 +21,7 @@
 	                <div class="column">
 		                <div class="object-5">
 		                    <div class="object-6">
-		                        <a href="#" class="button_title">Pet PathFinder</a>
+		                        <a href="/Pet_Pathfinder/Top" class="button_title">Pet PathFinder</a>
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
@@ -29,7 +35,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="../img/cat5.png"
+	                    srcset="/Pet_Pathfinder/img/cat5.png"
 	                    class="img"
 	                    />
 	                </div>
@@ -40,21 +46,25 @@
             <div class="limited-title">
             	<p>交換の確認</p>
             </div>
+            <% if ("minuscoin".equals(request.getParameter("error"))) { %>
+			    <p style="color: red; margin: auto;">コインが不足しています。</p>
+			<% } %>
             <div class="limited-parent">
 	            <div class="trade-child">
 					<div class="rounded-image">
-						<img src="../img/cat1.png" alt="Circle Image">
+						<img src="/Pet_Pathfinder/img/<%= prize.getPath() %>" alt="Circle Image">
 					</div>
 					<p>交換しますか？</p>
 				</div>
 				<div class="check-child">
 					<p>コイン所持枚数</p>
-					<p>100枚</p>
+					<p><%= totalCoins %>枚</p>
 					<p>↓</p>
-					<p style="margin-bottom: 80px;">2枚</p>
+					<p style="margin-bottom: 80px;"><%= afterPurchase %>枚</p>
 					<div class="parent" style="display: flex;">
-						<form action="Trade" method="post">
+						<form action="/Pet_Pathfinder/Trade" method="post">
 							<input type="hidden" name="trade" value="ok">
+							<input type="hidden" name="aftercoin" value="<%= afterPurchase %>">
 							<input class="div-12 button" type="submit" value="はい">
 						</form>
 						<button class="div-12 button"><a href="javascript:history.back()">いいえ</a></button>

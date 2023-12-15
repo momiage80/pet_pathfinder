@@ -41,7 +41,7 @@
             <!-- このメインの部分を入れ替える（CSSのメイン部分も入れ替える） -------------------------------------------------------->
 	            <div class="main">
 		            <div class="object-12">login</div>
-		            <form action="Login" method="post">
+		            <form action="/Pet_Pathfinder/Login" method="post">
 			            <div class="object-13">
 			                <img
 			                loading="lazy"
