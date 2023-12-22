@@ -5,6 +5,15 @@
 	Account account = (Account)session.getAttribute("account");
 	int totalCoins = account.getFree_coins() + account.getPaid_coins();
 	int afterPurchase = totalCoins - prize.getCost();
+	int afterPaid;
+	int afterFree;
+	if(account.getPaid_coins() - prize.getCost() < 0){
+		afterPaid = 0;
+		afterFree = account.getFree_coins() - (prize.getCost() - account.getPaid_coins());
+	}else{
+		afterPaid = account.getPaid_coins() - prize.getCost();
+		afterFree = account.getFree_coins();
+	}
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -65,6 +74,9 @@
 						<form action="/Pet_Pathfinder/Trade" method="post">
 							<input type="hidden" name="trade" value="ok">
 							<input type="hidden" name="aftercoin" value="<%= afterPurchase %>">
+							<input type="hidden" name="afterfree" value="<%= afterFree %>">
+							<input type="hidden" name="afterpaid" value="<%= afterPaid %>">
+							<input type="hidden" name="amount" value="<%= prize.getCost() %>">
 							<input class="div-12 button" type="submit" value="はい">
 						</form>
 						<button class="div-12 button"><a href="javascript:history.back()">いいえ</a></button>

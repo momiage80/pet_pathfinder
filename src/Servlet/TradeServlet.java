@@ -12,6 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import dao.PrizeDAO;
+import dao.TransactionDAO;
+import model.Account;
+import model.Login;
 import model.Prize;
 
 @WebServlet("/Trade")
@@ -30,14 +33,28 @@ public class TradeServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String trade = req.getParameter("trade");
 		HttpSession session = req.getSession(false);
+		Account account = (Account)session.getAttribute("account");
+		Login login = (Login)session.getAttribute("login");
+		String username = account.getUser_name();
+		int userID = account.getUser_id();
 		if("ok".equals(trade)){
 			String saftercoin = req.getParameter("aftercoin");
 			int aftercoin = Integer.parseInt(saftercoin);
+			String safterfree = req.getParameter("afterfree");
+			int afterfree = Integer.parseInt(safterfree);
+			String safterpaid = req.getParameter("afterpaid");
+			int afterpaid = Integer.parseInt(safterpaid);
+			String samount = req.getParameter("amount");
+			int amount = Integer.parseInt(samount);
 			if(aftercoin < 0){
 				resp.sendRedirect("/Pet_Pathfinder/jsp/tradecheck.jsp?error=minuscoin");
 			}else{
-				//costomerテーブルのcoinを減らす処理
+				PrizeDAO dao = new PrizeDAO();
+				dao.downCoin(username, afterfree, afterpaid);
+				System.out.println("コインを減らすサーブレット成功");
 				//transactionテーブルを設定
+				TransactionDAO tdao = new TransactionDAO();
+				tdao.insertTransaction(userID,"景品交換",0-amount,afterfree,afterpaid);
 				RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/tradecomp.jsp");
 				dispatcher.forward(req, resp);
 			}
