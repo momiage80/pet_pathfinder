@@ -10,6 +10,36 @@ import java.util.List;
 import model.Prize;
 
 public class PrizeDAO {
+	public void downCoin(String username,int free,int paid){
+		try {
+			Class.forName("org.postgresql.Driver");
+		}catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e);
+		}
+		try{
+			Connection con = DriverManager.getConnection(
+					"jdbc:postgresql://localhost/pet_pathfinder?useSSL=false",
+					"postgres",
+					"postsql"
+					);
+			PreparedStatement pstmt = con.prepareStatement("update customer set free_coins = ?, paid_coins = ? where user_name = ?");
+			pstmt.setInt(1, free);
+			pstmt.setInt(2, paid);
+			pstmt.setString(3, username);
+			int rowsAffected = pstmt.executeUpdate();
+            if (rowsAffected > 0) {
+                System.out.println("コイン枚数変更成功");
+            }
+			pstmt.close();
+			con.close();
+			System.out.println("prizedao成功");
+		} catch (Exception e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+			System.out.println("失敗したでござる");
+		}
+	}
 	public List selectByPrize() {
 		Prize prize = null;
 		List<Prize> prizes = new ArrayList<>(); // ArrayListを使用してPrizeオブジェクトを格納するリスト
