@@ -5,19 +5,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../adminhtml/css/confirm.css">
-    <title>パスワード変更確認</title>
+    <link rel="stylesheet" href="../adminhtml/css/admin_settings.css">
+        <title>管理者設定</title>
 </head>
+
 <body>
-    <div class="confirm-list">
-        <div class="confirm-header">パスワードを変更しますか?</div>
-        <div class="confirm">
-
-            <p class="confidence"><a href="settings_complete.html" class="confidence-link">パスワードを変更する</a></p>
-            <p class="denial"><a href="admin_settings.html" class="denial-link">パスワード変更画面に戻る</a></p>
-
+    <div class="settings-container">
+        <div class="settings-header">管理者設定-パスワード変更-</div>
+        <div class="explanation-header">
+            新しく設定するパスワードを入力し、{パスワード変更}ボタンを押してください。
+            パスワードには、八桁の半角英数字を入力してください。
         </div>
-    </div>
+
+        <div class="settings-fields">
+            <div class="field_pass">前のパスワード</div>
+            <div>
+                <input type="password" name="old_password" maxlength="8" value="" placeholder="">
+            </div>
+
+            <div class="field_new_pass">新しいパスワード(八桁半角英数字)</div>
+            <div>
+                <input type="password" name="new_password" maxlength="8" value="" placeholder="">
+            </div>
+
+            <div class="field_again_pass">新しいパスワードの再入力</div>
+            <div>
+                <input type="password" name="confirm_password" maxlength="8" value="" placeholder="">
+            </div>
+
+            <div class="password-button">
+                <a href="admin_confirm_settings.html" name="change" class="change-button" style="text-decoration: none">
+                    パスワード変更</a>
+                <a href="top_menu.html" name="cancel" class="cancel-button" style="text-decoration: none">
+                    キャンセル</a>
+            </div>
+        </div>
 </body>
 <style>
 .settings-header{ /*divのヘッダー*/
