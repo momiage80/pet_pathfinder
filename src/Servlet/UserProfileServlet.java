@@ -56,7 +56,8 @@ public class UserProfileServlet extends HttpServlet {
 		}else if("coin".equals(profile)){
 			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/user-profile-coin-number.jsp");
 			dispatcher.forward(req, resp);
-		}else if("coincheck".equals(profile)){
+		}else if("coincheck".equals(profile) && Integer.parseInt(req.getParameter("totalCoins")) - Integer.parseInt(req.getParameter("amount")) > 0){
+			//まだほかのユーザープロフにとベルシステムができてないのでいったん保留。。。
 			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/user-profile-coin-check.jsp");
 			dispatcher.forward(req, resp);
 		}else if("coincomp".equals(profile)){
