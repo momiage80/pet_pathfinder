@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	Account account = ((Account)session.getAttribute("account") != null) ? (Account)session.getAttribute("account") : null;
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -38,11 +41,13 @@
 	            </div>
             </div>
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
-            <form action="Contact" method="post">
-			   	<label for="username" class="label">ユーザー名</label>
-			   	<input type="text" id="username" name="username" class="input" required>
+            <% if ("cantinsert".equals(request.getParameter("error"))) { %>
+			    <p style="color: red;">お問い合わせできませんでした。お手数ですがお問い合わせをお願いします。</p>
+			<% } %>
+            <form action="/Pet_Pathfinder/Contact" method="post">
 				<label for="email" class="label">メールアドレス</label>
-				<input type="email" id="email" name="email" class="input" required>
+				<input type="email" id="email" name="email" class="input" value="<%= (account != null) ? account.getMail_address() : "" %>" required>
+				<input type="hidden" name="userid" value="<%= (account != null) ? account.getUser_id() : 1 %>">
 				<label for="inquiry" class="label">お問い合わせ内容</label>
 		        <textarea id="inquiry" name="inquiry" class="textarea" required></textarea>
 				<div class="div-12">

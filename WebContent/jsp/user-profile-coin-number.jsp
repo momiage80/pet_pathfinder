@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	Account account = (Account)session.getAttribute("account");
+	int totalCoins = account.getFree_coins() + account.getPaid_coins();
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -42,16 +46,17 @@
             	<!-- 画像のファイルパスを実際のプロジェクトのディレクトリ構造に合わせて変更 -->
 		        <img src="/Pet_Pathfinder/img/Select_number_of_transfer_coins.png" alt="Header Image" class="header-img" style="width: 300px; height: auto;">
 			    <div class="user-info">
-			     <p>所有コイン：2<p>
-			        <input type="number" id="numberInput" min="10" max="100" placeholder="Enter a number (10-100)">
-			        <div class="button-container">
-			           <div class="button-container">
-			           <form action="Profile" method="post">
-					    <a class="button" href="javascript:history.back()" style="text-decoration: none;">戻る</a>
-					    <input type="hidden" name="profile" value="coincheck">
-					    <input type="submit" class="button" value="ok">
-					   </form>
-					</div>
+				     <p>所有コイン：<%= totalCoins %><p>
+				     <form action="/Pet_Pathfinder/Profile" method="post">
+				        <input type="number" name="amount" id="numberInput" min="10" max="100" placeholder="Enter a number (10-100)">
+				        <div class="button-container">
+				           <div class="button-container">
+						    <a class="button" href="javascript:history.back()" style="text-decoration: none;">戻る</a>
+						    <input type="hidden" name="profile" value="coincheck">
+						    <input type="hidden" name="totalCoins" value="<%= totalCoins %>">
+						    <input type="submit" class="button" value="ok">
+						</div>
+					</form>
 			    </div>
 			</div>
             <!-- ここまで入れ替える ------------------------------------------------------------------------->
