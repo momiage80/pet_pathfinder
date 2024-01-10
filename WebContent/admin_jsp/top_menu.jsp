@@ -12,34 +12,34 @@
 <body>
     <header>
         <h1>トップメニュー</h1>
-        <p><a href="logout_confirm.html">ログアウト<img src="image/logout.png" alt="ログアウト"></a></p>
+        <p><a href="logout_confirm.jsp">ログアウト<img src="image/logout.png" alt="ログアウト"></a></p>
     </header>
 
     <!-- HTML -->
     <nav>
     <ul class="menu-list">
 
-        <li><a href="members_list.html">
+        <li><a href="members_list.jsp">
             <img src="image/member.png" alt="会員一覧">
             <div class="menu-item">会員一覧</div>
         </a></li>
 
-        <li><a href="gift_list.html">
+        <li><a href="gift_list.jsp">
             <img src="image/gift.jpeg" alt="景品設定">
             <div class="menu-item">景品設定</div>
         </a></li>
 
-        <li><a href="inquiry_list.html">
+        <li><a href="inquiry_list.jsp">
             <img src="image/inquiry.jpg" alt="お問合わせ一覧">
             <div class="menu-item">お問合わせ一覧</div>
         </a></li>
 
-        <li><a href="admin_settings.html">
+        <li><a href="admin_settings.jsp">
             <img src="image/settings.jpg" alt="管理者設定">
             <div class="menu-item">管理者設定</div>
         </a></li>
 
-        <li><a href="trading_history.html">
+        <li><a href="trading_history.jsp">
             <img src="image/trading.jpg" alt="取引履歴">
             <div class="menu-item">取引履歴</div>
         </a></li>
@@ -151,7 +151,6 @@ nav ul.menu-list img {
 nav ul.menu-list img:hover {
     transform: scale(1.1); /* ホバー時に拡大するエフェクト */
 }
-
 </style>
 </html>
 
