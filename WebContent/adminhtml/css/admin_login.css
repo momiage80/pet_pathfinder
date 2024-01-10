@@ -97,7 +97,7 @@ footer {
     margin: 50px auto 20px; /* 上下左右の余白を調整 */
     width: 890px;
     cursor: pointer;
-    border-top: 1px solid rgb(0, 0, 0); 
+    border-top: 1px solid rgb(0, 0, 0);
     padding: 15px;
 }
 
