@@ -1,0 +1,22 @@
+/*選択確認画面のCSS*/
+.completion-header { /*divのヘッダー*/
+    padding: 10px;
+    color: #fb0000;
+    font-size: 20px;
+}
+
+.link {
+    color:#00B2FF;
+    padding: 10px 20px;
+}
+
+.logout-link {
+    background-color: #757272;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none; /* 下線をなくす */
+}
+

@@ -1,0 +1,46 @@
+/*選択確認画面のCSS*/
+.confirm-header { /*divのヘッダー*/
+    padding: 20px;
+    color: #fb0000;
+    font-size: 24px;
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.confirm {
+    text-align: center; /* .confirm 内の要素を中央に配置 */
+    margin-top: 30px;
+}
+
+.confirm p {
+    display: inline-block; /* または 'inline' を使用しても良いです */
+}
+
+/*.confirm p a {/* リンクの色を青に変更 
+    text-decoration: none; /* リンクの下線を削除 
+}
+
+
+.confirm p a:hover {
+    text-decoration: underline; /* ホバー時にリンクの下線を表示 
+}
+*/
+
+.confirm .confidence a {
+    /* 赤字に対するスタイル */
+    display: inline-block;
+    margin-right: 50px;
+    font-size: 16px;
+    color: #FF0000; /* ログアウトのテキストの色を赤に変更 */
+}
+
+.confirm .denial a {
+    /* 青字に対するスタイル */
+    display: inline-block;
+    margin-left: 50px;
+    font-size: 16px;
+    color: #00B2FF; /* メニューに戻るテキストの色を青に変更 */
+}
