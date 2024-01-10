@@ -19,7 +19,7 @@
     <nav>
     <ul class="menu-list">
 
-        <li><a href="members_list.jap">
+        <li><a href="members_list.jsp">
             <img src="image/member.png" alt="会員一覧">
             <div class="menu-item">会員一覧</div>
         </a></li>
