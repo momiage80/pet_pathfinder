@@ -34,7 +34,7 @@
                     <td>3100コイン</td>
                     <td>4000コイン</td>
                     <td>
-                        <a href="members_confirm_delete.html" value="削除" name="delete" class="icon-button">
+                        <a href="members_confirm_delete.jsp" value="削除" name="delete" class="icon-button">
                             <img src="image/dustbox.png" alt="削除" class="image-with-margin">削除
                         </a>
                     </td>
@@ -47,7 +47,7 @@
                     <td>1400コイン</td>
                     <td>2100コイン</td>
                     <td>
-                        <a href="members_confirm_delete.html" value="削除" name="delete" class="icon-button">
+                        <a href="members_confirm_delete.jsp" value="削除" name="delete" class="icon-button">
                             <img src="image/dustbox.png" alt="削除" class="image-with-margin">削除
                         </a>
                     </td>
@@ -57,9 +57,9 @@
        <!-- <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/427aac47-5b2b-476a-a8fe" class="background-img" />-->
     </div>
     <footer>
-        <a href="top_menu.jsp">
-        <div class="back-to-top">×トップへ戻る</div>
-        </a>
+        <form action="top_menu.jsp" method="get">
+        <input type="submit"  value="Xトップへ戻る" id="back"  class="back-to-top">
+        </form>
     </footer>
 
 </body>
@@ -135,6 +135,18 @@ footer {
 
 footer a {
     color: inherit; /* テキストの色を親要素と同じに設定 */
+}
+
+.back-to-top{
+    color: blue;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.back-to-top:hover{
+    color: red;
+    cursor:pointer
 }
 </style>
 </html>

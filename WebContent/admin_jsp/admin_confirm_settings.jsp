@@ -13,8 +13,8 @@
         <div class="confirm-header">パスワードを変更しますか?</div>
         <div class="confirm">
 
-            <p class="confidence"><a href="settings_complete.html" class="confidence-link">パスワードを変更する</a></p>
-            <p class="denial"><a href="admin_settings.html" class="denial-link">パスワード変更画面に戻る</a></p>
+            <p class="confidence"><a href="settings_complete.jsp" class="confidence-link">パスワードを変更する</a></p>
+            <p class="denial"><a href="admin_settings.jsp" class="denial-link">パスワード変更画面に戻る</a></p>
 
         </div>
     </div>

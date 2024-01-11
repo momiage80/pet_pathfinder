@@ -12,38 +12,57 @@
 <body>
     <header>
         <h1>トップメニュー</h1>
-        <p><a href="logout_confirm.jsp">ログアウト<img src="image/logout.png" alt="ログアウト"></a></p>
+         <form action="logout_confirm.jsp" method="post">
+            <p>
+            <div class="a">ログアウト
+              <input type="image" src="image/logout.png" alt="会員一覧" id="会員一覧"  class="a-1">
+            </div>
+            </p>
+         </form>
     </header>
 
     <!-- HTML -->
     <nav>
     <ul class="menu-list">
-
-        <li><a href="members_list.jsp">
-            <img src="image/member.png" alt="会員一覧">
+        <form action="members_list.jsp" method="get">
+        <li><div class="a">
+              <input type="image" src="image/member.png" alt="会員一覧" id="会員一覧"  class="img">
+            </div>
             <div class="menu-item">会員一覧</div>
-        </a></li>
+        </li>
+        </form>
 
-        <li><a href="gift_list.jsp">
-            <img src="image/gift.jpeg" alt="景品設定">
-            <div class="menu-item">景品設定</div>
-        </a></li>
+        <form action="gift_list.jsp" method="get">
+        <li><div class="a">
+              <input type="image" src="image/gift.jpeg" alt="景品設定" id="景品設定"  class="img">
+              <div class="menu-item">景品設定</div>
+            </div>
+        </li>
+        </form>
 
-        <li><a href="inquiry_list.jsp">
-            <img src="image/inquiry.jpg" alt="お問合わせ一覧">
-            <div class="menu-item">お問合わせ一覧</div>
-        </a></li>
+        <form action="inquiry_list.jsp" method="get">
+        <li><div class="a">
+              <input type="image" src="image/inquiry.jpg" alt="お問合せ一覧" id="お問合せ一覧"  class="img">
+              <div class="menu-item">お問合せ一覧</div>
+            </div>
+        </li>
+        </form>
 
-        <li><a href="admin_settings.jsp">
-            <img src="image/settings.jpg" alt="管理者設定">
-            <div class="menu-item">管理者設定</div>
-        </a></li>
+        <form action="admin_settings.jsp" method="get">
+        <li><div class="a">
+              <input type="image" src="image/settings.jpg" alt="管理者設定" id="管理者設定"  class="img">
+              <div class="menu-item">管理者設定</div>
+            </div>
+        </li>
+        </form>
 
-        <li><a href="trading_history.jsp">
-            <img src="image/trading.jpg" alt="取引履歴">
-            <div class="menu-item">取引履歴</div>
-        </a></li>
-
+        <form action="trading_history.jsp" method="get">
+        <li><div class="a">
+              <input type="image" src="image/trading.jpg" alt="取引履歴" id="取引履歴"  class="img">
+              <div class="menu-item">取引履歴</div>
+            </div>
+        </li>
+        </form>
     </ul>
     </nav>
 
@@ -53,6 +72,7 @@
 
 </body>
 <style>
+
 /*nav h1 {
     text-align: center;
     padding: 10px 0;
@@ -68,22 +88,22 @@ header p {
     text-align: right; /* テキストを右寄せにする */
 }
 
-header p a {
+header p .a {
     display: inline-block; /* インラインブロック要素にする */
 }
 
-header p a img {
+header p .a .img {
     width: 20px; /* 画像の幅を設定 */
     height: auto; /* 高さを自動調整 */
     vertical-align: middle; /* 画像をテキストと垂直方向に中央揃え */
 }
 
-a {
+.a {
     color: #2600ff; /* ここに適切なカラーコードを指定 */
     text-decoration: none; /* リンクの下線を非表示にする場合 */
 }
 
-a:hover {
+.a:hover {
     color: #2600ff; /* ホバー時の色を指定 */
 }
 
@@ -100,9 +120,11 @@ a:hover {
 }
 
 .menu-item {
+    height:100px;
+    width:100px;
     position: absolute;
-    top: 94%; /* 画像の下に配置 */
-    left: 50%; /* 画像の中央に配置 */
+    top: 125%; /* 画像の下に配置 */
+    left: 160%; /* 画像の中央に配置 */
     transform: translate(-50%, -50%); /* 中央揃えのための変換 */
     text-align: center;
     color: #0047FF; /* テキストの色を設定（任意） */
@@ -117,7 +139,7 @@ a:hover {
     opacity: 1;
 }
 
-.menu-list li:hover img {
+.menu-list li:hover .img {
     transform: scale(1.1);
 }
 
@@ -134,23 +156,43 @@ nav ul.menu-list li {
     margin-bottom: 10px; /* 項目間の余白を追加 */
     }
 
-nav ul.menu-list a {
+nav ul.menu-list .a {
     display: block;
     text-align: center;
     text-decoration: none;
 }
 
-nav ul.menu-list img {
-    width: 40%; /* 画像の幅を100%に設定 */
-    height: auto; /* 高さを自動調整 */
+nav ul.menu-list .img {
+    width: 100px; /* 画像の幅を100%に設定 */
+    height: 100px;; /* 高さを自動調整 */
     border: 26px solid #24aea783; /* 画像にボーダーを追加 */
     border-radius: 8px; /* 画像に角丸を追加 */
     transition: transform 0.3s ease-in-out; /* ホバーエフェクト用のトランジション */
 }
 
-nav ul.menu-list img:hover {
+nav ul.menu-list .img:hover {
     transform: scale(1.1); /* ホバー時に拡大するエフェクト */
 }
+
+.a-1 {
+    display: inline-block; /* インラインブロック要素にする */
+}
+
+.a-1{
+    width: 20px; /* 画像の幅を設定 */
+    height: auto; /* 高さを自動調整 */
+    vertical-align: middle; /* 画像をテキストと垂直方向に中央揃え */
+}
+
+.a-1 {
+    color: #2600ff; /* ここに適切なカラーコードを指定 */
+    text-decoration: none; /* リンクの下線を非表示にする場合 */
+}
+
+.a-1:hover {
+    color: #2600ff; /* ホバー時の色を指定 */
+}
+
 </style>
 </html>
 

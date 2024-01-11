@@ -12,7 +12,7 @@
 <body>
     <div class="gift-set">
         <div class="giftset-header">景品一覧:追加</div>
-        <a href="gift_plus.html" value="新規追加" name="addition_set" class="additionset-button">新規追加</a>
+        <a href="gift_plus.jsp" value="新規追加" name="addition_set" class="additionset-button">新規追加</a>
         <form>
         <table>
             <thead>
@@ -39,7 +39,7 @@
         </form>
     </div>
     <footer>
-        <a href="top_menu.html">
+        <a href="top_menu.jsp">
             <div class="back-to-top">×トップへ戻る</div>
         </a>
     </footer>

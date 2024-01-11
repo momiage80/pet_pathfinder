@@ -14,8 +14,13 @@
         <div class="confirm-header">ログアウトしますか?</div>
         <div class="confirm">
 
-            <p class="confidence"><a href="logout.jsp" class="confidence-link">ログアウトする</a></p>
-            <p class="denial"><a href="top_menu.jsp" class="denial-link">メニューに戻る</a></p>
+            <form action="logout.jsp" method="post">
+                <input type="submit"  value="-ログアウトする-" id="logout"  class="confidence">
+            </form>
+            <form action="top_menu.jsp" method="get">
+                <input type="submit"  value="-メニューに戻る-" id="back"  class="denial">
+            </form>
+
 
         </div>
     </div>
@@ -70,5 +75,30 @@ body {
     color: #00B2FF; /* メニューに戻るテキストの色を青に変更 */
 }
 
+.confidence{
+    padding: 20px 20px;
+    color: red;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.confidence:hover{
+    color: black;
+    cursor:pointer
+}
+
+.denial{
+    padding: 20px 20px;
+    color: blue;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.denial:hover{
+    color: black;
+    cursor:pointer
+}
 </style>
 </html>

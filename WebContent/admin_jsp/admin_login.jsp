@@ -25,7 +25,7 @@
             </div>
 
             <div class="login-button">
-                <a href="top_menu.html" value="ログイン" name="login" class="icon-button" style="text-decoration: none">ログイン</a>
+                <a href="top_menu.jsp" value="ログイン" name="login" class="icon-button" style="text-decoration: none">ログイン</a>
             </div>
         </div>
 </body>

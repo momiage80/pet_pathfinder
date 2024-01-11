@@ -15,7 +15,9 @@
         <div class="completion-header">パスワードを変更しました。</div>
         <div class="completion">
 
-            <p class="confidence"><a href="admin_settings.jsp" class="link">パスワード変更画面に戻る</a></p>
+            <form action="admin_settings.jsp" method="get">
+                <input type="submit"  value="パスワード変更画面に戻る" id="back"  class="confidence">
+            </form>
 
         </div>
     </div>
@@ -45,6 +47,18 @@
     text-decoration: none; /* 下線をなくす */
 }
 
+.confidence{
+    padding: 10px 20px;
+    color: blue;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.confidence:hover{
+    color: red;
+    cursor:pointer
+}
 
 </style>
 </html>

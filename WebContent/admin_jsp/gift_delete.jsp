@@ -13,7 +13,7 @@
     <div class="completion-list">
         <div class="completion-header">景品を削除しました。</div>
         <div class="completion">
-            <p class="confidence"><a href="gift_list.html" class="link">景品設定に戻る</a></p>
+            <p class="confidence"><a href="gift_list.jsp" class="link">景品設定に戻る</a></p>
 
         </div>
     </div>
