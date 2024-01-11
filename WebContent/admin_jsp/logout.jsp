@@ -14,7 +14,9 @@
         <div class="completion-header">ログアウトしました。</div>
         <div class="completion">
 
-            <p class="confidence"><a href="admin_login.jsp" class="logout-link">ログイン画面に戻る</a></p>
+            <form action="admin_login.jsp" method="get">
+                <input type="submit"  value="ログイン画面に戻る" id="back"  class="confidence">
+            </form>
 
         </div>
     </div>
@@ -44,6 +46,18 @@
     text-decoration: none; /* 下線をなくす */
 }
 
+.confidence{
+    padding: 10px 20px;
+    color: blue;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.confidence:hover{
+    color: red;
+    cursor:pointer
+}
 
 </style>
 </html>

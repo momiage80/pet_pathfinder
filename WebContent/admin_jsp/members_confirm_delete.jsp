@@ -14,8 +14,12 @@
         <div class="confirm-header">会員を削除しますか?</div>
         <div class="confirm">
 
-            <p class="confidence"><a href="members_delete.jsp" class="confidence-link">会員を削除する</a></p>
-            <p class="denial"><a href="members_list.jsp" class="denial-link">会員一覧に戻る</a></p>
+            <form action="members_delete.jsp" method="post">
+                <input type="submit"  value="-会員を削除する-" id="delete"  class="confidence">
+            </form>
+            <form action="members_list.jsp" method="get">
+                <input type="submit"  value="-会員一覧に戻る-" id="back"  class="denial">
+            </form>
 
         </div>
     </div>
@@ -68,6 +72,32 @@ body {
     margin-left: 50px;
     font-size: 16px;
     color: #00B2FF; /* メニューに戻るテキストの色を青に変更 */
+}
+
+.confidence{
+    padding: 20px 20px;
+    color: red;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.confidence:hover{
+    color: black;
+    cursor:pointer
+}
+
+.denial{
+    padding: 20px 20px;
+    color: blue;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.denial:hover{
+    color: black;
+    cursor:pointer
 }
 
 </style>

@@ -14,7 +14,9 @@
         <div class="completion-header">会員を削除しました。</div>
         <div class="completion">
 
-            <p class="confidence"><a href="members_list.jsp" class="link">会員設定に戻る</a></p>
+            <form action="members_list.jsp" method="get">
+                <input type="submit"  value="会員設定に戻る" id="back"  class="confidence">
+            </form>
 
         </div>
     </div>
@@ -44,6 +46,18 @@
     text-decoration: none; /* 下線をなくす */
 }
 
+.confidence{
+    padding: 10px 20px;
+    color: blue;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.confidence:hover{
+    color: red;
+    cursor:pointer
+}
 
 </style>
 </html>
