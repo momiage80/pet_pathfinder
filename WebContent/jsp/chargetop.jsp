@@ -169,6 +169,7 @@
             .object-8 {
             margin-left: 9px;
             font-size: 40px;
+            margin: auto;
             line-height: 65px;
             }
         }
@@ -207,6 +208,7 @@
         }
         @media (max-width: 991px) {
             .object-10 {
+            height: 400px;
             max-width: 100%;
             margin-top: 33px;
             }
@@ -231,6 +233,7 @@
         }
         @media (max-width: 991px) {
             .img-2 {
+            width: 400px;
             margin: 0 10px 40px 0;
             }
         }
@@ -264,7 +267,7 @@
     }
 
     .coin-amount {
-        font-size: 24px;
+        /*コメントにしたよ font-size: 24px; */
         margin-bottom: 10px;
     }
 
