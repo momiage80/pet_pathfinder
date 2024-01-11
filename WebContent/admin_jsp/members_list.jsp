@@ -34,7 +34,7 @@
                     <td>3100コイン</td>
                     <td>4000コイン</td>
                     <td>
-                        <a href="members_confirm_delete.html" value="削除" name="delete" class="icon-button">
+                        <a href="members_confirm_delete.jsp" value="削除" name="delete" class="icon-button">
                             <img src="image/dustbox.png" alt="削除" class="image-with-margin">削除
                         </a>
                     </td>
@@ -47,7 +47,7 @@
                     <td>1400コイン</td>
                     <td>2100コイン</td>
                     <td>
-                        <a href="members_confirm_delete.html" value="削除" name="delete" class="icon-button">
+                        <a href="members_confirm_delete.jsp" value="削除" name="delete" class="icon-button">
                             <img src="image/dustbox.png" alt="削除" class="image-with-margin">削除
                         </a>
                     </td>

@@ -34,9 +34,9 @@
             </div>
 
             <div class="password-button">
-                <a href="admin_confirm_settings.html" name="change" class="change-button" style="text-decoration: none">
+                <a href="admin_confirm_settings.jsp" name="change" class="change-button" style="text-decoration: none">
                     パスワード変更</a>
-                <a href="top_menu.html" name="cancel" class="cancel-button" style="text-decoration: none">
+                <a href="top_menu.jsp" name="cancel" class="cancel-button" style="text-decoration: none">
                     キャンセル</a>
             </div>
         </div>

@@ -14,8 +14,8 @@
         <div class="confirm-header">景品を削除しますか?</div>
         <div class="confirm">
 
-            <p class="confidence"><a href="gift_delete.html" class="confidence-link">景品を削除する</a></p>
-            <p class="denial"><a href="gift_list.html" class="denial-link">景品設定に戻る</a></p>
+            <p class="confidence"><a href="gift_delete.jsp" class="confidence-link">景品を削除する</a></p>
+            <p class="denial"><a href="gift_list.jsp" class="denial-link">景品設定に戻る</a></p>
 
         </div>
     </div>

@@ -14,7 +14,7 @@
         <div class="completion-header">景品を追加しました。</div>
         <div class="completion">
 
-            <p class="confidence"><a href="gift_list.html" class="link">景品設定に戻る</a></p>
+            <p class="confidence"><a href="gift_list.jsp" class="link">景品設定に戻る</a></p>
 
         </div>
     </div>

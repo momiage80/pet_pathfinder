@@ -30,7 +30,7 @@
                     <td>猫のぬいぐるみです</td>
                     <td>100コイン</td>
                     <td>
-                        <a href="gift_confirm_delete.html" value="削除" name="delete" class="delete-button">
+                        <a href="gift_confirm_delete.jsp" value="削除" name="delete" class="delete-button">
                             <img src="image/dustbox.png" alt="削除" class="image-with-delete">削除
                         </a>
                     </td>
@@ -41,19 +41,19 @@
                     <td>猫の写真がのった卓上カレンダー</td>
                     <td>300コイン</td>
                     <td>
-                        <a href="gift_confirm_delete.html" value="削除" name="delete" class="delete-button">
+                        <a href="gift_confirm_delete.jsp" value="削除" name="delete" class="delete-button">
                             <img src="image/dustbox.png" alt="削除" class="image-with-delete">削除
                         </a>
                     </td>
                 </tr>
             </tbody>
         </table>
-            <a href="gift_settings.html" value="追加" name="addition" class="addition-button">
+            <a href="gift_settings.jsp" value="追加" name="addition" class="addition-button">
                 <img src="image/pen.jpg" alt="削除" class="image-with-addition">追加
             </a>
     </div>
     <footer>
-        <a href="top_menu.html">
+        <a href="top_menu.jsp">
             <div class="back-to-top">×トップへ戻る</div>
         </a>
     </footer>
