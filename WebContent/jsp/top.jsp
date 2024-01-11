@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	Account account = ((Account)session.getAttribute("account") != null) ? (Account)session.getAttribute("account") : null;
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -91,6 +94,7 @@
 	    <div class="search-btns">
 	    <form action="/Pet_Pathfinder/Search" method="post" class="search-buttons">
 	    	<input type="hidden" name="search" value="searchrequest">
+	    	<input type="hidden" name="userid" value="<%= (account != null) ? account.getUser_id() : 1 %>">
 		    <input type="submit" class="img-y" value="捜索依頼を出す"/>
 		</form>
 	    <form action="/Pet_Pathfinder/Search" method="post" class="search-buttons">

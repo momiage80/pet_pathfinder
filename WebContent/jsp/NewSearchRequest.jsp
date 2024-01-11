@@ -70,11 +70,11 @@
             <!-- このメインの部分を入れ替える（CSSのメイン部分も入れ替える） -------------------------------------------------------->
             <div class="sub-title"><p>捜索依頼をする</p></div>
 			<div id="map"></div>
-            <form action="Search" method="post">
+            <form action="Search" method="post" enctype="multipart/form-data">
 				<p>緯度：<span style="color: red;">(必須)</span></p>
-				<input id="lat" name="name" type="text" class="feedback-input" value="" placeholder="マップ上をクリックしてください" />
+				<input id="lat" name="lat" type="text" class="feedback-input" value="" placeholder="マップ上をクリックしてください" />
 				<p>経度：<span style="color: red;">(必須)</span></p>
-				<input id="lng" name="email" type="text" class="feedback-input" value="" placeholder="マップ上をクリックしてください" />
+				<input id="lng" name="lng" type="text" class="feedback-input" value="" placeholder="マップ上をクリックしてください" />
 				<p>動物の種類：<span style="color: red;">(必須)</span></p>
 				<div><input id="dog" type="radio" name="animal" value="dog" checked onclick="optionChange()"><label for="dog">犬</label></div>
 			    <div><input id="cat" type="radio" name="animal" value="cat" onclick="optionChange()"><label for="cat">猫</label></div>
@@ -82,7 +82,7 @@
 				<input name="others" type="text" class="feedback-input" id="otherInput" disabled>
 				<p>動物の写真：<span style="color: red;">(必須)</span></p>
 				<div>
-					<input type="file" accept='image/*' onchange="previewImage(this);"><!-- 画像読み込み -->
+					<input type="file" accept='image/*' name="file" onchange="previewImage(this);"><!-- 画像読み込み -->
 				</div>
 				<div class="img-aspect"><img id="preview" src=""></div>
 				<p>備考：</p>
@@ -460,9 +460,10 @@
 		    openDiv.style.display = (openDiv.style.display == 'none') ? 'block' : 'none';
 		}
 
+		// ここからmapでーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーす。
 	    var map = L.map('map').setView([35.8713, 139.9719], 15);
 	    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	        maxZoom: 19,
+	        maxZoom: 14,
 	        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	    }).addTo(map);
 	    var marker = L.marker([35.8689, 139.9711]).addTo(map);
