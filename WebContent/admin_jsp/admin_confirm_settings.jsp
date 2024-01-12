@@ -15,7 +15,7 @@
             <form action="settings_complete.jsp" method="post">
                 <input type="submit"  value="-パスワードを変更する-" id="delete"  class="confidence">
             </form>
-            <form action="dmin_settings.jsp"" method="get">
+            <form action="admin_settings.jsp"" method="get">
                 <input type="submit"  value="-パスワード変更画面に戻る-" id="back"  class="denial">
             </form>
 
