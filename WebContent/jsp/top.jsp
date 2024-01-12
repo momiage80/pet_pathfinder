@@ -1,7 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.util.List" %>
 <%
 	Account account = ((Account)session.getAttribute("account") != null) ? (Account)session.getAttribute("account") : null;
+	int account_id = (account != null) ? account.getUser_id() : 1;
+	System.out.println(account_id);
+%>
+<%
+	List<Pointer> pointers = (List)session.getAttribute("pointers");
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -579,13 +585,37 @@
 	            maxZoom: 19,
 	            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	        }).addTo(map);
+			var count = 2;
+			// マーカーとポップアップを表示する関数
+			function addMarker(lat, lng, animal, animal_detail, file, user_id, account_id) {
+			    var marker = L.marker([lat, lng]).addTo(map);
+			    //ピンをクリックしたときに表示する内容
+			    marker.bindPopup(
+			    		"<h1>"+animal+"<br>"+animal_detail+"<br></h1>"+
+			    		"<img style='max-width: 300px;max-height: 500px;margin-right: 30px' src='/Pet_Pathfinder/img/"+file+"'>"+
+			    		"<form action='/Pet_Pathfinder/Profile' method='post'>"+
+			    		"<input type='hidden' name='profile' value='profile'>"+
+			    		"<input type='hidden' name='user_id' value='"+user_id+"'>"+
+			    		"<input type='hidden' name='account_id' value='"+account_id+"'>"+
+			    		"<input type='submit' value='プロフィール画面'>"+
+
+			    		"</form>"
+			    		).openPopup();
+			}
+
+			// ポップアップを表示する例（forループ使用）
+			<%for (int i = 0; i < pointers.size(); i++) {%>
+			    var markerLat = <%=pointers.get(i).getLat() %>;
+			    var markerLng = <%=pointers.get(i).getLng() %>;
+			    var animal = "<%=pointers.get(i).getAnimal() %>";
+			    var animal_detail = "<%=pointers.get(i).getAnimal_detail() %>";
+			    var file = "<%=pointers.get(i).getFile() %>";
+			    var user_id = "<%=pointers.get(i).getUser_id() %>";
+			    var account_id = <%=account_id %>
+			    addMarker(markerLat, markerLng, animal, animal_detail, file, user_id, account_id);
+			<%}%>
 	        var marker = L.marker([35.8689, 139.9711]).addTo(map);
-	        // var polygon = L.polygon([
-	        //     [35.89, 139.971],
-	        //     [35.8689, 139.9713],
-	        //     [35.868, 139.9715]
-	        // ]).addTo(map);
-	        marker.bindPopup("hoge").openPopup();
+	        marker.bindPopup("<h1>hoge</h1>").openPopup();
 	        var popup = L.popup()
 	            .setLatLng([35.85, 139.90])
 	            .setContent("<button style='color:blue';>I am a standalone popup.</button>")

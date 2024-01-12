@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	Account account = ((Account)session.getAttribute("account") != null) ? (Account)session.getAttribute("account") : null;
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -71,6 +74,7 @@
             <div class="sub-title"><p>捜索依頼をする</p></div>
 			<div id="map"></div>
             <form action="Search" method="post" enctype="multipart/form-data">
+            	<input type="hidden" name="userid" value="<%= (account != null) ? account.getUser_id() : 1 %>">
 				<p>緯度：<span style="color: red;">(必須)</span></p>
 				<input id="lat" name="lat" type="text" class="feedback-input" value="" placeholder="マップ上をクリックしてください" />
 				<p>経度：<span style="color: red;">(必須)</span></p>
