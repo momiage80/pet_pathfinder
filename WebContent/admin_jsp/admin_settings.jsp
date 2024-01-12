@@ -18,6 +18,7 @@
         </div>
 
         <div class="settings-fields">
+            <form action="admin_confirm_settings.jsp" method="post">
             <div class="field_pass">前のパスワード</div>
             <div>
                 <input type="password" name="old_password" maxlength="8" value="" placeholder="">
@@ -34,11 +35,10 @@
             </div>
 
             <div class="password-button">
-                <a href="admin_confirm_settings.jsp" name="change" class="change-button" style="text-decoration: none">
-                    パスワード変更</a>
-                <a href="top_menu.jsp" name="cancel" class="cancel-button" style="text-decoration: none">
-                    キャンセル</a>
+                <input type="submit"  value="パスワード変更" id="change"  class="change-button">
+                <input type="submit"  value="キャンセル" id="cancel"  class="cancel-button">
             </div>
+            </form>
         </div>
 </body>
 <style>
@@ -121,6 +121,11 @@
     margin-bottom: 10px; /* マージンを追加 */
 }
 
+.change-button:hover{
+    cursor:pointer;
+    opacity:0.5;
+}
+
 .cancel-button {
     background-color: #89AAD1;
     color: #fff;
@@ -128,6 +133,11 @@
     border: none;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.cancel-button:hover{
+    cursor:pointer;
+    opacity:0.5;
 }
 
 input[type="password"] {

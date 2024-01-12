@@ -12,8 +12,9 @@
 <body>
     <div class="gift-set">
         <div class="giftset-header">景品一覧:追加</div>
-        <a href="gift_plus.jsp" value="新規追加" name="addition_set" class="additionset-button">新規追加</a>
-        <form>
+
+        <form action="gift_plus.jsp" method="post">
+                <input type="submit"  value="新規追加" id="add"  class="additionset-button">
         <table>
             <thead>
                 <tr>
@@ -39,9 +40,9 @@
         </form>
     </div>
     <footer>
-        <a href="top_menu.jsp">
-            <div class="back-to-top">×トップへ戻る</div>
-        </a>
+        <form action="top_menu.jsp" method="get">
+        <input type="submit"  value="Xトップへ戻る" id="back"  class="back-to-top">
+        </form>
     </footer>
 </body>
 <style>
@@ -118,6 +119,18 @@ footer {
 
 footer a {
     color: inherit; /* テキストの色を親要素と同じに設定 */
+}
+
+.back-to-top{
+    color: blue;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.back-to-top:hover{
+    color: red;
+    cursor:pointer
 }
 </style>
 </html>
