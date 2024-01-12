@@ -30,9 +30,9 @@
                     <td>猫のぬいぐるみです</td>
                     <td>100コイン</td>
                     <td>
-                        <a href="gift_confirm_delete.jsp" value="削除" name="delete" class="delete-button">
-                            <img src="image/dustbox.png" alt="削除" class="image-with-delete">削除
-                        </a>
+                        <form action="gift_confirm_delete.jsp" method="post">
+                            <input type="submit"  value="削除" id="delete"  class="image-with-delete">
+                        </form>
                     </td>
                 </tr>
                 <tr>
@@ -41,16 +41,16 @@
                     <td>猫の写真がのった卓上カレンダー</td>
                     <td>300コイン</td>
                     <td>
-                        <a href="gift_confirm_delete.jsp" value="削除" name="delete" class="delete-button">
-                            <img src="image/dustbox.png" alt="削除" class="image-with-delete">削除
-                        </a>
+                        <form action="gift_confirm_delete.jsp" method="post">
+                            <input type="submit"  value="削除" id="delete"  class="image-with-delete">
+                        </form>
                     </td>
                 </tr>
             </tbody>
         </table>
-            <a href="gift_settings.jsp" value="追加" name="addition" class="addition-button">
-                <img src="image/pen.jpg" alt="削除" class="image-with-addition">追加
-            </a>
+            <form action="gift_settings.jsp" method="get">
+                <input type="submit"  value="追加" id="add"  class="image-with-addition">
+            </form>
     </div>
     <footer>
         <a href="top_menu.jsp">
@@ -110,7 +110,19 @@ th {
     height: 14px; /* 画像の高さを調整 */
 }
 .image-with-delete {
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+    background-color: red;
+    color: white;
+    width:80px;
+    height:40px;
+    font-size: 20px;
     margin-right: 5px;
+}
+
+.image-with-delete:hover{
+    cursor:pointer;
+    opacity: 0.5;
 }
 
 .addition-button {
@@ -133,6 +145,17 @@ th {
 .image-with-addition {
     margin-right: 3px; /* 画像の右側に3pxの余白を追加 */
     margin-top: 25px; /* 余白の上部をリセット */
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+    background-color: blue;
+    color: white;
+    width:80px;
+    height:40px;
+    font-size: 20px;
+}
+.image-with-addition:hover{
+    cursor:pointer;
+    opacity: 0.5;
 }
 
 

@@ -13,7 +13,9 @@
     <div class="completion-list">
         <div class="completion-header">景品を削除しました。</div>
         <div class="completion">
-            <p class="confidence"><a href="gift_list.jsp" class="link">景品設定に戻る</a></p>
+            <form action="gift_list.jsp" method="get">
+                <input type="submit"  value="景品設定に戻る" id="back"  class="confidence">
+            </form>
 
         </div>
     </div>
@@ -39,6 +41,19 @@
     border-radius: 10px;
     cursor: pointer;
     text-decoration: none; /* 下線をなくす */
+}
+
+.confidence{
+    padding: 10px 20px;
+    color: blue;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.confidence:hover{
+    color: red;
+    cursor:pointer
 }
 </style>
 </html>

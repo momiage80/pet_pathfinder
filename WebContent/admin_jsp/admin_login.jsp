@@ -14,6 +14,7 @@
         <div class="login-header">ログイン画面</div>
         <div class="login-fields">
 
+            <form action="top_menu.jsp" method="post">
             <div class="field_ID">管理者ID</div>
             <div class="divider">
                 <input type="text" name="login-text" maxlength="10" value="" placeholder="">
@@ -23,10 +24,8 @@
             <div class="divider">
                 <input type="text" name="login-text" maxlength="8" value="" placeholder="">
             </div>
-
-            <div class="login-button">
-                <a href="top_menu.jsp" value="ログイン" name="login" class="icon-button" style="text-decoration: none">ログイン</a>
-            </div>
+            <input type="submit"  value="ログイン" id="login"  class="icon-button">
+            </form>
         </div>
 </body>
 <style>
@@ -98,11 +97,18 @@
 
 .icon-button {
     background-color: #757272;
+    margin-left:90px;
+    margin-top: 10px;
+    text-align: center;
     color: #fff;
-    padding: 10px 28px;
+    padding: 10px 28px ;
     border: none;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.icon-button:hover{
+    opacity: 0.5;
 }
 
 input[name="login-text"] {

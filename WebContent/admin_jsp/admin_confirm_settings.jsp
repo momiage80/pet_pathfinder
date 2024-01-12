@@ -12,9 +12,13 @@
     <div class="confirm-list">
         <div class="confirm-header">パスワードを変更しますか?</div>
         <div class="confirm">
+            <form action="settings_complete.jsp" method="post">
+                <input type="submit"  value="-パスワードを変更する-" id="delete"  class="confidence">
+            </form>
+            <form action="dmin_settings.jsp"" method="get">
+                <input type="submit"  value="-パスワード変更画面に戻る-" id="back"  class="denial">
+            </form>
 
-            <p class="confidence"><a href="settings_complete.jsp" class="confidence-link">パスワードを変更する</a></p>
-            <p class="denial"><a href="admin_settings.jsp" class="denial-link">パスワード変更画面に戻る</a></p>
 
         </div>
     </div>
@@ -129,5 +133,32 @@ footer {
 footer a {
     color: inherit; /* テキストの色を親要素と同じに設定 */
 }
+
+.confidence{
+    padding: 20px 20px;
+    color: red;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.confidence:hover{
+    color: black;
+    cursor:pointer
+}
+
+.denial{
+    padding: 20px 20px;
+    color: blue;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.denial:hover{
+    color: black;
+    cursor:pointer
+}
+
 </style>
 </html>
