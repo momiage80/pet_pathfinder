@@ -24,10 +24,10 @@ public class SearchServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String search = req.getParameter("search");
 		String StrUserid = req.getParameter("userid");
-//		int user_id = Integer.parseInt(StrUserid);
-//		System.out.println(user_id);
+		int user_id = Integer.parseInt(StrUserid);
+		System.out.println(user_id);
 
-		if("searchrequest".equals(search) && Integer.parseInt(StrUserid) != 1){
+		if("searchrequest".equals(search) && user_id != 1){
 			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/NewSearchRequest.jsp");
 			dispatcher.forward(req, resp);
 		}else if("searchcomp".equals(search)){
@@ -41,7 +41,7 @@ public class SearchServlet extends HttpServlet {
 			Double dlng = Double.parseDouble(lng);
 			System.out.println(lat+lng+animal+file+fileName+text);
 			SearchDAO dao = new SearchDAO();
-			if(dao.isInsertSearch(Integer.parseInt(StrUserid), animal, text, fileName, file, dlat, dlng)){
+			if(dao.isInsertSearch(user_id, animal, text, fileName, file, dlat, dlng) && user_id != 1){
 				RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/searchcomp.jsp");
 				dispatcher.forward(req, resp);
 			}else{
@@ -53,7 +53,7 @@ public class SearchServlet extends HttpServlet {
 			dispatcher.forward(req, resp);
 		}
 		else{
-			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/signup.jsp");
+			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/login.jsp");
 			dispatcher.forward(req, resp);
 		}
 	}

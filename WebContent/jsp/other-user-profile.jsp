@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	Account account = (Account)session.getAttribute("account");
+	Account account = (Account)session.getAttribute("other_user_profile");
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -44,7 +44,7 @@
             <!-- このメインの部分を入れ替える（CSSも） -------------------------------------------------------->
             <div class="parent">
 	            <div class="rounded-image">
-					<img id="preview" src="/Pet_Pathfinder/img/<%= account.getIcon() %>" alt="画像の更新には時間がかかります。">
+					<img id="preview" src="/Pet_Pathfinder/img/<%= account.getIcon() %>" alt="<br><br><br>画像の更新には時間がかかります。">
 				</div>
 	            <div class="child">
 		            <p class="p-1">name</p>
@@ -60,20 +60,19 @@
 		            	<% } %>
 		            </div>
 		            <div class="children">
-			            <form action="/Pet_Pathfinder/Profile" method="post">
-			            	<input type="hidden" name="profile" value="hoge">
+			            <form action="/Pet_Pathfinder/Top" method="get">
 			            	<input type="submit" id="back" name="back" value="戻る" class="img-g">
 			            </form>
+			            <%-- 他人のプロフィールは変更してはいけないため
 			            <form action="/Pet_Pathfinder/Profile" method="post">
 			            	<input type="hidden" name="profile" value="change">
 			            	<input type="submit" id="change" name="change" value="変更" class="img-h">
 			            </form>
-			            <%-- 自分のプロフィールにアクセスした場合コインは渡せなくていいため
+			            --%>
 			            <form action="/Pet_Pathfinder/Profile" method="post">
 			            	<input type="hidden" name="profile" value="coin">
 			            	<input type="submit" id="coin" name="coin" value="コインを渡す" class="img-i">
 			            </form>
-			            --%>
 		            </div>
 	            </div>
             </div>
