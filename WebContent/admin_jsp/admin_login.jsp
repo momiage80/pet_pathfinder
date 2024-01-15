@@ -17,12 +17,12 @@
             <form action="top_menu.jsp" method="post">
             <div class="field_ID">管理者ID</div>
             <div class="divider">
-                <input type="text" name="login-text" maxlength="10" value="" placeholder="">
+                <input type="text" name="id" id="id" maxlength="10" value="" placeholder="">
             </div>
 
             <div class="field_pass">パスワード</div>
             <div class="divider">
-                <input type="text" name="login-text" maxlength="8" value="" placeholder="">
+                <input type="text" name="password" id="password"  maxlength="8" value="" placeholder="">
             </div>
             <input type="submit"  value="ログイン" id="login"  class="icon-button">
             </form>
