@@ -15,7 +15,7 @@
          <form action="logout_confirm.jsp" method="post">
             <p>
             <div class="a">ログアウト
-              <input type="image" src="image/logout.png" alt="会員一覧" id="会員一覧"  class="a-1">
+              <input type="image" src="image/logout.png" alt="ログアウト" id="logout"  class="a-1">
             </div>
             </p>
          </form>
