@@ -10,8 +10,9 @@ public class Pointer implements Serializable {
 	private String file;
 	private double lat;
 	private double lng;
+	private String type;
 
-	public Pointer(int id,int user_id,String animal,String animal_detail,String file,double lat, double lng){
+	public Pointer(int id,int user_id,String animal,String animal_detail,String file,double lat, double lng, String type){
 		this.id = id;
 		this.user_id = user_id;
 		this.animal = animal;
@@ -19,6 +20,15 @@ public class Pointer implements Serializable {
 		this.file = file;
 		this.lat = lat;
 		this.lng = lng;
+		this.type = type;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	public int getId() {

@@ -466,10 +466,10 @@
 
 		// ここからmapでーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーす。
 	    var map = L.map('map').setView([35.8713, 139.9719], 15);
-	    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	        maxZoom: 14,
-	        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-	    }).addTo(map);
+	        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	            maxZoom: 19,
+	            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	        }).addTo(map);
 	    var marker = L.marker([35.8689, 139.9711]).addTo(map);
 	    // var polygon = L.polygon([
 	    //     [35.89, 139.971],

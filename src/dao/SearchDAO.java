@@ -11,7 +11,7 @@ import java.sql.PreparedStatement;
 import javax.servlet.http.Part;
 
 public class SearchDAO {
-	public boolean isInsertSearch(int user_id, String animal, String animal_detail, String fileName, Part file, double lat, double lng){
+	public boolean isInsertSearch(int user_id, String animal, String animal_detail, String fileName, Part file, double lat, double lng, String type){
 		try {
             // データベース接続処理（略）
 			Class.forName("org.postgresql.Driver");
@@ -40,7 +40,7 @@ public class SearchDAO {
 			}
 
 	        // データベースにファイルのパスを保存
-	        String query = "insert into search (user_id, animal, animal_detail, file, lat, lng) values (?,?,?,?,?,?);";
+	        String query = "insert into search (user_id, animal, animal_detail, file, lat, lng, type) values (?,?,?,?,?,?,?);";
 	        try (PreparedStatement statement = con.prepareStatement(query)) {
                 statement.setInt(1, user_id);
                 statement.setString(2, animal);
@@ -48,6 +48,7 @@ public class SearchDAO {
                 statement.setString(4, fileName);
                 statement.setDouble(5, lat);
                 statement.setDouble(6, lng);
+                statement.setString(7, type);
                 int rowsAffected = statement.executeUpdate();
                 if (rowsAffected > 0) {
                 	System.out.println("searchのinsert成功");

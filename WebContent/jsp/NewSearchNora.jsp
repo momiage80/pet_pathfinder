@@ -1,10 +1,42 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	Account account = ((Account)session.getAttribute("account") != null) ? (Account)session.getAttribute("account") : null;
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+<script>
+   	function optionChange() {
+		var otherRadio = document.getElementById('otherOption');
+		var otherInput = document.getElementById('otherInput');
+
+		if(otherRadio.checked){
+			otherInput.disabled = false;
+			otherInput.style.background = "none";
+		}else{
+			otherInput.disabled = true;
+			otherInput.style.background = "#eee";
+		};
+	}
+   	function previewImage(obj){
+		var fileReader = new FileReader();
+
+		fileReader.onload = (function() {
+			document.getElementById('preview').src = fileReader.result;
+		});
+		fileReader.readAsDataURL(obj.files[0]);
+	}
+
+</script>
 </head>
 <body>
 	<div class="object-1">
@@ -21,8 +53,8 @@
 		                    </div>
 		                    <div class="object-7">
 		                    	<!-- ここの文字を書き換える -------------------------------------------------------->
-			                    <div class="object-8">会員情報削除</div>
-			                    <div class="object-9">data deletion</div>
+			                    <div class="object-8">野良報告</div>
+			                    <div class="object-9">search</div>
 		                    </div>
 		                </div>
 	                </div>
@@ -31,7 +63,7 @@
 	                	<!-- ここにヘッダー画像のURLを記述 ---------------------------------------------------->
 	                    <img
 	                    loading="lazy"
-	                    srcset="/Pet_Pathfinder/img/data-deletion.jpg"
+	                    srcset="/Pet_Pathfinder/img/Catsunglasses.png"
 	                    class="img"
 	                    />
 	                </div>
@@ -39,21 +71,37 @@
 	            </div>
             </div>
             <!-- このメインの部分を入れ替える（CSSのメイン部分も入れ替える） -------------------------------------------------------->
-			<div class="center-heading stylish-heading">
-			    <h2>確認画面</h2>
-			</div>
-			<p class="warning-message">会員情報を削除するとマップピン以外の情報が削除されます。<br>本当に削除しますか？</p>
-			<div class="button-container">
-			<form action="CustomerInfo" method="post">
-				<input type="hidden" name="customer" value="deletecomp">
-			    <input type="submit" onclick="executeDeletion()" class="delete-button" value="削除">
+            <div class="sub-title"><p>野良動物を報告する</p></div>
+			<div id="map"></div>
+            <form action="Search" method="post" enctype="multipart/form-data">
+            	<input type="hidden" name="userid" value="<%= (account != null) ? account.getUser_id() : 1 %>">
+				<p>緯度：<span style="color: red;">(必須)</span></p>
+				<input id="lat" name="lat" type="text" class="feedback-input" value="" placeholder="マップ上をクリックしてください" />
+				<p>経度：<span style="color: red;">(必須)</span></p>
+				<input id="lng" name="lng" type="text" class="feedback-input" value="" placeholder="マップ上をクリックしてください" />
+				<p>動物の種類：<span style="color: red;">(必須)</span></p>
+				<div><input id="dog" type="radio" name="animal" value="dog" checked onclick="optionChange()"><label for="dog">犬</label></div>
+			    <div><input id="cat" type="radio" name="animal" value="cat" onclick="optionChange()"><label for="cat">猫</label></div>
+			    <div><input type="radio" name="animal" value="way" id="otherOption" onclick="optionChange()"><label for="otherOption">その他</label></div>
+				<input name="others" type="text" class="feedback-input" id="otherInput" disabled>
+				<p>動物の写真：<span style="color: red;">(必須)</span></p>
+				<div>
+					<input type="file" accept='image/*' name="file" onchange="previewImage(this);"><!-- 画像読み込み -->
+				</div>
+				<div class="img-aspect"><img id="preview" src=""></div>
+				<p>備考：</p>
+				<textarea name="text" class="feedback-input" placeholder="動物の詳細を記入してください"></textarea>
+				<div style="margin-bottom: 15px;">
+					<label>
+					<input type="checkbox" name="check" value="Check">
+					入力内容に間違いがないことを確認しました
+					</label>
+				</div>
+				<input type="hidden" name="search" value="noracomp">
+				<input type="submit" value="SUBMIT"/>
 			</form>
-			    <a class="cancel-button" href="javascript:history.back()">いいえ</a>
-			</div>
-			</div>
-            <!-- ここまで入れ替える ------------------------------------------------------------------------->
-        </div>
-    </div>
+		</div>
+	</div>
     <jsp:include page="footer.jsp" />
     <style>
     	/*ここからヘッダーCSS（書き換えない）
@@ -90,7 +138,7 @@
         .object-4 {
             gap: 20px;
             display: flex;
-            height: 661px;
+            height: 528px;
         }
         @media (max-width: 991px) {
             .object-4 {
@@ -148,7 +196,7 @@
         .object-8 {
             color: #000;
             text-align: center;
-            font: 400 25px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
+            font: 400 30px/70px Shippori Mincho B1, -apple-system, Roboto, Helvetica,
             sans-serif;
         }
         @media (max-width: 991px) {
@@ -199,7 +247,7 @@
         }
         .img {
             position: absolute;
-            height: 80%;
+            height: 100%;
             width: 100%;
             object-fit: cover;
             object-position: center;
@@ -222,48 +270,90 @@
         }
         /*ここからメイン （書き換える）
         ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
-        .stylish-heading h2.red-text {
-		    color: #ff5252; /* 赤色のテキストカラーに変更 */
-		    font-size: 2em;
-		    margin-bottom: 10px;
+        .sub-title {
+        	font-size: 3rem;
+        	text-align: center;
+        	color: white;
+        	margin: 20px auto 0;
+        	width: 90%;
+        	background: #CC6666;
+			clip-path: polygon(0% 0%, 98% 0%, 100% 100%, 2% 100%);
+        }
+        .sub-title p {
+        	transform: rotate(-3deg);
+        	display: inline-block;
+        }
+
+		form { max-width:420px; margin:50px auto; }
+
+		form p{
+			font-size: 18px;
 		}
 
-		.warning-message.red-text {
-		    font-size: 18px;
-		    color: #ff5252; /* 赤色のテキストカラーに変更 */
-		    margin-bottom: 20px;
+		.feedback-input {
+		  font-family: Helvetica, Arial, sans-serif;
+		  font-weight:500;
+		  font-size: 18px;
+		  border-radius: 5px;
+		  line-height: 22px;
+		  background-color: transparent;
+		  border:2px solid #CC6666;
+		  transition: all 0.3s;
+		  padding: 13px;
+		  margin-bottom: 15px;
+		  width:100%;
+		  box-sizing: border-box;
+		  outline:0;
 		}
 
-		.button-container {
-		    display: flex;
-		    justify-content: center;
-		    margin-bottom: 100px;
+		.feedback-input:focus { border:2px solid #CC4949; }
+
+		textarea {
+		  height: 150px;
+		  line-height: 150%;
+		  resize:vertical;
 		}
 
-		/* 削除ボタンのスタイル */
-		.delete-button,
-		.cancel-button {
-		    background-color: #ff5252; /* 赤色の背景色に変更 */
-		    color: #fff;
-		    padding: 12px 24px;
-		    font-size: 16px;
-		    cursor: pointer;
-		    border: none;
-		    border-radius: 4px;
-		    margin: 0 10px;
-		    text-decoration: none;
+		[type="submit"] {
+		  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+		  width: 100%;
+		  background:#CC6666;
+		  border-radius:5px;
+		  border:0;
+		  cursor:pointer;
+		  color:white;
+		  font-size:24px;
+		  padding-top:10px;
+		  padding-bottom:10px;
+		  transition: all 0.3s;
+		  margin-top:-4px;
+		  font-weight:700;
 		}
 
-		.delete-button:hover,
-		.cancel-button:hover {
-		    opacity: 0.9;
+		#otherInput {
+			background: #eee;
 		}
 
-		/* キャンセルボタンのスタイル */
-		.cancel-button {
-		    background-color: #ff7f7f; /* より明るい赤色の背景色に変更 */
-		    color: #fff;
+		[type="submit"]:hover { background:#CC4949; }
+
+		.img-aspect {
+			max-width: 300px;
+			max-height: 500px;
+		/** overflow: scroll; **/
+			margin-bottom: 15px;
 		}
+
+		.img-aspect #preview {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+		#map {
+        	width: 60%;
+        	height: 400px;
+        	margin: 50px auto;
+        }
+
 		/*ここからハンバーガー ※ここから下は入れ替えない
 		ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
         .hamburger{
@@ -361,7 +451,47 @@
         .a{
             color:#fff;
             text-decoration-line: none;
-        }
+            }
     </style>
+    <script>
+	    function rotateArrow(id) {
+		    var btn = document.getElementById(id);
+		    btn.classList.toggle('active');
+		}
+
+		function toggleContent(id) {
+		    var openDiv = document.getElementById(id);
+		    openDiv.style.display = (openDiv.style.display == 'none') ? 'block' : 'none';
+		}
+
+		// ここからmapでーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーす。
+	    var map = L.map('map').setView([35.8713, 139.9719], 15);
+	        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	            maxZoom: 19,
+	            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	        }).addTo(map);
+	    var marker = L.marker([35.8689, 139.9711]).addTo(map);
+	    // var polygon = L.polygon([
+	    //     [35.89, 139.971],
+	    //     [35.8689, 139.9713],
+	    //     [35.868, 139.9715]
+	    // ]).addTo(map);
+	    marker.bindPopup("hoge").openPopup();
+	    var popup = L.popup()
+	        .setLatLng([35.85, 139.90])
+	        .setContent("<button style='color:blue';>I am a standalone popup.</button>")
+	        .openOn(map);
+	    var popup_latlng = L.popup();
+	    var nowmarker = L.marker([0,0]).addTo(map);
+	    function onMapClick(e) {
+	        var inputlat = document.getElementById("lat");
+	        var inputlng = document.getElementById("lng");
+
+        	nowmarker.setLatLng(e.latlng);
+        	inputlat.value = e.latlng.lat;
+        	inputlng.value = e.latlng.lng;
+	    }
+	    map.on('click', onMapClick);
+    </script>
 </body>
 </html>

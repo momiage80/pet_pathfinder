@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import dao.AccountDAO;
+import dao.DeleteDAO;
 import dao.DuplicationDAO;
 import model.Account;
 import model.Login;
@@ -35,6 +36,18 @@ public class CustomerInfoServlet extends HttpServlet {
 			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/customer-information-change.jsp");
 			dispatcher.forward(req, resp);
 		}else if("deletecomp".equals(customer)){
+			HttpSession session = req.getSession(false);
+			Account account = (Account)session.getAttribute("account");
+			int user_id = account.getUser_id();
+			DeleteDAO dao = new DeleteDAO();
+			dao.deleteCustomer(user_id);
+			if (session != null && session.getAttribute("login") != null) {
+	            // セッションの無効化
+	            session.invalidate();
+	            System.out.println("sessionを無効化したよ");
+	        }else{
+	        	System.out.println("sessionはまだ有効だよ");
+	        }
 			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/customer-information-deletecomp.jsp");
 			dispatcher.forward(req, resp);
 		}else if("changecomp".equals(customer)){

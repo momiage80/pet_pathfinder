@@ -41,16 +41,34 @@ public class SearchServlet extends HttpServlet {
 			Double dlng = Double.parseDouble(lng);
 			System.out.println(lat+lng+animal+file+fileName+text);
 			SearchDAO dao = new SearchDAO();
-			if(dao.isInsertSearch(user_id, animal, text, fileName, file, dlat, dlng) && user_id != 1){
+			if(dao.isInsertSearch(user_id, animal, text, fileName, file, dlat, dlng, "request") && user_id != 1){
 				RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/searchcomp.jsp");
 				dispatcher.forward(req, resp);
 			}else{
-				System.out.println("お問い合わせのinsertに失敗しました");
+				System.out.println("捜索依頼のinsertに失敗しました");
 				resp.sendRedirect("/Pet_Pathfinder/jsp/NewSearchRequest.jsp?error=cantinsert");
 			}
-		}else if("searchnora".equals(search)){
-			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/searchNora.jsp");
+		}else if("searchnora".equals(search) && user_id != 1){
+			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/NewSearchNora.jsp");
 			dispatcher.forward(req, resp);
+		}else if("noracomp".equals(search)){
+			String lat = req.getParameter("lat");
+			String lng = req.getParameter("lng");
+			String animal = req.getParameter("animal");
+			Part file = req.getPart("file");
+			String fileName = getFileName(file);
+			String text = req.getParameter("text");
+			Double dlat = Double.parseDouble(lat);
+			Double dlng = Double.parseDouble(lng);
+			System.out.println(lat+lng+animal+file+fileName+text);
+			SearchDAO dao = new SearchDAO();
+			if(dao.isInsertSearch(user_id, animal, text, fileName, file, dlat, dlng, "nora") && user_id != 1){
+				RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/searchcomp.jsp");
+				dispatcher.forward(req, resp);
+			}else{
+				System.out.println("捜索依頼のinsertに失敗しました");
+				resp.sendRedirect("/Pet_Pathfinder/jsp/NewSearchNora.jsp?error=cantinsert");
+			}
 		}
 		else{
 			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/login.jsp");
