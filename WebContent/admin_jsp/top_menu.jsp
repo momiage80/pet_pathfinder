@@ -24,25 +24,25 @@
     <!-- HTML -->
     <nav>
     <ul class="menu-list">
-        <form action="members_list.jsp" method="get">
+        <form action="../member" method="get">
         <li><div class="a">
-              <input type="image" src="image/member.png" alt="会員一覧" id="会員一覧"  class="img">
+              <input type="image" src="image/member.png" alt="会員一覧" id="member"  class="img">
             </div>
             <div class="menu-item">会員一覧</div>
         </li>
         </form>
 
-        <form action="gift_list.jsp" method="get">
+        <form action="item" method="get">
         <li><div class="a">
-              <input type="image" src="image/gift.jpeg" alt="景品設定" id="景品設定"  class="img">
+              <input type="image" src="image/gift.jpeg" alt="景品設定" id="item"  class="img">
               <div class="menu-item">景品設定</div>
             </div>
         </li>
         </form>
 
-        <form action="inquiry_list.jsp" method="get">
+        <form action="inquiry" method="get">
         <li><div class="a">
-              <input type="image" src="image/inquiry.jpg" alt="お問合せ一覧" id="お問合せ一覧"  class="img">
+              <input type="image" src="image/inquiry.jpg" alt="お問合せ一覧" id="inquiry"  class="img">
               <div class="menu-item">お問合せ一覧</div>
             </div>
         </li>
@@ -50,7 +50,7 @@
 
         <form action="admin_settings.jsp" method="get">
         <li><div class="a">
-              <input type="image" src="image/settings.jpg" alt="管理者設定" id="管理者設定"  class="img">
+              <input type="image" src="image/settings.jpg" alt="管理者設定" id="admin"  class="img">
               <div class="menu-item">管理者設定</div>
             </div>
         </li>
@@ -58,7 +58,7 @@
 
         <form action="trading_history.jsp" method="get">
         <li><div class="a">
-              <input type="image" src="image/trading.jpg" alt="取引履歴" id="取引履歴"  class="img">
+              <input type="image" src="image/trading.jpg" alt="取引履歴" id="transaction"  class="img">
               <div class="menu-item">取引履歴</div>
             </div>
         </li>
