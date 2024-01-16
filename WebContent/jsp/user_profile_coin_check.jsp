@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	int givenCoins = (int)request.getAttribute("sendCoins");
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -47,6 +50,7 @@
                 <div class="coin-message">コインを渡しますか？</div>
                 <form action="/Pet_Pathfinder/Profile" method="post">
                  <input type="hidden" name="profile" value="coincomp">
+                 <input type="hidden" name="coins" value=<%= givenCoins %>>
                	 <input type="submit" class="confirm-button" value="ok">
                	</form>
              </div>

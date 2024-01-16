@@ -1,5 +1,9 @@
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	ArrayList list = (ArrayList)session.getAttribute("chargeList");
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -43,12 +47,12 @@
 			  <div class="div-3"></div>
 			  <div class="div-4">
 			    <div class="div-5">支払い方法</div>
-			    <div class="div-6">PayPay</div>
+			    <div class="div-6"><%= list.get(1) %></div>
 			  </div>
 			  <div class="div-7"></div>
 			  <div class="div-8">
 			    <div class="div-9">枚数</div>
-			    <div class="div-10">100コイン</div>
+			    <div class="div-10"><%= list.get(0) %>コイン</div>
 			  </div>
 			  <form action="Charge" method="post" style="width: 400px; margin: auto;">
 			  	<input type="hidden" name="check" value="ok">

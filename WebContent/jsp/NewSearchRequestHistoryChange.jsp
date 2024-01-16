@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	int id = (int)request.getAttribute("id");
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -54,14 +57,17 @@
 			        <h2>変更情報入力</h2>
 			    </div>
 			    <form action="/Pet_Pathfinder/SearchHistory" method="post">
-				    <p>動物の写真：<span style="color: red;">(必須)</span></p>
+			<!--	捜索依頼履歴変更で  写真の追加は時間があったら行う
+					<p>動物の写真：<span style="color: red;">(必須)</span></p>
 					<div>
-						<input type="file" accept='image/*' onchange="previewImage(this);"><!-- 画像読み込み -->
+						<input type="file" accept='image/*' onchange="previewImage(this);">
 					</div>
+			-->
 					<div class="img-aspect"><img id="preview" src=""></div>
 					<p>備考：</p>
-					<textarea name="text" class="feedback-input" placeholder="動物の詳細を記入してください"></textarea>
+					<textarea name="text" class="feedback-input" placeholder="動物の詳細を記入してください" wrap="off"></textarea>
 					<input type="hidden" name="searchhistory" value="reformcomp">
+					<input type="hidden" name="id" value=<%= id %>>
 			        <input type="submit" value="変更する" class="button">
 			        <a class="button" href="javascript:history.back()">戻る</a>
 			    </form>

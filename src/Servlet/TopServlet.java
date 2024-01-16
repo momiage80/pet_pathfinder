@@ -23,10 +23,11 @@ public class TopServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     	TopDAO dao = new TopDAO();
     	List pointers = dao.selectByMap();
-    	System.out.println(pointers.size());
+    	System.out.println("ピンの数は"+pointers.size());
     	HttpSession session = req.getSession(false);
     	if(session == null){
         	session = req.getSession();
+        	System.out.println("TopServletでsessionを作成しました。");
     	}
 		session.setAttribute("pointers", pointers);
     	RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/top.jsp");

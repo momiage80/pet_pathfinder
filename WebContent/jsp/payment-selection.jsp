@@ -64,7 +64,7 @@
 					        </label>
 
 					        <input type="submit" class="button" value="決定">
-					        <input type="submit" class="button" value="戻る">
+					        <input type="submit" name="戻る" class="button" value="戻る">
 					    </div>
 				    </form>
 				</div>

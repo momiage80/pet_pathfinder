@@ -95,6 +95,38 @@ public class AccountDAO {
         }
         return false;
     }
+	public boolean isUpdateAccount(String username, int paid_coins) {
+        try {
+            // データベース接続処理（略）
+			Class.forName("org.postgresql.Driver");
+		}catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e);
+		}
+
+        try{
+			Connection con = DriverManager.getConnection(
+					"jdbc:postgresql://localhost/pet_pathfinder?useSSL=false",
+					"postgres",
+					"postsql"
+					);
+            // updateチェッククエリの実行
+            String query = "update customer set paid_coins = ? where user_name = ?;";
+            try (PreparedStatement statement = con.prepareStatement(query)) {
+                statement.setInt(1, paid_coins);
+                statement.setString(2, username);
+
+                int rowsAffected = statement.executeUpdate();
+                if (rowsAffected > 0) {
+                    return true;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("customerのupdateに失敗しました");
+        }
+        return false;
+    }
 	public Account findByLogin(Login login) {
 		Account account = null;
 		try {

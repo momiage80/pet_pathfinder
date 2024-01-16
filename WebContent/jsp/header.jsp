@@ -1,3 +1,5 @@
+<%@page import="java.util.Enumeration"%>
+<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div class="logined" style="position: absolute;
 		    right: 100px;
@@ -9,7 +11,15 @@
    			 text-shadow: 2px 2px 4px rgb(218 20 20 / 50%);">
 <%@ page import="javax.servlet.http.HttpSession" %>
 <%@ page import="model.*" %>
+
 <%
+	System.out.println("現在のセッションは "+request.getSession(false));
+	Enumeration<String> attributeNames = session.getAttributeNames();
+	while (attributeNames.hasMoreElements()) {
+	    String attributeName = attributeNames.nextElement();
+	    Object attributeValue = session.getAttribute(attributeName);
+	    System.out.println(attributeName + ": " + attributeValue);
+	}
 	// セッションからユーザ情報を取得
 	Login login = (session != null) ? (Login) session.getAttribute("login") : null;
 
@@ -21,7 +31,12 @@
 	    out.println(login.getName() + "さん！");
 	} else {
 	    // ログインしていない場合はゲストと表示
+	    // 前のセッションを削除する ここでエラーが起きる可能性あり
 	    out.println("ゲストさん！");
+        session.removeAttribute("account");
+        System.out.println("sessionのaccount属性を無効化したよ");
+		// falseを指定することで、セッションが存在しない場合は新しいセッションを作成せずにnullを返します。
+		session = request.getSession(false);
 	}
 %>
 </div>
