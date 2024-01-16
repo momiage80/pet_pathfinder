@@ -1,5 +1,9 @@
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	List<SearchHistory> searchHistoryList = (List)request.getAttribute("searchHistoryList");
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -69,25 +73,33 @@
             </div>
             <!-- このメインの部分を入れ替える（CSSのメイン部分も入れ替える） -------------------------------------------------------->
             <div class="god">
-	            <div class="parent">
-					<div class="img-aspect">
-						<img id="preview" src="/Pet_Pathfinder/img/cat1.png">
+            <%if(searchHistoryList != null && searchHistoryList.size() > 0){ %>
+	            <%for (int i = 0; i < searchHistoryList.size(); i++) {%>
+		            <div class="parent">
+						<div class="img-aspect">
+							<img id="preview" src="/Pet_Pathfinder/img/<%= searchHistoryList.get(i).getFile() %>">
+						</div>
+						<div>
+							<p>動物の種類：</p>
+							<p name="text" class="feedback-input"><%= searchHistoryList.get(i).getAnimal() %></p>
+							<p>備考：</p>
+							<p name="text" class="feedback-input"><%= searchHistoryList.get(i).getAnimal_detail() %></p>
+	            			<form action="/Pet_Pathfinder/SearchHistory" method="post">
+	            				<input type="hidden" name="searchhistory" value="reform">
+	            				<input type="hidden" name="id" value=<%= searchHistoryList.get(i).getId() %>>
+								<input type="submit" value="修正"/>
+							</form>
+				            <form action="/Pet_Pathfinder/SearchHistory" method="post">
+				            	<input type="hidden" name="id" value=<%= searchHistoryList.get(i).getId() %>>
+				            	<input type="hidden" name="searchhistory" value="delete" >
+								<input type="submit" value="削除"/>
+							</form>
+						</div>
 					</div>
-					<div>
-						<p>動物の種類：</p>
-						<p name="text" class="feedback-input">猫</p>
-						<p>備考：</p>
-						<p name="text" class="feedback-input">hogehoge</p>
-            			<form action="/Pet_Pathfinder/SearchHistory" method="post">
-            				<input type="hidden" name="searchhistory" value="reform">
-							<input type="submit" value="修正"/>
-						</form>
-			            <form action="/Pet_Pathfinder/SearchHistory" method="post">
-			            	<input type="hidden" name="searchhistory" value="delete" >
-							<input type="submit" value="削除"/>
-						</form>
-					</div>
-				</div>
+				<% } %>
+			<% }else{ %>
+				<p>まだ捜索依頼履歴を出していません。。。</p>
+			<% } %>
 			</div>
 		</div>
 	</div>
@@ -273,6 +285,7 @@
 			padding: 15px;
 			border-radius: 15px;
 			align-item: center;
+			margin-bottom: 10px;
 		}
 
 		.feedback-input {

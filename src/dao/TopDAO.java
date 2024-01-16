@@ -38,7 +38,6 @@ public class TopDAO {
 				double lng = rs.getDouble("lng");
 				pointer = new Pointer(id, user_id, animal, animal_detail, file, lat, lng);
 				pointers.add(pointer);
-				System.out.println(pointer);
 			}
 			rs.close();
 			pstmt.close();
@@ -50,7 +49,6 @@ public class TopDAO {
 			System.out.println("失敗したでござる");
 			return null;
 		}
-		System.out.println(pointers);
 		return pointers;
 	}
 }

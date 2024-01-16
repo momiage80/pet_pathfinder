@@ -1,6 +1,7 @@
 package Servlet;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -8,6 +9,11 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import dao.SearchHistoryDAO;
+import model.Account;
+import model.SearchHistory;
 
 /**
  * Servlet implementation class SearchHistoryServlet
@@ -20,17 +26,33 @@ public class SearchHistoryServlet extends HttpServlet {
 		String searchhistory = req.getParameter("searchhistory");
 
 		if("searchhistory".equals(searchhistory)){
+			HttpSession session = req.getSession(false);
+			Account account = (Account)session.getAttribute("account");
+			SearchHistoryDAO dao = new SearchHistoryDAO();
+			List<SearchHistory> list = dao.selectSearchHistory(account.getUser_id());
+			req.setAttribute("searchHistoryList", list);
 			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/NewSearchRequestHistory.jsp");
 			dispatcher.forward(req, resp);
 		}else if("reform".equals(searchhistory)){
+			String StrId = req.getParameter("id");
+			int id = Integer.parseInt(StrId);
+			req.setAttribute("id", id);
 			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/NewSearchRequestHistoryChange.jsp");
 			dispatcher.forward(req, resp);
 		}else if("delete".equals(searchhistory)){
 			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/NewSearchRequestHistoryDelete.jsp");
 			dispatcher.forward(req, resp);
 		}else if("reformcomp".equals(searchhistory)){
-			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/NewSearchRequestHistoryChangecomp.jsp");
-			dispatcher.forward(req, resp);
+			String text = req.getParameter("text");
+			String StrId = req.getParameter("id");
+			int id = Integer.parseInt(StrId);
+			SearchHistoryDAO dao = new SearchHistoryDAO();
+			if(dao.isUpdateSearchHistory(id, text)){
+				RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/NewSearchRequestHistoryChangecomp.jsp");
+				dispatcher.forward(req, resp);
+			}else{
+				System.out.println("isupdatesearchhistorydao失敗");
+			}
 		}
 		else{
 			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/mypage.jsp");
