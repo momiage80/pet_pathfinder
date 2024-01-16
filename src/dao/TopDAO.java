@@ -36,7 +36,8 @@ public class TopDAO {
 				String file = rs.getString("file");
 				double lat = rs.getDouble("lat");
 				double lng = rs.getDouble("lng");
-				pointer = new Pointer(id, user_id, animal, animal_detail, file, lat, lng);
+				String type = rs.getString("type");
+				pointer = new Pointer(id, user_id, animal, animal_detail, file, lat, lng, type);
 				pointers.add(pointer);
 			}
 			rs.close();

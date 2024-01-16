@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import dao.DeleteDAO;
 import dao.SearchHistoryDAO;
 import model.Account;
 import model.SearchHistory;
@@ -40,6 +41,10 @@ public class SearchHistoryServlet extends HttpServlet {
 			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/NewSearchRequestHistoryChange.jsp");
 			dispatcher.forward(req, resp);
 		}else if("delete".equals(searchhistory)){
+			String StrId = req.getParameter("id");
+			int id = Integer.parseInt(StrId);
+			DeleteDAO dao = new DeleteDAO();
+			dao.deleteSearchHistory(id);
 			RequestDispatcher dispatcher = req.getRequestDispatcher("jsp/NewSearchRequestHistoryDelete.jsp");
 			dispatcher.forward(req, resp);
 		}else if("reformcomp".equals(searchhistory)){

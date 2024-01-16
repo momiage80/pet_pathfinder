@@ -105,6 +105,7 @@
 		</form>
 	    <form action="/Pet_Pathfinder/Search" method="post" class="search-buttons">
 	    	<input type="hidden" name="search" value="searchnora">
+	    	<input type="hidden" name="userid" value="<%= (account != null) ? account.getUser_id() : 1 %>">
 		    <input type="submit" class="img-z" value="野良動物を報告する"/>
 		</form>
 
@@ -565,6 +566,9 @@
             color:#fff;
             text-decoration-line: none;
         }
+        .icon-red { /* icon-redは最初に指定したクラス名 */
+        	filter: hue-rotate(150deg);
+		}
 		</style>
 
 		<!-- ここからjavascript
@@ -580,6 +584,18 @@
 			    openDiv.style.display = (openDiv.style.display == 'none') ? 'block' : 'none';
 			}
 
+			const redIcon = L.icon({
+				  iconUrl: "https://esm.sh/leaflet@1.9.2/dist/images/marker-icon.png",
+				  iconRetinaUrl: "https://esm.sh/leaflet@1.9.2/dist/images/marker-icon-2x.png",
+				  shadowUrl: "https://esm.sh/leaflet@1.9.2/dist/images/marker-shadow.png",
+				  iconSize: [25, 41],
+				  iconAnchor: [12, 41],
+				  popupAnchor: [1, -34],
+				  tooltipAnchor: [16, -28],
+				  shadowSize: [41, 41],
+				  className: "icon-red", // <= ここでクラス名を指定
+				});
+
 	        var map = L.map('map').setView([35.8713, 139.9719], 15);
 	        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	            maxZoom: 19,
@@ -587,12 +603,19 @@
 	        }).addTo(map);
 			var count = 2;
 			// マーカーとポップアップを表示する関数
-			function addMarker(lat, lng, animal, animal_detail, file, user_id, account_id) {
-			    var marker = L.marker([lat, lng]).addTo(map);
+			function addMarker(lat, lng, animal, animal_detail, file, user_id, account_id, type) {
+
+			    var marker;
+			    console.log(type == "request");
+			    if(type == "request"){
+			    	marker = L.marker([lat, lng], { icon: redIcon }).addTo(map);
+			    }else{
+			    	marker = L.marker([lat, lng]).addTo(map);
+			    }
 			    //ピンをクリックしたときに表示する内容
 			    marker.bindPopup(
 			    		"<h1>"+animal+"<br>"+animal_detail+"<br></h1>"+
-			    		"<img style='max-width: 300px;max-height: 500px;margin-right: 30px' src='/Pet_Pathfinder/img/"+file+"'>"+
+			    		"<img alt='画像の表示には時間がかかりませう。申し訳ございませう。' style='max-width: 300px;max-height: 500px;margin-right: 30px' src='/Pet_Pathfinder/img/"+file+"'>"+
 			    		"<form action='/Pet_Pathfinder/Profile' method='post'>"+
 			    		"<input type='hidden' name='profile' value='profile'>"+
 			    		"<input type='hidden' name='user_id' value='"+user_id+"'>"+
@@ -611,8 +634,9 @@
 			    var animal_detail = "<%=pointers.get(i).getAnimal_detail() %>";
 			    var file = "<%=pointers.get(i).getFile() %>";
 			    var user_id = "<%=pointers.get(i).getUser_id() %>";
-			    var account_id = <%=account_id %>
-			    addMarker(markerLat, markerLng, animal, animal_detail, file, user_id, account_id);
+			    var account_id = <%=account_id %>;
+			    var type = "<%=pointers.get(i).getType() %>";
+			    addMarker(markerLat, markerLng, animal, animal_detail, file, user_id, account_id, type);
 			<%}%>
 	        var marker = L.marker([35.8689, 139.9711]).addTo(map);
 	        marker.bindPopup("<h1>hoge</h1>").openPopup();
