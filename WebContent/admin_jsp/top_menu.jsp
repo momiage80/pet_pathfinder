@@ -32,7 +32,7 @@
         </li>
         </form>
 
-        <form action="item" method="get">
+        <form action="../item" method="get">
         <li><div class="a">
               <input type="image" src="image/gift.jpeg" alt="景品設定" id="item"  class="img">
               <div class="menu-item">景品設定</div>
@@ -40,7 +40,7 @@
         </li>
         </form>
 
-        <form action="inquiry" method="get">
+        <form action="../inquiry" method="get">
         <li><div class="a">
               <input type="image" src="image/inquiry.jpg" alt="お問合せ一覧" id="inquiry"  class="img">
               <div class="menu-item">お問合せ一覧</div>
@@ -48,7 +48,7 @@
         </li>
         </form>
 
-        <form action="admin_settings.jsp" method="get">
+        <form action="../admin" method="get">
         <li><div class="a">
               <input type="image" src="image/settings.jpg" alt="管理者設定" id="admin"  class="img">
               <div class="menu-item">管理者設定</div>
@@ -56,7 +56,7 @@
         </li>
         </form>
 
-        <form action="trading_history.jsp" method="get">
+        <form action="../transaction" method="get">
         <li><div class="a">
               <input type="image" src="image/trading.jpg" alt="取引履歴" id="transaction"  class="img">
               <div class="menu-item">取引履歴</div>
