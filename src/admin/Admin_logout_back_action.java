@@ -8,12 +8,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns={"/admin"})
-public class Admin_top_menu_admin_action extends HttpServlet{
+@WebServlet(urlPatterns={"/Top_back"})
+public class Admin_logout_back_action extends HttpServlet{
 	private static final long serialVersionUID = 1L;
     public void doGet(
     		HttpServletRequest request, HttpServletResponse response
     ) throws ServletException, IOException{
-    		request.getRequestDispatcher("admin_jsp/admin_settings.jsp").forward(request, response);
+    		request.getRequestDispatcher("admin_jsp/top_menu.jsp").forward(request, response);
     }
 }

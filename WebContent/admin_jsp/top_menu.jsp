@@ -12,7 +12,7 @@
 <body>
     <header>
         <h1>トップメニュー</h1>
-         <form action="logout_confirm.jsp" method="post">
+         <form action="../logout" method="get">
             <p>
             <div class="a">ログアウト
               <input type="image" src="image/logout.png" alt="ログアウト" id="logout"  class="a-1">
