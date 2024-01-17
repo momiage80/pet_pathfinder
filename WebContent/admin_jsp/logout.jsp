@@ -14,7 +14,7 @@
         <div class="completion-header">ログアウトしました。</div>
         <div class="completion">
 
-            <form action="admin_login.jsp" method="get">
+            <form action="../Top" method="get">
                 <input type="submit"  value="ログイン画面に戻る" id="back"  class="confidence">
             </form>
 

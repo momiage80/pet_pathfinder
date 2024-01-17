@@ -14,10 +14,10 @@
         <div class="confirm-header">ログアウトしますか?</div>
         <div class="confirm">
 
-            <form action="logout.jsp" method="post">
+            <form action="../Logout" method="post">
                 <input type="submit"  value="-ログアウトする-" id="logout"  class="confidence">
             </form>
-            <form action="top_menu.jsp" method="get">
+            <form action="../Top_back" method="get">
                 <input type="submit"  value="-メニューに戻る-" id="back"  class="denial">
             </form>
 
