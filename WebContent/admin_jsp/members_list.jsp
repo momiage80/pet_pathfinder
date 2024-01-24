@@ -1,5 +1,11 @@
+<%@page import="model.Account"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
  pageEncoding="UTF-8"%>
+<%
+	List<Account> list = (List)request.getAttribute("user_list");
+%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -26,38 +32,29 @@
             </thead>
 
             <tbody>
-                <tr>
-                    <td>abcdefghi</td>
-                    <td>山田 太郎</td>
-                    <td>abcdefgh</td>
-                    <td><a href="mailto:user01@email.com" target="_blank">user01@email.com</a></td>
-                    <td>3100コイン</td>
-                    <td>4000コイン</td>
-                    <td>
-                        <a href="members_confirm_delete.jsp" value="削除" name="delete" class="icon-button">
-                            <img src="image/dustbox.png" alt="削除" class="image-with-margin">削除
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>ihgfedcba</td>
-                    <td>一二 三四</td>
-                    <td>12345678</td>
-                    <td><a href="mailto:user02@email.com" target="_blank">user02@email.com</a></td>
-                    <td>1400コイン</td>
-                    <td>2100コイン</td>
-                    <td>
-                        <a href="members_confirm_delete.jsp" value="削除" name="delete" class="icon-button">
-                            <img src="image/dustbox.png" alt="削除" class="image-with-margin">削除
-                        </a>
-                    </td>
-                </tr>
+            	<%for (int i = 0; i < list.size(); i++) {%>
+	                <tr>
+	                    <td><%= list.get(i).getUser_id() %></td>
+	                    <td><%= list.get(i).getUser_name() %></td>
+	                    <td><%= list.get(i).getPassword() %></td>
+	                    <td><a href="mailto:user01@email.com" target="_blank"><%= list.get(i).getMail_address() %></a></td>
+	                    <td><%= list.get(i).getFree_coins() %></td>
+	                    <td><%= list.get(i).getPaid_coins() %></td>
+	                    <td>
+	                        <form action="/Pet_Pathfinder/member" method="post">
+	                        	<input type="hidden" name="user_id" value="<%= list.get(i).getUser_id()%>">
+	                        	<input type="hidden" name="member" value="delete">
+	                        	<input type="submit" value="削除" class="icon-button">
+	                        </form>
+	                    </td>
+	                </tr>
+                <%}%>
             </tbody>
         </table>
        <!-- <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/427aac47-5b2b-476a-a8fe" class="background-img" />-->
     </div>
     <footer>
-        <form action="top_menu.jsp" method="get">
+        <form action="/Pet_Pathfinder/admin_jsp/top_menu.jsp" method="get">
         <input type="submit"  value="Xトップへ戻る" id="back"  class="back-to-top">
         </form>
     </footer>

@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
  pageEncoding="UTF-8"%>
+<%
+	String error = (request.getParameter("error") != null) ? request.getParameter("error") : null;
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -18,26 +21,29 @@
         </div>
 
         <div class="settings-fields">
-            <form action="admin_confirm_settings.jsp" method="post">
-            <div class="field_pass">前のパスワード</div>
-            <div>
-                <input type="password" name="old_password" maxlength="8" value="" placeholder="">
-            </div>
+        	<% if(error != null){ %>
+        	<h1 style="color: red">あなたにパスワードを変更する資格はありません。<br>今すぐここから立ち去りなさい。</h1>
+        	<% } %>
+            <form action="/Pet_Pathfinder/admin" method="post">
+	            <div class="field_pass">前のパスワード</div>
+	            <div>
+	                <input type="password" name="old_password" maxlength="8" value="" placeholder="">
+	            </div>
 
-            <div class="field_new_pass">新しいパスワード(八桁半角英数字)</div>
-            <div>
-                <input type="password" name="new_password" maxlength="8" value="" placeholder="">
-            </div>
+	            <div class="field_new_pass">新しいパスワード(八桁半角英数字)</div>
+	            <div>
+	                <input type="password" name="new_password" maxlength="8" value="" placeholder="">
+	            </div>
 
-            <div class="field_again_pass">新しいパスワードの再入力</div>
-            <div>
-                <input type="password" name="confirm_password" maxlength="8" value="" placeholder="">
-            </div>
+	            <div class="field_again_pass">新しいパスワードの再入力</div>
+	            <div>
+	                <input type="password" name="confirm_password" maxlength="8" value="" placeholder="">
+	            </div>
 
-            <div class="password-button">
-                <input type="submit"  value="パスワード変更" id="change"  class="change-button">
-                <input type="submit"  value="キャンセル" id="cancel"  class="cancel-button">
-            </div>
+	            <div class="password-button">
+	                <input type="submit"  value="パスワード変更" id="change"  class="change-button">
+	                <a href="/Pet_Pathfinder/admin_jsp/top_menu.jsp" class="cancel-button" id="cancel" value="キャンセル" style="text-decoration: none;">キャンセル</a>
+	            </div>
             </form>
         </div>
 </body>

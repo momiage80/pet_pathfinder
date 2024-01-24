@@ -26,7 +26,7 @@ public class SearchDAO {
 					"postgres",
 					"postsql"
 					);
-			String uploadDirectory = "C:/pleiades/4_6neon/Pet_Pathfinder/WebContent/img";
+			String uploadDirectory = "/usr/share/tomcat/webapps/Pet_Pathfinder/img";
 			String uploadPath = uploadDirectory + File.separator + fileName;
 
 	        try (InputStream input = file.getInputStream();

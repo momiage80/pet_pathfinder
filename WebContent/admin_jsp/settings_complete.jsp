@@ -15,8 +15,8 @@
         <div class="completion-header">パスワードを変更しました。</div>
         <div class="completion">
 
-            <form action="admin_settings.jsp" method="get">
-                <input type="submit"  value="パスワード変更画面に戻る" id="back"  class="confidence">
+            <form action="top_menu.jsp" method="get">
+                <input type="submit"  value="メニュー画面に戻る" id="back"  class="confidence">
             </form>
 
         </div>

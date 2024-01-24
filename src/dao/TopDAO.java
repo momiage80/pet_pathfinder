@@ -18,10 +18,14 @@ public class TopDAO {
 		}catch (Exception e) {
 			// TODO: handle exception
 			System.out.println(e);
+			pointer = new Pointer(0, 0, null, null, null, 0, 0, null);
+			pointers.add(pointer);
+			return pointers;
 		}
 		try{
 			Connection con = DriverManager.getConnection(
-					"jdbc:postgresql://localhost/pet_pathfinder?useSSL=false",
+					"jdbc:postgresql://44.206.229.63/pet_pathfinder",
+					//"jdbc:postgresql://localhost/pet_pathfinder",
 					"postgres",
 					"postsql"
 					);
@@ -46,6 +50,7 @@ public class TopDAO {
 			System.out.println("select * from search成功");
 		} catch (Exception e) {
 			// TODO 自動生成された catch ブロック
+			e.getMessage();
 			e.printStackTrace();
 			System.out.println("失敗したでござる");
 			return null;

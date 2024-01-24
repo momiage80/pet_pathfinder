@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
  pageEncoding="UTF-8"%>
+<%
+	String user_id = (String)request.getAttribute("user_id");
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -14,10 +17,12 @@
         <div class="confirm-header">会員を削除しますか?</div>
         <div class="confirm">
 
-            <form action="members_delete.jsp" method="post">
+            <form action="/Pet_Pathfinder/member" method="post">
+            	<input type="hidden" name="user_id" value="<%= user_id %>">
+            	<input type="hidden" name="delete_comp" value="deletecomp">
                 <input type="submit"  value="-会員を削除する-" id="delete"  class="confidence">
             </form>
-            <form action="members_list.jsp" method="get">
+            <form action="/Pet_Pathfinder/member" method="get">
                 <input type="submit"  value="-会員一覧に戻る-" id="back"  class="denial">
             </form>
 

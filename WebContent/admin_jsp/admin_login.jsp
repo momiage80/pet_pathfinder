@@ -14,17 +14,17 @@
         <div class="login-header">ログイン画面</div>
         <div class="login-fields">
 
-            <form action="top_menu.jsp" method="post">
-            <div class="field_ID">管理者ID</div>
-            <div class="divider">
-                <input type="text" name="id" id="id" maxlength="10" value="" placeholder="">
-            </div>
+            <form action="../adminLogin" method="post">
+	            <div class="field_ID">管理者ID</div>
+	            <div class="divider">
+	                <input type="text" name="id" id="id" maxlength="10" value="" placeholder="４桁で入力しろ" maxlength="4" required>
+	            </div>
 
-            <div class="field_pass">パスワード</div>
-            <div class="divider">
-                <input type="text" name="password" id="password"  maxlength="8" value="" placeholder="">
-            </div>
-            <input type="submit"  value="ログイン" id="login"  class="icon-button">
+	            <div class="field_pass">パスワード</div>
+	            <div class="divider">
+	                <input type="text" name="password" id="password"  maxlength="8" value="" placeholder="8桁以内" required>
+	            </div>
+	            <input type="submit"  value="ログイン" id="login"  class="icon-button">
             </form>
         </div>
 </body>

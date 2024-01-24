@@ -11,7 +11,7 @@
 
 <body>
    <p class="p-1">IDまたはパスワードが間違っています<br>もう一度ご確認の上、入力して下さい</p>
-   <form action="admin_login.jsp" method="get">
+   <form action="/Pet_Pathfinder/admin_jsp/admin_login.jsp" method="get">
        <input type="submit" id="back" value="入力画面へ戻る" class="back">
    </form>
 </body>

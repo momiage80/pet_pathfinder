@@ -14,9 +14,7 @@
         <div class="completion-header">会員を削除しました。</div>
         <div class="completion">
 
-            <form action="members_list.jsp" method="get">
-                <input type="submit"  value="会員設定に戻る" id="back"  class="confidence">
-            </form>
+		<a href="/Pet_Pathfinder/admin_jsp/top_menu.jsp">会員一覧に戻る</a>
 
         </div>
     </div>
