@@ -1,5 +1,10 @@
+<%@page import="model.Transaction"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
  pageEncoding="UTF-8"%>
+<%
+	List<Transaction> list = (List)request.getAttribute("transaction_list");
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -25,39 +30,23 @@
                 </tr>
             </thead>
             <tbody>
+            	<%for (int i = 0; i < list.size(); i++) {%>
                 <tr>
-                    <td>12345678</td>
-                    <td>abcdefghi</td>
-                    <td>入金</td>
-                    <td>+3000コイン</td>
-                    <td>3100コイン</td>
-                    <td>4000コイン</td>
-                    <td>2023年11月28日15時6分</td>
+                    <td><%= list.get(i).getId() %></td>
+                    <td><%= list.get(i).getUser_id() %></td>
+                    <td><%= list.get(i).getType() %></td>
+                    <td><%= list.get(i).getAmount() %></td>
+                    <td><%= list.get(i).getAfterfreecoin() %>コイン</td>
+                    <td><%= list.get(i).getAfterpaidcoin() %>コイン</td>
+                    <td><%= list.get(i).getDate() %></td>
                 </tr>
-                <tr>
-                    <td>87654321</td>
-                    <td>ihfgedcba</td>
-                    <td>出金</td>
-                    <td>-3000コイン</td>
-                    <td>1500コイン</td>
-                    <td>2000コイン</td>
-                    <td>2023年11月28日15時5分</td>
-                </tr>
-                <tr>
-                    <td>24681012</td>
-                    <td>ihfgedcba</td>
-                    <td>購入</td>
-                    <td>-100コイン</td>
-                    <td>4500コイン</td>
-                    <td>2000コイン</td>
-                    <td>2023年11月28日13時24分</td>
-                </tr>
+            	<% } %>
             </tbody>
         </table>
     </div>
 
     <footer>
-        <form action="top_menu.jsp" method="get">
+        <form action="/Pet_Pathfinder/admin_jsp/top_menu.jsp" method="get">
         <input type="submit"  value="Xトップへ戻る" id="back"  class="back-to-top">
         </form>
     </footer>

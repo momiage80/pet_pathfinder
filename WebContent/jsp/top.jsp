@@ -56,7 +56,12 @@
 		<!-- 折り畳まれ部分 -->
 			<div id="open-1" style="display:none;clear:both;">
 				<!--ここの部分が折りたたまれる＆展開される部分になります。自由に記述してください。-->
-				<p class="p-1">hogehogehogeohgeohgehogehogehogehogehogehogehogehogehogehoge</p>
+				<p class="p-1">
+					Pet PathFinderとは<br>逃げてしまった動物たちとまた、再会できるようにするシステムです。<br>
+					犬や猫、その他の動物が行方不明になると、残念ながら安楽死の可能性も考えられます。そこで、このアプリを開発し、行方不明になったペットが安心して飼い主と再会できるようお手伝いをしています。<br>
+					ペットを飼っていない方でも、行方不明のペットを見つけた場合には、その情報をアプリを通じて飼い主に迅速に伝えることができます。これにより、行方不明になったペットと再び出会える確率が向上します。<br>
+					是非、このアプリを通じてコミュニティ全体でペットの安全をサポートし、飼い主とペットとの絆を強化する一助となれば幸いでございます。
+				</p>
 			</div>
 		<!--// 折り畳まれ部分 -->
 		<hr class="btn-hr" />
@@ -65,14 +70,20 @@
 		------------------------------------------------------------------------------------------------------------ -->
 		<!-- 折り畳み展開ポインタ -->
 			<div onclick="toggleContent('open-2');">
-				<a class="btn" id="btn-2" onclick="rotateArrow('btn-2');">Pet Pathfinderとは</a>
+				<a class="btn" id="btn-2" onclick="rotateArrow('btn-2');">コインの使用用途とは</a>
 			</div>
 		<!--// 折り畳み展開ポインタ -->
 
 		<!-- 折り畳まれ部分 -->
 			<div id="open-2" style="display:none;clear:both;">
 				<!--ここの部分が折りたたまれる＆展開される部分になります。自由に記述してください。-->
-				<p class="p-1">hogehogehogeohgeohgehogehogehogehogehogehogehogehogehogehoge</p>
+				<p class="p-1">
+					コインの使用方法<br>
+					飼い主様の動物が行方不明になった場合、他のユーザーから情報提供を行い、それによってコインを獲得できます。ただし、有益でない情報の場合はコインはもらえませんのでご注意ください。<br>
+					有益な情報提供を受けた場合、自分が所持しているコインを10から100枚まで相手に贈ることができます。コインの受け渡し時には更新をかける必要がありますので、お気を付けください。<br>
+					マイページからユーザープロフィールで所持しているコインの枚数を確認することができます。これらのコインは、アイコンを購入する際に使用することができます。期間限定のアイコンもあるので、興味があればぜひチェックしてみてください。<br>
+					アイコンの購入はコインでのみ行えますが、必要に応じてコインの購入も可能です。<br>
+				</p>
 			</div>
 		<!--// 折り畳まれ部分 -->
 		<hr class="btn-hr" />
@@ -81,14 +92,27 @@
 		------------------------------------------------------------------------------------------------------------ -->
 		<!-- 折り畳み展開ポインタ -->
 			<div onclick="toggleContent('open-3');">
-				<a class="btn" id="btn-3" onclick="rotateArrow('btn-3');">Pet Pathfinderとは</a>
+				<a class="btn" id="btn-3" onclick="rotateArrow('btn-3');">捜索依頼を出すには</a>
 			</div>
 		<!--// 折り畳み展開ポインタ -->
 
 		<!-- 折り畳まれ部分 -->
 			<div id="open-3" style="display:none;clear:both;">
 				<!--ここの部分が折りたたまれる＆展開される部分になります。自由に記述してください。-->
-				<p class="p-1">hogehogehogeohgeohgehogehogehogehogehogehogehogehogehogehoge</p>
+				<p class="p-1">
+					捜索依頼を行う際の手順は、以下の通りです。<br>
+					捜索場所の座標と経度を記入:<br>
+					捜索が必要な場所の座標と経度を正確にご記入ください。<br><br>
+
+					動物の種類を選択:<br>
+					どの種類のペットに関する捜索をご希望か、お選びください。<br><br>
+
+					ペットの画像提供:<br>
+					依頼するペットの画像をアップロードしてください。<br><br>
+
+					備考欄に情報入力:<br>
+					ペットに関する詳細情報を記入してください。模様、鳴き声、性別、大きさ、色などの情報が役立ちます。<br>
+				</p>
 			</div>
 		<!--// 折り畳まれ部分 -->
 		<hr class="btn-hr" />
@@ -397,8 +421,8 @@
        		border-
         }
         #map {
-        	width: 60%;
-        	height: 400px;
+        	width: 80%;
+        	height: 600px;
         	margin: 50px auto;
         }
         .btn {
@@ -596,9 +620,9 @@
 				  className: "icon-red", // <= ここでクラス名を指定
 				});
 
-	        var map = L.map('map').setView([35.8713, 139.9719], 15);
+	        var map = L.map('map').setView([36.491973, 147.787781], 5);
 	        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	            maxZoom: 19,
+	            maxZoom: 15,
 	            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	        }).addTo(map);
 			var count = 2;
@@ -640,10 +664,8 @@
 			<%}%>
 	        var marker = L.marker([35.8689, 139.9711]).addTo(map);
 	        marker.bindPopup("<h1>hoge</h1>").openPopup();
-	        var popup = L.popup()
-	            .setLatLng([35.85, 139.90])
-	            .setContent("<button style='color:blue';>I am a standalone popup.</button>")
-	            .openOn(map);
+	        var popup = L.marker([24.287092, 153.980167]).addTo(map);
+	        popup.bindPopup("<a href='/Pet_Pathfinder/admin_jsp/admin_login.jsp'>関係者以外立ち入り禁止</a>");
 	        var popup_latlng = L.popup();
 	        function onMapClick(e) {
 	            popup_latlng

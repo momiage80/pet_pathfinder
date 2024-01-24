@@ -1,5 +1,10 @@
+<%@page import="model.Prize"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
  pageEncoding="UTF-8"%>
+<%
+	List<Prize> list =  (List)request.getAttribute("prize_list");
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -24,36 +29,27 @@
             </thead>
 
             <tbody>
-                <tr>
-                    <td>a000001</td>
-                    <td>ぬいぐるみ</td>
-                    <td>猫のぬいぐるみです</td>
-                    <td>100コイン</td>
-                    <td>
-                        <form action="gift_confirm_delete.jsp" method="post">
-                            <input type="submit"  value="削除" id="delete"  class="image-with-delete">
-                        </form>
-                    </td>
-                </tr>
-                <tr>
-                    <td>a000002</td>
-                    <td>猫カレンダー</td>
-                    <td>猫の写真がのった卓上カレンダー</td>
-                    <td>300コイン</td>
-                    <td>
-                        <form action="gift_confirm_delete.jsp" method="post">
-                            <input type="submit"  value="削除" id="delete"  class="image-with-delete">
-                        </form>
-                    </td>
-                </tr>
+            	<%for (int i = 0; i < list.size(); i++) {%>
+	                <tr>
+	                    <td><%= list.get(i).getId() %></td>
+	                    <td><%= list.get(i).getName() %></td>
+	                    <td><%= list.get(i).getDetaile() %></td>
+	                    <td><%= list.get(i).getCost() %></td>
+	                    <td>
+	                        <form action="gift_confirm_delete.jsp" method="post">
+	                            <input type="submit"  value="削除" id="delete"  class="image-with-delete">
+	                        </form>
+	                    </td>
+	                </tr>
+                <%}%>
             </tbody>
         </table>
-            <form action="gift_settings.jsp" method="get">
-                <input type="submit"  value="追加" id="add"  class="image-with-addition">
-            </form>
+		<form action="gift_settings.jsp" method="get">
+		    <input type="submit"  value="追加" id="add"  class="image-with-addition">
+		</form>
     </div>
     <footer>
-        <a href="top_menu.jsp">
+        <a href="/Pet_Pathfinder/admin_jsp/top_menu.jsp">
             <div class="back-to-top">×トップへ戻る</div>
         </a>
     </footer>

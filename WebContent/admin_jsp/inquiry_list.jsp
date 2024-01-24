@@ -1,5 +1,10 @@
+<%@page import="model.Inquiry"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
  pageEncoding="UTF-8"%>
+<%
+	List<Inquiry> list =(List)request.getAttribute("inquiry_list");
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -15,32 +20,28 @@
         <table>
             <thead>
                 <tr>
-                    <th>タイトル</th>
-                    <th>氏名</th>
-                    <th>メールアドレス</th>
+                    <th>ID</th>
+                    <th>USER_ID</th>
                     <th>問い合わせ内容</th>
+                    <th>問い合わせ日</th>
                 </tr>
             </thead>
 
             <tbody>
+            	<%for (int i = 0; i < list.size(); i++) {%>
                 <tr>
-                    <td>abcdefghi</td>
-                    <td>山田 太郎</td>
-                    <td><a href="mailto:user01@email.com" target="_blank">user01@email.com</a></td>
-                    <td><textarea cols="20（横幅）" rows="2（高さ）" name="mail"></textarea></td>
+                    <td><%= list.get(i).getId() %></td>
+                    <td><%= list.get(i).getUser_id() %></td>
+                    <td><%= list.get(i).getContent() %></td>
+                    <td><%= list.get(i).getDate() %></td>
                 </tr>
-                <tr>
-                    <td>ihgfedcba</td>
-                    <td>一二 三四</td>
-                    <td><a href="mailto:user02@email.com" target="_blank">user02@email.com</a></td>
-                    <td><textarea cols="20（横幅）" rows="2（高さ）" name="mail"></textarea></td>
-                </tr>
+                <% } %>
             </tbody>
         </table>
        <!-- <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/427aac47-5b2b-476a-a8fe" class="background-img" />-->
     </div>
     <footer>
-       <form action="top_menu.jsp" method="get">
+       <form action="/Pet_Pathfinder/admin_jsp/top_menu.jsp" method="get">
         <input type="submit"  value="Xトップへ戻る" id="back"  class="back-to-top">
         </form>
     </footer>

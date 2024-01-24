@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%
 	int givenCoins = (int)request.getAttribute("sendCoins");
+	Account other_user_prof = (Account)session.getAttribute("other_user_profile");
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -44,9 +45,9 @@
             <!-- このメインの部分を入れ替える（CSSのメイン部分も入れ替える） -------------------------------------------------------->
               <div class="user-info">
                <div class="rounded-image">
-						<img src="../img/transfer_coin_confirmation.jpg" alt="Circle Image">
+						<img src="/Pet_Pathfinder/img/<%= other_user_prof.getIcon() %>" alt="Circle Image">
 					</div>
-                   <div class="user-name">ユーザ名</div>
+                   <div class="user-name"><%= other_user_prof.getUser_name() %></div>
                 <div class="coin-message">コインを渡しますか？</div>
                 <form action="/Pet_Pathfinder/Profile" method="post">
                  <input type="hidden" name="profile" value="coincomp">

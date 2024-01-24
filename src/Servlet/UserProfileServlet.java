@@ -106,7 +106,8 @@ public class UserProfileServlet extends HttpServlet {
 			}
 			CoinsDAO coinsdao = new CoinsDAO();
 			TransactionDAO transactiondao = new TransactionDAO();
-			if(coinsdao.isUpdateCoins(account.getUser_id(), free_coins, paid_coins) && coinsdao.isUpdateCoins(other_account.getUser_id(), other_account.getFree_coins()+free_coins, other_account.getPaid_coins())){
+			System.out.println("paid_coins="+paid_coins+" free_coins="+free_coins+" other_account.getFree_coins()="+other_account.getFree_coins()+" other_account.getPaid_coins()"+other_account.getPaid_coins());
+			if(coinsdao.isUpdateCoins(account.getUser_id(), free_coins, paid_coins) && coinsdao.isUpdateCoins(other_account.getUser_id(), other_account.getFree_coins()+coins, other_account.getPaid_coins())){
 				System.out.println("コインの譲渡ok");
 				transactiondao.insertTransaction(account.getUser_id(), "コイン譲渡", coins, free_coins, paid_coins, other_account.getUser_id());
 				transactiondao.insertTransaction(other_account.getUser_id(), "コイン受取", coins, other_account.getFree_coins()+coins, other_account.getPaid_coins(), account.getUser_id());
