@@ -141,7 +141,7 @@
         }
         @media (max-width: 991px) {
             .object-8 {
-            margin-left: 9px;
+            margin-left: 10cm;
             font-size: 40px;
             line-height: 65px;
             }
@@ -171,6 +171,7 @@
         @media (max-width: 991px) {
             .column-2 {
             width: 100%;
+            height: 500px;
             }
         }
         .object-10 {
